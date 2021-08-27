@@ -113,8 +113,10 @@ Matrix4x4f Matrix4x4f_ScaleXYZ(const Vector4f& scale);
 Matrix4x4f Matrix4x4f_RotateX(Scalar1f x);
 Matrix4x4f Matrix4x4f_RotateY(Scalar1f y);
 Matrix4x4f Matrix4x4f_RotateZ(Scalar1f z);
-Matrix4x4f Matrix4x4f_PerspectiveFrustum(Radians fieldOfView, Scalar1f aspectRatio, Scalar1f near, Scalar1f far);
-Matrix4x4f Matrix4x4f_OrthographicFrustum(Scalar1f left, Scalar1f right, Scalar1f bottom, Scalar1f top, Scalar1f near, Scalar1f far);
+Matrix4x4f Matrix4x4f_PerspectiveFrustum(Radians fieldOfView, Scalar1f aspectRatio,
+                                         Scalar1f near, Scalar1f far);
+Matrix4x4f Matrix4x4f_OrthographicFrustum(Scalar1f left, Scalar1f right,
+                                          Scalar1f bottom, Scalar1f top,
+                                          Scalar1f near, Scalar1f far);
 Vector4f Vector4f_Transform(const Matrix4x4f& m, const Vector4f& vec);
 ```
-
