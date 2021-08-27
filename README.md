@@ -1,5 +1,5 @@
 
-# cgMaths
+# Maths3D
 ### Maths for Computer Graphics
 
 Copyright (c) 2021, John Ryland
