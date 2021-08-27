@@ -85,6 +85,7 @@ types or without or without different levels of SIMD support.
 ## The API
 
 ```
+// Vector functions
 Vector4f Vector4f_Set(Scalar1f x, Scalar1f y, Scalar1f z, Scalar1f w);
 Vector4f Vector4f_Replicate(Scalar1f v);
 Vector4f Vector4f_Zero();
@@ -92,6 +93,8 @@ Vector4f Vector4f_SetX(const Vector4f& vec, Scalar1f x);
 Vector4f Vector4f_SetY(const Vector4f& vec, Scalar1f y);
 Vector4f Vector4f_SetZ(const Vector4f& vec, Scalar1f z);
 Vector4f Vector4f_SetW(const Vector4f& vec, Scalar1f w);
+
+// Vector operations
 Vector4f Vector4f_CrossProduct(const Vector4f& v1, const Vector4f& v2);
 Vector4f Vector4f_Multiply(const Vector4f& vec1, const Vector4f& vec2);
 Vector4f Vector4f_Add(const Vector4f& vec1, const Vector4f& vec2);
@@ -102,9 +105,13 @@ Scalar1f Vector4f_LengthSquared(const Vector4f& vec);
 Scalar1f Vector4f_Length(const Vector4f& vec);
 Scalar1f Vector4f_ReciprocalLength(const Vector4f& vec);
 Vector4f Vector4f_Normalized(const Vector4f& vec);
+
+// Matrix functions
 Matrix4x4f Matrix4x4f_Set(const Scalar1f v[16]);
 Matrix4x4f Matrix4x4f_Zero();
 Matrix4x4f Matrix4x4f_Identity();
+
+// Matrix transforms
 Matrix4x4f Matrix4x4f_TranslateXYZ(const Vector4f& vec);
 Matrix4x4f Matrix4x4f_Multiply(const Matrix4x4f& m1, const Matrix4x4f& m2);
 Matrix4x4f Matrix4x4f_Transposed(const Matrix4x4f& a);
@@ -113,10 +120,12 @@ Matrix4x4f Matrix4x4f_ScaleXYZ(const Vector4f& scale);
 Matrix4x4f Matrix4x4f_RotateX(Scalar1f x);
 Matrix4x4f Matrix4x4f_RotateY(Scalar1f y);
 Matrix4x4f Matrix4x4f_RotateZ(Scalar1f z);
+Vector4f Vector4f_Transform(const Matrix4x4f& m, const Vector4f& vec);
+
+// Projections
 Matrix4x4f Matrix4x4f_PerspectiveFrustum(Radians fieldOfView, Scalar1f aspectRatio,
                                          Scalar1f near, Scalar1f far);
 Matrix4x4f Matrix4x4f_OrthographicFrustum(Scalar1f left, Scalar1f right,
                                           Scalar1f bottom, Scalar1f top,
                                           Scalar1f near, Scalar1f far);
-Vector4f Vector4f_Transform(const Matrix4x4f& m, const Vector4f& vec);
 ```
