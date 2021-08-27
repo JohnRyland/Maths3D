@@ -2,7 +2,7 @@
 // About
 
 // 
-// cgMaths
+// Maths3D
 // Maths for Computer Graphics
 // 
 
