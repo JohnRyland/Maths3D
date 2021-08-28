@@ -31,15 +31,27 @@
 all: run_tests
 
 
+run_tests: .tags tests
+	./tests
+
+
+debug: .tags tests_d
+	./tests_d
+
+
 clean:
-	rm -rf tests
+	rm -rf tests tests_d tests_d.dSYM .tags
+
+
+tests_d: tests.cpp maths3d.h maths3d_ext.h
+	$(CXX) -g -std=c++11 $< -o $@ -lm
 
 
 tests: tests.cpp maths3d.h maths3d_ext.h
 	$(CXX) -std=c++11 $< -o $@ -lm
 
 
-run_tests: tests
-	./tests
+.tags: $(patsubst %, ./%, *.cpp *.h)
+	ctags --tag-relative=yes --c++-kinds=+pl --fields=+iaS --extra=+q --language-force=C++ -f $@ $^ 2> /dev/null ; true
 
 
