@@ -66,7 +66,7 @@ int matrix_tests()
 int extension_tests()
 {
   // TODO
-  return 0;
+  return -1;
 }
 
 int main(int argc, const char* argv[])
