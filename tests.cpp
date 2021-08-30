@@ -55,10 +55,24 @@ int vector_tests()
   return 0;
 }
 
+// Exercise all the Matrix4x4f functions (some indirectly)
+int matrix_tests()
+{
+  // TODO
+  return 0;
+}
+
+// Exercise all the extension functions
+int extension_tests()
+{
+  // TODO
+  return 0;
+}
 
 int main(int argc, const char* argv[])
 {
-  return vector_tests();
+  return vector_tests() ||
+         matrix_tests() ||
+         extension_tests();
 }
-
 

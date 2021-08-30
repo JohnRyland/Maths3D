@@ -155,6 +155,37 @@ Radians::operator Degrees() const
   return Degrees{ value * rad2deg };
 }
 
+// As with degrees and radians, so too can distances be confusing.
+// Particularly annoying are things where it could be an angle or a distance,
+// such as 'elevation' which could mean an altitude or an angle of elevation.
+struct Metres;
+struct Feet;
+
+struct Metres
+{
+  Scalar1f value;
+  operator Feet() const;
+};
+
+// International feet
+struct Feet
+{
+  Scalar1f value;
+  operator Metres() const;
+};
+
+Metres::operator Feet() const
+{
+  constexpr float m2ft= 3.2808398950131;
+  return Feet{ value * m2ft };
+}
+
+Feet::operator Metres() const
+{
+  constexpr float ft2m = 0.3048;
+  return Feet{ value * ft2m };
+}
+
 
 ///////////////////////////////////////////////////////////////////////////////////
 // 3D Maths - Vector
