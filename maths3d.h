@@ -183,7 +183,7 @@ Metres::operator Feet() const
 Feet::operator Metres() const
 {
   constexpr float ft2m = 0.3048;
-  return Feet{ value * ft2m };
+  return Metres{ value * ft2m };
 }
 
 
