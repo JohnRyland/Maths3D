@@ -143,13 +143,13 @@ struct Radians
   operator Degrees() const;
 };
 
-Degrees::operator Radians() const
+inline Degrees::operator Radians() const
 {
   constexpr float deg2rad = 0.01745329251f; // pi / 180
   return Radians{ value * deg2rad };
 }
 
-Radians::operator Degrees() const
+inline Radians::operator Degrees() const
 {
   constexpr float rad2deg = 57.2957795131f; // 180 / pi
   return Degrees{ value * rad2deg };
@@ -174,13 +174,13 @@ struct Feet
   operator Metres() const;
 };
 
-Metres::operator Feet() const
+inline Metres::operator Feet() const
 {
   constexpr float m2ft= 3.2808398950131;
   return Feet{ value * m2ft };
 }
 
-Feet::operator Metres() const
+inline Feet::operator Metres() const
 {
   constexpr float ft2m = 0.3048;
   return Metres{ value * ft2m };
