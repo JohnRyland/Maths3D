@@ -31,7 +31,9 @@
 all: run_tests
 
 
-run_tests: .tags tests
+run_tests: .tags tests optimization_test.S
+	@echo checking the compiler is optimizing to use inverse sqrt instruction
+	grep rsqrtss optimization_test.S > /dev/null
 	./tests
 
 
@@ -40,7 +42,7 @@ debug: .tags tests_d
 
 
 clean:
-	rm -rf tests tests_d tests_d.dSYM .tags
+	rm -rf tests tests_d tests_d.dSYM .tags optimization_test.S
 
 
 tests_d: tests.cpp maths3d.h maths3d_ext.h
@@ -48,7 +50,11 @@ tests_d: tests.cpp maths3d.h maths3d_ext.h
 
 
 tests: tests.cpp maths3d.h maths3d_ext.h
-	$(CXX) -std=c++11 $< -o $@ -lm
+	$(CXX) -ffast-math -std=c++11 -O2 $< -o $@ -lm
+
+
+optimization_test.S: optimization_test.cpp maths3d.h
+	$(CXX) -ffast-math -std=c++11 -O2 $< -S -o $@
 
 
 .tags: $(patsubst %, ./%, *.cpp *.h)
