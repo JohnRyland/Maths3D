@@ -1,5 +1,6 @@
 BSD 2-Clause License
 
+Maths3D
 Copyright (c) 2021, John Ryland
 All rights reserved.
 
