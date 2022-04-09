@@ -11,7 +11,7 @@
 // License
 
 // 
-// Copyright (c) 2021, John Ryland
+// Copyright (c) 2021-2022, John Ryland
 // All rights reserved.
 // 
 // Redistribution and use in source and binary forms, with or without
@@ -36,7 +36,7 @@
 // 
 // The views and conclusions contained in the software and documentation are those
 // of the authors and should not be interpreted as representing official policies, 
-// either expressed or implied, of the cgMaths Project.
+// either expressed or implied, of the Maths3D Project.
 // 
 
 
@@ -102,7 +102,12 @@
 // providing SIMD optimizations as most compilers can auto-vectorize this code
 // just fine and so it only will make the code more error prone, and not able
 // to be re-compiled with different compiler flags to target different machine
-// types or without or without different levels of SIMD support.
+// types or with or without different levels of SIMD support (eg MMX, SSE3, SSE4).
+//
+// For some special cases where performance is important, see the maths3d_ext.h
+// file which contains SSE optimizations for transforming arrays of vectors. The
+// intent of the _ext.h file is to put any code which is not part of the core
+// API and is more bulky or platform specific.
 //
 
 
