@@ -40,6 +40,7 @@
 // 
 
 
+#include <cstdint>
 #include "maths3d.h"
 #include <xmmintrin.h>
 #include <emmintrin.h>
