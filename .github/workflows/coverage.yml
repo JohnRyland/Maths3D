@@ -36,7 +36,7 @@ jobs:
 
       - name: Switch Branch
         run: |
-          git remote add origin git@github.com:JohnRyland/Maths3D.git
+          git remote set-url origin git@github.com:JohnRyland/Maths3D.git
           git checkout gh-pages
           mkdir -p Coverage
 
