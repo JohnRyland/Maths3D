@@ -36,7 +36,8 @@ jobs:
 
       - name: Switch Branch
         run: |
-          git checkout gh_pages
+          git remote add origin git@github.com:JohnRyland/Maths3D.git
+          git checkout gh-pages
           mkdir -p Coverage
 
       - name: Download job1 artifacts
