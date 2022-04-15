@@ -2,7 +2,7 @@
 # Maths3D
 ### Maths for Computer Graphics
 
-Copyright (c) 2021, John Ryland
+Copyright (c) 2021-2022, John Ryland
 All rights reserved.
 
 
