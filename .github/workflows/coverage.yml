@@ -34,7 +34,7 @@ jobs:
     steps:
       - name: Clone
         run: |
-          git clone https://github.com/JohnRyland/JohnRyland.github.io.git
+          git clone git@github.com:JohnRyland/JohnRyland.github.io.git
           mkdir -p JohnRyland.github.io/Maths3D
 
       - name: Download job1 artifacts
