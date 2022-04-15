@@ -46,8 +46,8 @@ jobs:
       - name: Git add & commit
         working-directory: JohnRyland.github.io/Maths3D
         run: |
-          git config user.email "JohnRyland@users.noreply.github.com"
-          git config user.name "JohnRyland"          
+          git config --global user.email "JohnRyland@users.noreply.github.com"
+          git config --global user.name "JohnRyland"          
           git add .
           git commit -m "Publish Maths3D coverage report"
           git push
