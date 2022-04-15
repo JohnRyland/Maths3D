@@ -35,8 +35,10 @@ jobs:
       - uses: actions/checkout@v1
 
       - name: Switch Branch
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git remote set-url origin git@github.com:JohnRyland/Maths3D.git
+          git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
           git checkout gh-pages
           mkdir -p Coverage
 
@@ -48,8 +50,6 @@ jobs:
 
       - name: Git add & commit
         working-directory: Coverage
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --global user.email "JohnRyland@users.noreply.github.com"
           git config --global user.name "JohnRyland"          
