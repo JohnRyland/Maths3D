@@ -8,7 +8,7 @@ All rights reserved.
 
 ## Status
 
-[![Build Status](https://github.com/JohnRyland/Maths3D/workflows/build/badge.svg)](https://github.com/JohnRyland/Maths3D/actions?workflow=build)
+[![Build Status](../../workflows/build/badge.svg)](../../actions/workflows/build.yml)
 
 
 ## Introduction
