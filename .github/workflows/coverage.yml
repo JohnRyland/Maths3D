@@ -35,7 +35,7 @@ jobs:
       - name: Clone
         run: |
           git clone https://github.com/JohnRyland/JohnRyland.github.io.git
-          cd JohnRyland.github.io.git
+          cd JohnRyland.github.io
           mkdir -p Maths3D
           cd Maths3D
 
