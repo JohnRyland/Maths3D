@@ -35,17 +35,16 @@ jobs:
       - name: Clone
         run: |
           git clone https://github.com/JohnRyland/JohnRyland.github.io.git
-          cd JohnRyland.github.io
-          mkdir -p Maths3D
-          cd Maths3D
+          mkdir -p JohnRyland.github.io/Maths3D
 
       - name: Download job1 artifacts
         uses: actions/download-artifact@v1
         with:
           name: report
-          path: ./
+          path: JohnRyland.github.io/Maths3D
 
       - name: Git add & commit
+        working-directory: JohnRyland.github.io/Maths3D
         run: |
           git add .
           git commit -m "Publish Maths3D coverage report"
