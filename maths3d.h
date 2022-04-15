@@ -339,7 +339,7 @@ inline Matrix4x4f Matrix4x4f_TranslateXYZ(const Vector4f& vec)
   return ret;
 }
 
-Matrix4x4f Matrix4x4f_Multiply(const Matrix4x4f& m1, const Matrix4x4f& m2)
+static Matrix4x4f Matrix4x4f_Multiply(const Matrix4x4f& m1, const Matrix4x4f& m2)
 {
   Matrix4x4f ret = Matrix4x4f_Zero();
   for (int i = 0; i < 4; i++)
@@ -349,7 +349,7 @@ Matrix4x4f Matrix4x4f_Multiply(const Matrix4x4f& m1, const Matrix4x4f& m2)
   return ret;
 }
 
-Matrix4x4f Matrix4x4f_Transposed(const Matrix4x4f& a)
+static Matrix4x4f Matrix4x4f_Transposed(const Matrix4x4f& a)
 {
   Matrix4x4f ret;
   for (int i = 0; i < 4; i++)
@@ -358,7 +358,7 @@ Matrix4x4f Matrix4x4f_Transposed(const Matrix4x4f& a)
   return ret;
 }
 
-Matrix4x4f Matrix4x4f_Scaled(const Matrix4x4f& m, Scalar1f scale)
+static Matrix4x4f Matrix4x4f_Scaled(const Matrix4x4f& m, Scalar1f scale)
 {
   Matrix4x4f ret = m;
   for (int i = 0; i < 16; i++)
@@ -366,7 +366,7 @@ Matrix4x4f Matrix4x4f_Scaled(const Matrix4x4f& m, Scalar1f scale)
   return ret;
 }
 
-Matrix4x4f Matrix4x4f_ScaleXYZ(const Vector4f& scale)
+static Matrix4x4f Matrix4x4f_ScaleXYZ(const Vector4f& scale)
 {
   Matrix4x4f ret = Matrix4x4f_Zero();
   ret.m[0][0] = scale.x;
@@ -406,7 +406,7 @@ inline Matrix4x4f Matrix4x4f_RotateZ(Scalar1f z)
   return Matrix4x4f_RotateCommon(z, 2);
 }
 
-Matrix4x4f Matrix4x4f_PerspectiveFrustum(Radians fieldOfView, Scalar1f aspectRatio, Scalar1f near, Scalar1f far)
+static Matrix4x4f Matrix4x4f_PerspectiveFrustum(Radians fieldOfView, Scalar1f aspectRatio, Scalar1f near, Scalar1f far)
 {
   const Scalar1f z = Scalar1f_Zero();
   const Scalar1f one = Scalar1f_One();
@@ -421,7 +421,7 @@ Matrix4x4f Matrix4x4f_PerspectiveFrustum(Radians fieldOfView, Scalar1f aspectRat
   return Matrix4x4f_Set(perspective);
 }
 
-Matrix4x4f Matrix4x4f_OrthographicFrustum(Scalar1f left, Scalar1f right, Scalar1f bottom, Scalar1f top, Scalar1f near, Scalar1f far)
+static Matrix4x4f Matrix4x4f_OrthographicFrustum(Scalar1f left, Scalar1f right, Scalar1f bottom, Scalar1f top, Scalar1f near, Scalar1f far)
 {
   const Scalar1f z = Scalar1f_Zero();
   const Scalar1f two = Scalar1f_Two();
@@ -440,7 +440,7 @@ Matrix4x4f Matrix4x4f_OrthographicFrustum(Scalar1f left, Scalar1f right, Scalar1
   return Matrix4x4f_Set(ortho);
 }
 
-Vector4f Vector4f_Transform(const Matrix4x4f& m, const Vector4f& vec)
+static Vector4f Vector4f_Transform(const Matrix4x4f& m, const Vector4f& vec)
 {
   Matrix4x4f trans = Matrix4x4f_Transposed(m);
   return Vector4f_Set(Vector4f_DotProduct(trans.row[0], vec),
