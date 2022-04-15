@@ -1,0 +1,46 @@
+name: coverage
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  job1:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Generate Coverage Report
+        run: make coverage
+
+      - name: Save Report
+        uses: actions/upload-artifact@v1
+        with:
+          name: report
+          path: .build/test/coverage
+
+  job2:
+    name: Publish
+    needs: job1
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone
+        run: |
+          git clone https://github.com/JohnRyland/JohnRyland.github.io.git
+          cd JohnRyland.github.io.git
+          mkdir -p Maths3D
+          cd Maths3D
+
+      - name: Download job1 artifacts
+        uses: actions/download-artifact@v1
+        with:
+          name: report
+          path: ./
+
+      - name: Git add & commit
+        run: |
+          git add .
+          git commit -m "Publish Maths3D coverage report"
+          git push
