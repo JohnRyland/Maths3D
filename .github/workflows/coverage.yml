@@ -1,0 +1,58 @@
+name: coverage
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  job1:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      
+      - name: Install tools
+        run: |
+          sudo apt update
+          sudo apt-get install -y gcovr
+
+      - name: Generate Coverage Report
+        run: make test
+
+      - name: Save Report
+        uses: actions/upload-artifact@v1
+        with:
+          name: report
+          path: .build/test/coverage
+
+  job2:
+    name: Publish
+    needs: job1
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Switch Branch
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          git checkout gh-pages
+          mkdir -p Coverage
+
+      - name: Download job1 artifacts
+        uses: actions/download-artifact@v1
+        with:
+          name: report
+          path: Coverage
+
+      - name: Git add & commit
+        working-directory: Coverage
+        run: |
+          git config --global user.email "JohnRyland@users.noreply.github.com"
+          git config --global user.name "JohnRyland"          
+          git add .
+          git commit -m "Publish Maths3D coverage report"
+          git push
