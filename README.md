@@ -9,6 +9,7 @@ All rights reserved.
 ## Status
 
 [![Build Status](../../workflows/build/badge.svg)](../../actions/workflows/build.yml)
+
 [![Coverage Status](../../workflows/coverage/badge.svg)](../../actions/workflows/coverage.yml)
 
 [Coverage Report](http://johnryland.github.io/Maths3D/Coverage/)
