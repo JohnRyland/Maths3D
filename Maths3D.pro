@@ -4,7 +4,7 @@ SOURCES   = tests.cpp
 DOCS      = README.md
 LIBRARIES = m
 CFLAGS    = -Wall -ffast-math -O2
-CXXFLAGS  = -std=c++11
+CXXFLAGS  = -std=c++11 -fno-exceptions
 MODULES   = https://github.com/JohnRyland/TestFramework.git
 
 # Add some additional tests to check the generated code
