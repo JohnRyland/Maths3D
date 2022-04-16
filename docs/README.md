@@ -1,14 +1,22 @@
 
+
+![Logo](docs/logo.svg)
+
 # Maths3D
 ### Maths for Computer Graphics
 
-Copyright (c) 2021, John Ryland
+Copyright (c) 2021-2022, John Ryland
 All rights reserved.
 
 
 ## Status
 
-[![Build Status](../../workflows/build/badge.svg)](../../actions/workflows/build.yml)
+[![Build Status](https://github.com/JohnRyland/Maths3D/workflows/build/badge.svg)](https://github.com/JohnRyland/Maths3D/actions/workflows/build.yml)
+[![Coverage Status](https://github.com/JohnRyland/Maths3D/workflows/coverage/badge.svg)](https://github.com/JohnRyland/Maths3D/actions/workflows/coverage.yml)
+
+[Coverage Report](http://johnryland.github.io/Maths3D/Coverage/)
+
+[Documentation](http://johnryland.github.io/Maths3D/Documentation/)
 
 
 ## Introduction
