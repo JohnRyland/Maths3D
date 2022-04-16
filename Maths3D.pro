@@ -1,4 +1,6 @@
 PROJECT   = Maths3D
+BRIEF     = Maths for Computer Graphics
+LOGO      = logo.svg
 TARGET    = Maths3D
 SOURCES   = tests.cpp
 DOCS      = README.md
