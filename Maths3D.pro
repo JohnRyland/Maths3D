@@ -1,5 +1,5 @@
 PROJECT   = Maths3D
-BRIEF     = Maths for Computer Graphics
+BRIEF     = "Maths for Computer Graphics"
 LOGO      = docs/logo.svg
 TARGET    = Maths3D
 SOURCES   = tests/tests.cpp
