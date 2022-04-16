@@ -96,7 +96,7 @@ void Vector4f_SSETransformStreamGeneric(float* outputStream, const float* inputS
   __m128 R1 = xform.r[1];
   __m128 R2 = xform.r[2];
   __m128 R3 = xform.r[3];
-  for (int i = 0; i < count; ++i)
+  for (unsigned i = 0; i < count; ++i)
   {
     // Hint to the CPU that we will access the memory ahead and it should warm the cache to avoid a cache miss
     // when we actually go to use it. A bit of tweaking was required to get the best value to look ahead by.
@@ -104,7 +104,7 @@ void Vector4f_SSETransformStreamGeneric(float* outputStream, const float* inputS
     __m128 vals;
     if (alignedInput) // note these 'if's are only on template parameters so aren't in the generated code
     {
-      vals = _mm_load_si128((const __m128i *)inputStream);
+      vals = (__m128)_mm_load_si128((const __m128i *)inputStream);
     }
     else
     {
