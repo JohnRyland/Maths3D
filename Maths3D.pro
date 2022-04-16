@@ -5,7 +5,10 @@ DOCS      = README.md
 LIBRARIES = m
 CFLAGS    = -Wall -ffast-math -O2
 CXXFLAGS  = -std=c++11 -fno-exceptions
+
 MODULES   = https://github.com/JohnRyland/TestFramework.git
+INCLUDES  = .modules/TestFramework/include
+SOURCES   += .modules/TestFramework/src/TestMain.cpp
 
 # Add some additional tests to check the generated code
 optimization_test.S: optimization_test.cpp maths3d.h
