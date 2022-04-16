@@ -1,4 +1,4 @@
-name: coverage
+name: documentation
 
 on:
   push:
@@ -16,16 +16,15 @@ jobs:
       - name: Install tools
         run: |
           sudo apt update
-          sudo apt-get install -y gcovr
+          sudo apt-get install -y doxygen
+      - name: Generate documentation
+        run: make doxygen
 
-      - name: Generate Coverage Report
-        run: make test
-
-      - name: Save Report
+      - name: Save documentation
         uses: actions/upload-artifact@v1
         with:
-          name: report
-          path: .build/test/coverage
+          name: documentation
+          path: .build/docs/html
 
   job2:
     name: Publish
@@ -40,20 +39,19 @@ jobs:
         run: |
           git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
           git checkout gh-pages
-          mkdir -p Coverage
-
+          mkdir -p Documentation
       - name: Download job1 artifacts
         uses: actions/download-artifact@v1
         with:
-          name: report
-          path: Coverage
+          name: documentation
+          path: Documentation
 
       - name: Git add & commit
-        working-directory: Coverage
+        working-directory: Documentation
         run: |
           git config --global user.email "JohnRyland@users.noreply.github.com"
           git config --global user.name "JohnRyland"          
           git add .
-          git commit -m "Publish Maths3D coverage report"
+          git commit -m "Publish Maths3D documentation"
           git pull
           git push
