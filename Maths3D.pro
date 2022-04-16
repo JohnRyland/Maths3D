@@ -1,9 +1,9 @@
 PROJECT   = Maths3D
 BRIEF     = Maths for Computer Graphics
-LOGO      = logo.svg
+LOGO      = docs/logo.svg
 TARGET    = Maths3D
 SOURCES   = tests.cpp
-DOCS      = README.md
+DOCS      = docs/README.md
 LIBRARIES = m
 CFLAGS    = -Wall -ffast-math -O2
 CXXFLAGS  = -std=c++11 -fno-exceptions

@@ -1,6 +1,6 @@
 
 
-![Logo](logo.svg)
+![Logo](docs/logo.svg)
 
 # Maths3D
 ### Maths for Computer Graphics
