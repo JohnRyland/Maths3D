@@ -55,4 +55,5 @@ jobs:
           git config --global user.name "JohnRyland"          
           git add .
           git commit -m "Publish Maths3D coverage report"
+          git pull
           git push
