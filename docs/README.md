@@ -1,5 +1,5 @@
 
-[![Logo](logo.svg)](https://github.com/JohnRyland/Maths3D)
+[![](logo.svg)](https://github.com/JohnRyland/Maths3D)
 
 # Maths3D
 ### Maths for Computer Graphics
@@ -11,8 +11,8 @@ All rights reserved
 
 ## Status
 
-[![Build Status](https://github.com/JohnRyland/Maths3D/workflows/build/badge.svg)](https://github.com/JohnRyland/Maths3D/actions/workflows/build.yml)
-[![Coverage Status](https://github.com/JohnRyland/Maths3D/workflows/coverage/badge.svg)](https://github.com/JohnRyland/Maths3D/actions/workflows/coverage.yml)
+[![](https://github.com/JohnRyland/Maths3D/workflows/build/badge.svg)](https://github.com/JohnRyland/Maths3D/actions/workflows/build.yml)
+[![](https://github.com/JohnRyland/Maths3D/workflows/coverage/badge.svg)](https://github.com/JohnRyland/Maths3D/actions/workflows/coverage.yml)
 
 [Coverage Report](http://johnryland.github.io/Maths3D/Coverage/)
 
