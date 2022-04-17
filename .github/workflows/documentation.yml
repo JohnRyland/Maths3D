@@ -55,5 +55,6 @@ jobs:
           git config --global user.name "JohnRyland"          
           git add .
           git commit -m "Publish Maths3D documentation"
+          git config pull.rebase false
           git pull
           git push
