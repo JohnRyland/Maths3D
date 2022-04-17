@@ -207,41 +207,49 @@ struct Vector4f
   };
 };
 
+/// Assigns x, y, z and w to the corresponding components of the vector
 inline Vector4f Vector4f_Set(Scalar1f x, Scalar1f y, Scalar1f z, Scalar1f w)
 {
   return Vector4f{ { { x, y, z, w } } };
 }
 
+/// Assigns v to all four of the components of the vector
 inline Vector4f Vector4f_Replicate(Scalar1f v)
 {
   return Vector4f_Set(v, v, v, v);
 }
 
+/// Assigns zero to all four of the components of the vector
 inline Vector4f Vector4f_Zero()
 {
   return Vector4f_Replicate(Scalar1f_Zero());
 }
 
+/// Copies vec and sets the x component of the vector to x
 inline Vector4f Vector4f_SetX(const Vector4f& vec, Scalar1f x)
 {
   return Vector4f_Set(x, vec.y, vec.z, vec.w);
 }
 
+/// Copies vec and sets the y component of the vector to y
 inline Vector4f Vector4f_SetY(const Vector4f& vec, Scalar1f y)
 {
   return Vector4f_Set(vec.x, y, vec.z, vec.w);
 }
 
+/// Copies vec and sets the z component of the vector to z
 inline Vector4f Vector4f_SetZ(const Vector4f& vec, Scalar1f z)
 {
   return Vector4f_Set(vec.x, vec.y, z, vec.w);
 }
 
+/// Copies vec and sets the w component of the vector to w
 inline Vector4f Vector4f_SetW(const Vector4f& vec, Scalar1f w)
 {
   return Vector4f_Set(vec.x, vec.y, vec.z, w);
 }
 
+/// Calculates the cross-product of v1 and v2
 inline Vector4f Vector4f_CrossProduct(const Vector4f& v1, const Vector4f& v2)
 {
   return Vector4f_Set(v1.y * v2.z - v1.z * v2.y,
@@ -250,46 +258,55 @@ inline Vector4f Vector4f_CrossProduct(const Vector4f& v1, const Vector4f& v2)
                       Scalar1f_One());
 }
 
+/// Multiplies vec1 with vec2
 inline Vector4f Vector4f_Multiply(const Vector4f& vec1, const Vector4f& vec2)
 {
   return Vector4f_Set(vec1.x*vec2.x, vec1.y*vec2.y, vec1.z*vec2.z, vec1.w*vec2.w);
 }
 
+/// Adds vec1 and vec2
 inline Vector4f Vector4f_Add(const Vector4f& vec1, const Vector4f& vec2)
 {
   return Vector4f_Set(vec1.x+vec2.x, vec1.y+vec2.y, vec1.z+vec2.z, vec1.w+vec2.w);
 }
 
+/// Copies vec and multiplies each component by scale
 inline Vector4f Vector4f_Scaled(const Vector4f& vec, Scalar1f scale)
 {
   return Vector4f_Multiply(vec, Vector4f_Replicate(scale));
 }
 
+/// Returns the sum of the components of vec
 inline Scalar1f Vector4f_SumComponents(const Vector4f& vec)
 {
   return vec.x + vec.y + vec.z + vec.w;
 }
 
+/// Calculates the dot-product of vec1 and vec2
 inline Scalar1f Vector4f_DotProduct(const Vector4f& vec1, const Vector4f& vec2)
 {
   return Vector4f_SumComponents(Vector4f_Multiply(vec1, vec2));
 }
 
+/// Calculates the length squared of vec
 inline Scalar1f Vector4f_LengthSquared(const Vector4f& vec)
 {
   return Vector4f_DotProduct(vec, vec);
 }
 
+/// Calculates the length of vec
 inline Scalar1f Vector4f_Length(const Vector4f& vec)
 {
   return ::sqrt(Vector4f_LengthSquared(vec));
 }
 
+/// Calculates 1/length of vec
 inline Scalar1f Vector4f_ReciprocalLength(const Vector4f& vec)
 {
   return Scalar1f_One() / Vector4f_Length(vec);
 }
 
+/// Copies vec and divides each component by the length of vec (returning the normalized or unit vector of vec)
 inline Vector4f Vector4f_Normalized(const Vector4f& vec)
 {
   return Vector4f_Scaled(vec, Vector4f_ReciprocalLength(vec));
