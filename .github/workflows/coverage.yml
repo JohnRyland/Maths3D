@@ -57,4 +57,4 @@ jobs:
           git commit -m "Publish Maths3D coverage report"
           git config pull.rebase false
           git pull
-          git push
+          git push || true
