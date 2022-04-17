@@ -17,12 +17,9 @@ jobs:
       - name: Build project # This would actually build your project, using zip for an example artifact
         id: build
         run: |
-          REPOSITORY_NAME=$(basename ${{ github.repository }})
-          RELEASE_VERSION=$(basename ${{ github.ref }})
-          make release
-          # make zip
-          zip "${REPOSITORY_NAME}-${RELEASE_VERSION}.zip" docs/README.md
-          echo ::set-output name=ZIP::"${REPOSITORY_NAME}-${RELEASE_VERSION}.zip"
+          PACKAGE_NAME="$(basename ${{ github.repository }})-$(basename ${{ github.ref }}).zip"
+          make package PACKAGE_NAME="${PACKAGE_NAME}"
+          echo ::set-output name=PACKAGE_NAME::"${PACKAGE_NAME}"
 
       - name: Create Release
         id: create_release
@@ -42,6 +39,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
-          asset_path: ./${{ steps.build.outputs.ZIP }}
-          asset_name: ${{ steps.build.outputs.ZIP }}
+          asset_path: ./${{ steps.build.outputs.PACKAGE_NAME }}
+          asset_name: ${{ steps.build.outputs.PACKAGE_NAME }}
           asset_content_type: application/zip
