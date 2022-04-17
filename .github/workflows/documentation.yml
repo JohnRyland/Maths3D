@@ -16,7 +16,7 @@ jobs:
       - name: Install tools
         run: |
           sudo apt update
-          sudo apt-get install -y doxygen dot plantuml
+          sudo apt-get install -y doxygen graphviz plantuml
       - name: Generate documentation
         run: |
           make doxygen
