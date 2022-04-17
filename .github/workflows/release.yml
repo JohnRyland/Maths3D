@@ -18,7 +18,7 @@ jobs:
         id: build
         run: |
           sudo apt update
-          sudo apt -y install textlive-latex-base textlive-fonts-recommended pandoc
+          sudo apt install -y texlive-latex-base texlive-fonts-recommended pandoc
           PACKAGE_NAME="$(basename ${{ github.repository }})-$(basename ${{ github.ref }}).zip"
           make package PACKAGE_NAME="${PACKAGE_NAME}"
           echo ::set-output name=PACKAGE_NAME::"${PACKAGE_NAME}"
