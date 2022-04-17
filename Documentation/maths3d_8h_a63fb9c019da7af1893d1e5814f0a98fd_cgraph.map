@@ -1,8 +1,8 @@
 <map id="Vector4f_Transform" name="Vector4f_Transform">
 <area shape="rect" id="node1" title=" " alt="" coords="5,56,153,83"/>
 <area shape="rect" id="node2" href="$maths3d_8h.html#aefb08742da337dfb8cc6147e39b16fd0" title=" " alt="" coords="201,5,375,32"/>
-<area shape="rect" id="node3" href="$maths3d_8h.html#afa6fbd00f48007bc9ca8b9fad6911058" title=" " alt="" coords="211,56,365,83"/>
-<area shape="rect" id="node5" href="$maths3d_8h.html#ae4a4af082482c7992d487d2f709a1d4b" title=" " alt="" coords="665,56,769,83"/>
-<area shape="rect" id="node4" href="$maths3d_8h.html#a90265d9aa55b92df80e1ff0db7be136f" title=" " alt="" coords="452,5,588,32"/>
-<area shape="rect" id="node6" href="$maths3d_8h.html#a670630003a2a62f351daa92d3e3a6d8f" title=" " alt="" coords="423,56,617,83"/>
+<area shape="rect" id="node3" href="$maths3d_8h.html#afa6fbd00f48007bc9ca8b9fad6911058" title="Calculates the dot&#45;product of vec1 and vec2." alt="" coords="211,56,365,83"/>
+<area shape="rect" id="node5" href="$maths3d_8h.html#ae4a4af082482c7992d487d2f709a1d4b" title="Assigns x, y, z and w to the corresponding components of the vector." alt="" coords="665,56,769,83"/>
+<area shape="rect" id="node4" href="$maths3d_8h.html#a90265d9aa55b92df80e1ff0db7be136f" title="Multiplies vec1 with vec2." alt="" coords="452,5,588,32"/>
+<area shape="rect" id="node6" href="$maths3d_8h.html#a670630003a2a62f351daa92d3e3a6d8f" title="Returns the sum of the components of vec." alt="" coords="423,56,617,83"/>
 </map>

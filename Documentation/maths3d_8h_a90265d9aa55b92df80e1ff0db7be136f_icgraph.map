@@ -1,12 +1,12 @@
 <map id="Vector4f_Multiply" name="Vector4f_Multiply">
-<area shape="rect" id="node1" title=" " alt="" coords="1313,81,1449,108"/>
-<area shape="rect" id="node2" href="$maths3d_8h.html#afa6fbd00f48007bc9ca8b9fad6911058" title=" " alt="" coords="1111,56,1265,83"/>
-<area shape="rect" id="node11" href="$maths3d_8h.html#a6e31aefd604b0542109db392dbe9d4ed" title=" " alt="" coords="499,107,626,133"/>
-<area shape="rect" id="node3" href="$maths3d_8h.html#a6a12894b1a4971a2291d506140394124" title=" " alt="" coords="883,56,1063,83"/>
+<area shape="rect" id="node1" title="Multiplies vec1 with vec2." alt="" coords="1313,81,1449,108"/>
+<area shape="rect" id="node2" href="$maths3d_8h.html#afa6fbd00f48007bc9ca8b9fad6911058" title="Calculates the dot&#45;product of vec1 and vec2." alt="" coords="1111,56,1265,83"/>
+<area shape="rect" id="node11" href="$maths3d_8h.html#a6e31aefd604b0542109db392dbe9d4ed" title="Copies vec and multiplies each component by scale." alt="" coords="499,107,626,133"/>
+<area shape="rect" id="node3" href="$maths3d_8h.html#a6a12894b1a4971a2291d506140394124" title="Calculates the length squared of vec." alt="" coords="883,56,1063,83"/>
 <area shape="rect" id="node9" href="$maths3d_8h.html#a63fb9c019da7af1893d1e5814f0a98fd" title=" " alt="" coords="899,5,1047,32"/>
-<area shape="rect" id="node4" href="$maths3d_8h.html#a4f551392427772319a2abb968295bad2" title=" " alt="" coords="708,56,835,83"/>
-<area shape="rect" id="node5" href="$maths3d_8h.html#add8a21f2e58d7d54153d07a551e2295a" title=" " alt="" coords="465,56,660,83"/>
-<area shape="rect" id="node6" href="$maths3d_8h.html#ac8a62a63b780796489c14691caac5824" title=" " alt="" coords="259,56,417,83"/>
+<area shape="rect" id="node4" href="$maths3d_8h.html#a4f551392427772319a2abb968295bad2" title="Calculates the length of vec." alt="" coords="708,56,835,83"/>
+<area shape="rect" id="node5" href="$maths3d_8h.html#add8a21f2e58d7d54153d07a551e2295a" title="Calculates 1/length of vec." alt="" coords="465,56,660,83"/>
+<area shape="rect" id="node6" href="$maths3d_8h.html#ac8a62a63b780796489c14691caac5824" title="Copies vec and divides each component by the length of vec (returning the normalized or unit vector o..." alt="" coords="259,56,417,83"/>
 <area shape="rect" id="node7" href="$tests_8cpp.html#a0e64913f2f7932ab8f3b57ab47d494a7" title=" " alt="" coords="108,56,211,83"/>
 <area shape="rect" id="node8" href="$tests_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title=" " alt="" coords="5,31,60,57"/>
 <area shape="rect" id="node10" href="$tests_8cpp.html#a81702378d4fe24787c381f549e8e1847" title=" " alt="" coords="286,5,390,32"/>

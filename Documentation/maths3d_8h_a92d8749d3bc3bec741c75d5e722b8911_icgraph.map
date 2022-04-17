@@ -1,5 +1,5 @@
 <map id="Vector4f_Zero" name="Vector4f_Zero">
-<area shape="rect" id="node1" title=" " alt="" coords="260,31,373,57"/>
+<area shape="rect" id="node1" title="Assigns zero to all four of the components of the vector." alt="" coords="260,31,373,57"/>
 <area shape="rect" id="node2" href="$tests_8cpp.html#a81702378d4fe24787c381f549e8e1847" title=" " alt="" coords="108,5,212,32"/>
 <area shape="rect" id="node4" href="$tests_8cpp.html#a0e64913f2f7932ab8f3b57ab47d494a7" title=" " alt="" coords="109,56,211,83"/>
 <area shape="rect" id="node3" href="$tests_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title=" " alt="" coords="5,31,60,57"/>

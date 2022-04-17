@@ -1,4 +1,4 @@
 <map id="Vector4f_Add" name="Vector4f_Add">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,113,32"/>
-<area shape="rect" id="node2" href="$maths3d_8h.html#ae4a4af082482c7992d487d2f709a1d4b" title=" " alt="" coords="161,5,265,32"/>
+<area shape="rect" id="node1" title="Adds vec1 and vec2." alt="" coords="5,5,113,32"/>
+<area shape="rect" id="node2" href="$maths3d_8h.html#ae4a4af082482c7992d487d2f709a1d4b" title="Assigns x, y, z and w to the corresponding components of the vector." alt="" coords="161,5,265,32"/>
 </map>
