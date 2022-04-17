@@ -1,5 +1,4 @@
 
-
 [![Logo](logo.svg)](https://github.com/JohnRyland/Maths3D)
 
 # Maths3D
