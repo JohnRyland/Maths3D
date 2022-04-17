@@ -18,7 +18,9 @@ jobs:
           sudo apt update
           sudo apt-get install -y doxygen
       - name: Generate documentation
-        run: make doxygen
+        run: |
+          make doxygen
+          sed -i 's/object type="image\/svg+xml" data/img src/g' .build/docs/html/index.html
 
       - name: Save documentation
         uses: actions/upload-artifact@v1
