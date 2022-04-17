@@ -18,6 +18,8 @@ All rights reserved.
 
 [Documentation](http://johnryland.github.io/Maths3D/Documentation/)
 
+[Source](https://github.com/JohnRyland/Maths3D)
+
 
 ## Introduction
 
