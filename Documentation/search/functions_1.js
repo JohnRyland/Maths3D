@@ -1,5 +1,20 @@
 var searchData=
 [
-  ['main_12',['main',['../tests_8cpp.html#ac0f2228420376f4db7e1274f2b41667c',1,'tests.cpp']]],
-  ['matrix_5ftests_13',['matrix_tests',['../tests_8cpp.html#a81702378d4fe24787c381f549e8e1847',1,'tests.cpp']]]
+  ['main_84',['main',['../tests_8cpp.html#ac0f2228420376f4db7e1274f2b41667c',1,'tests.cpp']]],
+  ['matrix4x4f_5fidentity_85',['Matrix4x4f_Identity',['../maths3d_8h.html#aee566e6a213d4cfeeede9e23eac68c8f',1,'maths3d.h']]],
+  ['matrix4x4f_5finversed_86',['Matrix4x4f_Inversed',['../maths3d__ext_8h.html#a0f859fe03f21ffcf0c4994d4415b41eb',1,'maths3d_ext.h']]],
+  ['matrix4x4f_5fmultiply_87',['Matrix4x4f_Multiply',['../maths3d_8h.html#a163ffd684df4d3e85aeecc27687e24ba',1,'maths3d.h']]],
+  ['matrix4x4f_5forthographicfrustum_88',['Matrix4x4f_OrthographicFrustum',['../maths3d_8h.html#ab5449f3a4c21a79a25aad1c7bc322c06',1,'maths3d.h']]],
+  ['matrix4x4f_5fperspectivefrustum_89',['Matrix4x4f_PerspectiveFrustum',['../maths3d_8h.html#a09e24e35e45ae0838ac9b60177164d8e',1,'maths3d.h']]],
+  ['matrix4x4f_5frotatecommon_90',['Matrix4x4f_RotateCommon',['../maths3d_8h.html#a655c027ed401744ea139601bb2219223',1,'maths3d.h']]],
+  ['matrix4x4f_5frotatex_91',['Matrix4x4f_RotateX',['../maths3d_8h.html#a8e55e35ba129e305548e271c9a825524',1,'maths3d.h']]],
+  ['matrix4x4f_5frotatey_92',['Matrix4x4f_RotateY',['../maths3d_8h.html#afc3c0913e70c1567f4c99c2d4f997352',1,'maths3d.h']]],
+  ['matrix4x4f_5frotatez_93',['Matrix4x4f_RotateZ',['../maths3d_8h.html#ad6409707b2f0acdb02554bebde18974b',1,'maths3d.h']]],
+  ['matrix4x4f_5fscaled_94',['Matrix4x4f_Scaled',['../maths3d_8h.html#a33093eeb58c9a5d9a08463984722756d',1,'maths3d.h']]],
+  ['matrix4x4f_5fscalexyz_95',['Matrix4x4f_ScaleXYZ',['../maths3d_8h.html#ad520ae2903c45418c3c4809762623e22',1,'maths3d.h']]],
+  ['matrix4x4f_5fset_96',['Matrix4x4f_Set',['../maths3d_8h.html#a0e389dd6c80ea3d67dca4280855af2b2',1,'maths3d.h']]],
+  ['matrix4x4f_5ftranslatexyz_97',['Matrix4x4f_TranslateXYZ',['../maths3d_8h.html#ad9ab510eb17aa1dc3dc76005eb09d667',1,'maths3d.h']]],
+  ['matrix4x4f_5ftransposed_98',['Matrix4x4f_Transposed',['../maths3d_8h.html#aefb08742da337dfb8cc6147e39b16fd0',1,'maths3d.h']]],
+  ['matrix4x4f_5fzero_99',['Matrix4x4f_Zero',['../maths3d_8h.html#a3fbb5d30c36494eaeb37013aab805075',1,'maths3d.h']]],
+  ['matrix_5ftests_100',['matrix_tests',['../tests_8cpp.html#a81702378d4fe24787c381f549e8e1847',1,'tests.cpp']]]
 ];

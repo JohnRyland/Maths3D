@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['float_5fcompare_2',['FLOAT_COMPARE',['../tests_8cpp.html#a05b7092306a3392c00d2925c686b2b7f',1,'tests.cpp']]]
+  ['epsilon_1',['epsilon',['../tests_8cpp.html#af0a8f7690ee367012c717b49e66634b1',1,'tests.cpp']]],
+  ['extension_5ftests_2',['extension_tests',['../tests_8cpp.html#a3943b56f2c9eb093893ed16cdf5777e7',1,'tests.cpp']]]
 ];
