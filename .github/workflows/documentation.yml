@@ -54,7 +54,7 @@ jobs:
           git config --global user.email "JohnRyland@users.noreply.github.com"
           git config --global user.name "JohnRyland"          
           git add .
-          git commit -m "Publish Maths3D documentation"
+          git commit -m "Publish Maths3D documentation" || true
           git config pull.rebase false
           git pull
           git push || true
