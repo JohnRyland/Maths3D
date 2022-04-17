@@ -25,12 +25,14 @@ var NAVTREE =
   [ "Maths3D", "index.html", [
     [ "Maths3D", "index.html#autotoc_md0", [
       [ "Status", "index.html#autotoc_md2", null ],
-      [ "Introduction", "index.html#autotoc_md3", null ],
-      [ "Scalars", "index.html#autotoc_md4", null ],
-      [ "Vector Components", "index.html#autotoc_md5", null ],
-      [ "Vector width", "index.html#autotoc_md6", null ],
-      [ "The API", "index.html#autotoc_md7", null ]
+      [ "Introduction", "index.html#autotoc_md3", null ]
     ] ],
+    [ "Scalars", "index.html#autotoc_md4", null ],
+    [ "Vectors", "index.html#autotoc_md5", [
+      [ "Vector Components", "index.html#autotoc_md6", null ],
+      [ "Vector width", "index.html#autotoc_md7", null ]
+    ] ],
+    [ "The API", "index.html#autotoc_md8", null ],
     [ "Files", "files.html", [
       [ "File List", "files.html", "files_dup" ],
       [ "File Members", "globals.html", [
