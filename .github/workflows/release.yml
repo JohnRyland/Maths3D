@@ -17,7 +17,7 @@ jobs:
       - name: Build project # This would actually build your project, using zip for an example artifact
         run: |          
           make release
-          zip "$(basename ${{ github.repository }})-$(basename ${{ github.ref }}).zip" README.md
+          zip "$(basename ${{ github.repository }})-$(basename ${{ github.ref }}).zip" docs/README.md
 
       - name: Create Release
         id: create_release
