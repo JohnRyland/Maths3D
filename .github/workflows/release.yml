@@ -17,6 +17,7 @@ jobs:
       - name: Build project # This would actually build your project, using zip for an example artifact
         id: build
         run: |
+          git config --global user.name "John Ryland"
           sudo apt update
           sudo apt install -y texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra pandoc librsvg2-bin
           PACKAGE_NAME="$(basename ${{ github.repository }})-$(basename ${{ github.ref }}).zip"
