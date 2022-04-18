@@ -1,7 +1,8 @@
 var annotated_dup =
 [
-    [ "Maths for Computer Graphics", "index.html#autotoc_md1", null ],
+    [ "UnitTest", "namespaceUnitTest.html", "namespaceUnitTest" ],
     [ "Degrees", "structDegrees.html", "structDegrees" ],
+    [ "FactoryItem", "structFactoryItem.html", "structFactoryItem" ],
     [ "Feet", "structFeet.html", "structFeet" ],
     [ "Matrix4x4f", "structMatrix4x4f.html", "structMatrix4x4f" ],
     [ "Metres", "structMetres.html", "structMetres" ],

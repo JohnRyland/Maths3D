@@ -1,8 +1,5 @@
 <map id="Scalar1f_Two" name="Scalar1f_Two">
-<area shape="rect" id="node1" title="If redefine Scalar1f to something other than float, update this function as applicable." alt="" coords="567,31,673,57"/>
-<area shape="rect" id="node2" href="$maths3d_8h.html#ab5449f3a4c21a79a25aad1c7bc322c06" title=" " alt="" coords="281,5,519,32"/>
-<area shape="rect" id="node5" href="$maths3d_8h.html#a09e24e35e45ae0838ac9b60177164d8e" title=" " alt="" coords="285,56,515,83"/>
-<area shape="rect" id="node3" href="$tests_8cpp.html#a81702378d4fe24787c381f549e8e1847" title=" " alt="" coords="119,5,223,32"/>
-<area shape="rect" id="node4" href="$tests_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title=" " alt="" coords="5,31,60,57"/>
-<area shape="rect" id="node6" href="$tests_8cpp.html#a3943b56f2c9eb093893ed16cdf5777e7" title=" " alt="" coords="108,56,233,83"/>
+<area shape="rect" id="node1" title="If redefine Scalar1f to something other than float, update this function as applicable." alt="" coords="291,31,397,57"/>
+<area shape="rect" id="node2" href="$maths3d_8h.html#a7355f8e9db69d28bfe94b49465853908" title=" " alt="" coords="5,5,243,32"/>
+<area shape="rect" id="node3" href="$maths3d_8h.html#aa30bcb6a4b4fac3227cf5b3a4cec3fd5" title=" " alt="" coords="9,56,239,83"/>
 </map>

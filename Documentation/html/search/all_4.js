@@ -1,7 +1,9 @@
 var searchData=
 [
-  ['operator_20degrees_27',['operator Degrees',['../structRadians.html#ac2a438507f17db5fc5c039a1d7325257',1,'Radians']]],
-  ['operator_20feet_28',['operator Feet',['../structMetres.html#a7d56eee30d66057260ef16042af42ab0',1,'Metres']]],
-  ['operator_20metres_29',['operator Metres',['../structFeet.html#aac1d3948081720a061c5b99d64722d1f',1,'Feet']]],
-  ['operator_20radians_30',['operator Radians',['../structDegrees.html#a9247641fee1bb4940ac7567828c0994d',1,'Degrees']]]
+  ['end_10',['end',['../structFactoryItem.html#a77c34eb4b63db279a22916f16ede4299',1,'FactoryItem']]],
+  ['expect_11',['EXPECT',['../test_8h.html#a454aae13a48cd394f528fda9dcfd7866',1,'test.h']]],
+  ['expect_5feq_12',['EXPECT_EQ',['../test_8h.html#ac87eb24f983e29eebcb6d54f1aeb91bf',1,'test.h']]],
+  ['expect_5fgt_13',['EXPECT_GT',['../test_8h.html#ac0aa560f61a5521c22973b39a458a558',1,'test.h']]],
+  ['expect_5flt_14',['EXPECT_LT',['../test_8h.html#ac6b48dd836f18cdf481610aaee0f4c07',1,'test.h']]],
+  ['expect_5fnear_15',['EXPECT_NEAR',['../test_8h.html#a43c2650468006da64c9aff5e9c94406f',1,'test.h']]]
 ];

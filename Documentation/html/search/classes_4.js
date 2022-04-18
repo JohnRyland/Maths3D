@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['vector4f_78',['Vector4f',['../structVector4f.html',1,'']]]
+  ['radians_122',['Radians',['../structRadians.html',1,'']]]
 ];

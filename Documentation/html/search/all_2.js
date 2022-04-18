@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['feet_3',['Feet',['../structFeet.html',1,'']]],
-  ['float_5fcompare_4',['FLOAT_COMPARE',['../tests_8cpp.html#a05b7092306a3392c00d2925c686b2b7f',1,'tests.cpp']]]
+  ['check_6',['CHECK',['../test_8h.html#a7b0a4b3c393708bef4a73475d5c2656c',1,'test.h']]]
 ];

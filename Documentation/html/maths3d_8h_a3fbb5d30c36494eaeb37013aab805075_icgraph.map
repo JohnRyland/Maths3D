@@ -1,13 +1,13 @@
 <map id="Matrix4x4f_Zero" name="Matrix4x4f_Zero">
-<area shape="rect" id="node1" title="Initialize the matrix to zero." alt="" coords="744,107,875,133"/>
-<area shape="rect" id="node2" href="$maths3d_8h.html#aee566e6a213d4cfeeede9e23eac68c8f" title=" " alt="" coords="519,12,670,39"/>
-<area shape="rect" id="node6" href="$maths3d_8h.html#a163ffd684df4d3e85aeecc27687e24ba" title=" " alt="" coords="518,69,671,96"/>
-<area shape="rect" id="node7" href="$maths3d_8h.html#a655c027ed401744ea139601bb2219223" title="Internal helper function for implementing the other matrix rotation functions." alt="" coords="493,132,696,159"/>
-<area shape="rect" id="node11" href="$maths3d_8h.html#ad520ae2903c45418c3c4809762623e22" title=" " alt="" coords="514,208,675,235"/>
-<area shape="rect" id="node3" href="$maths3d_8h.html#ad9ab510eb17aa1dc3dc76005eb09d667" title=" " alt="" coords="260,5,445,32"/>
-<area shape="rect" id="node4" href="$tests_8cpp.html#a81702378d4fe24787c381f549e8e1847" title=" " alt="" coords="108,132,212,159"/>
-<area shape="rect" id="node5" href="$tests_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title=" " alt="" coords="5,132,60,159"/>
-<area shape="rect" id="node8" href="$maths3d_8h.html#a8e55e35ba129e305548e271c9a825524" title=" " alt="" coords="277,107,429,133"/>
-<area shape="rect" id="node9" href="$maths3d_8h.html#afc3c0913e70c1567f4c99c2d4f997352" title=" " alt="" coords="277,157,428,184"/>
-<area shape="rect" id="node10" href="$maths3d_8h.html#ad6409707b2f0acdb02554bebde18974b" title=" " alt="" coords="277,208,429,235"/>
+<area shape="rect" id="node1" title="Initialize the matrix to zero." alt="" coords="489,132,620,159"/>
+<area shape="rect" id="node2" href="$maths3d_8h.html#a41df60aead4b752bfae253846614857c" title=" " alt="" coords="261,5,419,32"/>
+<area shape="rect" id="node3" href="$maths3d_8h.html#a0f859fe03f21ffcf0c4994d4415b41eb" title=" " alt="" coords="20,31,176,57"/>
+<area shape="rect" id="node4" href="$maths3d_8h.html#aee566e6a213d4cfeeede9e23eac68c8f" title=" " alt="" coords="265,107,415,133"/>
+<area shape="rect" id="node6" href="$maths3d_8h.html#a65cdc5d4d5315542b78fe93220e41905" title=" " alt="" coords="263,157,417,184"/>
+<area shape="rect" id="node7" href="$maths3d_8h.html#ae631fc742b5251ab497804c2581aecdb" title="Internal helper function for implementing the other matrix rotation functions." alt="" coords="239,208,441,235"/>
+<area shape="rect" id="node11" href="$maths3d_8h.html#a9301fd5539233957eeb6834c4f3a7132" title=" " alt="" coords="259,259,421,285"/>
+<area shape="rect" id="node5" href="$maths3d_8h.html#ad9ab510eb17aa1dc3dc76005eb09d667" title=" " alt="" coords="5,107,191,133"/>
+<area shape="rect" id="node8" href="$maths3d_8h.html#a90aa396fb2898f3117d152f6ee471e0d" title=" " alt="" coords="22,157,174,184"/>
+<area shape="rect" id="node9" href="$maths3d_8h.html#a91d4c88dd9e9c61b2a28d011c8449de2" title=" " alt="" coords="23,208,173,235"/>
+<area shape="rect" id="node10" href="$maths3d_8h.html#ac9b7694cbf0678572160d2f54b184563" title=" " alt="" coords="22,259,174,285"/>
 </map>
