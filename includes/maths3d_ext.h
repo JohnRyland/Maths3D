@@ -45,6 +45,8 @@
 #include <xmmintrin.h>
 #include <emmintrin.h>
 
+/// Creates a matrix that is the inverse of matrix a. This resulting matrix when multiplied
+/// with the original matrix a will return an identity matrix (provided the matrix is invertable).
 Matrix4x4f Matrix4x4f_Inversed(const Matrix4x4f& a)
 {
   static const uint8_t idxA[12] = { 0x50, 0x60, 0x70, 0x61, 0x71, 0x72, 0xFA, 0xF9, 0xE9, 0xF8, 0xE8, 0xD8 }; // entries 0-6 and 7-11 are mirrors with + 0x88
@@ -79,6 +81,23 @@ Matrix4x4f Matrix4x4f_Inversed(const Matrix4x4f& a)
   return ret;
 }
 
+/// Transforms arrays of vectors by the transform matrix. 
+/// \param translate is a bool to enable or disable applying the translation component of the transform.
+/// \param divideByW is a bool to enable or disable applying perspective by dividing by W.
+/// \param alignedOutput is a bool to flag if outputStream is aligned to a 128-bit boundary or not.
+/// \param outputStep is the width in floats to the next vector element of the outputStream array.
+///        This allows the outputStream array to be an array of structures of which the vector is a member.
+///        These structures should be 32-bit aligned, and if the size is not a multiple of 128-bits, then
+///        alignedOutput shouldn't be set.
+/// \param alignedInput is a bool to flag if inputStream is aligned to a 128-bit boundary or not.
+/// \param inputStep is the width in floats to the next vector element of the inputStream array.
+///        This allows the inputStream array to be an array of structures of which the vector is a member.
+///        These structures should be 32-bit aligned, and if the size is not a multiple of 128-bits, then
+///        alignedInput shouldn't be set.
+/// \param outputStream is the output buffer to put the transformed vectors to.
+/// \param inputStream is the input array of vectors to apply the transform to.
+/// \param count is the number of vectors to transform.
+/// \param transform is the matrix to apply.
 template <bool translate, bool divideByW, bool alignedOutput, int outputStep, bool alignedInput, int inputStep>
 void Vector4f_SSETransformStreamGeneric(float* outputStream, const float* inputStream, unsigned count, const Matrix4x4f& transform)
 {
@@ -148,36 +167,51 @@ void Vector4f_SSETransformStreamGeneric(float* outputStream, const float* inputS
   }
 }
 
+/// Specialization of Vector4f_SSETransformStreamGeneric for transforming an array of vectors without applying perspective.
+/// \see Vector4f_SSETransformStreamGeneric
 template <size_t N>
 void Vector4f_SSETransformStream(Vector4f (&outputStream)[N], const Vector4f (&inputStream)[N], const Matrix4x4f& transform)
 {
   Vector4f_SSETransformStreamGeneric<true,false,false,4,false,4>((float*)outputStream, (float*)inputStream, N, transform);
 }
 
+/// Specialization of Vector4f_SSETransformStreamGeneric for transforming an array of vectors with perspective.
+/// \see Vector4f_SSETransformStreamGeneric
 template <size_t N>
 void Vector4f_SSETransformCoordStream(Vector4f (&outputStream)[N], const Vector4f (&inputStream)[N], const Matrix4x4f& transform)
 {
   Vector4f_SSETransformStreamGeneric<true,true,false,4,false,4>((float*)outputStream, (float*)inputStream, N, transform);
 }
 
+/// Specialization of Vector4f_SSETransformStreamGeneric for transforming an array of normal vectors.
+/// \see Vector4f_SSETransformStreamGeneric
 template <size_t N>
 void Vector4f_SSETransformNormalStream(Vector4f (&outputStream)[N], const Vector4f (&inputStream)[N], const Matrix4x4f& transform)
 {
   Vector4f_SSETransformStreamGeneric<false,false,false,4,false,4>((float*)outputStream, (float*)inputStream, N, transform);
 }
 
+/// Specialization of Vector4f_SSETransformStreamGeneric for transforming an array of vectors without applying perspective
+/// where the arrays of vectors have been prepared to be aligned to a 128-bit boundary.
+/// \see Vector4f_SSETransformStreamGeneric
 template <size_t N>
 void Vector4f_SSETransformStreamAligned(Vector4f (&outputStream)[N], const Vector4f (&inputStream)[N], const Matrix4x4f& transform)
 {
   Vector4f_SSETransformStreamGeneric<true,false,true,4,true,4>((float*)outputStream, (float*)inputStream, N, transform);
 }
 
+/// Specialization of Vector4f_SSETransformStreamGeneric for transforming an array of vectors with perspective
+/// where the arrays of vectors have been prepared to be aligned to a 128-bit boundary.
+/// \see Vector4f_SSETransformStreamGeneric
 template <size_t N>
 void Vector4f_SSETransformCoordStreamAligned(Vector4f (&outputStream)[N], const Vector4f (&inputStream)[N], const Matrix4x4f& transform)
 {
   Vector4f_SSETransformStreamGeneric<true,true,true,4,true,4>((float*)outputStream, (float*)inputStream, N, transform);
 }
 
+/// Specialization of Vector4f_SSETransformStreamGeneric for transforming an array of normal vectors
+/// where the arrays of vectors have been prepared to be aligned to a 128-bit boundary.
+/// \see Vector4f_SSETransformStreamGeneric
 template <size_t N>
 void Vector4f_SSETransformNormalStreamAligned(Vector4f (&outputStream)[N], const Vector4f (&inputStream)[N], const Matrix4x4f& transform)
 {

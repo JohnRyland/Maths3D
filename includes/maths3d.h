@@ -114,38 +114,44 @@
 ///////////////////////////////////////////////////////////////////////////////////
 // 3D Maths - Scalar
 
+/// Scalar1f type is used through-out the Maths3D library as an alias to float so
+/// as to make it easy to swap it out for the double type or a fixed-point class.
 using Scalar1f = float;
 
+/// If redefine Scalar1f to something other than float, update this function as applicable.
 inline Scalar1f Scalar1f_Zero()
 {
   return 0.0f;
 }
 
+/// If redefine Scalar1f to something other than float, update this function as applicable.
 inline Scalar1f Scalar1f_One()
 {
   return 1.0f;
 }
 
+/// If redefine Scalar1f to something other than float, update this function as applicable.
 inline Scalar1f Scalar1f_Two()
 {
   return 2.0f;
 }
 
-// These helpers ensure it is harder to mess up the units and make APIs more
-// self-documenting
+/// This helper type ensures it is harder to mess up the units and makes the APIs self-documenting.
 struct Degrees;
+
+/// This helper type ensures it is harder to mess up the units and makes the APIs self-documenting.
 struct Radians;
 
 struct Degrees
 {
-  Scalar1f value;
-  operator Radians() const;
+  Scalar1f value;             /// The value in degrees.
+  operator Radians() const;   /// Function to convert from degrees to radians.
 };
 
 struct Radians
 {
-  Scalar1f value;
-  operator Degrees() const;
+  Scalar1f value;             /// The value in radians.
+  operator Degrees() const;   /// Function to convert from radians to degrees.
 };
 
 inline Degrees::operator Radians() const
@@ -160,23 +166,32 @@ inline Radians::operator Degrees() const
   return Degrees{ value * rad2deg };
 }
 
-// As with degrees and radians, so too can distances be confusing.
-// Particularly annoying are things where it could be an angle or a distance,
-// such as 'elevation' which could mean an altitude or an angle of elevation.
 struct Metres;
 struct Feet;
 
+/// \brief
+/// This helper type ensures it is harder to mess up the units and makes the APIs self-documenting.
+/// \note
+/// As with degrees and radians, so too can distances be confusing.
+/// And it might also be confusing if a parameter is an angle or a distance,
+/// Take as an example a function like `void setElevation(float elevation)`
+/// It might mean the distance above sea level, which may be in meters or feet,
+/// or it might be an angle of elevation, such as 20 degrees above the horizon.
+/// \see Feet
 struct Metres
 {
-  Scalar1f value;
-  operator Feet() const;
+  Scalar1f value;            /// The value in meters.
+  operator Feet() const;     /// Function to convert from meters to Feet.
 };
 
-// International feet
+/// \brief
+/// International feet (which is almost the same as U.S feet and survey feet).
+/// This helper type ensures it is harder to mess up the units and makes the APIs self-documenting.
+/// \see Meters
 struct Feet
 {
-  Scalar1f value;
-  operator Metres() const;
+  Scalar1f value;            /// The value in feet.
+  operator Metres() const;   /// Function to convert from feet to meters.
 };
 
 inline Metres::operator Feet() const
@@ -199,49 +214,57 @@ struct Vector4f
 {
   union
   {
-    Scalar1f v[4];
+    Scalar1f v[4];            /// The 4 components accessible as an array.
     struct
     {
-      Scalar1f x, y, z, w;
+      Scalar1f x, y, z, w;    /// The named components, x, y, z and w accessible by name.
     };
   };
 };
 
+/// Assigns x, y, z and w to the corresponding components of the vector.
 inline Vector4f Vector4f_Set(Scalar1f x, Scalar1f y, Scalar1f z, Scalar1f w)
 {
   return Vector4f{ { { x, y, z, w } } };
 }
 
+/// Assigns v to all four of the components of the vector.
 inline Vector4f Vector4f_Replicate(Scalar1f v)
 {
   return Vector4f_Set(v, v, v, v);
 }
 
+/// Assigns zero to all four of the components of the vector.
 inline Vector4f Vector4f_Zero()
 {
   return Vector4f_Replicate(Scalar1f_Zero());
 }
 
+/// Copies vec and sets the x component of the vector to x.
 inline Vector4f Vector4f_SetX(const Vector4f& vec, Scalar1f x)
 {
   return Vector4f_Set(x, vec.y, vec.z, vec.w);
 }
 
+/// Copies vec and sets the y component of the vector to y.
 inline Vector4f Vector4f_SetY(const Vector4f& vec, Scalar1f y)
 {
   return Vector4f_Set(vec.x, y, vec.z, vec.w);
 }
 
+/// Copies vec and sets the z component of the vector to z.
 inline Vector4f Vector4f_SetZ(const Vector4f& vec, Scalar1f z)
 {
   return Vector4f_Set(vec.x, vec.y, z, vec.w);
 }
 
+/// Copies vec and sets the w component of the vector to w.
 inline Vector4f Vector4f_SetW(const Vector4f& vec, Scalar1f w)
 {
   return Vector4f_Set(vec.x, vec.y, vec.z, w);
 }
 
+/// Calculates the cross-product of v1 and v2.
 inline Vector4f Vector4f_CrossProduct(const Vector4f& v1, const Vector4f& v2)
 {
   return Vector4f_Set(v1.y * v2.z - v1.z * v2.y,
@@ -250,46 +273,55 @@ inline Vector4f Vector4f_CrossProduct(const Vector4f& v1, const Vector4f& v2)
                       Scalar1f_One());
 }
 
+/// Multiplies vec1 with vec2.
 inline Vector4f Vector4f_Multiply(const Vector4f& vec1, const Vector4f& vec2)
 {
   return Vector4f_Set(vec1.x*vec2.x, vec1.y*vec2.y, vec1.z*vec2.z, vec1.w*vec2.w);
 }
 
+/// Adds vec1 and vec2.
 inline Vector4f Vector4f_Add(const Vector4f& vec1, const Vector4f& vec2)
 {
   return Vector4f_Set(vec1.x+vec2.x, vec1.y+vec2.y, vec1.z+vec2.z, vec1.w+vec2.w);
 }
 
+/// Copies vec and multiplies each component by scale.
 inline Vector4f Vector4f_Scaled(const Vector4f& vec, Scalar1f scale)
 {
   return Vector4f_Multiply(vec, Vector4f_Replicate(scale));
 }
 
+/// Returns the sum of the components of vec.
 inline Scalar1f Vector4f_SumComponents(const Vector4f& vec)
 {
   return vec.x + vec.y + vec.z + vec.w;
 }
 
+/// Calculates the dot-product of vec1 and vec2.
 inline Scalar1f Vector4f_DotProduct(const Vector4f& vec1, const Vector4f& vec2)
 {
   return Vector4f_SumComponents(Vector4f_Multiply(vec1, vec2));
 }
 
+/// Calculates the length squared of vec.
 inline Scalar1f Vector4f_LengthSquared(const Vector4f& vec)
 {
   return Vector4f_DotProduct(vec, vec);
 }
 
+/// Calculates the length of vec.
 inline Scalar1f Vector4f_Length(const Vector4f& vec)
 {
   return ::sqrt(Vector4f_LengthSquared(vec));
 }
 
+/// Calculates 1/length of vec.
 inline Scalar1f Vector4f_ReciprocalLength(const Vector4f& vec)
 {
   return Scalar1f_One() / Vector4f_Length(vec);
 }
 
+/// Copies vec and divides each component by the length of vec (returning the normalized or unit vector of vec).
 inline Vector4f Vector4f_Normalized(const Vector4f& vec)
 {
   return Vector4f_Scaled(vec, Vector4f_ReciprocalLength(vec));
@@ -303,12 +335,13 @@ struct Matrix4x4f
 {
   union
   {
-    Vector4f row[4];
-    Scalar1f m[4][4];
-    Scalar1f v[16];
+    Vector4f row[4];              /// The 4 rows of the matrix accessible as an array of Vector4f.
+    Scalar1f m[4][4];             /// The 4x4 matrix values accessible as a 4x4 array of arrays.
+    Scalar1f v[16];               /// The 4x4 matrix values accessible as a single array of 16 values.
   };
 };
 
+/// Initialize the matrix from an array of 16 values.
 inline Matrix4x4f Matrix4x4f_Set(const Scalar1f v[16])
 {
   Matrix4x4f ret;
@@ -317,6 +350,7 @@ inline Matrix4x4f Matrix4x4f_Set(const Scalar1f v[16])
   return ret;
 }
 
+/// Initialize the matrix to zero.
 inline Matrix4x4f Matrix4x4f_Zero()
 {
   Matrix4x4f ret;
@@ -325,6 +359,8 @@ inline Matrix4x4f Matrix4x4f_Zero()
   return ret;
 }
 
+/// Initialize the matrix to an identity matrix, a matrix that when multiplied with
+/// another matrix, returns an identical matrix back again.
 inline Matrix4x4f Matrix4x4f_Identity()
 {
   Matrix4x4f ret = Matrix4x4f_Zero();
@@ -332,6 +368,8 @@ inline Matrix4x4f Matrix4x4f_Identity()
   return ret;
 }
 
+/// Creates a matrix that when multiplied by it, will be able to apply a 3D translation
+/// transformation.
 inline Matrix4x4f Matrix4x4f_TranslateXYZ(const Vector4f& vec)
 {
   Matrix4x4f ret = Matrix4x4f_Identity();
@@ -339,6 +377,10 @@ inline Matrix4x4f Matrix4x4f_TranslateXYZ(const Vector4f& vec)
   return ret;
 }
 
+/// Multiplies m1 with m2 and returns the resulting matrix that combines these.
+/// This can be used to compound together different transformations. Note the order
+/// matters, as a translation followed by a rotation, for example, is not the same
+/// transformation as a rotation followed by a translation.
 static Matrix4x4f Matrix4x4f_Multiply(const Matrix4x4f& m1, const Matrix4x4f& m2)
 {
   Matrix4x4f ret = Matrix4x4f_Zero();
@@ -349,6 +391,7 @@ static Matrix4x4f Matrix4x4f_Multiply(const Matrix4x4f& m1, const Matrix4x4f& m2
   return ret;
 }
 
+/// Creates a matrix where the matrix a is mirrored through the diagonal of the matrix.
 static Matrix4x4f Matrix4x4f_Transposed(const Matrix4x4f& a)
 {
   Matrix4x4f ret;
@@ -358,6 +401,9 @@ static Matrix4x4f Matrix4x4f_Transposed(const Matrix4x4f& a)
   return ret;
 }
 
+/// Creates a matrix that when multiplied by it will be able to apply a uniform 3D
+/// scaling transformation (uniform meaning that it is scaled by the same amount in
+/// the x, y and z dimensions).
 static Matrix4x4f Matrix4x4f_Scaled(const Matrix4x4f& m, Scalar1f scale)
 {
   Matrix4x4f ret = m;
@@ -366,6 +412,9 @@ static Matrix4x4f Matrix4x4f_Scaled(const Matrix4x4f& m, Scalar1f scale)
   return ret;
 }
 
+/// Creates a matrix that when multiplied by it will be able to apply a 3D scaling
+/// transformation. This is a non-uniform scaling where the amount scaled in each
+/// dimension is determined by the scale vector parameter.
 static Matrix4x4f Matrix4x4f_ScaleXYZ(const Vector4f& scale)
 {
   Matrix4x4f ret = Matrix4x4f_Zero();
@@ -376,7 +425,7 @@ static Matrix4x4f Matrix4x4f_ScaleXYZ(const Vector4f& scale)
   return ret;
 }
 
-// Helper for other functions
+/// Internal helper function for implementing the other matrix rotation functions.
 static Matrix4x4f Matrix4x4f_RotateCommon(Scalar1f angle, int axis)
 {
   const Scalar1f sx = ::sin(angle);
@@ -391,21 +440,33 @@ static Matrix4x4f Matrix4x4f_RotateCommon(Scalar1f angle, int axis)
   return ret;
 }
 
+/// Creates a matrix that when multiplied by it will be able to apply a 3D rotation
+/// transformation about the x axis. The x parameter is in radians.
 inline Matrix4x4f Matrix4x4f_RotateX(Scalar1f x)
 {
   return Matrix4x4f_RotateCommon(x, 0);
 }
 
+/// Creates a matrix that when multiplied by it will be able to apply a 3D rotation
+/// transformation about the y axis. The y parameter is in radians.
 inline Matrix4x4f Matrix4x4f_RotateY(Scalar1f y)
 {
   return Matrix4x4f_RotateCommon(y, 1);
 }
 
+/// Creates a matrix that when multiplied by it will be able to apply a 3D rotation
+/// transformation about the z axis. The z parameter is in radians.
 inline Matrix4x4f Matrix4x4f_RotateZ(Scalar1f z)
 {
   return Matrix4x4f_RotateCommon(z, 2);
 }
 
+/// Creates a matrix that when multiplied by it will be able to apply a 3D perspective
+/// projection transformation.
+/// \param fieldOfView is the field of view which is the horizontal viewing angle in to the scene.
+/// \param aspectRatio is the ratio of width to height of the view.
+/// \param near is the distance to the near plane. Depth values are scaled according to this.
+/// \param far is the distance to the far plane. Depth values are scaled according to this.
 static Matrix4x4f Matrix4x4f_PerspectiveFrustum(Radians fieldOfView, Scalar1f aspectRatio, Scalar1f near, Scalar1f far)
 {
   const Scalar1f z = Scalar1f_Zero();
@@ -421,6 +482,14 @@ static Matrix4x4f Matrix4x4f_PerspectiveFrustum(Radians fieldOfView, Scalar1f as
   return Matrix4x4f_Set(perspective);
 }
 
+/// Creates a matrix that when multiplied by it will be able to apply a 3D orthographic
+/// projection transformation.
+/// \param left is the distance from the centre of the projection to the left edge of the view.
+/// \param right is the distance from the centre of the projection to the right edge of the view.
+/// \param bottom is the distance from the centre of the projection to the bottom edge of the view.
+/// \param top the distance from the centre of the projection to the top edge of the view.
+/// \param near is the distance to the near plane. Depth values are scaled according to this.
+/// \param far is the distance to the far plane. Depth values are scaled according to this.
 static Matrix4x4f Matrix4x4f_OrthographicFrustum(Scalar1f left, Scalar1f right, Scalar1f bottom, Scalar1f top, Scalar1f near, Scalar1f far)
 {
   const Scalar1f z = Scalar1f_Zero();
@@ -440,6 +509,8 @@ static Matrix4x4f Matrix4x4f_OrthographicFrustum(Scalar1f left, Scalar1f right, 
   return Matrix4x4f_Set(ortho);
 }
 
+/// Applies the transformation of matrix m to vector vec, and returns the transformed
+/// vector.
 static Vector4f Vector4f_Transform(const Matrix4x4f& m, const Vector4f& vec)
 {
   Matrix4x4f trans = Matrix4x4f_Transposed(m);

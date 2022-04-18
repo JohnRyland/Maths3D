@@ -1,22 +1,29 @@
 
-
-![Logo](docs/logo.svg)
+[![](logo.svg)](https://github.com/JohnRyland/Maths3D)
 
 # Maths3D
 ### Maths for Computer Graphics
 
 Copyright (c) 2021-2022, John Ryland
-All rights reserved.
+
+All rights reserved
 
 
 ## Status
 
-[![Build Status](https://github.com/JohnRyland/Maths3D/workflows/build/badge.svg)](https://github.com/JohnRyland/Maths3D/actions/workflows/build.yml)
-[![Coverage Status](https://github.com/JohnRyland/Maths3D/workflows/coverage/badge.svg)](https://github.com/JohnRyland/Maths3D/actions/workflows/coverage.yml)
+[![](https://github.com/JohnRyland/Maths3D/workflows/build/badge.svg)](https://github.com/JohnRyland/Maths3D/actions/workflows/build.yml)
+[![](https://github.com/JohnRyland/Maths3D/workflows/coverage/badge.svg)](https://github.com/JohnRyland/Maths3D/actions/workflows/coverage.yml)
+[![](https://github.com/JohnRyland/Maths3D/workflows/documentation/badge.svg)](https://github.com/JohnRyland/Maths3D/actions/workflows/documentation.yml)
 
 [Coverage Report](http://johnryland.github.io/Maths3D/Coverage/)
 
-[Documentation](http://johnryland.github.io/Maths3D/Documentation/)
+[Documentation](http://johnryland.github.io/Maths3D/Documentation/html/)
+
+[PDF](http://johnryland.github.io/Maths3D/Documentation/docs/README.pdf)
+
+[Source](https://github.com/JohnRyland/Maths3D/tree/main)
+
+[Releases](https://github.com/JohnRyland/Maths3D/releases)
 
 
 ## Introduction
@@ -40,7 +47,7 @@ Inputs are passed by const reference when the size of the input would be
 larger than the size of a pointer.
 
 
-## Scalars
+# Scalars
 
 Changing the scalar type will change the underlying value type used by
 vector and matrix.
@@ -54,6 +61,8 @@ ensuring there is no mistakes of this kind. The same could be used for other
 types of units as required, such as meters
 vs feet if the API were to need this.
 
+
+# Vectors
 
 ## Vector Components
 
@@ -95,7 +104,7 @@ to be re-compiled with different compiler flags to target different machine
 types or without or without different levels of SIMD support.
 
 
-## The API
+# The API
 
 ```
 // Vector functions
@@ -142,3 +151,4 @@ Matrix4x4f Matrix4x4f_OrthographicFrustum(Scalar1f left, Scalar1f right,
                                           Scalar1f bottom, Scalar1f top,
                                           Scalar1f near, Scalar1f far);
 ```
+
