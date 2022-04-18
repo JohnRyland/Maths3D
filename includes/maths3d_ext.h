@@ -40,46 +40,29 @@
 // 
 
 
-#include <cstdint>
+///////////////////////////////////////////////////////////////////////////////////
+// Documentation
+
+/// \file maths3d_ext.h
+///
+/// Extensions to the Maths3D API.
+///
+/// Transforming large arrays of vectors is performance critical to many 3D pipelines.
+/// This file contains SSE optimizations for doing this in a flexible way that this
+/// may be useful in a variety of situations. However this is platform specific code,
+/// so fallback code may be required.
+///
+/// It should be a todo that based on a preprocessor define, this SSE optimized code
+/// is used or some fallback code is used instead which would need to be written.
+
+
+///////////////////////////////////////////////////////////////////////////////////
+// Includes
+
 #include "maths3d.h"
 #include <xmmintrin.h>
 #include <emmintrin.h>
 
-/// Creates a matrix that is the inverse of matrix a. This resulting matrix when multiplied
-/// with the original matrix a will return an identity matrix (provided the matrix is invertable).
-Matrix4x4f Matrix4x4f_Inversed(const Matrix4x4f& a)
-{
-  static const uint8_t idxA[12] = { 0x50, 0x60, 0x70, 0x61, 0x71, 0x72, 0xFA, 0xF9, 0xE9, 0xF8, 0xE8, 0xD8 }; // entries 0-6 and 7-11 are mirrors with + 0x88
-  // TODO: idxE->J are all only using 4bits per entry, could reduce space by combining
-  static const uint8_t idxE[16] = { 5, 1, 13,  9,  4,  0, 12,  8,  4,  0, 12,  8,  4,  0, 12,  8 };
-  static const uint8_t idxF[16] = { 6, 2, 14, 10,  6,  2, 14, 10,  5,  1, 13,  9,  5,  1, 13,  9 };
-  static const uint8_t idxG[16] = { 7, 3, 15, 11,  7,  3, 15, 11,  7,  3, 15, 11,  6,  2, 14, 10 };
-  static const uint8_t idxH[16] = { 6, 6,  5,  5,  6,  6,  5,  5,  7,  7,  4,  4,  8,  8,  3,  3 };
-  static const uint8_t idxI[16] = { 7, 7,  4,  4,  9,  9,  2,  2,  9,  9,  2,  2, 10, 10,  1,  1 };
-  static const uint8_t idxJ[16] = { 8, 8,  3,  3, 10, 10,  1,  1, 11, 11,  0,  0, 11, 11,  0,  0 };
-  // TODO: could use bit flags to signify if positive or negative instead of needing 32-bits for each
-  static const float signs[16] = {1.f,-1.f,1.f,-1.f,-1.f,1.f,-1.f,1.f,1.f,-1.f,1.f,-1.f,-1.f,1.f,-1.f,1.f };
-  static const float detSigns[6] = { 1.f, -1.f, 1.f, 1.f, -1.f, 1.f };
-
-  Matrix4x4f ret;
-  const float* v = a.v;
-  float* r = ret.v;
-  float s[12];
-  for (int i = 0; i < 12; i++)
-  {
-    const int A = (idxA[i] & 0x0F) >> 0;
-    const int B = (idxA[i] & 0xF0) >> 4;
-    s[i] = v[A] * v[B] - v[A+4] * v[B+4];
-  }
-  float det = 0.f;
-  for (int i = 0; i < 6; i++)
-    det += detSigns[i] * s[i] * s[6+i];
-  float invdet = 1.0f / det;
-  for (int i = 0; i < 16; i++)
-    r[i] = signs[i] * (v[idxE[i]] * s[idxH[i]]
-        - v[idxF[i]] * s[idxI[i]] + v[idxG[i]] * s[idxJ[i]]) * invdet;
-  return ret;
-}
 
 /// Transforms arrays of vectors by the transform matrix. 
 /// \param translate is a bool to enable or disable applying the translation component of the transform.
@@ -167,6 +150,50 @@ void Vector4f_SSETransformStreamGeneric(float* outputStream, const float* inputS
   }
 }
 
+/// Transforms arrays of vectors by the transform matrix (non-SSE fallback implementation, untested). 
+/// \param translate is a bool to enable or disable applying the translation component of the transform.
+/// \param divideByW is a bool to enable or disable applying perspective by dividing by W.
+/// \param alignedOutput is ignored
+/// \param outputStep is the width in floats to the next vector element of the outputStream array.
+///        This allows the outputStream array to be an array of structures of which the vector is a member.
+///        These structures should be 32-bit aligned, and if the size is not a multiple of 128-bits, then
+///        alignedOutput shouldn't be set.
+/// \param alignedInput is ignored
+/// \param inputStep is the width in floats to the next vector element of the inputStream array.
+///        This allows the inputStream array to be an array of structures of which the vector is a member.
+///        These structures should be 32-bit aligned, and if the size is not a multiple of 128-bits, then
+///        alignedInput shouldn't be set.
+/// \param outputStream is the output buffer to put the transformed vectors to.
+/// \param inputStream is the input array of vectors to apply the transform to.
+/// \param count is the number of vectors to transform.
+/// \param transform is the matrix to apply.
+template <bool translate, bool divideByW, bool alignedOutput, int outputStep, bool alignedInput, int inputStep>
+void Vector4f_TransformStreamGeneric(float* outputStream, const float* inputStream, unsigned count, const Matrix4x4f& transform)
+{
+  for (unsigned i = 0; i < count; ++i)
+  {
+    Vector4f Z = Vector4f_Multiply(transform.row[2], Vector4f_Replicate(inputStream[2])); // z
+    if (translate)
+    {
+      Z = Vector4f_Add(transform.row[3], Z);
+    }
+    // This form of the transform function is tailored for platforms with fused multiply and add instructions
+    // and the compiler flags can be configured so that the compiler will be able to emit these.
+    // See the Vector4f_Transform function for the alternative form which transposes the transform matrix
+    // first and then uses dot products instead. On some platforms where there are optimizations for dot-products
+    // then this might be faster instead.
+    Z = Vector4f_Add(Z, Vector4f_Multiply(transform.row[1], Vector4f_Replicate(inputStream[1]))); // y
+    Z = Vector4f_Add(Z, Vector4f_Multiply(transform.row[0], Vector4f_Replicate(inputStream[0]))); // x
+    if (divideByW)
+    {
+      Z = Vector4f_Multiply(Z, Vector4f_Replicate(Scalar1f_One() / Z.w));
+    }
+    *(Vector4f*)outputStream = Z;
+    inputStream  += inputStep;
+    outputStream += outputStep;
+  }
+}
+
 /// Specialization of Vector4f_SSETransformStreamGeneric for transforming an array of vectors without applying perspective.
 /// \see Vector4f_SSETransformStreamGeneric
 template <size_t N>
@@ -217,5 +244,4 @@ void Vector4f_SSETransformNormalStreamAligned(Vector4f (&outputStream)[N], const
 {
   Vector4f_SSETransformStreamGeneric<false,false,true,4,true,4>((float*)outputStream, (float*)inputStream, N, transform);
 }
-
 

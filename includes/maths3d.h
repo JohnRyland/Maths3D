@@ -43,72 +43,81 @@
 ///////////////////////////////////////////////////////////////////////////////////
 // Documentation
 
-//
-// This code requires a modern C++ compiler but is mostly C and avoids using
-// classes (with the exception of providing unit type safety discussed below).
-// 
-// No header or library dependencies.
-// 
-// The API attempts to be functional in style, with inputs and a returned
-// output.
-// 
-// The inputs are never mutated (modified) and the returned value is a newly
-// constructed object. This is to maintain referential transparency. Some
-// benefits to this approach are that it is easy to chain together calls to
-// these APIs. It also means that they can be safely used in multithreaded
-// code. From a performance point of view it assumes that the compiler will be
-// able to perform RVO.
-// 
-// Inputs are passed by const reference when the size of the input would be
-// larger than the size of a pointer.
-// 
-// Changing the scalar type will change the underlying value type used by
-// vector and matrix.
-//
-// A scalar value used to represent an angle can sometimes be used incorrectly
-// when an API is not clear if the units are degrees or radians. To avoid this,
-// the API itself should document the units with a specific type that encode
-// the units. The types Degrees and Radians below do this. These are actually
-// classes and so this is C++, but it is worth the developer time it saves by
-// ensuring there is no mistakes of this kind. The same could be used for other
-// types of units as required, such as meters
-// vs feet if the API were to need this.
-//
-// Both the vector and matrix type contain unions with a 'v' member which can
-// be used for iteration of the components instead of needing to write code
-// which requires copy paste of the same code for each component. This avoids
-// mistakes, such as:
-//
-//    Vector4f ret;
-//    ret.x = a.x + b.x;
-//    ret.y = a.y + b.y;
-//    ret.y = a.z + b.z;
-// 
-// Do you see the mistake? Happens all the time. Far better is to write code
-// like this:
-// 
-//    Vector4f ret;
-//    for (int i = 0; i < 3; ++i)
-//      ret.v[i] = a.v[i] + b.v[i];
-//
-// Less lines of code, less error prone, and easier to update the formula
-// applied to each component.
-//
-// The API omits providing a 3 component wide vector and instead only provides
-// a Vector4f.  This is because when dealing with arrays of these, we will be
-// able to optimize better the 4 wide version, particularly if it can be
-// aligned to 128-bits and used with a SIMD optimized function to transform an
-// array of them. For all the provided functions below, we don't bother
-// providing SIMD optimizations as most compilers can auto-vectorize this code
-// just fine and so it only will make the code more error prone, and not able
-// to be re-compiled with different compiler flags to target different machine
-// types or with or without different levels of SIMD support (eg MMX, SSE3, SSE4).
-//
-// For some special cases where performance is important, see the maths3d_ext.h
-// file which contains SSE optimizations for transforming arrays of vectors. The
-// intent of the _ext.h file is to put any code which is not part of the core
-// API and is more bulky or platform specific.
-//
+/// \file maths3d.h
+///
+/// Scalar, Vector and Matrix types required for 3D maths.
+///
+/// This code requires a modern C++ compiler but is mostly C and avoids using
+/// classes (with the exception of providing unit type safety discussed below).
+/// 
+/// No header or library dependencies (other than math.h).
+/// 
+/// The API attempts to be functional in style, with inputs and a returned
+/// output.
+/// 
+/// The inputs are never mutated (modified) and the returned value is a newly
+/// constructed object. This is to maintain referential transparency. Some
+/// benefits to this approach are that it is easy to chain together calls to
+/// these APIs. It also means that they can be safely used in multithreaded
+/// code. From a performance point of view it assumes that the compiler will be
+/// able to perform RVO.
+/// 
+/// Inputs are passed by const reference when the size of the input would be
+/// larger than the size of a pointer.
+/// 
+/// Changing the scalar type will change the underlying value type used by
+/// vector and matrix.
+///
+/// A scalar value used to represent an angle can sometimes be used incorrectly
+/// when an API is not clear if the units are degrees or radians. To avoid this,
+/// the API itself should document the units with a specific type that encode
+/// the units. The types Degrees and Radians below do this. These are actually
+/// classes and so this is C++, but it is worth the developer time it saves by
+/// ensuring there is no mistakes of this kind. The same could be used for other
+/// types of units as required, such as meters
+/// vs feet if the API were to need this.
+///
+/// Both the vector and matrix type contain unions with a 'v' member which can
+/// be used for iteration of the components instead of needing to write code
+/// which requires copy paste of the same code for each component. This avoids
+/// mistakes, such as:
+///
+///    Vector4f ret;
+///    ret.x = a.x + b.x;
+///    ret.y = a.y + b.y;
+///    ret.y = a.z + b.z;
+/// 
+/// Do you see the mistake? Happens all the time. Far better is to write code
+/// like this:
+/// 
+///    Vector4f ret;
+///    for (int i = 0; i < 3; ++i)
+///      ret.v[i] = a.v[i] + b.v[i];
+///
+/// Less lines of code, less error prone, and easier to update the formula
+/// applied to each component.
+///
+/// The API omits providing a 3 component wide vector and instead only provides
+/// a Vector4f.  This is because when dealing with arrays of these, we will be
+/// able to optimize better the 4 wide version, particularly if it can be
+/// aligned to 128-bits and used with a SIMD optimized function to transform an
+/// array of them. For all the provided functions below, we don't bother
+/// providing SIMD optimizations as most compilers can auto-vectorize this code
+/// just fine and so it only will make the code more error prone, and not able
+/// to be re-compiled with different compiler flags to target different machine
+/// types or with or without different levels of SIMD support (eg MMX, SSE3, SSE4).
+///
+/// For some special cases where performance is important, see the maths3d_ext.h
+/// file which contains SSE optimizations for transforming arrays of vectors. The
+/// intent of the _ext.h file is to put any code which is not part of the core
+/// API and is more bulky or platform specific.
+///
+
+
+///////////////////////////////////////////////////////////////////////////////////
+// Includes
+
+#include <cmath>
 
 
 ///////////////////////////////////////////////////////////////////////////////////
@@ -394,82 +403,41 @@ inline Matrix4x4f Matrix4x4f_TranslateXYZ(const Vector4f& vec)
 /// This can be used to compound together different transformations. Note the order
 /// matters, as a translation followed by a rotation, for example, is not the same
 /// transformation as a rotation followed by a translation.
-static Matrix4x4f Matrix4x4f_Multiply(const Matrix4x4f& m1, const Matrix4x4f& m2)
-{
-  Matrix4x4f ret = Matrix4x4f_Zero();
-  for (int i = 0; i < 4; i++)
-    for (int j = 0; j < 4; j++)
-      for (int k = 0; k < 4; k++)
-        ret.m[i][j] += m1.m[k][j] * m2.m[i][k];
-  return ret;
-}
+Matrix4x4f Matrix4x4f_Multiply(const Matrix4x4f& m1, const Matrix4x4f& m2);
 
 /// Creates a matrix where the matrix a is mirrored through the diagonal of the matrix.
-static Matrix4x4f Matrix4x4f_Transposed(const Matrix4x4f& a)
-{
-  Matrix4x4f ret;
-  for (int i = 0; i < 4; i++)
-    for (int j = 0; j < 4; j++)
-      ret.m[i][j] = a.m[j][i];
-  return ret;
-}
+Matrix4x4f Matrix4x4f_Transposed(const Matrix4x4f& a);
 
 /// Creates a matrix that when multiplied by it will be able to apply a uniform 3D
 /// scaling transformation (uniform meaning that it is scaled by the same amount in
 /// the x, y and z dimensions).
-static Matrix4x4f Matrix4x4f_Scaled(const Matrix4x4f& m, Scalar1f scale)
-{
-  Matrix4x4f ret = m;
-  for (int i = 0; i < 16; i++)
-    ret.v[i] = m.v[i] * scale;
-  return ret;
-}
+Matrix4x4f Matrix4x4f_Scaled(const Matrix4x4f& m, Scalar1f scale);
 
 /// Creates a matrix that when multiplied by it will be able to apply a 3D scaling
 /// transformation. This is a non-uniform scaling where the amount scaled in each
 /// dimension is determined by the scale vector parameter.
-static Matrix4x4f Matrix4x4f_ScaleXYZ(const Vector4f& scale)
-{
-  Matrix4x4f ret = Matrix4x4f_Zero();
-  ret.m[0][0] = scale.x;
-  ret.m[1][1] = scale.y;
-  ret.m[2][2] = scale.z;
-  ret.m[3][3] = scale.w;
-  return ret;
-}
+Matrix4x4f Matrix4x4f_ScaleXYZ(const Vector4f& scale);
 
 /// Internal helper function for implementing the other matrix rotation functions.
-static Matrix4x4f Matrix4x4f_RotateCommon(Scalar1f angle, int axis)
-{
-  const Scalar1f sx = ::sin(angle);
-  const Scalar1f cx = ::cos(angle);
-  Matrix4x4f ret = Matrix4x4f_Zero();
-  ret.m[0][2]    = ret.m[1][0]    = ret.m[2][1]    = sx;
-  ret.m[0][1]    = ret.m[1][2]    = ret.m[2][0]    = -sx;
-  ret.m[axis][0] = ret.m[axis][1] = ret.m[axis][2] = Scalar1f_Zero();
-  ret.m[0][axis] = ret.m[1][axis] = ret.m[2][axis] = Scalar1f_Zero();
-  ret.m[0][0]    = ret.m[1][1]    = ret.m[2][2]    = cx;
-  ret.m[axis][axis] = ret.m[3][3] = Scalar1f_One();
-  return ret;
-}
+Matrix4x4f Matrix4x4f_RotateCommon(Radians angle, int axis);
 
 /// Creates a matrix that when multiplied by it will be able to apply a 3D rotation
 /// transformation about the x axis. The x parameter is in radians.
-inline Matrix4x4f Matrix4x4f_RotateX(Scalar1f x)
+inline Matrix4x4f Matrix4x4f_RotateX(Radians x)
 {
   return Matrix4x4f_RotateCommon(x, 0);
 }
 
 /// Creates a matrix that when multiplied by it will be able to apply a 3D rotation
 /// transformation about the y axis. The y parameter is in radians.
-inline Matrix4x4f Matrix4x4f_RotateY(Scalar1f y)
+inline Matrix4x4f Matrix4x4f_RotateY(Radians y)
 {
   return Matrix4x4f_RotateCommon(y, 1);
 }
 
 /// Creates a matrix that when multiplied by it will be able to apply a 3D rotation
 /// transformation about the z axis. The z parameter is in radians.
-inline Matrix4x4f Matrix4x4f_RotateZ(Scalar1f z)
+inline Matrix4x4f Matrix4x4f_RotateZ(Radians z)
 {
   return Matrix4x4f_RotateCommon(z, 2);
 }
@@ -480,20 +448,7 @@ inline Matrix4x4f Matrix4x4f_RotateZ(Scalar1f z)
 /// \param aspectRatio is the ratio of width to height of the view.
 /// \param near is the distance to the near plane. Depth values are scaled according to this.
 /// \param far is the distance to the far plane. Depth values are scaled according to this.
-static Matrix4x4f Matrix4x4f_PerspectiveFrustum(Radians fieldOfView, Scalar1f aspectRatio, Scalar1f near, Scalar1f far)
-{
-  const Scalar1f z = Scalar1f_Zero();
-  const Scalar1f one = Scalar1f_One();
-  const Scalar1f two = Scalar1f_Two();
-  const Scalar1f fov = fieldOfView.value;
-  const Scalar1f ctan = one / ::tanf(fov / two);
-  const Scalar1f inlf = one / (near - far);
-  const Scalar1f perspective[16] = { ctan / aspectRatio, z, z, z,
-                                     z, ctan, z, z,
-                                     z, z, (far + near) * inlf, -one,
-                                     z, z, (two * far * near) * inlf, z };
-  return Matrix4x4f_Set(perspective);
-}
+Matrix4x4f Matrix4x4f_PerspectiveFrustum(Radians fieldOfView, Scalar1f aspectRatio, Scalar1f near, Scalar1f far);
 
 /// Creates a matrix that when multiplied by it will be able to apply a 3D orthographic
 /// projection transformation.
@@ -503,33 +458,33 @@ static Matrix4x4f Matrix4x4f_PerspectiveFrustum(Radians fieldOfView, Scalar1f as
 /// \param top the distance from the centre of the projection to the top edge of the view.
 /// \param near is the distance to the near plane. Depth values are scaled according to this.
 /// \param far is the distance to the far plane. Depth values are scaled according to this.
-static Matrix4x4f Matrix4x4f_OrthographicFrustum(Scalar1f left, Scalar1f right, Scalar1f bottom, Scalar1f top, Scalar1f near, Scalar1f far)
+Matrix4x4f Matrix4x4f_OrthographicFrustum(Scalar1f left, Scalar1f right, Scalar1f bottom, Scalar1f top, Scalar1f near, Scalar1f far);
+
+/// Calculates the determinate of the matrix a. The determinate can be used to decide if a matrix is
+/// invertible or not. If you need to use Matrix4x4f_Inversed and need to know if it will succeed or not,
+/// then use this function and the Matrix4x4f_Adjugate functions directly instead of the Matrix4x4f_Inversed
+/// convenience function.
+/// \see Matrix4x4f_Inversed, Matrix4x4f_Adjugate
+Scalar1f Matrix4x4f_Determinant(const Matrix4x4f& a);
+
+/// Calculates the adjugate of the matrix a. This is used to find the inverse of the matrix.
+/// \see Matrix4x4f_Inversed, Matrix4x4f_Determinate
+Matrix4x4f Matrix4x4f_Adjugate(const Matrix4x4f& a);
+
+/// Creates a matrix that is the inverse of matrix a. This resulting matrix when multiplied
+/// with the original matrix a will return an identity matrix (provided the matrix is invertible).
+/// \see Matrix4x4f_Adjugate, Matrix4x4f_Determinate
+inline Matrix4x4f Matrix4x4f_Inversed(const Matrix4x4f& a)
 {
-  const Scalar1f z = Scalar1f_Zero();
-  const Scalar1f two = Scalar1f_Two();
-  const Scalar1f width = right - left;
-  const Scalar1f height = top - bottom;
-  const Scalar1f depth = far - near;
-  const Scalar1f a = two / width;
-  const Scalar1f b = (right + left) / width;
-  const Scalar1f c = two / height;
-  const Scalar1f d = (top + bottom) / height;
-  const Scalar1f e = -(far + near) / depth;
-  Scalar1f ortho[16] = { a, z, z,-b,
-                         z, c, z,-d,
-                         z, z,-two/depth, e,
-                         z, z, z, z };
-  return Matrix4x4f_Set(ortho);
+  Scalar1f det = Matrix4x4f_Determinant(a);
+  if (det != Scalar1f_Zero())
+  {
+    return Matrix4x4f_Scaled(Matrix4x4f_Adjugate(a), Scalar1f_One() / det);
+  }
+  return Matrix4x4f_Zero();
 }
 
 /// Applies the transformation of matrix m to vector vec, and returns the transformed
 /// vector.
-static Vector4f Vector4f_Transform(const Matrix4x4f& m, const Vector4f& vec)
-{
-  Matrix4x4f trans = Matrix4x4f_Transposed(m);
-  return Vector4f_Set(Vector4f_DotProduct(trans.row[0], vec),
-                      Vector4f_DotProduct(trans.row[1], vec),
-                      Vector4f_DotProduct(trans.row[2], vec),
-                      Vector4f_DotProduct(trans.row[3], vec));
-}
+Vector4f Vector4f_Transform(const Matrix4x4f& m, const Vector4f& vec);
 
