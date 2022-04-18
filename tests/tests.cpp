@@ -34,38 +34,34 @@
 #include <cstdio>
 #include <cmath>
 #include "maths3d_ext.h"
+#include "test.h"
 
 
-const float epsilon = 0.000001f;
+#ifdef ENABLE_UNIT_TESTS
 
-#define FLOAT_COMPARE(a, b) \
-    if (fabs(a - b) > epsilon) \
-    { \
-      printf("values not equal: %f != %f\n", a, b); \
-      return -1; \
-    }
+namespace {
 
+const float epsilon = 0.00001f;
 
 // Exercise all the scalar functions
-int scalar_tests()
+TEST(Maths3DTest, Scalar)
 {
   printf("Starting scalar tests\n");
 
   Radians rad = Degrees{ 15.0f };
   Degrees deg = rad;
-  FLOAT_COMPARE(deg.value, 15.0f)
+  EXPECT_NEAR(deg.value, 15.0f, epsilon);
 
   Feet ft = Metres{ 10.0f };
   Metres m = ft;
-  FLOAT_COMPARE(m.value, 10.0f)
-
-  return 0;
+  EXPECT_NEAR(m.value, 10.0f, epsilon);
 }
 
 // Exercise all the Vector4f functions (some indirectly)
-int vector_tests()
+TEST(Maths3DTest, Vector)
 {
   printf("Starting vector tests\n");
+
   Vector4f v1 = Vector4f_SetW(Vector4f_SetZ(Vector4f_Zero(), 1.0), 2.0);
   Vector4f v2 = Vector4f_SetY(Vector4f_SetX(Vector4f_Zero(), 3.0), 4.0);
   Vector4f v3 = Vector4f_Add(v1, v2);
@@ -75,14 +71,13 @@ int vector_tests()
   Vector4f expectedCross = Vector4f_Set(-4.0, -3.0, 0.0, 1.0);
   for (int i = 0; i < 4; ++i)
   {
-    FLOAT_COMPARE(cross.v[i], expectedCross.v[i])
-    FLOAT_COMPARE(norm1.v[i], norm2.v[i])
+    EXPECT_NEAR(cross.v[i], expectedCross.v[i], epsilon);
+    EXPECT_NEAR(norm1.v[i], norm2.v[i], epsilon);
   }
-  return 0;
 }
 
 // Exercise all the Matrix4x4f functions (some indirectly)
-int matrix_tests()
+TEST(Maths3DTest, Matrix)
 {
   printf("Starting matrix tests\n");
 
@@ -101,12 +96,10 @@ int matrix_tests()
 
   modelViewProjection = Matrix4x4f_OrthographicFrustum(-1.0f, 1.0f, -1.0f, 1.0f, -1.0f, 1.0f);
   vec = Vector4f_Transform(modelViewProjection, Vector4f_Zero());
-
-  return 0;
 }
 
 // Exercise all the extension functions
-int extension_tests()
+TEST(Maths3DTest, Extensions)
 {
   printf("Starting extension tests\n");
 
@@ -117,7 +110,7 @@ int extension_tests()
   // Check that can do inverse or inverse and get back our original matrix within some precision
   for (int i = 0; i < 16; ++i)
   {
-    FLOAT_COMPARE(modelViewProjection.v[i], invinv.v[i])
+    EXPECT_NEAR(modelViewProjection.v[i], invinv.v[i], epsilon);
   }
 
   Vector4f vecs[16];
@@ -133,17 +126,32 @@ int extension_tests()
   Vector4f_SSETransformStreamAligned(vecOut, vecs, modelViewProjection);
   Vector4f_SSETransformCoordStreamAligned(vecOut, vecs, modelViewProjection);
   Vector4f_SSETransformNormalStreamAligned(vecOut, vecs, modelViewProjection);
+}
 
+BENCHMARK(Maths3DTest, Transform, iterations)
+{
+  Matrix4x4f modelViewProjection = Matrix4x4f_PerspectiveFrustum(Degrees{15.0}, 1.0f, 0.1, 10000.0);
+  Vector4f vecs[256];
+  Vector4f vecOut[256];
+  for (int i = 0; i < 256; ++i)
+  {
+    vecs[i] = Vector4f_Set(i, i, i, 1.0);
+  }
+
+  for (int i = 0; i < iterations; ++i)
+  {
+    Vector4f_SSETransformStream(vecOut, vecs, modelViewProjection);
+  }
+}
+
+}  // namespace
+
+#else
+
+int main()
+{
+  printf("Tests were not run\n");
   return 0;
 }
 
-int main(int argc, const char* argv[])
-{
-  printf("Starting Maths3D tests\n");
-  return scalar_tests() ||
-         vector_tests() ||
-         matrix_tests() ||
-         extension_tests();
-  printf("Finished Maths3D tests\n");
-}
-
+#endif
