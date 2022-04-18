@@ -146,4 +146,12 @@ BENCHMARK(Maths3DTest, Transform, iterations)
 
 }  // namespace
 
+#else
+
+int main()
+{
+  printf("Tests were not run\n");
+  return 0;
+}
+
 #endif
