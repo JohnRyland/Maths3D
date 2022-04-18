@@ -101,11 +101,15 @@ $(document).ready(function(){initNavTree('structMetres.html',''); initResizable(
 </div><!--header-->
 <div class="contents">
 
+<p>This helper type ensures it is harder to mess up the units and makes the APIs self-documenting.  
+ <a href="structMetres.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="maths3d_8h_source.html">maths3d.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a7d56eee30d66057260ef16042af42ab0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structMetres.html#a7d56eee30d66057260ef16042af42ab0">operator Feet</a> () const</td></tr>
+<tr class="memdesc:a7d56eee30d66057260ef16042af42ab0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The value in meters.  <a href="structMetres.html#a7d56eee30d66057260ef16042af42ab0">More...</a><br /></td></tr>
 <tr class="separator:a7d56eee30d66057260ef16042af42ab0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -113,7 +117,11 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:af909180c5f1c755bf04153bd08afd80b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="maths3d_8h.html#afa8e5a9ded9b1a9dfeb09b6d20eb0ae2">Scalar1f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structMetres.html#af909180c5f1c755bf04153bd08afd80b">value</a></td></tr>
 <tr class="separator:af909180c5f1c755bf04153bd08afd80b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This helper type ensures it is harder to mess up the units and makes the APIs self-documenting. </p>
+<dl class="section note"><dt>Note</dt><dd>As with degrees and radians, so too can distances be confusing. And it might also be confusing if a parameter is an angle or a distance, Take as an example a function like <code>void setElevation(float elevation)</code> It might mean the distance above sea level, which may be in meters or feet, or it might be an angle of elevation, such as 20 degrees above the horizon. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="structFeet.html" title="International feet (which is almost the same as U.S feet and survey feet). This helper type ensures i...">Feet</a> </dd></dl>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a7d56eee30d66057260ef16042af42ab0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7d56eee30d66057260ef16042af42ab0">&#9670;&nbsp;</a></span>operator Feet()</h2>
 
@@ -136,6 +144,8 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>The value in meters. </p>
 
 </div>
 </div>

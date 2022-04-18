@@ -1,5 +1,5 @@
 <map id="Matrix4x4f_RotateCommon" name="Matrix4x4f_RotateCommon">
-<area shape="rect" id="node1" title=" " alt="" coords="460,56,663,83"/>
+<area shape="rect" id="node1" title="Internal helper function for implementing the other matrix rotation functions." alt="" coords="460,56,663,83"/>
 <area shape="rect" id="node2" href="$maths3d_8h.html#a8e55e35ba129e305548e271c9a825524" title=" " alt="" coords="260,5,412,32"/>
 <area shape="rect" id="node5" href="$maths3d_8h.html#afc3c0913e70c1567f4c99c2d4f997352" title=" " alt="" coords="261,56,411,83"/>
 <area shape="rect" id="node6" href="$maths3d_8h.html#ad6409707b2f0acdb02554bebde18974b" title=" " alt="" coords="260,107,412,133"/>

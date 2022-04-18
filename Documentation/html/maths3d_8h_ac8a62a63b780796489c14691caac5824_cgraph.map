@@ -2,7 +2,7 @@
 <area shape="rect" id="node1" title="Copies vec and divides each component by the length of vec (returning the normalized or unit vector o..." alt="" coords="5,81,164,108"/>
 <area shape="rect" id="node2" href="$maths3d_8h.html#add8a21f2e58d7d54153d07a551e2295a" title="Calculates 1/length of vec." alt="" coords="212,56,407,83"/>
 <area shape="rect" id="node10" href="$maths3d_8h.html#a6e31aefd604b0542109db392dbe9d4ed" title="Copies vec and multiplies each component by scale." alt="" coords="871,107,998,133"/>
-<area shape="rect" id="node3" href="$maths3d_8h.html#a7d18c307128606532d069a5fc8e9effe" title=" " alt="" coords="464,5,572,32"/>
+<area shape="rect" id="node3" href="$maths3d_8h.html#a7d18c307128606532d069a5fc8e9effe" title="If redefine Scalar1f to something other than float, update this function as applicable." alt="" coords="464,5,572,32"/>
 <area shape="rect" id="node4" href="$maths3d_8h.html#a4f551392427772319a2abb968295bad2" title="Calculates the length of vec." alt="" coords="455,56,581,83"/>
 <area shape="rect" id="node5" href="$maths3d_8h.html#a6a12894b1a4971a2291d506140394124" title="Calculates the length squared of vec." alt="" coords="629,56,809,83"/>
 <area shape="rect" id="node6" href="$maths3d_8h.html#afa6fbd00f48007bc9ca8b9fad6911058" title="Calculates the dot&#45;product of vec1 and vec2." alt="" coords="857,56,1012,83"/>

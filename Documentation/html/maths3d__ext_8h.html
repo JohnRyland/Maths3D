@@ -168,6 +168,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Creates a matrix that is the inverse of matrix a. This resulting matrix when multiplied with the original matrix a will return an identity matrix (provided the matrix is invertable). </p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -214,6 +215,7 @@ template&lt;size_t N&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Specialization of Vector4f_SSETransformStreamGeneric for transforming an array of vectors with perspective. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="maths3d__ext_8h.html#a7cd34ee25da58bfecc1ea06856cb17c9">Vector4f_SSETransformStreamGeneric</a> </dd></dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -260,6 +262,7 @@ template&lt;size_t N&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Specialization of Vector4f_SSETransformStreamGeneric for transforming an array of vectors with perspective where the arrays of vectors have been prepared to be aligned to a 128-bit boundary. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="maths3d__ext_8h.html#a7cd34ee25da58bfecc1ea06856cb17c9">Vector4f_SSETransformStreamGeneric</a> </dd></dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -306,6 +309,7 @@ template&lt;size_t N&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Specialization of Vector4f_SSETransformStreamGeneric for transforming an array of normal vectors. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="maths3d__ext_8h.html#a7cd34ee25da58bfecc1ea06856cb17c9">Vector4f_SSETransformStreamGeneric</a> </dd></dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -352,6 +356,7 @@ template&lt;size_t N&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Specialization of Vector4f_SSETransformStreamGeneric for transforming an array of normal vectors where the arrays of vectors have been prepared to be aligned to a 128-bit boundary. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="maths3d__ext_8h.html#a7cd34ee25da58bfecc1ea06856cb17c9">Vector4f_SSETransformStreamGeneric</a> </dd></dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -398,6 +403,7 @@ template&lt;size_t N&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Specialization of Vector4f_SSETransformStreamGeneric for transforming an array of vectors without applying perspective. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="maths3d__ext_8h.html#a7cd34ee25da58bfecc1ea06856cb17c9">Vector4f_SSETransformStreamGeneric</a> </dd></dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -444,6 +450,7 @@ template&lt;size_t N&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Specialization of Vector4f_SSETransformStreamGeneric for transforming an array of vectors without applying perspective where the arrays of vectors have been prepared to be aligned to a 128-bit boundary. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="maths3d__ext_8h.html#a7cd34ee25da58bfecc1ea06856cb17c9">Vector4f_SSETransformStreamGeneric</a> </dd></dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -496,6 +503,21 @@ template&lt;bool translate, bool divideByW, bool alignedOutput, int outputStep, 
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Transforms arrays of vectors by the transform matrix. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">translate</td><td>is a bool to enable or disable applying the translation component of the transform. </td></tr>
+    <tr><td class="paramname">divideByW</td><td>is a bool to enable or disable applying perspective by dividing by W. </td></tr>
+    <tr><td class="paramname">alignedOutput</td><td>is a bool to flag if outputStream is aligned to a 128-bit boundary or not. </td></tr>
+    <tr><td class="paramname">outputStep</td><td>is the width in floats to the next vector element of the outputStream array. This allows the outputStream array to be an array of structures of which the vector is a member. These structures should be 32-bit aligned, and if the size is not a multiple of 128-bits, then alignedOutput shouldn't be set. </td></tr>
+    <tr><td class="paramname">alignedInput</td><td>is a bool to flag if inputStream is aligned to a 128-bit boundary or not. </td></tr>
+    <tr><td class="paramname">inputStep</td><td>is the width in floats to the next vector element of the inputStream array. This allows the inputStream array to be an array of structures of which the vector is a member. These structures should be 32-bit aligned, and if the size is not a multiple of 128-bits, then alignedInput shouldn't be set. </td></tr>
+    <tr><td class="paramname">outputStream</td><td>is the output buffer to put the transformed vectors to. </td></tr>
+    <tr><td class="paramname">inputStream</td><td>is the input array of vectors to apply the transform to. </td></tr>
+    <tr><td class="paramname">count</td><td>is the number of vectors to transform. </td></tr>
+    <tr><td class="paramname">transform</td><td>is the matrix to apply. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

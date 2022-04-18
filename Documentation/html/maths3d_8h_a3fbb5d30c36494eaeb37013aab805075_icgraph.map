@@ -1,8 +1,8 @@
 <map id="Matrix4x4f_Zero" name="Matrix4x4f_Zero">
-<area shape="rect" id="node1" title=" " alt="" coords="744,107,875,133"/>
+<area shape="rect" id="node1" title="Initialize the matrix to zero." alt="" coords="744,107,875,133"/>
 <area shape="rect" id="node2" href="$maths3d_8h.html#aee566e6a213d4cfeeede9e23eac68c8f" title=" " alt="" coords="519,12,670,39"/>
 <area shape="rect" id="node6" href="$maths3d_8h.html#a163ffd684df4d3e85aeecc27687e24ba" title=" " alt="" coords="518,69,671,96"/>
-<area shape="rect" id="node7" href="$maths3d_8h.html#a655c027ed401744ea139601bb2219223" title=" " alt="" coords="493,132,696,159"/>
+<area shape="rect" id="node7" href="$maths3d_8h.html#a655c027ed401744ea139601bb2219223" title="Internal helper function for implementing the other matrix rotation functions." alt="" coords="493,132,696,159"/>
 <area shape="rect" id="node11" href="$maths3d_8h.html#ad520ae2903c45418c3c4809762623e22" title=" " alt="" coords="514,208,675,235"/>
 <area shape="rect" id="node3" href="$maths3d_8h.html#ad9ab510eb17aa1dc3dc76005eb09d667" title=" " alt="" coords="260,5,445,32"/>
 <area shape="rect" id="node4" href="$tests_8cpp.html#a81702378d4fe24787c381f549e8e1847" title=" " alt="" coords="108,132,212,159"/>

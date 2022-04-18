@@ -102,7 +102,13 @@ Generating caller graph for function Matrix4x4f_Scaled
 Generating call graph for function Matrix4x4f_ScaleXYZ
 Generating caller graph for function Matrix4x4f_ScaleXYZ
 Generating caller graph for function Matrix4x4f_Set
-Generating call graph for function Matrix4x4f_TranslateXYZ
+Generating call grincludes/maths3d_ext.h:84: warning: argument 'translate' of command @param is not found in the argument list of Vector4f_SSETransformStreamGeneric(float *outputStream, const float *inputStream, unsigned count, const Matrix4x4f &transform)
+includes/maths3d_ext.h:84: warning: argument 'divideByW' of command @param is not found in the argument list of Vector4f_SSETransformStreamGeneric(float *outputStream, const float *inputStream, unsigned count, const Matrix4x4f &transform)
+includes/maths3d_ext.h:84: warning: argument 'alignedOutput' of command @param is not found in the argument list of Vector4f_SSETransformStreamGeneric(float *outputStream, const float *inputStream, unsigned count, const Matrix4x4f &transform)
+includes/maths3d_ext.h:84: warning: argument 'outputStep' of command @param is not found in the argument list of Vector4f_SSETransformStreamGeneric(float *outputStream, const float *inputStream, unsigned count, const Matrix4x4f &transform)
+includes/maths3d_ext.h:84: warning: argument 'alignedInput' of command @param is not found in the argument list of Vector4f_SSETransformStreamGeneric(float *outputStream, const float *inputStream, unsigned count, const Matrix4x4f &transform)
+includes/maths3d_ext.h:84: warning: argument 'inputStep' of command @param is not found in the argument list of Vector4f_SSETransformStreamGeneric(float *outputStream, const float *inputStream, unsigned count, const Matrix4x4f &transform)
+aph for function Matrix4x4f_TranslateXYZ
 Generating caller graph for function Matrix4x4f_TranslateXYZ
 Generating caller graph for function Matrix4x4f_Transposed
 Generating call graph for function Matrix4x4f_Zero

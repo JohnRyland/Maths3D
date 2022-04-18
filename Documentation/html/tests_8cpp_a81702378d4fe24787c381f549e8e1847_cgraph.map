@@ -10,15 +10,15 @@
 <area shape="rect" id="node15" href="$maths3d_8h.html#ad520ae2903c45418c3c4809762623e22" title=" " alt="" coords="169,200,331,226"/>
 <area shape="rect" id="node16" href="$maths3d_8h.html#ad9ab510eb17aa1dc3dc76005eb09d667" title=" " alt="" coords="157,453,343,480"/>
 <area shape="rect" id="node19" href="$maths3d_8h.html#ae4a4af082482c7992d487d2f709a1d4b" title="Assigns x, y, z and w to the corresponding components of the vector." alt="" coords="923,504,1027,530"/>
-<area shape="rect" id="node20" href="$maths3d_8h.html#aefb08742da337dfb8cc6147e39b16fd0" title=" " alt="" coords="423,605,596,632"/>
+<area shape="rect" id="node20" href="$maths3d_8h.html#aefb08742da337dfb8cc6147e39b16fd0" title="Creates a matrix where the matrix a is mirrored through the diagonal of the matrix." alt="" coords="423,605,596,632"/>
 <area shape="rect" id="node21" href="$maths3d_8h.html#a63fb9c019da7af1893d1e5814f0a98fd" title=" " alt="" coords="176,554,324,581"/>
 <area shape="rect" id="node25" href="$maths3d_8h.html#a92d8749d3bc3bec741c75d5e722b8911" title="Assigns zero to all four of the components of the vector." alt="" coords="453,453,566,480"/>
-<area shape="rect" id="node3" href="$maths3d_8h.html#a3fbb5d30c36494eaeb37013aab805075" title=" " alt="" coords="708,200,839,226"/>
-<area shape="rect" id="node4" href="$maths3d_8h.html#a23076d13621d19b8faf6760896a64270" title=" " alt="" coords="919,200,1031,226"/>
-<area shape="rect" id="node6" href="$maths3d_8h.html#a0e389dd6c80ea3d67dca4280855af2b2" title=" " alt="" coords="713,48,834,74"/>
-<area shape="rect" id="node7" href="$maths3d_8h.html#a791539fd7b912c66a12b8049bc5c37cb" title=" " alt="" coords="720,98,827,125"/>
-<area shape="rect" id="node9" href="$maths3d_8h.html#a7d18c307128606532d069a5fc8e9effe" title=" " alt="" coords="719,301,827,328"/>
-<area shape="rect" id="node11" href="$maths3d_8h.html#a655c027ed401744ea139601bb2219223" title=" " alt="" coords="408,250,611,277"/>
+<area shape="rect" id="node3" href="$maths3d_8h.html#a3fbb5d30c36494eaeb37013aab805075" title="Initialize the matrix to zero." alt="" coords="708,200,839,226"/>
+<area shape="rect" id="node4" href="$maths3d_8h.html#a23076d13621d19b8faf6760896a64270" title="If redefine Scalar1f to something other than float, update this function as applicable." alt="" coords="919,200,1031,226"/>
+<area shape="rect" id="node6" href="$maths3d_8h.html#a0e389dd6c80ea3d67dca4280855af2b2" title="Initialize the matrix from an array of 16 values." alt="" coords="713,48,834,74"/>
+<area shape="rect" id="node7" href="$maths3d_8h.html#a791539fd7b912c66a12b8049bc5c37cb" title="If redefine Scalar1f to something other than float, update this function as applicable." alt="" coords="720,98,827,125"/>
+<area shape="rect" id="node9" href="$maths3d_8h.html#a7d18c307128606532d069a5fc8e9effe" title="If redefine Scalar1f to something other than float, update this function as applicable." alt="" coords="719,301,827,328"/>
+<area shape="rect" id="node11" href="$maths3d_8h.html#a655c027ed401744ea139601bb2219223" title="Internal helper function for implementing the other matrix rotation functions." alt="" coords="408,250,611,277"/>
 <area shape="rect" id="node17" href="$maths3d_8h.html#aee566e6a213d4cfeeede9e23eac68c8f" title=" " alt="" coords="434,301,585,328"/>
 <area shape="rect" id="node18" href="$maths3d_8h.html#a2e257e9a25dbf2a26be0ffdee03cb9d9" title="Copies vec and sets the w component of the vector to w." alt="" coords="715,352,832,378"/>
 <area shape="rect" id="node22" href="$maths3d_8h.html#afa6fbd00f48007bc9ca8b9fad6911058" title="Calculates the dot&#45;product of vec1 and vec2." alt="" coords="432,554,587,581"/>
