@@ -13,10 +13,13 @@ All rights reserved
 
 [![](https://github.com/JohnRyland/Maths3D/workflows/build/badge.svg)](https://github.com/JohnRyland/Maths3D/actions/workflows/build.yml)
 [![](https://github.com/JohnRyland/Maths3D/workflows/coverage/badge.svg)](https://github.com/JohnRyland/Maths3D/actions/workflows/coverage.yml)
+[![](https://github.com/JohnRyland/Maths3D/workflows/documentation/badge.svg)](https://github.com/JohnRyland/Maths3D/actions/workflows/documentation.yml)
 
 [Coverage Report](http://johnryland.github.io/Maths3D/Coverage/)
 
-[Documentation](http://johnryland.github.io/Maths3D/Documentation/)
+[Documentation](http://johnryland.github.io/Maths3D/Documentation/html/)
+
+[PDF](http://johnryland.github.io/Maths3D/Documentation/docs/README.pdf)
 
 [Source](https://github.com/JohnRyland/Maths3D/tree/main)
 
