@@ -38,8 +38,14 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          git config --global user.email "JohnRyland@users.noreply.github.com"
+          git config --global user.name "JohnRyland"          
+          git config pull.rebase false
           git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          git branch gh-pages || true
           git checkout gh-pages
+          git pull origin gh-pages || true
+          git push -u origin gh-pages || true
           mkdir -p Coverage
 
       - name: Download job1 artifacts
@@ -51,10 +57,8 @@ jobs:
       - name: Git add & commit
         working-directory: Coverage
         run: |
-          git config --global user.email "JohnRyland@users.noreply.github.com"
-          git config --global user.name "JohnRyland"          
           git add .
-          git commit -m "Publish Maths3D coverage report" || true
-          git config pull.rebase false
-          git pull
-          git push || true
+          git commit -m "Publish coverage report" || true
+          git pull origin gh-pages || true
+          git push -u origin gh-pages || true
+

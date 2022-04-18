@@ -16,9 +16,14 @@ jobs:
       - name: Install tools
         run: |
           sudo apt update
-          sudo apt-get install -y doxygen graphviz plantuml
+          sudo apt install -y doxygen graphviz plantuml
+          sudo apt install -y texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra
+          sudo apt install -y pandoc librsvg2-bin
+
       - name: Generate documentation
         run: |
+          git config --global user.name "John Ryland"
+          make pdfs
           make doxygen
           sed -i 's/object type="image\/svg+xml" data/img src/g' .build/docs/html/index.html
 
@@ -26,7 +31,7 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
           name: documentation
-          path: .build/docs/html
+          path: .build/docs
 
   job2:
     name: Publish
@@ -39,9 +44,16 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          git config --global user.email "JohnRyland@users.noreply.github.com"
+          git config --global user.name "JohnRyland"          
+          git config pull.rebase false
           git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          git branch gh-pages || true
           git checkout gh-pages
+          git pull origin gh-pages || true
+          git push -u origin gh-pages || true
           mkdir -p Documentation
+
       - name: Download job1 artifacts
         uses: actions/download-artifact@v1
         with:
@@ -51,10 +63,8 @@ jobs:
       - name: Git add & commit
         working-directory: Documentation
         run: |
-          git config --global user.email "JohnRyland@users.noreply.github.com"
-          git config --global user.name "JohnRyland"          
           git add .
-          git commit -m "Publish Maths3D documentation" || true
-          git config pull.rebase false
-          git pull
-          git push || true
+          git commit -m "Publish documentation" || true
+          git pull origin gh-pages || true
+          git push -u origin gh-pages || true
+
