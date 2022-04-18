@@ -136,18 +136,24 @@ inline Scalar1f Scalar1f_Two()
   return 2.0f;
 }
 
-/// This helper type ensures it is harder to mess up the units and makes the APIs self-documenting.
 struct Degrees;
 
-/// This helper type ensures it is harder to mess up the units and makes the APIs self-documenting.
 struct Radians;
 
+/// \brief
+/// A measure of angle in degrees. There are 360 degrees in a circle.
+/// \note
+/// This helper type ensures it is harder to mess up the units and makes the APIs self-documenting.
 struct Degrees
 {
   Scalar1f value;             /// The value in degrees.
   operator Radians() const;   /// Function to convert from degrees to radians.
 };
 
+/// \brief
+/// A measure of angle in radians. There are two pi radians (6.28 radians) in a circle (360 degrees).
+/// \note
+/// This helper type ensures it is harder to mess up the units and makes the APIs self-documenting.
 struct Radians
 {
   Scalar1f value;             /// The value in radians.
@@ -170,6 +176,8 @@ struct Metres;
 struct Feet;
 
 /// \brief
+/// The SI unit of metres for measuring distances.
+/// \note
 /// This helper type ensures it is harder to mess up the units and makes the APIs self-documenting.
 /// \note
 /// As with degrees and radians, so too can distances be confusing.
@@ -186,6 +194,7 @@ struct Metres
 
 /// \brief
 /// International feet (which is almost the same as U.S feet and survey feet).
+/// \note
 /// This helper type ensures it is harder to mess up the units and makes the APIs self-documenting.
 /// \see Meters
 struct Feet
@@ -210,6 +219,8 @@ inline Feet::operator Metres() const
 ///////////////////////////////////////////////////////////////////////////////////
 // 3D Maths - Vector
 
+/// \brief
+/// A four component vector suitable as a 3D vector in a 3D graphics pipeline.
 struct Vector4f
 {
   union
@@ -331,6 +342,8 @@ inline Vector4f Vector4f_Normalized(const Vector4f& vec)
 ///////////////////////////////////////////////////////////////////////////////////
 // 3D Maths - Matrix
 
+/// \brief
+/// A 4x4 matrix suitable for 3D transformations in a 3D graphics pipeline.
 struct Matrix4x4f
 {
   union
