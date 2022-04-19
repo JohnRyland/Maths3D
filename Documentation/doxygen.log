@@ -3,7 +3,7 @@ warning: ignoring unsupported tag 'NUM_PROC_THREADS' at line 22, file .build/doc
 warning: ignoring unsupported tag 'RESOLVE_UNNAMED_PARAMS' at line 27, file .build/docs/Doxyfile
 warning: ignoring unsupported tag 'DOT_UML_DETAILS' at line 33, file .build/docs/Doxyfile
 warning: ignoring unsupported tag 'DOT_WRAP_THRESHOLD' at line 34, file .build/docs/Doxyfile
-.modules/TestFramework/include/Factory.hpp:64: warning: no matching class member found for 
+.modules/TestFramework/include/Factory.hpp:70: warning: no matching class member found for 
   Iterator
 
 Parsing layout file .modules/GenericMake/doxygen/layout.xml...
@@ -336,5 +336,5 @@ Patching output file 13/16
 Patching output file 14/16
 Patching output file 15/16
 Patching output file 16/16
-lookup cache used 336/65536 hits=2537 misses=421
+lookup cache used 340/65536 hits=2574 misses=425
 finished...

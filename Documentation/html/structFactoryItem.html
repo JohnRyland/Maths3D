@@ -157,7 +157,9 @@ Private Attributes</h2></td></tr>
 struct FactoryItem&lt; T &gt;</h3>
 
 <p>This creates a linked-list of T type objects when a new T is registered by declaring a <a class="el" href="structFactoryItem.html">FactoryItem</a> global variable. This is used by the unit test framework to register and collect a list of all tests.</p>
-<p>This might also be useful for registering the modules. </p>
+<p>This might also be useful for registering the modules.</p>
+<p>While this class is not the Factory of the factory pattern, these factory items can be used by a factory class to instantiate instances.</p>
+<p>For example in the context of unit testing, each unit test will have an associated <a class="el" href="structFactoryItem.html">FactoryItem</a> wrapper, and the unit test framework will be the factory creating instances of unit tests to run. </p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="ab95005c7c5b14e98e0b3d9e758f68f4c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab95005c7c5b14e98e0b3d9e758f68f4c">&#9670;&nbsp;</a></span>ItemT</h2>
