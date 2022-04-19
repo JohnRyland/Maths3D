@@ -115,21 +115,18 @@ Matrix4x4f Matrix4x4f_PerspectiveFrustum(Radians fieldOfView, Scalar1f aspectRat
 
 Matrix4x4f Matrix4x4f_OrthographicFrustum(Scalar1f left, Scalar1f right, Scalar1f bottom, Scalar1f top, Scalar1f near, Scalar1f far)
 {
-  const Scalar1f z = Scalar1f_Zero();
-  const Scalar1f two = Scalar1f_Two();
-  const Scalar1f width = right - left;
-  const Scalar1f height = top - bottom;
-  const Scalar1f depth = far - near;
-  const Scalar1f a = two / width;
-  const Scalar1f b = (right + left) / width;
-  const Scalar1f c = two / height;
-  const Scalar1f d = (top + bottom) / height;
-  const Scalar1f e = -(far + near) / depth;
-  Scalar1f ortho[16] = { a, z, z,-b,
-                         z, c, z,-d,
-                         z, z,-two/depth, e,
-                         z, z, z, z };
-  return Matrix4x4f_Set(ortho);
+  Matrix4x4f ortho = Matrix4x4f_Zero();
+  const Scalar1f leftBottomNear[3] = { left, bottom, near };
+  const Scalar1f rightTopFar[3] = { right, top, far };
+  for (int i = 0; i < 3; ++i)
+  {
+    Scalar1f scale = rightTopFar[i] - leftBottomNear[i];
+    ortho.m[i][3] = -(rightTopFar[i] + leftBottomNear[i]) / scale;
+    ortho.m[i][i] = Scalar1f_Two() / scale;
+  }
+  // This changes the z direction
+  ortho.m[2][2] = -ortho.m[2][2];
+  return ortho;
 }
 
 // Helper function for getting the 3x3 sub-matrix of a 4x4 and calculating the determinant of the 3x3 matrix

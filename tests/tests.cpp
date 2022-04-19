@@ -107,22 +107,48 @@ TEST(Maths3DTest, Vector)
 // Exercise all the Matrix4x4f functions (some indirectly)
 TEST(Maths3DTest, Matrix)
 {
-  Radians rotation{ 1.0f };
+  Degrees rotation{ 45.0f };
   Matrix4x4f modelViewProjection;
-  modelViewProjection = Matrix4x4f_PerspectiveFrustum(Degrees{15.0}, 1.0f, 0.1, 10000.0);
+  modelViewProjection = Matrix4x4f_PerspectiveFrustum(Degrees{60.0}, 1.0f, 0.1, 10000.0);
   modelViewProjection = Matrix4x4f_Multiply(modelViewProjection, Matrix4x4f_TranslateXYZ(Vector4f_Set(0.0f, 0.0f, -100.0f, 1.0f)));
   modelViewProjection = Matrix4x4f_Multiply(modelViewProjection, Matrix4x4f_RotateZ(rotation));
   modelViewProjection = Matrix4x4f_Multiply(modelViewProjection, Matrix4x4f_RotateY(rotation));
   modelViewProjection = Matrix4x4f_Multiply(modelViewProjection, Matrix4x4f_RotateX(rotation));
   modelViewProjection = Matrix4x4f_Multiply(modelViewProjection, Matrix4x4f_ScaleXYZ(Vector4f_Set(5.0, 5.0, 5.0, 1.0)));
-  modelViewProjection = Matrix4x4f_Scaled(modelViewProjection, 1.0f);
-  modelViewProjection = Matrix4x4f_Transposed(modelViewProjection);
-  // TODO add checks for what values should be
+  modelViewProjection = Matrix4x4f_Scaled(modelViewProjection, 0.2f);
+
   Vector4f vec = Vector4f_Transform(modelViewProjection, Vector4f_Zero());
+  for (int i = 0; i < 4; ++i)
+  {
+    // Expecting a zero vector should be transformed in to a zero vector
+    Vector4f expectedVec = Vector4f_Zero();
+    EXPECT_NEAR(vec.v[i], expectedVec.v[i], epsilon);
+  }
+
+  vec = Vector4f_Transform(modelViewProjection, Vector4f_Set(1.0, 2.0, 3.0, 4.0));
+  for (int i = 0; i < 4; ++i)
+  {
+    // Expecting this particular perspective transform will result in this vector
+    Vector4f expectedVec = Vector4f_Set(4.583780, 4.076474, 78.634460, 78.792892);
+    EXPECT_NEAR(vec.v[i], expectedVec.v[i], epsilon);
+  }
 
   modelViewProjection = Matrix4x4f_OrthographicFrustum(-1.0f, 1.0f, -1.0f, 1.0f, -1.0f, 1.0f);
   vec = Vector4f_Transform(modelViewProjection, Vector4f_Zero());
-  // TODO add checks for what values should be
+  for (int i = 0; i < 4; ++i)
+  {
+    // Expecting a zero vector should be transformed in to a zero vector
+    Vector4f expectedVec = Vector4f_Zero();
+    EXPECT_NEAR(vec.v[i], expectedVec.v[i], epsilon);
+  }
+
+  vec = Vector4f_Transform(modelViewProjection, Vector4f_Set(1.0, 2.0, 3.0, 4.0));
+  for (int i = 0; i < 4; ++i)
+  {
+    // Expecting this particular orthographic transform will result in this vector
+    Vector4f expectedVec = Vector4f_Set(1.0, 2.0, -3.0, 0.0);
+    EXPECT_NEAR(vec.v[i], expectedVec.v[i], epsilon);
+  }
 }
 
 // Test the inverse function
@@ -158,23 +184,74 @@ TEST(Maths3DTest, Extensions)
 {
   Matrix4x4f modelViewProjection = Matrix4x4f_PerspectiveFrustum(Degrees{15.0}, 1.0f, 0.1, 10000.0);
 
+  // TODO: for the aligned tests, should actually make these aligned - this could potentially fail
   Vector4f vecs[16];
   for (int i = 0; i < 16; ++i)
   {
     vecs[i] = Vector4f_Set(i, i, i, 1.0);
   }
 
+  // TODO: for the aligned tests, should actually make these aligned - this could potentially fail
   Vector4f vecOut[16];
-  Vector4f_SSETransformStream(vecOut, vecs, modelViewProjection);
-  Vector4f_SSETransformCoordStream(vecOut, vecs, modelViewProjection);
-  Vector4f_SSETransformNormalStream(vecOut, vecs, modelViewProjection);
-  Vector4f_SSETransformStreamAligned(vecOut, vecs, modelViewProjection);
-  Vector4f_SSETransformCoordStreamAligned(vecOut, vecs, modelViewProjection);
-  Vector4f_SSETransformNormalStreamAligned(vecOut, vecs, modelViewProjection);
 
-  // TODO add checks for what values should be
+  Vector4f_SSETransformStream(vecOut, vecs, modelViewProjection);
+  for (int i = 0; i < 16; ++i)
+  {
+    EXPECT_NEAR(vecOut[i].x, i * 7.595754, epsilon);
+    EXPECT_NEAR(vecOut[i].y, i * 7.595754, epsilon);
+    EXPECT_NEAR(vecOut[i].z, i * -1.00002 - 0.200002, epsilon);
+    EXPECT_NEAR(vecOut[i].w, i * -1.00000, epsilon);
+  }
+
+  Vector4f_SSETransformStreamAligned(vecOut, vecs, modelViewProjection);
+  for (int i = 0; i < 16; ++i)
+  {
+    EXPECT_NEAR(vecOut[i].x, i * 7.595754, epsilon);
+    EXPECT_NEAR(vecOut[i].y, i * 7.595754, epsilon);
+    EXPECT_NEAR(vecOut[i].z, i * -1.00002 - 0.200002, epsilon);
+    EXPECT_NEAR(vecOut[i].w, i * -1.00000, epsilon);
+  }
+
+  float expectedZ[16] = { 0.0, 1.200022, 1.100021, 1.066687, 1.050020, 1.040020, 1.033354, 1.028592, 
+                           1.025020, 1.022242, 1.020020, 1.018202, 1.016687, 1.015405, 1.014306, 1.013353 };
+  Vector4f_SSETransformCoordStream(vecOut, vecs, modelViewProjection);
+  for (int i = 1; i < 16; ++i)
+  {
+    EXPECT_NEAR(vecOut[i].x, - 7.595754, epsilon);
+    EXPECT_NEAR(vecOut[i].y, -7.595754, epsilon);
+    EXPECT_NEAR(vecOut[i].z, expectedZ[i], epsilon);
+    EXPECT_NEAR(vecOut[i].w, 1.00000, epsilon);
+  }
+
+  Vector4f_SSETransformCoordStreamAligned(vecOut, vecs, modelViewProjection);
+  for (int i = 1; i < 16; ++i)
+  {
+    EXPECT_NEAR(vecOut[i].x, - 7.595754, epsilon);
+    EXPECT_NEAR(vecOut[i].y, -7.595754, epsilon);
+    EXPECT_NEAR(vecOut[i].z, expectedZ[i], epsilon);
+    EXPECT_NEAR(vecOut[i].w, 1.00000, epsilon);
+  }
+
+  Vector4f_SSETransformNormalStream(vecOut, vecs, modelViewProjection);
+  for (int i = 0; i < 16; ++i)
+  {
+    EXPECT_NEAR(vecOut[i].x, i * 7.595754, epsilon);
+    EXPECT_NEAR(vecOut[i].y, i * 7.595754, epsilon);
+    EXPECT_NEAR(vecOut[i].z, i * -1.00002, epsilon);
+    EXPECT_NEAR(vecOut[i].w, i * -1.00000, epsilon);
+  }
+
+  Vector4f_SSETransformNormalStreamAligned(vecOut, vecs, modelViewProjection);
+  for (int i = 0; i < 16; ++i)
+  {
+    EXPECT_NEAR(vecOut[i].x, i * 7.595754, epsilon);
+    EXPECT_NEAR(vecOut[i].y, i * 7.595754, epsilon);
+    EXPECT_NEAR(vecOut[i].z, i * -1.00002, epsilon);
+    EXPECT_NEAR(vecOut[i].w, i * -1.00000, epsilon);
+  }
 }
 
+// Benchmark test designed to measure the performance of the generated code
 BENCHMARK(Maths3DTest, Transform, iterations)
 {
   Matrix4x4f modelViewProjection = Matrix4x4f_PerspectiveFrustum(Degrees{15.0}, 1.0f, 0.1, 10000.0);
@@ -189,8 +266,6 @@ BENCHMARK(Maths3DTest, Transform, iterations)
   {
     Vector4f_SSETransformStream(vecOut, vecs, modelViewProjection);
   }
-
-  // TODO add checks for what values should be
 }
 
 }  // namespace
