@@ -1,0 +1,31 @@
+#pragma once
+
+////////////////////////////////////////////////////////////////////////////////////
+// About
+
+//
+// Simple BMP image saving
+//
+
+
+////////////////////////////////////////////////////////////////////////////////////
+// Includes
+
+#include <cstdint>
+#include <cstdio>
+
+
+////////////////////////////////////////////////////////////////////////////////////
+// Image 
+
+/// Simple image which is a buffer of 32-bpp ARGB values in an array
+struct Image
+{
+  uint32_t    width;
+  uint32_t    height;
+  uint32_t*   pixels;
+};
+
+/// Saves the image to the file named fileName
+bool Image_SaveBitmap(const Image& image, const char* fileName);
+

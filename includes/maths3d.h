@@ -307,6 +307,12 @@ inline Vector4f Vector4f_Add(const Vector4f& vec1, const Vector4f& vec2)
   return Vector4f_Set(vec1.x+vec2.x, vec1.y+vec2.y, vec1.z+vec2.z, vec1.w+vec2.w);
 }
 
+/// Subtracts vec2 from vec1.
+inline Vector4f Vector4f_Subtract(const Vector4f& vec1, const Vector4f& vec2)
+{
+  return Vector4f_Set(vec1.x-vec2.x, vec1.y-vec2.y, vec1.z-vec2.z, vec1.w-vec2.w);
+}
+
 /// Copies vec and multiplies each component by scale.
 inline Vector4f Vector4f_Scaled(const Vector4f& vec, Scalar1f scale)
 {
