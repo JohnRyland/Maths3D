@@ -25,8 +25,9 @@ var searchData=
   ['vector4f_5fssetransformstream_109',['Vector4f_SSETransformStream',['../maths3d__ext_8h.html#a0264cb82092555148becb139fac6feae',1,'maths3d_ext.h']]],
   ['vector4f_5fssetransformstreamaligned_110',['Vector4f_SSETransformStreamAligned',['../maths3d__ext_8h.html#a067b1ead0fad3513f28cfa3fadf473ae',1,'maths3d_ext.h']]],
   ['vector4f_5fssetransformstreamgeneric_111',['Vector4f_SSETransformStreamGeneric',['../maths3d__ext_8h.html#a7cd34ee25da58bfecc1ea06856cb17c9',1,'maths3d_ext.h']]],
-  ['vector4f_5fsumcomponents_112',['Vector4f_SumComponents',['../maths3d_8h.html#a670630003a2a62f351daa92d3e3a6d8f',1,'maths3d.h']]],
-  ['vector4f_5ftransform_113',['Vector4f_Transform',['../maths3d_8cpp.html#aa4034ce6071b46002489f994f1cca0fa',1,'Vector4f_Transform(const Matrix4x4f &amp;m, const Vector4f &amp;vec):&#160;maths3d.cpp'],['../maths3d_8h.html#aa4034ce6071b46002489f994f1cca0fa',1,'Vector4f_Transform(const Matrix4x4f &amp;m, const Vector4f &amp;vec):&#160;maths3d.cpp']]],
-  ['vector4f_5ftransformstreamgeneric_114',['Vector4f_TransformStreamGeneric',['../maths3d__ext_8h.html#a108b1218141f5ae8db971554414de9c5',1,'maths3d_ext.h']]],
-  ['vector4f_5fzero_115',['Vector4f_Zero',['../maths3d_8h.html#a92d8749d3bc3bec741c75d5e722b8911',1,'maths3d.h']]]
+  ['vector4f_5fsubtract_112',['Vector4f_Subtract',['../maths3d_8h.html#aa1c0d13997d9eb4c57689b37f1c6d4ad',1,'maths3d.h']]],
+  ['vector4f_5fsumcomponents_113',['Vector4f_SumComponents',['../maths3d_8h.html#a670630003a2a62f351daa92d3e3a6d8f',1,'maths3d.h']]],
+  ['vector4f_5ftransform_114',['Vector4f_Transform',['../maths3d_8cpp.html#aa4034ce6071b46002489f994f1cca0fa',1,'Vector4f_Transform(const Matrix4x4f &amp;m, const Vector4f &amp;vec):&#160;maths3d.cpp'],['../maths3d_8h.html#aa4034ce6071b46002489f994f1cca0fa',1,'Vector4f_Transform(const Matrix4x4f &amp;m, const Vector4f &amp;vec):&#160;maths3d.cpp']]],
+  ['vector4f_5ftransformstreamgeneric_115',['Vector4f_TransformStreamGeneric',['../maths3d__ext_8h.html#a108b1218141f5ae8db971554414de9c5',1,'maths3d_ext.h']]],
+  ['vector4f_5fzero_116',['Vector4f_Zero',['../maths3d_8h.html#a92d8749d3bc3bec741c75d5e722b8911',1,'maths3d.h']]]
 ];

@@ -42,6 +42,7 @@ var maths3d_8h =
     [ "Vector4f_SetX", "maths3d_8h.html#a5919d68dc856d05b663229a06d9cb307", null ],
     [ "Vector4f_SetY", "maths3d_8h.html#affb9d0d47db26105ea3f139c56910ac9", null ],
     [ "Vector4f_SetZ", "maths3d_8h.html#aafe26d688ec8f15c1cfbb8514508789f", null ],
+    [ "Vector4f_Subtract", "maths3d_8h.html#aa1c0d13997d9eb4c57689b37f1c6d4ad", null ],
     [ "Vector4f_SumComponents", "maths3d_8h.html#a670630003a2a62f351daa92d3e3a6d8f", null ],
     [ "Vector4f_Transform", "maths3d_8h.html#aa4034ce6071b46002489f994f1cca0fa", null ],
     [ "Vector4f_Zero", "maths3d_8h.html#a92d8749d3bc3bec741c75d5e722b8911", null ]
