@@ -19,6 +19,31 @@
 
 
 ////////////////////////////////////////////////////////////////////////////////////
+// Documentation
+
+/// \file example1.cpp
+///
+/// This is the first example program for the Maths3D library to show some
+/// practical example usage of the vector functions.
+///
+/// It creates a very simple scene containing 3 spheres, and then ray traces this
+/// only to the first ray hit with no recursion or lighting.
+///
+/// It sends out rays for each pixel of the output image. It defines the ray as
+/// a pair of 3d points, the first is the eye position which is behind the center of
+/// the view plane at a position of 0, 0, -viewDistance. It then has a second point
+/// which is where the ray is pointing to which is through the pixel which is at
+/// x, y, 0 for x values from -width/2 to width/2 and similarly for y and the height.
+///
+/// Then for each ray, it tests it against each sphere to find the closest point
+/// the ray gets to the center of the sphere, and then compares that to the radius
+/// of the sphere. If it is less than the radius, then the ray is passing through
+/// the sphere and the color of that sphere is used to draw the pixel.
+///
+/// This ignores finding the closest sphere which would require additional calculations.
+
+
+////////////////////////////////////////////////////////////////////////////////////
 // Includes
 
 #include <cstdint>
@@ -77,7 +102,7 @@ bool RayIntersectsSphere(const Ray& ray, const Sphere& sphere)
   const Vector4f vectorFromSphereCenterToRay = Vector4f_Subtract(pointOnRayPerpendicularToSphereCenter, sphere.center);
   const Scalar1f distanceFromSphereCenterToRay = Vector4f_Length(vectorFromSphereCenterToRay);
 
-  // See if our point of closest intercept between the ray and the center of the sphere is less than the radius of the sphere
+  // See if our point of closest intercept between the ray and the center of the sphere is less than the radius of the sphere.
   return distanceFromSphereCenterToRay < sphere.radius;
 }
 
@@ -85,7 +110,7 @@ template <size_t width, size_t height, int viewDistance>
 uint32_t TraceRay(int i, int j, const Scene& scene)
 {
   Vector4f eye{ 0.0f, 0.0f, -viewDistance, 0.0f };
-  Vector4f lookAt{ i - width / 2.0f, j - height / 2.0f, 0.0f, 0.0f };
+  Vector4f lookAt{ i - 0.5f * width, j - 0.5f * height, 0.0f, 0.0f };
   Ray ray{ eye, lookAt };
 
   for (int i = 0; i < scene.numberOfSpheres; ++i)
@@ -96,6 +121,7 @@ uint32_t TraceRay(int i, int j, const Scene& scene)
     }
   }
 
+  // If don't intersect any spheres, then draw a black pixel.
   return 0x000000;
 }
 
