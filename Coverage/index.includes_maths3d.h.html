@@ -275,7 +275,7 @@
           </tr>
           <tr>
             <td class="headerName">Date:</td>
-            <td class="headerValue">2022-04-21 22:53:57</td>
+            <td class="headerValue">2022-04-21 22:57:29</td>
             <td></td>
             <td class="headerName">Branches:</td>
             <td class="headerTableEntry">5</td>
@@ -1226,7 +1226,7 @@
     <tr>
     <td align="right" class="lineno"><pre>133</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>291</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>106254</pre></td>
     <td align="left" class="src coveredLine"><pre>inline Scalar1f Scalar1f_Zero()</pre></td>
     </tr>
 
@@ -1240,7 +1240,7 @@
     <tr>
     <td align="right" class="lineno"><pre>135</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>291</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>106254</pre></td>
     <td align="left" class="src coveredLine"><pre>  return 0.0f;</pre></td>
     </tr>
 
@@ -1268,7 +1268,7 @@
     <tr>
     <td align="right" class="lineno"><pre>139</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>5333132</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>3723302</pre></td>
     <td align="left" class="src coveredLine"><pre>inline Scalar1f Scalar1f_One()</pre></td>
     </tr>
 
@@ -1282,7 +1282,7 @@
     <tr>
     <td align="right" class="lineno"><pre>141</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>5333132</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>3723302</pre></td>
     <td align="left" class="src coveredLine"><pre>  return 1.0f;</pre></td>
     </tr>
 
@@ -2031,7 +2031,7 @@
     <tr>
     <td align="right" class="lineno"><pre>248</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>58664580</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>52448348</pre></td>
     <td align="left" class="src coveredLine"><pre>inline Vector4f Vector4f_Set(Scalar1f x, Scalar1f y, Scalar1f z, Scalar1f w)</pre></td>
     </tr>
 
@@ -2045,7 +2045,7 @@
     <tr>
     <td align="right" class="lineno"><pre>250</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>58664580</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>52448348</pre></td>
     <td align="left" class="src coveredLine"><pre>  return Vector4f{ { { x, y, z, w } } };</pre></td>
     </tr>
 
@@ -2073,7 +2073,7 @@
     <tr>
     <td align="right" class="lineno"><pre>254</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>10666243</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>9259856</pre></td>
     <td align="left" class="src coveredLine"><pre>inline Vector4f Vector4f_Replicate(Scalar1f v)</pre></td>
     </tr>
 
@@ -2087,7 +2087,7 @@
     <tr>
     <td align="right" class="lineno"><pre>256</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>10666243</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>9259856</pre></td>
     <td align="left" class="src coveredLine"><pre>  return Vector4f_Set(v, v, v, v);</pre></td>
     </tr>
 
@@ -2115,7 +2115,7 @@
     <tr>
     <td align="right" class="lineno"><pre>260</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>13</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>105976</pre></td>
     <td align="left" class="src coveredLine"><pre>inline Vector4f Vector4f_Zero()</pre></td>
     </tr>
 
@@ -2129,7 +2129,7 @@
     <tr>
     <td align="right" class="lineno"><pre>262</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>13</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>105976</pre></td>
     <td align="left" class="src coveredLine"><pre>  return Vector4f_Replicate(Scalar1f_Zero());</pre></td>
     </tr>
 
@@ -2388,7 +2388,7 @@
     <tr>
     <td align="right" class="lineno"><pre>299</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>26665587</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>23508731</pre></td>
     <td align="left" class="src coveredLine"><pre>inline Vector4f Vector4f_Multiply(const Vector4f&amp; vec1, const Vector4f&amp; vec2)</pre></td>
     </tr>
 
@@ -2402,7 +2402,7 @@
     <tr>
     <td align="right" class="lineno"><pre>301</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>26665587</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>23508731</pre></td>
     <td align="left" class="src coveredLine"><pre>  return Vector4f_Set(vec1.x*vec2.x, vec1.y*vec2.y, vec1.z*vec2.z, vec1.w*vec2.w);</pre></td>
     </tr>
 
@@ -2430,7 +2430,7 @@
     <tr>
     <td align="right" class="lineno"><pre>305</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>5333116</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>5306923</pre></td>
     <td align="left" class="src coveredLine"><pre>inline Vector4f Vector4f_Add(const Vector4f&amp; vec1, const Vector4f&amp; vec2)</pre></td>
     </tr>
 
@@ -2444,7 +2444,7 @@
     <tr>
     <td align="right" class="lineno"><pre>307</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>5333116</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>5306923</pre></td>
     <td align="left" class="src coveredLine"><pre>  return Vector4f_Set(vec1.x+vec2.x, vec1.y+vec2.y, vec1.z+vec2.z, vec1.w+vec2.w);</pre></td>
     </tr>
 
@@ -2472,7 +2472,7 @@
     <tr>
     <td align="right" class="lineno"><pre>311</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>15999336</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>14372540</pre></td>
     <td align="left" class="src coveredLine"><pre>inline Vector4f Vector4f_Subtract(const Vector4f&amp; vec1, const Vector4f&amp; vec2)</pre></td>
     </tr>
 
@@ -2486,7 +2486,7 @@
     <tr>
     <td align="right" class="lineno"><pre>313</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>15999336</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>14372540</pre></td>
     <td align="left" class="src coveredLine"><pre>  return Vector4f_Set(vec1.x-vec2.x, vec1.y-vec2.y, vec1.z-vec2.z, vec1.w-vec2.w);</pre></td>
     </tr>
 
@@ -2514,7 +2514,7 @@
     <tr>
     <td align="right" class="lineno"><pre>317</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>10666230</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>9153880</pre></td>
     <td align="left" class="src coveredLine"><pre>inline Vector4f Vector4f_Scaled(const Vector4f&amp; vec, Scalar1f scale)</pre></td>
     </tr>
 
@@ -2528,7 +2528,7 @@
     <tr>
     <td align="right" class="lineno"><pre>319</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>10666230</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>9153880</pre></td>
     <td align="left" class="src coveredLine"><pre>  return Vector4f_Multiply(vec, Vector4f_Replicate(scale));</pre></td>
     </tr>
 
@@ -2556,7 +2556,7 @@
     <tr>
     <td align="right" class="lineno"><pre>323</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>15999357</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>14354851</pre></td>
     <td align="left" class="src coveredLine"><pre>inline Scalar1f Vector4f_SumComponents(const Vector4f&amp; vec)</pre></td>
     </tr>
 
@@ -2570,7 +2570,7 @@
     <tr>
     <td align="right" class="lineno"><pre>325</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>15999357</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>14354851</pre></td>
     <td align="left" class="src coveredLine"><pre>  return vec.x + vec.y + vec.z + vec.w;</pre></td>
     </tr>
 
@@ -2598,7 +2598,7 @@
     <tr>
     <td align="right" class="lineno"><pre>329</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>15999357</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>14354851</pre></td>
     <td align="left" class="src coveredLine"><pre>inline Scalar1f Vector4f_DotProduct(const Vector4f&amp; vec1, const Vector4f&amp; vec2)</pre></td>
     </tr>
 
@@ -2612,7 +2612,7 @@
     <tr>
     <td align="right" class="lineno"><pre>331</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>15999357</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>14354851</pre></td>
     <td align="left" class="src coveredLine"><pre>  return Vector4f_SumComponents(Vector4f_Multiply(vec1, vec2));</pre></td>
     </tr>
 
@@ -2640,7 +2640,7 @@
     <tr>
     <td align="right" class="lineno"><pre>335</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>10666229</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>9047916</pre></td>
     <td align="left" class="src coveredLine"><pre>inline Scalar1f Vector4f_LengthSquared(const Vector4f&amp; vec)</pre></td>
     </tr>
 
@@ -2654,7 +2654,7 @@
     <tr>
     <td align="right" class="lineno"><pre>337</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>10666229</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>9047916</pre></td>
     <td align="left" class="src coveredLine"><pre>  return Vector4f_DotProduct(vec, vec);</pre></td>
     </tr>
 
@@ -2682,7 +2682,7 @@
     <tr>
     <td align="right" class="lineno"><pre>341</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>10666229</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>9047916</pre></td>
     <td align="left" class="src coveredLine"><pre>inline Scalar1f Vector4f_Length(const Vector4f&amp; vec)</pre></td>
     </tr>
 
@@ -2696,7 +2696,7 @@
     <tr>
     <td align="right" class="lineno"><pre>343</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>10666229</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>9047916</pre></td>
     <td align="left" class="src coveredLine"><pre>  return ::sqrt(Vector4f_LengthSquared(vec));</pre></td>
     </tr>
 
@@ -2724,7 +2724,7 @@
     <tr>
     <td align="right" class="lineno"><pre>347</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>5333117</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>3723287</pre></td>
     <td align="left" class="src coveredLine"><pre>inline Scalar1f Vector4f_ReciprocalLength(const Vector4f&amp; vec)</pre></td>
     </tr>
 
@@ -2738,7 +2738,7 @@
     <tr>
     <td align="right" class="lineno"><pre>349</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>5333117</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>3723287</pre></td>
     <td align="left" class="src coveredLine"><pre>  return Scalar1f_One() / Vector4f_Length(vec);</pre></td>
     </tr>
 
@@ -2766,7 +2766,7 @@
     <tr>
     <td align="right" class="lineno"><pre>353</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>5333117</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>3723287</pre></td>
     <td align="left" class="src coveredLine"><pre>inline Vector4f Vector4f_Normalized(const Vector4f&amp; vec)</pre></td>
     </tr>
 
@@ -2780,7 +2780,7 @@
     <tr>
     <td align="right" class="lineno"><pre>355</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>5333117</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>3723287</pre></td>
     <td align="left" class="src coveredLine"><pre>  return Vector4f_Scaled(vec, Vector4f_ReciprocalLength(vec));</pre></td>
     </tr>
 
