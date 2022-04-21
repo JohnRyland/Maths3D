@@ -2,7 +2,7 @@
 // About
 
 //
-// Simple Example of a basic ray tracer
+// Example of a slightly less basic ray tracer
 //
 
 
@@ -21,26 +21,15 @@
 ////////////////////////////////////////////////////////////////////////////////////
 // Documentation
 
-/// \file example1.cpp
+/// \file example2.cpp
 ///
-/// This is the first example program for the Maths3D library to show some
+/// This is the second example program for the Maths3D library to show some
 /// practical example usage of the vector functions.
 ///
-/// It creates a very simple scene containing 3 spheres, and then ray traces this
-/// only to the first ray hit with no recursion or lighting.
+/// It creates a simple scene containing some spheres and cubes, and then ray traces
+/// them with some basic lighting.
 ///
-/// It sends out rays for each pixel of the output image. It defines the ray as
-/// a pair of 3d points, the first is the eye position which is behind the center of
-/// the view plane at a position of 0, 0, -viewDistance. It then has a second point
-/// which is where the ray is pointing to which is through the pixel which is at
-/// x, y, 0 for x values from -width/2 to width/2 and similarly for y and the height.
-///
-/// Then for each ray, it tests it against each sphere to find the closest point
-/// the ray gets to the center of the sphere, and then compares that to the radius
-/// of the sphere. If it is less than the radius, then the ray is passing through
-/// the sphere and the color of that sphere is used to draw the pixel.
-///
-/// This ignores finding the closest sphere which would require additional calculations.
+/// It builds on the first example. \see example1.cpp
 
 
 ////////////////////////////////////////////////////////////////////////////////////
@@ -62,10 +51,23 @@ struct Sphere
   uint32_t color;
 };
 
+struct Cube
+{
+  Vector4f center;
+  Scalar1f radius;
+  uint32_t color;
+};
+
 struct Ray
 {
   Vector4f origin;
   Vector4f lookAt;
+};
+
+struct Light
+{
+  Vector4f position;
+  uint32_t color;
 };
 
 
@@ -75,7 +77,10 @@ struct Ray
 struct Scene
 {
   static constexpr int numberOfSpheres = 3;
+  static constexpr int numberOfCubes = 3;
   Sphere spheres[numberOfSpheres];
+  Cube cubes[numberOfCubes];
+  Light light;
 };
 
 
@@ -117,9 +122,18 @@ uint32_t TraceRay(int i, int j, const Scene& scene)
   {
     if (RayIntersectsSphere(ray, scene.spheres[i]))
     {
+      // TODO: find point on the sphere and find closest object
       return scene.spheres[i].color;
     }
   }
+
+  for (int i = 0; i < scene.numberOfCubes; ++i)
+  {
+    // TODO: add cube support
+    // if (RayIntersectsCube(ray, scene.spheres[i]))
+  }
+
+  // TODO: trace ray to the light to do basic lighting
 
   // If don't intersect any spheres, then draw a black pixel.
   return 0x000000;
