@@ -269,13 +269,13 @@
             <td class="headerValue">includes/maths3d.h</td>
             <td></td>
             <td class="headerName">Lines:</td>
-            <td class="headerTableEntry">81</td>
-            <td class="headerTableEntry">82</td>
+            <td class="headerTableEntry">83</td>
+            <td class="headerTableEntry">84</td>
             <td class="headerTableEntry" style="background-color:LightGreen">98.8 %</td>
           </tr>
           <tr>
             <td class="headerName">Date:</td>
-            <td class="headerValue">2022-04-19 14:15:30</td>
+            <td class="headerValue">2022-04-21 08:20:00</td>
             <td></td>
             <td class="headerName">Branches:</td>
             <td class="headerTableEntry">5</td>
@@ -1268,7 +1268,7 @@
     <tr>
     <td align="right" class="lineno"><pre>139</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>20</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>5333132</pre></td>
     <td align="left" class="src coveredLine"><pre>inline Scalar1f Scalar1f_One()</pre></td>
     </tr>
 
@@ -1282,7 +1282,7 @@
     <tr>
     <td align="right" class="lineno"><pre>141</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>20</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>5333132</pre></td>
     <td align="left" class="src coveredLine"><pre>  return 1.0f;</pre></td>
     </tr>
 
@@ -2031,7 +2031,7 @@
     <tr>
     <td align="right" class="lineno"><pre>248</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>348</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>58664580</pre></td>
     <td align="left" class="src coveredLine"><pre>inline Vector4f Vector4f_Set(Scalar1f x, Scalar1f y, Scalar1f z, Scalar1f w)</pre></td>
     </tr>
 
@@ -2045,7 +2045,7 @@
     <tr>
     <td align="right" class="lineno"><pre>250</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>348</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>58664580</pre></td>
     <td align="left" class="src coveredLine"><pre>  return Vector4f{ { { x, y, z, w } } };</pre></td>
     </tr>
 
@@ -2073,7 +2073,7 @@
     <tr>
     <td align="right" class="lineno"><pre>254</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>19</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>10666243</pre></td>
     <td align="left" class="src coveredLine"><pre>inline Vector4f Vector4f_Replicate(Scalar1f v)</pre></td>
     </tr>
 
@@ -2087,7 +2087,7 @@
     <tr>
     <td align="right" class="lineno"><pre>256</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>19</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>10666243</pre></td>
     <td align="left" class="src coveredLine"><pre>  return Vector4f_Set(v, v, v, v);</pre></td>
     </tr>
 
@@ -2388,7 +2388,7 @@
     <tr>
     <td align="right" class="lineno"><pre>299</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>27</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>26665587</pre></td>
     <td align="left" class="src coveredLine"><pre>inline Vector4f Vector4f_Multiply(const Vector4f&amp; vec1, const Vector4f&amp; vec2)</pre></td>
     </tr>
 
@@ -2402,7 +2402,7 @@
     <tr>
     <td align="right" class="lineno"><pre>301</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>27</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>26665587</pre></td>
     <td align="left" class="src coveredLine"><pre>  return Vector4f_Set(vec1.x*vec2.x, vec1.y*vec2.y, vec1.z*vec2.z, vec1.w*vec2.w);</pre></td>
     </tr>
 
@@ -2430,7 +2430,7 @@
     <tr>
     <td align="right" class="lineno"><pre>305</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>4</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>5333116</pre></td>
     <td align="left" class="src coveredLine"><pre>inline Vector4f Vector4f_Add(const Vector4f&amp; vec1, const Vector4f&amp; vec2)</pre></td>
     </tr>
 
@@ -2444,7 +2444,7 @@
     <tr>
     <td align="right" class="lineno"><pre>307</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>4</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>5333116</pre></td>
     <td align="left" class="src coveredLine"><pre>  return Vector4f_Set(vec1.x+vec2.x, vec1.y+vec2.y, vec1.z+vec2.z, vec1.w+vec2.w);</pre></td>
     </tr>
 
@@ -2466,14 +2466,14 @@
     <td align="right" class="lineno"><pre>310</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>/// Copies vec and multiplies each component by scale.</pre></td>
+    <td align="left" class="src "><pre>/// Subtracts vec2 from vec1.</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>311</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>6</pre></td>
-    <td align="left" class="src coveredLine"><pre>inline Vector4f Vector4f_Scaled(const Vector4f&amp; vec, Scalar1f scale)</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>15999336</pre></td>
+    <td align="left" class="src coveredLine"><pre>inline Vector4f Vector4f_Subtract(const Vector4f&amp; vec1, const Vector4f&amp; vec2)</pre></td>
     </tr>
 
     <tr>
@@ -2486,8 +2486,8 @@
     <tr>
     <td align="right" class="lineno"><pre>313</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>6</pre></td>
-    <td align="left" class="src coveredLine"><pre>  return Vector4f_Multiply(vec, Vector4f_Replicate(scale));</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>15999336</pre></td>
+    <td align="left" class="src coveredLine"><pre>  return Vector4f_Set(vec1.x-vec2.x, vec1.y-vec2.y, vec1.z-vec2.z, vec1.w-vec2.w);</pre></td>
     </tr>
 
     <tr>
@@ -2508,14 +2508,14 @@
     <td align="right" class="lineno"><pre>316</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>/// Returns the sum of the components of vec.</pre></td>
+    <td align="left" class="src "><pre>/// Copies vec and multiplies each component by scale.</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>317</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>21</pre></td>
-    <td align="left" class="src coveredLine"><pre>inline Scalar1f Vector4f_SumComponents(const Vector4f&amp; vec)</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>10666230</pre></td>
+    <td align="left" class="src coveredLine"><pre>inline Vector4f Vector4f_Scaled(const Vector4f&amp; vec, Scalar1f scale)</pre></td>
     </tr>
 
     <tr>
@@ -2528,8 +2528,8 @@
     <tr>
     <td align="right" class="lineno"><pre>319</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>21</pre></td>
-    <td align="left" class="src coveredLine"><pre>  return vec.x + vec.y + vec.z + vec.w;</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>10666230</pre></td>
+    <td align="left" class="src coveredLine"><pre>  return Vector4f_Multiply(vec, Vector4f_Replicate(scale));</pre></td>
     </tr>
 
     <tr>
@@ -2550,14 +2550,14 @@
     <td align="right" class="lineno"><pre>322</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>/// Calculates the dot-product of vec1 and vec2.</pre></td>
+    <td align="left" class="src "><pre>/// Returns the sum of the components of vec.</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>323</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>21</pre></td>
-    <td align="left" class="src coveredLine"><pre>inline Scalar1f Vector4f_DotProduct(const Vector4f&amp; vec1, const Vector4f&amp; vec2)</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>15999357</pre></td>
+    <td align="left" class="src coveredLine"><pre>inline Scalar1f Vector4f_SumComponents(const Vector4f&amp; vec)</pre></td>
     </tr>
 
     <tr>
@@ -2570,8 +2570,8 @@
     <tr>
     <td align="right" class="lineno"><pre>325</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>21</pre></td>
-    <td align="left" class="src coveredLine"><pre>  return Vector4f_SumComponents(Vector4f_Multiply(vec1, vec2));</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>15999357</pre></td>
+    <td align="left" class="src coveredLine"><pre>  return vec.x + vec.y + vec.z + vec.w;</pre></td>
     </tr>
 
     <tr>
@@ -2592,14 +2592,14 @@
     <td align="right" class="lineno"><pre>328</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>/// Calculates the length squared of vec.</pre></td>
+    <td align="left" class="src "><pre>/// Calculates the dot-product of vec1 and vec2.</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>329</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>5</pre></td>
-    <td align="left" class="src coveredLine"><pre>inline Scalar1f Vector4f_LengthSquared(const Vector4f&amp; vec)</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>15999357</pre></td>
+    <td align="left" class="src coveredLine"><pre>inline Scalar1f Vector4f_DotProduct(const Vector4f&amp; vec1, const Vector4f&amp; vec2)</pre></td>
     </tr>
 
     <tr>
@@ -2612,8 +2612,8 @@
     <tr>
     <td align="right" class="lineno"><pre>331</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>5</pre></td>
-    <td align="left" class="src coveredLine"><pre>  return Vector4f_DotProduct(vec, vec);</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>15999357</pre></td>
+    <td align="left" class="src coveredLine"><pre>  return Vector4f_SumComponents(Vector4f_Multiply(vec1, vec2));</pre></td>
     </tr>
 
     <tr>
@@ -2634,14 +2634,14 @@
     <td align="right" class="lineno"><pre>334</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>/// Calculates the length of vec.</pre></td>
+    <td align="left" class="src "><pre>/// Calculates the length squared of vec.</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>335</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>5</pre></td>
-    <td align="left" class="src coveredLine"><pre>inline Scalar1f Vector4f_Length(const Vector4f&amp; vec)</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>10666229</pre></td>
+    <td align="left" class="src coveredLine"><pre>inline Scalar1f Vector4f_LengthSquared(const Vector4f&amp; vec)</pre></td>
     </tr>
 
     <tr>
@@ -2654,8 +2654,8 @@
     <tr>
     <td align="right" class="lineno"><pre>337</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>5</pre></td>
-    <td align="left" class="src coveredLine"><pre>  return ::sqrt(Vector4f_LengthSquared(vec));</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>10666229</pre></td>
+    <td align="left" class="src coveredLine"><pre>  return Vector4f_DotProduct(vec, vec);</pre></td>
     </tr>
 
     <tr>
@@ -2676,14 +2676,14 @@
     <td align="right" class="lineno"><pre>340</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>/// Calculates 1/length of vec.</pre></td>
+    <td align="left" class="src "><pre>/// Calculates the length of vec.</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>341</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>5</pre></td>
-    <td align="left" class="src coveredLine"><pre>inline Scalar1f Vector4f_ReciprocalLength(const Vector4f&amp; vec)</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>10666229</pre></td>
+    <td align="left" class="src coveredLine"><pre>inline Scalar1f Vector4f_Length(const Vector4f&amp; vec)</pre></td>
     </tr>
 
     <tr>
@@ -2696,8 +2696,8 @@
     <tr>
     <td align="right" class="lineno"><pre>343</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>5</pre></td>
-    <td align="left" class="src coveredLine"><pre>  return Scalar1f_One() / Vector4f_Length(vec);</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>10666229</pre></td>
+    <td align="left" class="src coveredLine"><pre>  return ::sqrt(Vector4f_LengthSquared(vec));</pre></td>
     </tr>
 
     <tr>
@@ -2718,14 +2718,14 @@
     <td align="right" class="lineno"><pre>346</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>/// Copies vec and divides each component by the length of vec (returning the normalized or unit vector of vec).</pre></td>
+    <td align="left" class="src "><pre>/// Calculates 1/length of vec.</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>347</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>5</pre></td>
-    <td align="left" class="src coveredLine"><pre>inline Vector4f Vector4f_Normalized(const Vector4f&amp; vec)</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>5333117</pre></td>
+    <td align="left" class="src coveredLine"><pre>inline Scalar1f Vector4f_ReciprocalLength(const Vector4f&amp; vec)</pre></td>
     </tr>
 
     <tr>
@@ -2738,8 +2738,8 @@
     <tr>
     <td align="right" class="lineno"><pre>349</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>5</pre></td>
-    <td align="left" class="src coveredLine"><pre>  return Vector4f_Scaled(vec, Vector4f_ReciprocalLength(vec));</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>5333117</pre></td>
+    <td align="left" class="src coveredLine"><pre>  return Scalar1f_One() / Vector4f_Length(vec);</pre></td>
     </tr>
 
     <tr>
@@ -2760,399 +2760,399 @@
     <td align="right" class="lineno"><pre>352</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
+    <td align="left" class="src "><pre>/// Copies vec and divides each component by the length of vec (returning the normalized or unit vector of vec).</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>353</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>///////////////////////////////////////////////////////////////////////////////////</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>5333117</pre></td>
+    <td align="left" class="src coveredLine"><pre>inline Vector4f Vector4f_Normalized(const Vector4f&amp; vec)</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>354</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>// 3D Maths - Matrix</pre></td>
+    <td align="left" class="src "><pre>{</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>355</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
+    <td align="right" class="linecount coveredLine"><pre>5333117</pre></td>
+    <td align="left" class="src coveredLine"><pre>  return Vector4f_Scaled(vec, Vector4f_ReciprocalLength(vec));</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>356</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>/// \brief</pre></td>
+    <td align="left" class="src "><pre>}</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>357</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>/// A 4x4 matrix suitable for 3D transformations in a 3D graphics pipeline.</pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>358</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>struct Matrix4x4f</pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>359</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>{</pre></td>
+    <td align="left" class="src "><pre>///////////////////////////////////////////////////////////////////////////////////</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>360</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>  union</pre></td>
+    <td align="left" class="src "><pre>// 3D Maths - Matrix</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>361</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>  {</pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>362</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>    Vector4f row[4];              /// The 4 rows of the matrix accessible as an array of Vector4f.</pre></td>
+    <td align="left" class="src "><pre>/// \brief</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>363</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>    Scalar1f m[4][4];             /// The 4x4 matrix values accessible as a 4x4 array of arrays.</pre></td>
+    <td align="left" class="src "><pre>/// A 4x4 matrix suitable for 3D transformations in a 3D graphics pipeline.</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>364</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>    Scalar1f v[16];               /// The 4x4 matrix values accessible as a single array of 16 values.</pre></td>
+    <td align="left" class="src "><pre>struct Matrix4x4f</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>365</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>  };</pre></td>
+    <td align="left" class="src "><pre>{</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>366</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>};</pre></td>
+    <td align="left" class="src "><pre>  union</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>367</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
+    <td align="left" class="src "><pre>  {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>368</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>/// Initialize the matrix from an array of 16 values.</pre></td>
+    <td align="left" class="src "><pre>    Vector4f row[4];              /// The 4 rows of the matrix accessible as an array of Vector4f.</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>369</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>4</pre></td>
-    <td align="left" class="src coveredLine"><pre>inline Matrix4x4f Matrix4x4f_Set(const Scalar1f v[16])</pre></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>    Scalar1f m[4][4];             /// The 4x4 matrix values accessible as a 4x4 array of arrays.</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>370</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>{</pre></td>
+    <td align="left" class="src "><pre>    Scalar1f v[16];               /// The 4x4 matrix values accessible as a single array of 16 values.</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>371</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>  Matrix4x4f ret;</pre></td>
+    <td align="left" class="src "><pre>  };</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>372</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 64 times">&check;</span><span class="takenBranch" title="Branch 1 taken 4 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>68</pre></td>
-    <td align="left" class="src coveredLine"><pre>  for (int i = 0; i &lt; 16; ++i)</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>};</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>373</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>64</pre></td>
-    <td align="left" class="src coveredLine"><pre>    ret.v[i] = v[i];</pre></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>374</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>4</pre></td>
-    <td align="left" class="src coveredLine"><pre>  return ret;</pre></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>/// Initialize the matrix from an array of 16 values.</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>375</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>}</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>4</pre></td>
+    <td align="left" class="src coveredLine"><pre>inline Matrix4x4f Matrix4x4f_Set(const Scalar1f v[16])</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>376</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
+    <td align="left" class="src "><pre>{</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>377</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>/// Initialize the matrix to zero.</pre></td>
+    <td align="left" class="src "><pre>  Matrix4x4f ret;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>378</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 64 times">&check;</span><span class="takenBranch" title="Branch 1 taken 4 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>68</pre></td>
+    <td align="left" class="src coveredLine"><pre>  for (int i = 0; i &lt; 16; ++i)</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>379</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount coveredLine"><pre>64</pre></td>
+    <td align="left" class="src coveredLine"><pre>    ret.v[i] = v[i];</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>380</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount coveredLine"><pre>4</pre></td>
+    <td align="left" class="src coveredLine"><pre>  return ret;</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>381</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>}</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>382</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre></pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>383</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>/// Initialize the matrix to zero.</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>384</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount coveredLine"><pre>16</pre></td>
     <td align="left" class="src coveredLine"><pre>inline Matrix4x4f Matrix4x4f_Zero()</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>379</pre></td>
-    <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>{</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>380</pre></td>
-    <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>  Matrix4x4f ret;</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>381</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 256 times">&check;</span><span class="takenBranch" title="Branch 1 taken 16 times">&check;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>272</pre></td>
-    <td align="left" class="src coveredLine"><pre>  for (int i = 0; i &lt; 16; ++i)</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>382</pre></td>
-    <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>256</pre></td>
-    <td align="left" class="src coveredLine"><pre>    ret.v[i] = Scalar1f_Zero();</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>383</pre></td>
-    <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>16</pre></td>
-    <td align="left" class="src coveredLine"><pre>  return ret;</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>384</pre></td>
-    <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>}</pre></td>
-    </tr>
-
-    <tr>
     <td align="right" class="lineno"><pre>385</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
+    <td align="left" class="src "><pre>{</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>386</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>/// Initialize the matrix to an identity matrix, a matrix that when multiplied with</pre></td>
+    <td align="left" class="src "><pre>  Matrix4x4f ret;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>387</pre></td>
-    <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>/// another matrix, returns an identical matrix back again.</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 0 taken 256 times">&check;</span><span class="takenBranch" title="Branch 1 taken 16 times">&check;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>272</pre></td>
+    <td align="left" class="src coveredLine"><pre>  for (int i = 0; i &lt; 16; ++i)</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>388</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>2</pre></td>
-    <td align="left" class="src coveredLine"><pre>inline Matrix4x4f Matrix4x4f_Identity()</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>256</pre></td>
+    <td align="left" class="src coveredLine"><pre>    ret.v[i] = Scalar1f_Zero();</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>389</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>{</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>16</pre></td>
+    <td align="left" class="src coveredLine"><pre>  return ret;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>390</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>2</pre></td>
-    <td align="left" class="src coveredLine"><pre>  Matrix4x4f ret = Matrix4x4f_Zero();</pre></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>}</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>391</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>2</pre></td>
-    <td align="left" class="src coveredLine"><pre>  ret.v[0] = ret.v[5] = ret.v[10] = ret.v[15] = Scalar1f_One();</pre></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>392</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>2</pre></td>
-    <td align="left" class="src coveredLine"><pre>  return ret;</pre></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>/// Initialize the matrix to an identity matrix, a matrix that when multiplied with</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>393</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>}</pre></td>
+    <td align="left" class="src "><pre>/// another matrix, returns an identical matrix back again.</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>394</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
+    <td align="right" class="linecount coveredLine"><pre>2</pre></td>
+    <td align="left" class="src coveredLine"><pre>inline Matrix4x4f Matrix4x4f_Identity()</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>395</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>/// Creates a matrix that when multiplied by it, will be able to apply a 3D translation</pre></td>
+    <td align="left" class="src "><pre>{</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>396</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>/// transformation.</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>2</pre></td>
+    <td align="left" class="src coveredLine"><pre>  Matrix4x4f ret = Matrix4x4f_Zero();</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>397</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>inline Matrix4x4f Matrix4x4f_TranslateXYZ(const Vector4f&amp; vec)</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>2</pre></td>
+    <td align="left" class="src coveredLine"><pre>  ret.v[0] = ret.v[5] = ret.v[10] = ret.v[15] = Scalar1f_One();</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>398</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>{</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>399</pre></td>
-    <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>  Matrix4x4f ret = Matrix4x4f_Identity();</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>400</pre></td>
-    <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>  ret.row[3] = Vector4f_SetW(vec, Scalar1f_One());</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>401</pre></td>
-    <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>2</pre></td>
     <td align="left" class="src coveredLine"><pre>  return ret;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>402</pre></td>
+    <td align="right" class="lineno"><pre>399</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>403</pre></td>
+    <td align="right" class="lineno"><pre>400</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
+    <td align="right" class="lineno"><pre>401</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>/// Creates a matrix that when multiplied by it, will be able to apply a 3D translation</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>402</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>/// transformation.</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>403</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="left" class="src coveredLine"><pre>inline Matrix4x4f Matrix4x4f_TranslateXYZ(const Vector4f&amp; vec)</pre></td>
+    </tr>
+
+    <tr>
     <td align="right" class="lineno"><pre>404</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>/// Multiplies m1 with m2 and returns the resulting matrix that combines these.</pre></td>
+    <td align="left" class="src "><pre>{</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>405</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>/// This can be used to compound together different transformations. Note the order</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="left" class="src coveredLine"><pre>  Matrix4x4f ret = Matrix4x4f_Identity();</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>406</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>/// matters, as a translation followed by a rotation, for example, is not the same</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="left" class="src coveredLine"><pre>  ret.row[3] = Vector4f_SetW(vec, Scalar1f_One());</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>407</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>/// transformation as a rotation followed by a translation.</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="left" class="src coveredLine"><pre>  return ret;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>408</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>Matrix4x4f Matrix4x4f_Multiply(const Matrix4x4f&amp; m1, const Matrix4x4f&amp; m2);</pre></td>
+    <td align="left" class="src "><pre>}</pre></td>
     </tr>
 
     <tr>
@@ -3166,578 +3166,620 @@
     <td align="right" class="lineno"><pre>410</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>/// Creates a matrix where the matrix a is mirrored through the diagonal of the matrix.</pre></td>
+    <td align="left" class="src "><pre>/// Multiplies m1 with m2 and returns the resulting matrix that combines these.</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>411</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>Matrix4x4f Matrix4x4f_Transposed(const Matrix4x4f&amp; a);</pre></td>
+    <td align="left" class="src "><pre>/// This can be used to compound together different transformations. Note the order</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>412</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
+    <td align="left" class="src "><pre>/// matters, as a translation followed by a rotation, for example, is not the same</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>413</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>/// Creates a matrix that when multiplied by it will be able to apply a uniform 3D</pre></td>
+    <td align="left" class="src "><pre>/// transformation as a rotation followed by a translation.</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>414</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>/// scaling transformation (uniform meaning that it is scaled by the same amount in</pre></td>
+    <td align="left" class="src "><pre>Matrix4x4f Matrix4x4f_Multiply(const Matrix4x4f&amp; m1, const Matrix4x4f&amp; m2);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>415</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>/// the x, y and z dimensions).</pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>416</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>Matrix4x4f Matrix4x4f_Scaled(const Matrix4x4f&amp; m, Scalar1f scale);</pre></td>
+    <td align="left" class="src "><pre>/// Creates a matrix where the matrix a is mirrored through the diagonal of the matrix.</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>417</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
+    <td align="left" class="src "><pre>Matrix4x4f Matrix4x4f_Transposed(const Matrix4x4f&amp; a);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>418</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>/// Creates a matrix that when multiplied by it will be able to apply a 3D scaling</pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>419</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>/// transformation. This is a non-uniform scaling where the amount scaled in each</pre></td>
+    <td align="left" class="src "><pre>/// Creates a matrix that when multiplied by it will be able to apply a uniform 3D</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>420</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>/// dimension is determined by the scale vector parameter.</pre></td>
+    <td align="left" class="src "><pre>/// scaling transformation (uniform meaning that it is scaled by the same amount in</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>421</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>Matrix4x4f Matrix4x4f_ScaleXYZ(const Vector4f&amp; scale);</pre></td>
+    <td align="left" class="src "><pre>/// the x, y and z dimensions).</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>422</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
+    <td align="left" class="src "><pre>Matrix4x4f Matrix4x4f_Scaled(const Matrix4x4f&amp; m, Scalar1f scale);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>423</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>/// Internal helper function for implementing the other matrix rotation functions.</pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>424</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>Matrix4x4f Matrix4x4f_RotateCommon(Radians angle, int axis);</pre></td>
+    <td align="left" class="src "><pre>/// Creates a matrix that when multiplied by it will be able to apply a 3D scaling</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>425</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
+    <td align="left" class="src "><pre>/// transformation. This is a non-uniform scaling where the amount scaled in each</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>426</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>/// Creates a matrix that when multiplied by it will be able to apply a 3D rotation</pre></td>
+    <td align="left" class="src "><pre>/// dimension is determined by the scale vector parameter.</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>427</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>/// transformation about the x axis. The x parameter is in radians.</pre></td>
+    <td align="left" class="src "><pre>Matrix4x4f Matrix4x4f_ScaleXYZ(const Vector4f&amp; scale);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>428</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>inline Matrix4x4f Matrix4x4f_RotateX(Radians x)</pre></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>429</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>{</pre></td>
+    <td align="left" class="src "><pre>/// Internal helper function for implementing the other matrix rotation functions.</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>430</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>  return Matrix4x4f_RotateCommon(x, 0);</pre></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>Matrix4x4f Matrix4x4f_RotateCommon(Radians angle, int axis);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>431</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>}</pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>432</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
+    <td align="left" class="src "><pre>/// Creates a matrix that when multiplied by it will be able to apply a 3D rotation</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>433</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>/// Creates a matrix that when multiplied by it will be able to apply a 3D rotation</pre></td>
+    <td align="left" class="src "><pre>/// transformation about the x axis. The x parameter is in radians.</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>434</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>/// transformation about the y axis. The y parameter is in radians.</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="left" class="src coveredLine"><pre>inline Matrix4x4f Matrix4x4f_RotateX(Radians x)</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>435</pre></td>
-    <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>inline Matrix4x4f Matrix4x4f_RotateY(Radians y)</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>436</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>{</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>437</pre></td>
+    <td align="right" class="lineno"><pre>436</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>  return Matrix4x4f_RotateCommon(y, 1);</pre></td>
+    <td align="left" class="src coveredLine"><pre>  return Matrix4x4f_RotateCommon(x, 0);</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>437</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>}</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>438</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>}</pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>439</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
+    <td align="left" class="src "><pre>/// Creates a matrix that when multiplied by it will be able to apply a 3D rotation</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>440</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>/// Creates a matrix that when multiplied by it will be able to apply a 3D rotation</pre></td>
+    <td align="left" class="src "><pre>/// transformation about the y axis. The y parameter is in radians.</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>441</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>/// transformation about the z axis. The z parameter is in radians.</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="left" class="src coveredLine"><pre>inline Matrix4x4f Matrix4x4f_RotateY(Radians y)</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>442</pre></td>
-    <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>inline Matrix4x4f Matrix4x4f_RotateZ(Radians z)</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>443</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>{</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>444</pre></td>
+    <td align="right" class="lineno"><pre>443</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>  return Matrix4x4f_RotateCommon(z, 2);</pre></td>
+    <td align="left" class="src coveredLine"><pre>  return Matrix4x4f_RotateCommon(y, 1);</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>444</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>}</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>445</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>}</pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>446</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
+    <td align="left" class="src "><pre>/// Creates a matrix that when multiplied by it will be able to apply a 3D rotation</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>447</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>/// Creates a matrix that when multiplied by it will be able to apply a 3D perspective</pre></td>
+    <td align="left" class="src "><pre>/// transformation about the z axis. The z parameter is in radians.</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>448</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>/// projection transformation.</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="left" class="src coveredLine"><pre>inline Matrix4x4f Matrix4x4f_RotateZ(Radians z)</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>449</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>/// \param fieldOfView is the field of view which is the horizontal viewing angle in to the scene.</pre></td>
+    <td align="left" class="src "><pre>{</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>450</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>/// \param aspectRatio is the ratio of width to height of the view.</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="left" class="src coveredLine"><pre>  return Matrix4x4f_RotateCommon(z, 2);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>451</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>/// \param near is the distance to the near plane. Depth values are scaled according to this.</pre></td>
+    <td align="left" class="src "><pre>}</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>452</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>/// \param far is the distance to the far plane. Depth values are scaled according to this.</pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>453</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>Matrix4x4f Matrix4x4f_PerspectiveFrustum(Radians fieldOfView, Scalar1f aspectRatio, Scalar1f near, Scalar1f far);</pre></td>
+    <td align="left" class="src "><pre>/// Creates a matrix that when multiplied by it will be able to apply a 3D perspective</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>454</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
+    <td align="left" class="src "><pre>/// projection transformation.</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>455</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>/// Creates a matrix that when multiplied by it will be able to apply a 3D orthographic</pre></td>
+    <td align="left" class="src "><pre>/// \param fieldOfView is the field of view which is the horizontal viewing angle in to the scene.</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>456</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>/// projection transformation.</pre></td>
+    <td align="left" class="src "><pre>/// \param aspectRatio is the ratio of width to height of the view.</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>457</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>/// \param left is the distance from the centre of the projection to the left edge of the view.</pre></td>
+    <td align="left" class="src "><pre>/// \param near is the distance to the near plane. Depth values are scaled according to this.</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>458</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>/// \param right is the distance from the centre of the projection to the right edge of the view.</pre></td>
+    <td align="left" class="src "><pre>/// \param far is the distance to the far plane. Depth values are scaled according to this.</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>459</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>/// \param bottom is the distance from the centre of the projection to the bottom edge of the view.</pre></td>
+    <td align="left" class="src "><pre>Matrix4x4f Matrix4x4f_PerspectiveFrustum(Radians fieldOfView, Scalar1f aspectRatio, Scalar1f near, Scalar1f far);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>460</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>/// \param top the distance from the centre of the projection to the top edge of the view.</pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>461</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>/// \param near is the distance to the near plane. Depth values are scaled according to this.</pre></td>
+    <td align="left" class="src "><pre>/// Creates a matrix that when multiplied by it will be able to apply a 3D orthographic</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>462</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>/// \param far is the distance to the far plane. Depth values are scaled according to this.</pre></td>
+    <td align="left" class="src "><pre>/// projection transformation.</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>463</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>Matrix4x4f Matrix4x4f_OrthographicFrustum(Scalar1f left, Scalar1f right, Scalar1f bottom, Scalar1f top, Scalar1f near, Scalar1f far);</pre></td>
+    <td align="left" class="src "><pre>/// \param left is the distance from the centre of the projection to the left edge of the view.</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>464</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
+    <td align="left" class="src "><pre>/// \param right is the distance from the centre of the projection to the right edge of the view.</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>465</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>/// Calculates the determinate of the matrix a. The determinate can be used to decide if a matrix is</pre></td>
+    <td align="left" class="src "><pre>/// \param bottom is the distance from the centre of the projection to the bottom edge of the view.</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>466</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>/// invertible or not. If you need to use Matrix4x4f_Inversed and need to know if it will succeed or not,</pre></td>
+    <td align="left" class="src "><pre>/// \param top the distance from the centre of the projection to the top edge of the view.</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>467</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>/// then use this function and the Matrix4x4f_Adjugate functions directly instead of the Matrix4x4f_Inversed</pre></td>
+    <td align="left" class="src "><pre>/// \param near is the distance to the near plane. Depth values are scaled according to this.</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>468</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>/// convenience function.</pre></td>
+    <td align="left" class="src "><pre>/// \param far is the distance to the far plane. Depth values are scaled according to this.</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>469</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>/// \see Matrix4x4f_Inversed, Matrix4x4f_Adjugate</pre></td>
+    <td align="left" class="src "><pre>Matrix4x4f Matrix4x4f_OrthographicFrustum(Scalar1f left, Scalar1f right, Scalar1f bottom, Scalar1f top, Scalar1f near, Scalar1f far);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>470</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>Scalar1f Matrix4x4f_Determinant(const Matrix4x4f&amp; a);</pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>471</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
+    <td align="left" class="src "><pre>/// Calculates the determinate of the matrix a. The determinate can be used to decide if a matrix is</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>472</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>/// Calculates the adjugate of the matrix a. This is used to find the inverse of the matrix.</pre></td>
+    <td align="left" class="src "><pre>/// invertible or not. If you need to use Matrix4x4f_Inversed and need to know if it will succeed or not,</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>473</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>/// \see Matrix4x4f_Inversed, Matrix4x4f_Determinate</pre></td>
+    <td align="left" class="src "><pre>/// then use this function and the Matrix4x4f_Adjugate functions directly instead of the Matrix4x4f_Inversed</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>474</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>Matrix4x4f Matrix4x4f_Adjugate(const Matrix4x4f&amp; a);</pre></td>
+    <td align="left" class="src "><pre>/// convenience function.</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>475</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
+    <td align="left" class="src "><pre>/// \see Matrix4x4f_Inversed, Matrix4x4f_Adjugate</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>476</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>/// Creates a matrix that is the inverse of matrix a. This resulting matrix when multiplied</pre></td>
+    <td align="left" class="src "><pre>Scalar1f Matrix4x4f_Determinant(const Matrix4x4f&amp; a);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>477</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>/// with the original matrix a will return an identity matrix (provided the matrix is invertible).</pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>478</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>/// \see Matrix4x4f_Adjugate, Matrix4x4f_Determinate</pre></td>
+    <td align="left" class="src "><pre>/// Calculates the adjugate of the matrix a. This is used to find the inverse of the matrix.</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>479</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>4</pre></td>
-    <td align="left" class="src coveredLine"><pre>inline Matrix4x4f Matrix4x4f_Inversed(const Matrix4x4f&amp; a)</pre></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>/// \see Matrix4x4f_Inversed, Matrix4x4f_Determinate</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>480</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>{</pre></td>
+    <td align="left" class="src "><pre>Matrix4x4f Matrix4x4f_Adjugate(const Matrix4x4f&amp; a);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>481</pre></td>
-    <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>4</pre></td>
-    <td align="left" class="src coveredLine"><pre>  Scalar1f det = Matrix4x4f_Determinant(a);</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>482</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 4 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
-    <td align="right" class="linecount coveredLine"><pre>4</pre></td>
-    <td align="left" class="src coveredLine"><pre>  if (det != Scalar1f_Zero())</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>483</pre></td>
-    <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>  {</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>484</pre></td>
-    <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>4</pre></td>
-    <td align="left" class="src coveredLine"><pre>    return Matrix4x4f_Scaled(Matrix4x4f_Adjugate(a), Scalar1f_One() / det);</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>485</pre></td>
-    <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>  }</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>486</pre></td>
-    <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>  return Matrix4x4f_Zero();</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>487</pre></td>
-    <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>}</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>488</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
+    <td align="right" class="lineno"><pre>482</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>/// Creates a matrix that is the inverse of matrix a. This resulting matrix when multiplied</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>483</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>/// with the original matrix a will return an identity matrix (provided the matrix is invertible).</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>484</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>/// \see Matrix4x4f_Adjugate, Matrix4x4f_Determinate</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>485</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount coveredLine"><pre>4</pre></td>
+    <td align="left" class="src coveredLine"><pre>inline Matrix4x4f Matrix4x4f_Inversed(const Matrix4x4f&amp; a)</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>486</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>{</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>487</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount coveredLine"><pre>4</pre></td>
+    <td align="left" class="src coveredLine"><pre>  Scalar1f det = Matrix4x4f_Determinant(a);</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>488</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 4 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>4</pre></td>
+    <td align="left" class="src coveredLine"><pre>  if (det != Scalar1f_Zero())</pre></td>
+    </tr>
+
+    <tr>
     <td align="right" class="lineno"><pre>489</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>/// Applies the transformation of matrix m to vector vec, and returns the transformed</pre></td>
+    <td align="left" class="src "><pre>  {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>490</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>/// vector.</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>4</pre></td>
+    <td align="left" class="src coveredLine"><pre>    return Matrix4x4f_Scaled(Matrix4x4f_Adjugate(a), Scalar1f_One() / det);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>491</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>Vector4f Vector4f_Transform(const Matrix4x4f&amp; m, const Vector4f&amp; vec);</pre></td>
+    <td align="left" class="src "><pre>  }</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>492</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>  return Matrix4x4f_Zero();</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>493</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>}</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>494</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre></pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>495</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>/// Applies the transformation of matrix m to vector vec, and returns the transformed</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>496</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>/// vector.</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>497</pre></td>
+    <td align="right" class="linebranch"></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>Vector4f Vector4f_Transform(const Matrix4x4f&amp; m, const Vector4f&amp; vec);</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>498</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
