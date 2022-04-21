@@ -32,6 +32,8 @@
 struct BitmapFileHeader
 {
   uint8_t     magic[2];
+  // Normally here between 'magic' and 'fileSize' the compiler would need to add
+  // padding if fileSize was a uint32_t, but it doesn't need to when it is a uint32_le.
   uint32_le   fileSize;
   uint32_le   reserved;
   uint32_le   imageDataFileOffset;
@@ -47,6 +49,8 @@ struct BitmapFileHeader
   uint32_le   paletteSize;
   uint32_le   importantColors;
 };
+
+static_assert(sizeof(BitmapFileHeader) == 54, "Unexpected Bitmap header size, compiler might be adding padding");
 
 
 ////////////////////////////////////////////////////////////////////////////////////
