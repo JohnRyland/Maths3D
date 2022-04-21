@@ -1,0 +1,6 @@
+<map id="Vector4f_Length" name="Vector4f_Length">
+<area shape="rect" id="node1" title="Calculates the length of vec." alt="" coords="455,31,581,57"/>
+<area shape="rect" id="node2" href="$maths3dpp_8h.html#ad175bd992a4e1c64554784b5fd40e99f" title="Length of a vector." alt="" coords="265,5,353,32"/>
+<area shape="rect" id="node3" href="$maths3d_8h.html#add8a21f2e58d7d54153d07a551e2295a" title="Calculates 1/length of vec." alt="" coords="212,56,407,83"/>
+<area shape="rect" id="node4" href="$maths3d_8h.html#ac8a62a63b780796489c14691caac5824" title="Copies vec and divides each component by the length of vec (returning the normalized or unit vector o..." alt="" coords="5,56,164,83"/>
+</map>
