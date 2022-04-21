@@ -5,6 +5,19 @@
 // Simple Example of a basic ray tracer
 //
 
+
+///////////////////////////////////////////////////////////////////////////////////
+// License
+
+//
+// Copyright (c) 2022, John Ryland
+// All rights reserved.
+//
+// BSD-2-Clause License. See included LICENSE file for details.
+// If LICENSE file is missing, see: https://opensource.org/licenses/BSD-2-Clause
+//
+
+
 ////////////////////////////////////////////////////////////////////////////////////
 // Includes
 
