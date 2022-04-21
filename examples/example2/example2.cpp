@@ -37,6 +37,7 @@
 
 #include <cstdint>
 #include <cstdio>
+#include <vector>
 #include "bitmap.h"
 #include "maths3d.h"
 
@@ -44,30 +45,34 @@
 ////////////////////////////////////////////////////////////////////////////////////
 // Types
 
-struct Sphere
-{
-  Vector4f center;
-  Scalar1f radius;
-  uint32_t color;
-};
-
-struct Cube
-{
-  Vector4f center;
-  Scalar1f radius;
-  uint32_t color;
-};
-
 struct Ray
 {
   Vector4f origin;
   Vector4f lookAt;
 };
 
+
+////////////////////////////////////////////////////////////////////////////////////
+// Scene Objects
+
+struct Sphere
+{
+  Vector4f center;
+  Vector4f color;
+  Scalar1f radius;
+};
+
+struct Cube
+{
+  Vector4f center;
+  Vector4f color;
+  Scalar1f radius;
+};
+
 struct Light
 {
   Vector4f position;
-  uint32_t color;
+  Vector4f color;
 };
 
 
@@ -76,11 +81,9 @@ struct Light
 
 struct Scene
 {
-  static constexpr int numberOfSpheres = 3;
-  static constexpr int numberOfCubes = 3;
-  Sphere spheres[numberOfSpheres];
-  Cube cubes[numberOfCubes];
-  Light light;
+  std::vector<Sphere> spheres;
+  std::vector<Cube>   cubes;
+  std::vector<Light>  lights;
 };
 
 
@@ -92,42 +95,74 @@ Vector4f RayDirection(const Ray& ray)
   return Vector4f_Normalized(Vector4f_Subtract(ray.lookAt, ray.origin));
 }
 
-Vector4f PointOfClosestIntercept(const Ray& ray, const Vector4f& point)
+Vector4f PointOfClosestIntercept(const Vector4f& origin, const Vector4f& rayDirection, const Vector4f& point)
 {
-  const Vector4f rayDirection = RayDirection(ray);
-  const Vector4f fromRayToPoint = Vector4f_Subtract(point, ray.origin);
-  const Scalar1f lengthAlongRayToPerpendicularToPoint = Vector4f_DotProduct(rayDirection, fromRayToPoint);
+  const Vector4f fromRayToPoint = Vector4f_Subtract(point, origin);
+  // const Scalar1f lengthAlongRayToPerpendicularToPoint = Vector4f_DotProduct(rayDirection, fromRayToPoint);
+  const Scalar1f lengthAlongRayToPerpendicularToPoint = Vector4f_DotProduct(fromRayToPoint, rayDirection);
   const Scalar1f& length = lengthAlongRayToPerpendicularToPoint;
-  return Vector4f_Add(ray.origin, Vector4f_Scaled(rayDirection, length));
-}
-
-bool RayIntersectsSphere(const Ray& ray, const Sphere& sphere)
-{
-  const Vector4f pointOnRayPerpendicularToSphereCenter = PointOfClosestIntercept(ray, sphere.center);
-  const Vector4f vectorFromSphereCenterToRay = Vector4f_Subtract(pointOnRayPerpendicularToSphereCenter, sphere.center);
-  const Scalar1f distanceFromSphereCenterToRay = Vector4f_Length(vectorFromSphereCenterToRay);
-
-  // See if our point of closest intercept between the ray and the center of the sphere is less than the radius of the sphere.
-  return distanceFromSphereCenterToRay < sphere.radius;
+  return Vector4f_Add(origin, Vector4f_Scaled(rayDirection, length));
 }
 
 template <size_t width, size_t height, int viewDistance>
 uint32_t TraceRay(int i, int j, const Scene& scene)
 {
-  Vector4f eye{ 0.0f, 0.0f, -viewDistance, 0.0f };
-  Vector4f lookAt{ i - 0.5f * width, j - 0.5f * height, 0.0f, 0.0f };
-  Ray ray{ eye, lookAt };
+  const Vector4f eye{ 0.0f, 0.0f, -viewDistance, 0.0f };
+  const Vector4f lookAt{ i - 0.5f * width, j - 0.5f * height, 0.0f, 0.0f };
+  const Ray ray{ eye, lookAt };
+  const Vector4f rayDirection = RayDirection(ray);
+  float closestDistance = 1000000000000.0f;
+  int closestObjectIndex = -1;
+  Vector4f closestIntersection;
 
-  for (int i = 0; i < scene.numberOfSpheres; ++i)
+  for (int i = 0; i < scene.spheres.size(); ++i)
   {
-    if (RayIntersectsSphere(ray, scene.spheres[i]))
+    const Sphere& sphere = scene.spheres[i];
+    const Vector4f pointOnRayPerpendicularToSphereCenter = PointOfClosestIntercept(ray.origin, rayDirection, sphere.center);
+    const Vector4f vectorFromSphereCenterToRay = Vector4f_Subtract(pointOnRayPerpendicularToSphereCenter, sphere.center);
+    const Scalar1f distanceFromSphereCenterToRay = Vector4f_Length(vectorFromSphereCenterToRay);
+
+    // See if our point of closest intercept between the ray and the center of the sphere is less than the radius of the sphere.
+    if (distanceFromSphereCenterToRay < sphere.radius)
     {
-      // TODO: find point on the sphere and find closest object
-      return scene.spheres[i].color;
+      // Now use Pythagoras' theorem to work out the distance back to the intersection point
+      float distanceBack = sqrt(sphere.radius * sphere.radius - distanceFromSphereCenterToRay * distanceFromSphereCenterToRay);
+
+      // Now we trace back along the ray this distance from the closest intercept point
+      const Vector4f intersectionPoint = Vector4f_Subtract(pointOnRayPerpendicularToSphereCenter, Vector4f_Scaled(rayDirection, distanceBack));
+
+      float distanceToIntersection = Vector4f_Length(Vector4f_Subtract(intersectionPoint, ray.origin));
+
+      if (distanceToIntersection < closestDistance)
+      {
+        closestIntersection = intersectionPoint;;
+        closestDistance = distanceToIntersection;
+        closestObjectIndex = i;
+      }
     }
   }
 
-  for (int i = 0; i < scene.numberOfCubes; ++i)
+  if (closestObjectIndex != -1)
+  {
+    const Sphere& sphere = scene.spheres[closestObjectIndex];
+    Vector4f normal = Vector4f_Normalized(Vector4f_Subtract(closestIntersection, sphere.center));
+    Vector4f color = Vector4f_Zero();
+    for (const Light& light : scene.lights)
+    {
+      Vector4f toLight = Vector4f_Normalized(Vector4f_Subtract(closestIntersection, light.position));
+      Scalar1f lightIntensity = Vector4f_DotProduct(toLight, normal);
+
+      if (lightIntensity < 0.0)
+        lightIntensity = 0.0;
+      lightIntensity += 0.2;
+
+      // color = color + sphere.color * lightIntensity;
+      color = Vector4f_Add(color, Vector4f_Scaled(sphere.color, lightIntensity));
+    }
+    return ((uint32_t(color.x*255.0)&0xFF) << 16) | ((uint32_t(color.y*255.0)&0xff) << 8) | (uint32_t(color.z*255.0)&0xff); 
+  }
+
+  for (int i = 0; i < scene.cubes.size(); ++i)
   {
     // TODO: add cube support
     // if (RayIntersectsCube(ray, scene.spheres[i]))
@@ -139,6 +174,7 @@ uint32_t TraceRay(int i, int j, const Scene& scene)
   return 0x000000;
 }
 
+/// Applies the ray tracing algorithm to each pixel of the image and saves to a file.
 template <size_t width, size_t height, int viewDistance>
 void RayTracer(const Scene& scene, const char* fileName)
 {
@@ -160,11 +196,23 @@ void RayTracer(const Scene& scene, const char* fileName)
 
 int main(int argc, const char* argv[])
 {
-  printf("example1\n");
-  Scene scene;
-  scene.spheres[0] = Sphere{ { -50, -50, 90 }, 50, 0xFF0000 };
-  scene.spheres[1] = Sphere{ {  60,  20, 70 }, 50, 0x00FF00 };
-  scene.spheres[2] = Sphere{ {   0,  30, 80 }, 70, 0x0000FF };
-  RayTracer<320,240,100>(scene, "example1.bmp");
+  Scene scene = 
+  {
+    .spheres =
+    {
+      { { -50, -50,  90 }, { 1.0, 0.0, 0.0 }, 50 },
+      { {  60,  20,  50 }, { 0.0, 1.0, 0.0 }, 50 },
+      { {   0,  30, 100 }, { 0.0, 0.0, 1.0 }, 70 }
+    },
+    .cubes =
+    {
+    },
+    .lights =
+    {
+      { { 20, 100, -10 }, { 1.0, 1.0, 1.0 } }
+    }
+  };
+
+  RayTracer<320,240,100>(scene, "example2.bmp");
 }
 
