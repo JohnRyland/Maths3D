@@ -1,0 +1,5 @@
+<map id="operator*" name="operator*">
+<area shape="rect" id="node1" title="Multiply two vectors." alt="" coords="5,5,89,32"/>
+<area shape="rect" id="node2" href="$maths3d_8h.html#a90265d9aa55b92df80e1ff0db7be136f" title="Multiplies vec1 with vec2." alt="" coords="137,5,273,32"/>
+<area shape="rect" id="node3" href="$maths3d_8h.html#ae4a4af082482c7992d487d2f709a1d4b" title="Assigns x, y, z and w to the corresponding components of the vector." alt="" coords="321,5,425,32"/>
+</map>
