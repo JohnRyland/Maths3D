@@ -1,0 +1,7 @@
+<map id="operator*" name="operator*">
+<area shape="rect" id="node1" title="Multiply by a scalar." alt="" coords="5,31,89,57"/>
+<area shape="rect" id="node2" href="$maths3d_8h.html#a6e31aefd604b0542109db392dbe9d4ed" title="Copies vec and multiplies each component by scale." alt="" coords="137,31,264,57"/>
+<area shape="rect" id="node3" href="$maths3d_8h.html#a90265d9aa55b92df80e1ff0db7be136f" title="Multiplies vec1 with vec2." alt="" coords="316,5,452,32"/>
+<area shape="rect" id="node5" href="$maths3d_8h.html#a6931631ee39dd7d2078a35562c6e3e98" title="Assigns v to all four of the components of the vector." alt="" coords="312,56,456,83"/>
+<area shape="rect" id="node4" href="$maths3d_8h.html#ae4a4af082482c7992d487d2f709a1d4b" title="Assigns x, y, z and w to the corresponding components of the vector." alt="" coords="504,31,608,57"/>
+</map>
