@@ -1,0 +1,33 @@
+digraph "Matrix4x4f_Zero"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="Matrix4x4f_Zero",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Matrix4x4f_Identity",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$maths3d_8h.html#aee566e6a213d4cfeeede9e23eac68c8f",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Matrix4x4f_TranslateXYZ",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$maths3d_8h.html#ad9ab510eb17aa1dc3dc76005eb09d667",tooltip=" "];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="matrix_tests",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$tests_8cpp.html#a81702378d4fe24787c381f549e8e1847",tooltip=" "];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$tests_8cpp.html#ac0f2228420376f4db7e1274f2b41667c",tooltip=" "];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Matrix4x4f_Multiply",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$maths3d_8h.html#a163ffd684df4d3e85aeecc27687e24ba",tooltip=" "];
+  Node6 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="Matrix4x4f_RotateCommon",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$maths3d_8h.html#a655c027ed401744ea139601bb2219223",tooltip=" "];
+  Node7 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="Matrix4x4f_RotateX",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$maths3d_8h.html#a8e55e35ba129e305548e271c9a825524",tooltip=" "];
+  Node8 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="Matrix4x4f_RotateY",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$maths3d_8h.html#afc3c0913e70c1567f4c99c2d4f997352",tooltip=" "];
+  Node9 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="Matrix4x4f_RotateZ",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$maths3d_8h.html#ad6409707b2f0acdb02554bebde18974b",tooltip=" "];
+  Node10 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="Matrix4x4f_ScaleXYZ",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$maths3d_8h.html#ad520ae2903c45418c3c4809762623e22",tooltip=" "];
+  Node11 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}
