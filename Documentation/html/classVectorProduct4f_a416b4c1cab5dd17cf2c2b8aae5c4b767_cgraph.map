@@ -1,0 +1,6 @@
+<map id="VectorProduct4f::operator Vector4f" name="VectorProduct4f::operator Vector4f">
+<area shape="rect" id="node1" title=" " alt="" coords="5,23,192,65"/>
+<area shape="rect" id="node2" href="$maths3d_8h.html#aea681748308bba9afb0ffdd613264f99" title="Calculates the cross&#45;product of v1 and v2." alt="" coords="240,31,408,57"/>
+<area shape="rect" id="node3" href="$maths3d_8h.html#a7d18c307128606532d069a5fc8e9effe" title="If redefine Scalar1f to something other than float, update this function as applicable." alt="" coords="456,5,564,32"/>
+<area shape="rect" id="node4" href="$maths3d_8h.html#ae4a4af082482c7992d487d2f709a1d4b" title="Assigns x, y, z and w to the corresponding components of the vector." alt="" coords="458,56,562,83"/>
+</map>
