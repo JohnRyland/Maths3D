@@ -1,0 +1,5 @@
+<map id="BitmapFileHeader" name="BitmapFileHeader">
+<area shape="rect" id="node1" title=" " alt="" coords="31,241,169,268"/>
+<area shape="rect" id="node2" href="$classuint16__le.html" title="Drop in replacement for uint16_t which can help simplify dealing with endian conversions...." alt="" coords="5,5,88,32"/>
+<area shape="rect" id="node3" href="$classuint32__le.html" title="Drop in replacement for uint32_t which can help simplify dealing with endian conversions...." alt="" coords="113,5,196,32"/>
+</map>
