@@ -26,7 +26,7 @@
 /// This is the second example program for the Maths3D library to show some
 /// practical example usage of the vector functions.
 ///
-/// It creates a simple scene containing some spheres and cubes, and then ray traces
+/// It creates a simple scene containing some spheres and then ray traces
 /// them with some basic lighting.
 ///
 /// It builds on the first example. \see example1.cpp
@@ -39,7 +39,7 @@
 #include <cstdio>
 #include <vector>
 #include "bitmap.h"
-#include "maths3d_pp.h"
+#include "maths3d.h"
 
 
 ////////////////////////////////////////////////////////////////////////////////////
@@ -62,13 +62,6 @@ struct Sphere
   Scalar1f radius;
 };
 
-struct Cube
-{
-  Vector4f center;
-  Vector4f color;
-  Scalar1f radius;
-};
-
 struct Light
 {
   Vector4f position;
@@ -82,7 +75,6 @@ struct Light
 struct Scene
 {
   std::vector<Sphere> spheres;
-  std::vector<Cube>   cubes;
   std::vector<Light>  lights;
 };
 
@@ -98,8 +90,7 @@ Vector4f RayDirection(const Ray& ray)
 Vector4f PointOfClosestIntercept(const Vector4f& origin, const Vector4f& rayDirection, const Vector4f& point)
 {
   const Vector4f fromRayToPoint = Vector4f_Subtract(point, origin);
-  // const Scalar1f lengthAlongRayToPerpendicularToPoint = Vector4f_DotProduct(rayDirection, fromRayToPoint);
-  const Scalar1f lengthAlongRayToPerpendicularToPoint = Vector4f_DotProduct(fromRayToPoint, rayDirection);
+  const Scalar1f lengthAlongRayToPerpendicularToPoint = Vector4f_DotProduct(rayDirection, fromRayToPoint);
   const Scalar1f& length = lengthAlongRayToPerpendicularToPoint;
   return Vector4f_Add(origin, Vector4f_Scaled(rayDirection, length));
 }
@@ -111,7 +102,7 @@ uint32_t TraceRay(int i, int j, const Scene& scene)
   const Vector4f lookAt{ i - 0.5f * width, j - 0.5f * height, 0.0f, 0.0f };
   const Ray ray{ eye, lookAt };
   const Vector4f rayDirection = RayDirection(ray);
-  float closestDistance = 1000000000000.0f;
+  float closestDistance = 1e10f;
   int closestObjectIndex = -1;
   Vector4f closestIntersection;
 
@@ -162,14 +153,6 @@ uint32_t TraceRay(int i, int j, const Scene& scene)
     return ((uint32_t(color.x*255.0)&0xFF) << 16) | ((uint32_t(color.y*255.0)&0xff) << 8) | (uint32_t(color.z*255.0)&0xff); 
   }
 
-  for (int i = 0; i < scene.cubes.size(); ++i)
-  {
-    // TODO: add cube support
-    // if (RayIntersectsCube(ray, scene.spheres[i]))
-  }
-
-  // TODO: trace ray to the light to do basic lighting
-
   // If don't intersect any spheres, then draw a black pixel.
   return 0x000000;
 }
@@ -203,9 +186,6 @@ int main(int argc, const char* argv[])
       { { -50, -50,  90 }, { 1.0, 0.0, 0.0 }, 50 },
       { {  60,  20,  50 }, { 0.0, 1.0, 0.0 }, 50 },
       { {   0,  30, 100 }, { 0.0, 0.0, 1.0 }, 70 }
-    },
-    .cubes =
-    {
     },
     .lights =
     {

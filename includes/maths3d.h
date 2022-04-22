@@ -242,7 +242,14 @@ struct Vector4f
       Scalar1f x, y, z, w;    /// The named components, x, y, z and w accessible by name.
     };
   };
+
+  operator Scalar1f() const;
+  Vector4f& operator=(Scalar1f value);
 };
+
+// Check that Vector4f is still a POD type even with the operator member function
+static_assert(std::is_pod<Vector4f>(), "Vector4f is non-POD type");
+
 
 /// Assigns x, y, z and w to the corresponding components of the vector.
 inline Vector4f Vector4f_Set(Scalar1f x, Scalar1f y, Scalar1f z, Scalar1f w)
@@ -369,7 +376,14 @@ struct Matrix4x4f
     Scalar1f m[4][4];             /// The 4x4 matrix values accessible as a 4x4 array of arrays.
     Scalar1f v[16];               /// The 4x4 matrix values accessible as a single array of 16 values.
   };
+
+  operator Vector4f() const;
+  Matrix4x4f& operator=(const Vector4f& vec);
 };
+
+// Check that Matrix4x4f is still a POD type even with the operator member function
+static_assert(std::is_pod<Matrix4x4f>(), "Matrix4x4f is non-POD type");
+
 
 /// Initialize the matrix from an array of 16 values.
 inline Matrix4x4f Matrix4x4f_Set(const Scalar1f v[16])

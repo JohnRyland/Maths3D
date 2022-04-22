@@ -45,7 +45,7 @@
 ///////////////////////////////////////////////////////////////////////////////////
 // Documentation
 
-/// \file maths3dpp.h
+/// \file maths3d_pp.h
 ///
 /// C++ operator overload support for operations on the Scalar, Vector and Matrix
 /// types defined in maths3d.h. \see maths3d.h
@@ -88,9 +88,10 @@ inline VectorProduct4f::operator Vector4f()
 // 3D Maths - Vector
 
 /// assign a scalar
-inline Vector4f operator=(Scalar1f v)
+inline Vector4f& Vector4f::operator=(Scalar1f value)
 {
-  return Vector4f_Replicate(v);
+  *this = Vector4f_Replicate(value);
+  return *this;
 }
 
 /// Product of two vectors.
@@ -126,33 +127,49 @@ inline Vector4f operator-(const Vector4f& vec1, const Vector4f& vec2)
 }
 
 /// Length of a vector.
-inline Scalar1f operator=(const Vector4f& vec)
+inline Vector4f::operator Scalar1f() const
 {
-  return Vector4f_Length(vec);
+  return Vector4f_Length(*this);
 }
 
-// ~v  which operator?
-// inline Vector4f Vector4f_Normalized(const Vector4f& vec)
+/// Normalized vector of a vector.
+inline Vector4f operator~(const Vector4f& vec)
+{
+  return Vector4f_Normalized(vec);
+}
 
 
 ///////////////////////////////////////////////////////////////////////////////////
 // Matrix operators
 
-// m = v
-// Matrix4x4f Matrix4x4f_TranslateXYZ(const Vector4f& vec)
+/// Convert vector to a translation matrix
+inline Matrix4x4f& Matrix4x4f::operator=(const Vector4f& vec)
+{
+  *this = Matrix4x4f_TranslateXYZ(vec);
+  return *this;
+}
 
-// m = m * m
-// Matrix4x4f Matrix4x4f_Multiply(const Matrix4x4f& m1, const Matrix4x4f& m2);
+/// Multiply two matrices.
+inline Matrix4x4f operator*(const Matrix4x4f& m1, const Matrix4x4f& m2)
+{
+  return Matrix4x4f_Multiply(m1, m2);
+}
 
-// ?
-// Matrix4x4f Matrix4x4f_Transposed(const Matrix4x4f& a);
+/// Transpose of matrix.
+inline Matrix4x4f operator~(const Matrix4x4f& m)
+{
+  return Matrix4x4f_Transposed(m);
+}
 
-// m = m * s
-// Matrix4x4f Matrix4x4f_Scaled(const Matrix4x4f& m, Scalar1f scale);
+/// Multiply by a scalar.
+inline Matrix4x4f operator*(const Matrix4x4f& m, const Scalar1f& scale)
+{
+  return Matrix4x4f_Scaled(m, scale);
+}
 
-// m = s
-// Matrix4x4f Matrix4x4f_ScaleXYZ(const Vector4f& scale);
-
-// m = m * v
-// Vector4f Vector4f_Transform(const Matrix4x4f& m, const Vector4f& vec);
+/// Multiply matrix by a vector (transform).
+inline Vector4f operator*(const Matrix4x4f& m, const Vector4f& vec)
+{
+  return Vector4f_Transform(m, vec);
+}
 
