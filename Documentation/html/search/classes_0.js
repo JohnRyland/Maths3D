@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['degrees_131',['Degrees',['../structDegrees.html',1,'']]]
+  ['bitmapfileheader_182',['BitmapFileHeader',['../structBitmapFileHeader.html',1,'']]]
 ];

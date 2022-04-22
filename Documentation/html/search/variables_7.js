@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['y_238',['y',['../structVector4f.html#ac1444fc6516ff7dee47005547e569b7b',1,'Vector4f']]]
+  ['origin_328',['origin',['../structRay.html#abcecf9eaa3874b8eed1d834b867e5b0e',1,'Ray']]]
 ];

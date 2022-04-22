@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['scalar1f_82',['Scalar1f',['../maths3d_8h.html#afa8e5a9ded9b1a9dfeb09b6d20eb0ae2',1,'maths3d.h']]],
-  ['scalar1f_5fone_83',['Scalar1f_One',['../maths3d_8h.html#a7d18c307128606532d069a5fc8e9effe',1,'maths3d.h']]],
-  ['scalar1f_5ftwo_84',['Scalar1f_Two',['../maths3d_8h.html#a791539fd7b912c66a12b8049bc5c37cb',1,'maths3d.h']]],
-  ['scalar1f_5fzero_85',['Scalar1f_Zero',['../maths3d_8h.html#a23076d13621d19b8faf6760896a64270',1,'maths3d.h']]]
+  ['palettesize_109',['paletteSize',['../structBitmapFileHeader.html#a887099e202f176c84a237f5788680ffe',1,'BitmapFileHeader']]],
+  ['pixels_110',['pixels',['../structImage.html#a026f50cb67e6ae7d991f8bb4ba9a18cb',1,'Image']]],
+  ['planes_111',['planes',['../structBitmapFileHeader.html#a9921af85572321b3330342c2f8658114',1,'BitmapFileHeader']]],
+  ['pointofclosestintercept_112',['PointOfClosestIntercept',['../example2_8cpp.html#a06194c3ab2fc9f73ca2ce41b35ad700e',1,'example2.cpp']]],
+  ['position_113',['position',['../structLight.html#ae5910e817c3068f82756f77b0c443049',1,'Light']]]
 ];

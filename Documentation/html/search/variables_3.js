@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['rhs_232',['rhs',['../classVectorProduct4f.html#ac8866713055b330530cb708261223313',1,'VectorProduct4f']]],
-  ['row_233',['row',['../structMatrix4x4f.html#a57afa98a763021c5a853ea9ce5bddbda',1,'Matrix4x4f']]]
+  ['headersize_309',['headerSize',['../structBitmapFileHeader.html#a207876297e79cc361918d3ff83753ca9',1,'BitmapFileHeader']]],
+  ['height_310',['height',['../structBitmapFileHeader.html#a8c34740219400c85d78e19fc45324d7b',1,'BitmapFileHeader::height()'],['../structImage.html#aae4c89087111bc31067684279947f80e',1,'Image::height()']]],
+  ['horzres_311',['horzRes',['../structBitmapFileHeader.html#a0f6f000ae90e0fb6c21f5f8cd52200fc',1,'BitmapFileHeader']]]
 ];

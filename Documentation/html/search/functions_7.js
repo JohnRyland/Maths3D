@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['scalar1f_5fone_189',['Scalar1f_One',['../maths3d_8h.html#a7d18c307128606532d069a5fc8e9effe',1,'maths3d.h']]],
-  ['scalar1f_5ftwo_190',['Scalar1f_Two',['../maths3d_8h.html#a791539fd7b912c66a12b8049bc5c37cb',1,'maths3d.h']]],
-  ['scalar1f_5fzero_191',['Scalar1f_Zero',['../maths3d_8h.html#a23076d13621d19b8faf6760896a64270',1,'maths3d.h']]]
+  ['pointofclosestintercept_261',['PointOfClosestIntercept',['../example2_8cpp.html#a06194c3ab2fc9f73ca2ce41b35ad700e',1,'example2.cpp']]]
 ];

@@ -3,6 +3,19 @@ warning: ignoring unsupported tag 'NUM_PROC_THREADS' at line 22, file .build/doc
 warning: ignoring unsupported tag 'RESOLVE_UNNAMED_PARAMS' at line 27, file .build/docs/Doxyfile
 warning: ignoring unsupported tag 'DOT_UML_DETAILS' at line 33, file .build/docs/Doxyfile
 warning: ignoring unsupported tag 'DOT_WRAP_THRESHOLD' at line 34, file .build/docs/Doxyfile
+warning: tag INPUT: input source 'examples/example2/blah/blah.pro' does not exist
+warning: tag INPUT: input source 'Generating' does not exist
+warning: tag INPUT: input source 'project' does not exist
+warning: tag INPUT: input source 'file' does not exist
+warning: tag INPUT: input source 'as' does not exist
+warning: tag INPUT: input source 'examples/example2/blah/blah.pro' does not exist
+warning: source examples/example2/blah/blah.pro is not a readable file or directory... skipping.
+warning: source Generating is not a readable file or directory... skipping.
+warning: source project is not a readable file or directory... skipping.
+warning: source file is not a readable file or directory... skipping.
+warning: source as is not a readable file or directory... skipping.
+warning: source examples/example2/blah/blah.pro is not a readable file or directory... skipping.
+includes/maths3d_pp.h:48: warning: the name 'maths3dpp.h' supplied as the argument in the \file statement is not an input file
 .modules/TestFramework/include/Factory.hpp:70: warning: no matching class member found for 
   Iterator
 
@@ -23,8 +36,6 @@ Preprocessing tests/tests.cpp...
 Parsing file tests/tests.cpp...
 Preprocessing .modules/TestFramework/src/TestMain.cpp...
 Parsing file .modules/TestFramework/src/TestMain.cpp...
-Preprocessing includes/maths3dpp.h...
-Parsing file includes/maths3dpp.h...
 Preprocessing includes/maths3d.h...
 Parsing file includes/maths3d.h...
 Preprocessing includes/maths3d_ext.h...
@@ -33,6 +44,19 @@ Preprocessing .modules/TestFramework/include/test.h...
 Parsing file .modules/TestFramework/include/test.h...
 Preprocessing .modules/TestFramework/include/Factory.hpp...
 Parsing file .modules/TestFramework/include/Factory.hpp...
+Reading examples/examples.pro...
+Reading examples/example1/example1.pro...
+Reading examples/example2/example2.pro...
+Preprocessing examples/example2/example2.cpp...
+Parsing file examples/example2/example2.cpp...
+Preprocessing examples/common/bitmap.cpp...
+Parsing file examples/common/bitmap.cpp...
+Preprocessing examples/common/bitmap.h...
+Parsing file examples/common/bitmap.h...
+Preprocessing includes/maths3d_pp.h...
+Parsing file includes/maths3d_pp.h...
+Preprocessing examples/common/endian.h...
+Parsing file examples/common/endian.h...
 Reading docs/README.md...
 Building group list...
 Building directory list...
@@ -92,28 +116,38 @@ Generating code for file .modules/TestFramework/include/Factory.hpp...
 Generating code for file .modules/TestFramework/include/test.h...
 Parsing code for file .modules/TestFramework/src/TestMain.cpp...
 Parsing code for file docs/README.md...
+Parsing code for file examples/common/bitmap.cpp...
+Generating code for file examples/common/bitmap.h...
+Generating code for file examples/common/endian.h...
+Parsing code for file examples/example1/example1.pro...
+Parsing code for file examples/example2/example2.cpp...
+Parsing code for file examples/example2/example2.pro...
+Parsing code for file examples/examples.pro...
 Generating code for file includes/maths3d.h...
 Generating code for file includes/maths3d_ext.h...
-Generating code for file includes/maths3dpp.h...
+Generating code for file includes/maths3d_pp.h...
 Parsing code for file src/maths3d.cpp...
 Parsing code for file tests/tests.cpp...
 Generating file documentation...
 Generating docs for file .modules/TestFramework/include/Factory.hpp...
 Generating docs for file .modules/TestFramework/include/test.h...
-Generating docs fincludes/maths3d_ext.h:69: warning: argument 'translate' of command @param is not found in the argument list of Vector4f_SSETransformStreamGeneric(float *outputStream, const float *inputStream, unsigned count, const Matrix4x4f &transform)
-includes/maths3d_ext.h:69: warning: argument 'divideByW' of command @param is not found in the argument list of Vector4f_SSETransformStreamGeneric(float *outputStream, const float *inputStream, unsigned count, const Matrix4x4f &transform)
-includes/maths3d_ext.h:69: warning: argument 'alignedOutput' of command @param is not found in the argument list of Vector4f_SSETransformStreamGeneric(float *outputStream, const float *inputStream, unsigned count, const Matrix4x4f &transform)
-includes/maths3d_ext.h:69: warning: argument 'outputStep' of command @param is not found in the argument list of Vector4f_SSETransformStreamGeneric(float *outputStream, const float *inputStream, unsigned count, const Matrix4x4f &transform)
-includes/maths3d_ext.h:69: warning: argument 'alignedInput' of command @param is not found in the argument list of Vector4f_SSETransformStreamGeneric(float *outputStream, const float *inputStream, unsigned count, const Matrix4x4f &transform)
-includes/maths3d_ext.h:69: warning: argument 'inputStep' of command @param is not found in the argument list of Vector4f_SSETransformStreamGeneric(float *outputStream, const float *inputStream, unsigned count, const Matrix4x4f &transform)
-includes/maths3d_ext.h:155: warning: argument 'translate' of command @param is not found in the argument list of Vector4f_TransformStreamGeneric(float *outputStream, const float *inputStream, unsigned count, const Matrix4x4f &transform)
-includes/maths3d_ext.h:155: warning: argument 'divideByW' of command @param is not found in the argument list of Vector4f_TransformStreamGeneric(float *outputStream, const float *inputStream, unsigned count, const Matrix4x4f &transform)
-includes/maths3d_ext.h:155: warning: argument 'alignedOutput' of command @param is not found in the argument list of Vector4f_TransformStreamGeneric(float *outputStream, const float *inputStream, unsigned count, const Matrix4x4f &transform)
-includes/maths3d_ext.h:155: warning: argument 'outputStep' of command @param is not found in the argument list of Vector4f_TransformStreamGeneric(float *outputStream, const float *inputStream, unsigned count, const Matrix4x4f &transform)
-includes/maths3d_ext.h:155: warning: argument 'alignedInput' of command @param is not found in the argument list of Vector4f_TransformStreamGeneric(float *outputStream, const float *inputStream, unsigned count, const Matrix4x4f &transform)
-includes/maths3d_ext.h:155: warning: argument 'inputStep' of command @param is not found in the argument list of Vector4f_TransformStreamGeneric(float *outputStream, const float *inputStream, unsigned count, const Matrix4x4f &transform)
-or file .modules/TestFramework/src/TestMain.cpp...
+Generating docs for file .modules/TestFramework/src/TestMain.cpp...
 Generating docs for file docs/README.md...
+Generating docs for file examples/common/bitmap.cpp...
+Generating caller graph for function Image_SaveBitmap
+Generating docs for file examples/common/bitmap.h...
+Generating caller graph for function Image_SaveBitmap
+Generating docs for file examples/common/endian.h...
+Generating docs for file examples/example1/example1.pro...
+Generating docs for file examples/example2/example2.cpp...
+Generating call graph for function PointOfClosestIntercept
+Generating caller graph for function PointOfClosestIntercept
+Generating call graph for function RayDirection
+Generating caller graph for function RayDirection
+Generating call graph for function RayTracer
+Generating call graph for function TraceRay
+Generating docs for file examples/example2/example2.pro...
+Generating docs for file examples/examples.pro...
 Generating docs for file includes/maths3d.h...
 Generating call graph for function Matrix4x4f_Adjugate
 Generating caller graph for function Matrix4x4f_Adjugate
@@ -149,10 +183,23 @@ Generating caller graph for function Vector4f_DotProduct
 Generating call graph for function Vector4f_Length
 Generating caller graph for function Vector4f_Length
 Generating call graph for function Vector4f_LengthSquared
-Generating caller graph for function Vector4f_LengthSquared
+Generating caller graph for function Vector4f_Lenincludes/maths3d_ext.h:69: warning: argument 'translate' of command @param is not found in the argument list of Vector4f_SSETransformStreamGeneric(float *outputStream, const float *inputStream, unsigned count, const Matrix4x4f &transform)
+includes/maths3d_ext.h:69: warning: argument 'divideByW' of command @param is not found in the argument list of Vector4f_SSETransformStreamGeneric(float *outputStream, const float *inputStream, unsigned count, const Matrix4x4f &transform)
+includes/maths3d_ext.h:69: warning: argument 'alignedOutput' of command @param is not found in the argument list of Vector4f_SSETransformStreamGeneric(float *outputStream, const float *inputStream, unsigned count, const Matrix4x4f &transform)
+includes/maths3d_ext.h:69: warning: argument 'outputStep' of command @param is not found in the argument list of Vector4f_SSETransformStreamGeneric(float *outputStream, const float *inputStream, unsigned count, const Matrix4x4f &transform)
+includes/maths3d_ext.h:69: warning: argument 'alignedInput' of command @param is not found in the argument list of Vector4f_SSETransformStreamGeneric(float *outputStream, const float *inputStream, unsigned count, const Matrix4x4f &transform)
+includes/maths3d_ext.h:69: warning: argument 'inputStep' of command @param is not found in the argument list of Vector4f_SSETransformStreamGeneric(float *outputStream, const float *inputStream, unsigned count, const Matrix4x4f &transform)
+includes/maths3d_ext.h:155: warning: argument 'translate' of command @param is not found in the argument list of Vector4f_TransformStreamGeneric(float *outputStream, const float *inputStream, unsigned count, const Matrix4x4f &transform)
+includes/maths3d_ext.h:155: warning: argument 'divideByW' of command @param is not found in the argument list of Vector4f_TransformStreamGeneric(float *outputStream, const float *inputStream, unsigned count, const Matrix4x4f &transform)
+includes/maths3d_ext.h:155: warning: argument 'alignedOutput' of command @param is not found in the argument list of Vector4f_TransformStreamGeneric(float *outputStream, const float *inputStream, unsigned count, const Matrix4x4f &transform)
+includes/maths3d_ext.h:155: warning: argument 'outputStep' of command @param is not found in the argument list of Vector4f_TransformStreamGeneric(float *outputStream, const float *inputStream, unsigned count, const Matrix4x4f &transform)
+includes/maths3d_ext.h:155: warning: argument 'alignedInput' of command @param is not found in the argument list of Vector4f_TransformStreamGeneric(float *outputStream, const float *inputStream, unsigned count, const Matrix4x4f &transform)
+includes/maths3d_ext.h:155: warning: argument 'inputStep' of command @param is not found in the argument list of Vector4f_TransformStreamGeneric(float *outputStream, const float *inputStream, unsigned count, const Matrix4x4f &transform)
+gthSquared
 Generating call graph for function Vector4f_Multiply
 Generating caller graph for function Vector4f_Multiply
 Generating call graph for function Vector4f_Normalized
+Generating caller graph for function Vector4f_Normalized
 Generating call graph for function Vector4f_ReciprocalLength
 Generating caller graph for function Vector4f_ReciprocalLength
 Generating call graph for function Vector4f_Replicate
@@ -170,9 +217,10 @@ Generating caller graph for function Vector4f_Subtract
 Generating caller graph for function Vector4f_SumComponents
 Generating call graph for function Vector4f_Transform
 Generating call graph for function Vector4f_Zero
+Generating caller graph for function Vector4f_Zero
 Generating docs for file includes/maths3d_ext.h...
 Generating call graph for function Vector4f_TransformStreamGeneric
-Generating docs for file includes/maths3dpp.h...
+Generating docs for file includes/maths3d_pp.h...
 Generating call graph for function operator*
 Generating call graph for function operator*
 Generating call graph for function operator+
@@ -198,6 +246,8 @@ Generating docs for file tests/tests.cpp...
 Generating page documentation...
 Generating group documentation...
 Generating class documentation...
+Generating docs for compound BitmapFileHeader...
+Generating docs for compound Cube...
 Generating docs for compound Degrees...
 Generating docs for compound FactoryItem...
 Generating call graph for function FactoryItem::FactoryItem
@@ -207,9 +257,26 @@ Generating call graph for function FactoryItem::items
 Generating caller graph for function FactoryItem::items
 Generating docs for nested compound FactoryItem::Iterator...
 Generating docs for compound Feet...
+Generating docs for compound Image...
+Generating docs for compound Light...
 Generating docs for compound Matrix4x4f...
 Generating docs for compound Metres...
 Generating docs for compound Radians...
+Generating docs for compound Ray...
+Generating docs for compound Scene...
+Generating docs for compound Sphere...
+Generating docs for compound uint16_be...
+Generating call graph for function uint16_be::uint16_be
+Generating caller graph for function uint16_be::operator=
+Generating docs for compound uint16_le...
+Generating call graph for function uint16_le::uint16_le
+Generating caller graph for function uint16_le::operator=
+Generating docs for compound uint32_be...
+Generating call graph for function uint32_be::uint32_be
+Generating caller graph for function uint32_be::operator=
+Generating docs for compound uint32_le...
+Generating call graph for function uint32_le::uint32_le
+Generating caller graph for function uint32_le::operator=
 Generating docs for compound Vector4f...
 Generating docs for compound VectorProduct4f...
 Generating call graph for function VectorProduct4f::operator Scalar1f
@@ -221,8 +288,10 @@ Generating docs for compound UnitTest::UnitTestItem...
 Generating graph info page...
 Generating directory documentation...
 Generating dependency graph for directory .modules
-Generating dependency graph for directory .modules/TestFramework/src
+Generating dependency graph for directory examples/example2
+Generating dependency graph for directory examples
 Generating dependency graph for directory src
+Generating dependency graph for directory .modules/TestFramework/src
 Generating dependency graph for directory .modules/TestFramework
 Generating dependency graph for directory tests
 Generating index page...
@@ -243,129 +312,178 @@ writing tag file...
 Running plantuml with JAVA...
 Running dot...
 Generating dot graphs using 3 parallel threads...
-Running dot for graph 1/106
-Running dot for graph 2/106
-Running dot for graph 3/106
-Running dot for graph 4/106
-Running dot for graph 5/106
-Running dot for graph 6/106
-Running dot for graph 7/106
-Running dot for graph 8/106
-Running dot for graph 9/106
-Running dot for graph 10/106
-Running dot for graph 11/106
-Running dot for graph 12/106
-Running dot for graph 13/106
-Running dot for graph 14/106
-Running dot for graph 15/106
-Running dot for graph 16/106
-Running dot for graph 17/106
-Running dot for graph 18/106
-Running dot for graph 19/106
-Running dot for graph 20/106
-Running dot for graph 21/106
-Running dot for graph 22/106
-Running dot for graph 23/106
-Running dot for graph 24/106
-Running dot for graph 25/106
-Running dot for graph 26/106
-Running dot for graph 27/106
-Running dot for graph 28/106
-Running dot for graph 29/106
-Running dot for graph 30/106
-Running dot for graph 31/106
-Running dot for graph 32/106
-Running dot for graph 33/106
-Running dot for graph 34/106
-Running dot for graph 35/106
-Running dot for graph 36/106
-Running dot for graph 37/106
-Running dot for graph 38/106
-Running dot for graph 39/106
-Running dot for graph 40/106
-Running dot for graph 41/106
-Running dot for graph 42/106
-Running dot for graph 43/106
-Running dot for graph 44/106
-Running dot for graph 45/106
-Running dot for graph 46/106
-Running dot for graph 47/106
-Running dot for graph 48/106
-Running dot for graph 49/106
-Running dot for graph 50/106
-Running dot for graph 51/106
-Running dot for graph 52/106
-Running dot for graph 53/106
-Running dot for graph 54/106
-Running dot for graph 55/106
-Running dot for graph 56/106
-Running dot for graph 57/106
-Running dot for graph 58/106
-Running dot for graph 59/106
-Running dot for graph 60/106
-Running dot for graph 61/106
-Running dot for graph 62/106
-Running dot for graph 63/106
-Running dot for graph 64/106
-Running dot for graph 65/106
-Running dot for graph 66/106
-Running dot for graph 67/106
-Running dot for graph 68/106
-Running dot for graph 69/106
-Running dot for graph 70/106
-Running dot for graph 71/106
-Running dot for graph 72/106
-Running dot for graph 73/106
-Running dot for graph 74/106
-Running dot for graph 75/106
-Running dot for graph 76/106
-Running dot for graph 77/106
-Running dot for graph 78/106
-Running dot for graph 79/106
-Running dot for graph 80/106
-Running dot for graph 81/106
-Running dot for graph 82/106
-Running dot for graph 83/106
-Running dot for graph 84/106
-Running dot for graph 85/106
-Running dot for graph 86/106
-Running dot for graph 87/106
-Running dot for graph 88/106
-Running dot for graph 89/106
-Running dot for graph 90/106
-Running dot for graph 91/106
-Running dot for graph 92/106
-Running dot for graph 93/106
-Running dot for graph 94/106
-Running dot for graph 95/106
-Running dot for graph 96/106
-Running dot for graph 97/106
-Running dot for graph 98/106
-Running dot for graph 99/106
-Running dot for graph 100/106
-Running dot for graph 101/106
-Running dot for graph 102/106
-Running dot for graph 103/106
-Running dot for graph 104/106
-Running dot for graph 105/106
-Running dot for graph 106/106
-Patching output file 1/18
-Patching output file 2/18
-Patching output file 3/18
-Patching output file 4/18
-Patching output file 5/18
-Patching output file 6/18
-Patching output file 7/18
-Patching output file 8/18
-Patching output file 9/18
-Patching output file 10/18
-Patching output file 11/18
-Patching output file 12/18
-Patching output file 13/18
-Patching output file 14/18
-Patching output file 15/18
-Patching output file 16/18
-Patching output file 17/18
-Patching output file 18/18
-lookup cache used 350/65536 hits=2731 misses=436
+Running dot for graph 1/139
+Running dot for graph 2/139
+Running dot for graph 3/139
+Running dot for graph 4/139
+Running dot for graph 5/139
+Running dot for graph 6/139
+Running dot for graph 7/139
+Running dot for graph 8/139
+Running dot for graph 9/139
+Running dot for graph 10/139
+Running dot for graph 11/139
+Running dot for graph 12/139
+Running dot for graph 13/139
+Running dot for graph 14/139
+Running dot for graph 15/139
+Running dot for graph 16/139
+Running dot for graph 17/139
+Running dot for graph 18/139
+Running dot for graph 19/139
+Running dot for graph 20/139
+Running dot for graph 21/139
+Running dot for graph 22/139
+Running dot for graph 23/139
+Running dot for graph 24/139
+Running dot for graph 25/139
+Running dot for graph 26/139
+Running dot for graph 27/139
+Running dot for graph 28/139
+Running dot for graph 29/139
+Running dot for graph 30/139
+Running dot for graph 31/139
+Running dot for graph 32/139
+Running dot for graph 33/139
+Running dot for graph 34/139
+Running dot for graph 35/139
+Running dot for graph 36/139
+Running dot for graph 37/139
+Running dot for graph 38/139
+Running dot for graph 39/139
+Running dot for graph 40/139
+Running dot for graph 41/139
+Running dot for graph 42/139
+Running dot for graph 43/139
+Running dot for graph 44/139
+Running dot for graph 45/139
+Running dot for graph 46/139
+Running dot for graph 47/139
+Running dot for graph 48/139
+Running dot for graph 49/139
+Running dot for graph 50/139
+Running dot for graph 51/139
+Running dot for graph 52/139
+Running dot for graph 53/139
+Running dot for graph 54/139
+Running dot for graph 55/139
+Running dot for graph 56/139
+Running dot for graph 57/139
+Running dot for graph 58/139
+Running dot for graph 59/139
+Running dot for graph 60/139
+Running dot for graph 61/139
+Running dot for graph 62/139
+Running dot for graph 63/139
+Running dot for graph 64/139
+Running dot for graph 65/139
+Running dot for graph 66/139
+Running dot for graph 67/139
+Running dot for graph 68/139
+Running dot for graph 69/139
+Running dot for graph 70/139
+Running dot for graph 71/139
+Running dot for graph 72/139
+Running dot for graph 73/139
+Running dot for graph 74/139
+Running dot for graph 75/139
+Running dot for graph 76/139
+Running dot for graph 77/139
+Running dot for graph 78/139
+Running dot for graph 79/139
+Running dot for graph 80/139
+Running dot for graph 81/139
+Running dot for graph 82/139
+Running dot for graph 83/139
+Running dot for graph 84/139
+Running dot for graph 85/139
+Running dot for graph 86/139
+Running dot for graph 87/139
+Running dot for graph 88/139
+Running dot for graph 89/139
+Running dot for graph 90/139
+Running dot for graph 91/139
+Running dot for graph 92/139
+Running dot for graph 93/139
+Running dot for graph 94/139
+Running dot for graph 95/139
+Running dot for graph 96/139
+Running dot for graph 97/139
+Running dot for graph 98/139
+Running dot for graph 99/139
+Running dot for graph 100/139
+Running dot for graph 101/139
+Running dot for graph 102/139
+Running dot for graph 103/139
+Running dot for graph 104/139
+Running dot for graph 105/139
+Running dot for graph 106/139
+Running dot for graph 107/139
+Running dot for graph 108/139
+Running dot for graph 109/139
+Running dot for graph 110/139
+Running dot for graph 111/139
+Running dot for graph 112/139
+Running dot for graph 113/139
+Running dot for graph 114/139
+Running dot for graph 115/139
+Running dot for graph 116/139
+Running dot for graph 117/139
+Running dot for graph 118/139
+Running dot for graph 119/139
+Running dot for graph 120/139
+Running dot for graph 121/139
+Running dot for graph 122/139
+Running dot for graph 123/139
+Running dot for graph 124/139
+Running dot for graph 125/139
+Running dot for graph 126/139
+Running dot for graph 127/139
+Running dot for graph 128/139
+Running dot for graph 129/139
+Running dot for graph 130/139
+Running dot for graph 131/139
+Running dot for graph 132/139
+Running dot for graph 133/139
+Running dot for graph 134/139
+Running dot for graph 135/139
+Running dot for graph 136/139
+Running dot for graph 137/139
+Running dot for graph 138/139
+Running dot for graph 139/139
+Patching output file 1/34
+Patching output file 2/34
+Patching output file 3/34
+Patching output file 4/34
+Patching output file 5/34
+Patching output file 6/34
+Patching output file 7/34
+Patching output file 8/34
+Patching output file 9/34
+Patching output file 10/34
+Patching output file 11/34
+Patching output file 12/34
+Patching output file 13/34
+Patching output file 14/34
+Patching output file 15/34
+Patching output file 16/34
+Patching output file 17/34
+Patching output file 18/34
+Patching output file 19/34
+Patching output file 20/34
+Patching output file 21/34
+Patching output file 22/34
+Patching output file 23/34
+Patching output file 24/34
+Patching output file 25/34
+Patching output file 26/34
+Patching output file 27/34
+Patching output file 28/34
+Patching output file 29/34
+Patching output file 30/34
+Patching output file 31/34
+Patching output file 32/34
+Patching output file 33/34
+Patching output file 34/34
+lookup cache used 455/65536 hits=3389 misses=556
 finished...

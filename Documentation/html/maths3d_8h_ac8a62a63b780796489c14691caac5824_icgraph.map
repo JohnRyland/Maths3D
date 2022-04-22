@@ -1,5 +1,5 @@
 <map id="Vector4f_Normalized" name="Vector4f_Normalized">
-<area shape="rect" id="node1" title="Copies vec and divides each component by the length of vec (returning the normalized or unit vector o..." alt="" coords="259,5,417,32"/>
-<area shape="rect" id="node2" href="$tests_8cpp.html#a0e64913f2f7932ab8f3b57ab47d494a7" title=" " alt="" coords="108,5,211,32"/>
-<area shape="rect" id="node3" href="$tests_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title=" " alt="" coords="5,5,60,32"/>
+<area shape="rect" id="node1" title="Copies vec and divides each component by the length of vec (returning the normalized or unit vector o..." alt="" coords="289,31,448,57"/>
+<area shape="rect" id="node2" href="$example2_8cpp.html#aee370e829700aacdff9f25618d1a0b40" title=" " alt="" coords="135,5,241,32"/>
+<area shape="rect" id="node3" href="$example2_8cpp.html#a73781238ba06430e5d25f8624259b99e" title=" " alt="" coords="5,31,87,57"/>
 </map>

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['items_25',['items',['../structFactoryItem.html#adc3419e220c44bfbd332bac6db65a14e',1,'FactoryItem']]],
-  ['itemt_26',['ItemT',['../structFactoryItem.html#ab95005c7c5b14e98e0b3d9e758f68f4c',1,'FactoryItem']]],
-  ['iterator_27',['Iterator',['../classFactoryItem_1_1Iterator.html',1,'FactoryItem&lt; T &gt;::Iterator'],['../classFactoryItem_1_1Iterator.html#a8cc5164a14c24e650e58274c09effb90',1,'FactoryItem::Iterator::Iterator()']]]
+  ['headersize_41',['headerSize',['../structBitmapFileHeader.html#a207876297e79cc361918d3ff83753ca9',1,'BitmapFileHeader']]],
+  ['height_42',['height',['../structBitmapFileHeader.html#a8c34740219400c85d78e19fc45324d7b',1,'BitmapFileHeader::height()'],['../structImage.html#aae4c89087111bc31067684279947f80e',1,'Image::height()']]],
+  ['horzres_43',['horzRes',['../structBitmapFileHeader.html#a0f6f000ae90e0fb6c21f5f8cd52200fc',1,'BitmapFileHeader']]]
 ];
