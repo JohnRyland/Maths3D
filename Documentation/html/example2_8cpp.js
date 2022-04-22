@@ -2,7 +2,6 @@ var example2_8cpp =
 [
     [ "Ray", "structRay.html", "structRay" ],
     [ "Sphere", "structSphere.html", "structSphere" ],
-    [ "Cube", "structCube.html", "structCube" ],
     [ "Light", "structLight.html", "structLight" ],
     [ "Scene", "structScene.html", "structScene" ],
     [ "main", "example2_8cpp.html#ac0f2228420376f4db7e1274f2b41667c", null ],

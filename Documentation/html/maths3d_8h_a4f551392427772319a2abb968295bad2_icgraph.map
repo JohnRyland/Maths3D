@@ -1,8 +1,10 @@
 <map id="Vector4f_Length" name="Vector4f_Length">
-<area shape="rect" id="node1" title="Calculates the length of vec." alt="" coords="739,56,865,83"/>
-<area shape="rect" id="node2" href="$maths3d__pp_8h.html#ad175bd992a4e1c64554784b5fd40e99f" title="Length of a vector." alt="" coords="549,5,637,32"/>
-<area shape="rect" id="node3" href="$example2_8cpp.html#a73781238ba06430e5d25f8624259b99e" title=" " alt="" coords="5,107,87,133"/>
-<area shape="rect" id="node4" href="$maths3d_8h.html#add8a21f2e58d7d54153d07a551e2295a" title="Calculates 1/length of vec." alt="" coords="496,107,691,133"/>
-<area shape="rect" id="node5" href="$maths3d_8h.html#ac8a62a63b780796489c14691caac5824" title="Copies vec and divides each component by the length of vec (returning the normalized or unit vector o..." alt="" coords="289,107,448,133"/>
-<area shape="rect" id="node6" href="$example2_8cpp.html#aee370e829700aacdff9f25618d1a0b40" title=" " alt="" coords="135,157,241,184"/>
+<area shape="rect" id="node1" title="Calculates the length of vec." alt="" coords="1167,43,1293,69"/>
+<area shape="rect" id="node2" href="$example1_8cpp.html#a2e9724f5f6bfe7c417e05eb7c7cf93c9" title=" " alt="" coords="135,43,291,69"/>
+<area shape="rect" id="node4" href="$example2_8cpp.html#a73781238ba06430e5d25f8624259b99e" title=" " alt="" coords="575,43,657,69"/>
+<area shape="rect" id="node5" href="$maths3d_8h.html#add8a21f2e58d7d54153d07a551e2295a" title="Calculates 1/length of vec." alt="" coords="924,93,1119,120"/>
+<area shape="rect" id="node3" href="$example1_8cpp.html#a73781238ba06430e5d25f8624259b99e" title=" " alt="" coords="5,43,87,69"/>
+<area shape="rect" id="node6" href="$maths3d_8h.html#ac8a62a63b780796489c14691caac5824" title="Copies vec and divides each component by the length of vec (returning the normalized or unit vector o..." alt="" coords="717,93,876,120"/>
+<area shape="rect" id="node7" href="$example1_8cpp.html#aee370e829700aacdff9f25618d1a0b40" title=" " alt="" coords="563,93,669,120"/>
+<area shape="rect" id="node8" href="$example1_8cpp.html#a6e04921dade6ad68b29172064d54be30" title=" " alt="" coords="339,68,515,95"/>
 </map>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['origin_328',['origin',['../structRay.html#abcecf9eaa3874b8eed1d834b867e5b0e',1,'Ray']]]
+  ['numberofspheres_316',['numberOfSpheres',['../structScene.html#a57391835bfd5cbdcead404a6f5eb8444',1,'Scene']]]
 ];

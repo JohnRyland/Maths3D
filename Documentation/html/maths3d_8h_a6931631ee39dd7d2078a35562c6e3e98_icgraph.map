@@ -1,12 +1,12 @@
 <map id="Vector4f_Replicate" name="Vector4f_Replicate">
-<area shape="rect" id="node1" title="Assigns v to all four of the components of the vector." alt="" coords="808,136,952,163"/>
-<area shape="rect" id="node2" href="$maths3d__pp_8h.html#a781aeee4c54ab5afce2b993c6b84a9f8" title="assign a scalar" alt="" coords="619,56,707,83"/>
-<area shape="rect" id="node3" href="$maths3d_8h.html#a6e31aefd604b0542109db392dbe9d4ed" title="Copies vec and multiplies each component by scale." alt="" coords="599,107,726,133"/>
-<area shape="rect" id="node9" href="$maths3d__ext_8h.html#a108b1218141f5ae8db971554414de9c5" title=" " alt="" coords="565,158,760,199"/>
-<area shape="rect" id="node10" href="$maths3d_8h.html#a92d8749d3bc3bec741c75d5e722b8911" title="Assigns zero to all four of the components of the vector." alt="" coords="166,259,279,285"/>
-<area shape="rect" id="node4" href="$maths3d__pp_8h.html#af86d8c815e5c0c509d1287d4bf8d9e19" title="Multiply by a scalar." alt="" coords="396,5,480,32"/>
-<area shape="rect" id="node5" href="$example2_8cpp.html#a06194c3ab2fc9f73ca2ce41b35ad700e" title=" " alt="" coords="135,56,311,83"/>
-<area shape="rect" id="node6" href="$example2_8cpp.html#a73781238ba06430e5d25f8624259b99e" title=" " alt="" coords="5,157,87,184"/>
-<area shape="rect" id="node7" href="$maths3d_8h.html#ac8a62a63b780796489c14691caac5824" title="Copies vec and divides each component by the length of vec (returning the normalized or unit vector o..." alt="" coords="359,157,517,184"/>
-<area shape="rect" id="node8" href="$example2_8cpp.html#aee370e829700aacdff9f25618d1a0b40" title=" " alt="" coords="169,208,276,235"/>
+<area shape="rect" id="node1" title="Assigns v to all four of the components of the vector." alt="" coords="1167,85,1311,112"/>
+<area shape="rect" id="node2" href="$maths3d_8h.html#a6e31aefd604b0542109db392dbe9d4ed" title="Copies vec and multiplies each component by scale." alt="" coords="958,27,1085,53"/>
+<area shape="rect" id="node9" href="$maths3d__ext_8h.html#a108b1218141f5ae8db971554414de9c5" title=" " alt="" coords="924,78,1119,119"/>
+<area shape="rect" id="node10" href="$maths3d_8h.html#a92d8749d3bc3bec741c75d5e722b8911" title="Assigns zero to all four of the components of the vector." alt="" coords="740,136,853,163"/>
+<area shape="rect" id="node3" href="$example1_8cpp.html#a6e04921dade6ad68b29172064d54be30" title=" " alt="" coords="339,5,515,32"/>
+<area shape="rect" id="node6" href="$example2_8cpp.html#a73781238ba06430e5d25f8624259b99e" title=" " alt="" coords="575,81,657,108"/>
+<area shape="rect" id="node7" href="$maths3d_8h.html#ac8a62a63b780796489c14691caac5824" title="Copies vec and divides each component by the length of vec (returning the normalized or unit vector o..." alt="" coords="717,31,876,57"/>
+<area shape="rect" id="node4" href="$example1_8cpp.html#a2e9724f5f6bfe7c417e05eb7c7cf93c9" title=" " alt="" coords="135,5,291,32"/>
+<area shape="rect" id="node5" href="$example1_8cpp.html#a73781238ba06430e5d25f8624259b99e" title=" " alt="" coords="5,5,87,32"/>
+<area shape="rect" id="node8" href="$example1_8cpp.html#aee370e829700aacdff9f25618d1a0b40" title=" " alt="" coords="563,31,669,57"/>
 </map>

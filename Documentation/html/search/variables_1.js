@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['center_303',['center',['../structSphere.html#ab19cb45ae2c90f7c1e49fd06fe7ff40c',1,'Sphere::center()'],['../structCube.html#a5c52e83fa8b29617f5963a0495522b92',1,'Cube::center()']]],
-  ['color_304',['color',['../structSphere.html#a58c3ddeeee42348319aa4c9a1cd56930',1,'Sphere::color()'],['../structCube.html#a21f91b5335a899d4660f637e75b0b029',1,'Cube::color()'],['../structLight.html#a92881f408f46913e6983be2a30124995',1,'Light::color()']]],
-  ['cubes_305',['cubes',['../structScene.html#ad56e72ee1e221d74bd37c64cad67c783',1,'Scene']]]
+  ['center_293',['center',['../structSphere.html#ab19cb45ae2c90f7c1e49fd06fe7ff40c',1,'Sphere']]],
+  ['color_294',['color',['../structSphere.html#aee55926ee6775db220e09c5805b36dba',1,'Sphere::color()'],['../structSphere.html#a58c3ddeeee42348319aa4c9a1cd56930',1,'Sphere::color()'],['../structLight.html#a92881f408f46913e6983be2a30124995',1,'Light::color()']]]
 ];
