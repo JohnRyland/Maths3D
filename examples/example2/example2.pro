@@ -1,13 +1,12 @@
-PROJECT=example2
-TARGET=example2
+PROJECT  = example2
 
-SOURCES=example2.cpp \
-        ../common/bitmap.cpp \
-        ../../src/maths3d.cpp
+TARGET   = example2
 
-# TODO: include paths should be relative to the .pro file
-INCLUDES=includes
-INCLUDES+=examples/common
+CXXFLAGS = -std=c++11
 
-CXXFLAGS=-std=c++11
+INCLUDES = ../../includes \
+					 ../common
 
+SOURCES  = example2.cpp \
+           ../common/bitmap.cpp \
+           ../../src/maths3d.cpp
