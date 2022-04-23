@@ -121,7 +121,7 @@ Introduction</h2>
 <h1><a class="anchor" id="autotoc_md4"></a>
 Scalars</h1>
 <p>Changing the scalar type will change the underlying value type used by vector and matrix.</p>
-<p>A scalar value used to represent an angle can sometimes be used incorrectly when an API is not clear if the units are degrees or radians. To avoid this, the API itself should document the units with a specific type that encode the units. The types <a class="el" href="structDegrees.html" title="A measure of angle in degrees. There are 360 degrees in a circle.">Degrees</a> and <a class="el" href="structRadians.html" title="A measure of angle in radians. There are two pi radians (6.28 radians) in a circle (360 degrees).">Radians</a> below do this. These are actually classes and so this is C++, but it is worth the developer time it saves by ensuring there is no mistakes of this kind. The same could be used for other types of units as required, such as meters vs feet if the API were to need this.</p>
+<p>A scalar value used to represent an angle can sometimes be used incorrectly when an API is not clear if the units are degrees or radians. To avoid this, the API itself should document the units with a specific type that encode the units. The types Degrees and Radians below do this. These are actually classes and so this is C++, but it is worth the developer time it saves by ensuring there is no mistakes of this kind. The same could be used for other types of units as required, such as meters vs feet if the API were to need this.</p>
 <h1><a class="anchor" id="autotoc_md5"></a>
 Vectors</h1>
 <h2><a class="anchor" id="autotoc_md6"></a>
@@ -138,7 +138,7 @@ Vector Components</h2>
 </div><!-- fragment --><p>Less lines of code, less error prone, and easier to update the formula applied to each component.</p>
 <h2><a class="anchor" id="autotoc_md7"></a>
 Vector width</h2>
-<p>The API omits providing a 3 component wide vector and instead only provides a <a class="el" href="structVector4f.html" title="A four component vector suitable as a 3D vector in a 3D graphics pipeline.">Vector4f</a>. This is because when dealing with arrays of these, we will be able to optimize better the 4 wide version, particularly if it can be aligned to 128-bits and used with a SIMD optimized function to transform an array of them. For all the provided functions below, we don't bother providing SIMD optimizations as most compilers can auto-vectorize this code just fine and so it only will make the code more error prone, and not able to be re-compiled with different compiler flags to target different machine types or without or without different levels of SIMD support.</p>
+<p>The API omits providing a 3 component wide vector and instead only provides a Vector4f. This is because when dealing with arrays of these, we will be able to optimize better the 4 wide version, particularly if it can be aligned to 128-bits and used with a SIMD optimized function to transform an array of them. For all the provided functions below, we don't bother providing SIMD optimizations as most compilers can auto-vectorize this code just fine and so it only will make the code more error prone, and not able to be re-compiled with different compiler flags to target different machine types or without or without different levels of SIMD support.</p>
 <h1><a class="anchor" id="autotoc_md8"></a>
 The API</h1>
 <div class="fragment"><div class="line">// Vector functions</div>
@@ -190,7 +190,7 @@ The API</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer"> Last update on Fri Apr 22 2022 for Maths3D  </li>
+    <li class="footer"> Last update on Sat Apr 23 2022 for Maths3D  </li>
   </ul>
 </div>
 </body>
