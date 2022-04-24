@@ -275,7 +275,7 @@
           </tr>
           <tr>
             <td class="headerName">Date:</td>
-            <td class="headerValue">2022-04-22 13:29:48</td>
+            <td class="headerValue">2022-04-24 07:22:13</td>
             <td></td>
             <td class="headerName">Branches:</td>
             <td class="headerTableEntry">0</td>
@@ -680,7 +680,7 @@
     <tr>
     <td align="right" class="lineno"><pre>55</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>46</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>22</pre></td>
     <td align="left" class="src coveredLine"><pre>  uint16_le()                          { }</pre></td>
     </tr>
 
@@ -701,7 +701,7 @@
     <tr>
     <td align="right" class="lineno"><pre>58</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>46</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>22</pre></td>
     <td align="left" class="src coveredLine"><pre>  uint16_le&amp; operator=(uint16_t val)   { bytes[1] = val >> 8U; bytes[0] = val &amp; 0xFF; return *this; }</pre></td>
     </tr>
 
@@ -785,7 +785,7 @@
     <tr>
     <td align="right" class="lineno"><pre>70</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>276</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>132</pre></td>
     <td align="left" class="src coveredLine"><pre>  uint32_le()                         { }</pre></td>
     </tr>
 
@@ -799,14 +799,14 @@
     <tr>
     <td align="right" class="lineno"><pre>72</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>46</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>22</pre></td>
     <td align="left" class="src coveredLine"><pre>  operator uint32_t() const           { return uint32_t(bytes[3] &lt;&lt; 24U) | uint32_t(bytes[2] &lt;&lt; 16U) | uint32_t(bytes[1] &lt;&lt; 8U) | bytes[0]; }</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>73</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>230</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>110</pre></td>
     <td align="left" class="src coveredLine"><pre>  uint32_le&amp; operator=(uint32_t val)  { bytes[3] = val >> 24U; bytes[2] = val >> 16U; bytes[1] = val >> 8U; bytes[0] = val; return *this; }</pre></td>
     </tr>
 
