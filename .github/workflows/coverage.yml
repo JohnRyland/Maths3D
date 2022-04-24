@@ -15,8 +15,9 @@ jobs:
       
       - name: Install tools
         run: |
-          sudo apt update
-          sudo apt-get install -y gcovr
+          pip install gcovr
+          # sudo apt update
+          # sudo apt-get install -y gcovr
 
       - name: Generate Coverage Report
         run: make test
