@@ -33,7 +33,6 @@ classes (with the exception of providing unit type safety discussed below).
 
 No header or library dependencies.
 
-
 The API attempts to be functional in style, with inputs and a returned
 output.
 
