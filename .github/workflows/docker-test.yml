@@ -1,0 +1,30 @@
+name: docker-test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  testing:
+    runs-on: ubuntu-latest
+    container:
+      image: jryland/dev-env:latest
+    steps:
+      - name: Install deps
+        run: |
+          apt update
+          apt install -y git
+          apt install -y git
+      - uses: actions/checkout@v2
+      - name: What OS is running
+        run: uname -a
+      - name: What gcc version do we have
+        run: gcc -v
+      - name: Dir list
+        run: ls -la
+      - name: Try building
+        run: |
+          cd "$GITHUB_WORKSPACE"
+          make
