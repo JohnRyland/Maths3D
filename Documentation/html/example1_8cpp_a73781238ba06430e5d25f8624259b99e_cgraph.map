@@ -1,0 +1,19 @@
+<map id="TraceRay" name="TraceRay">
+<area shape="rect" id="node1" title=" " alt="" coords="5,107,87,133"/>
+<area shape="rect" id="node2" href="$example1_8cpp.html#a2e9724f5f6bfe7c417e05eb7c7cf93c9" title=" " alt="" coords="135,107,291,133"/>
+<area shape="rect" id="node3" href="$example1_8cpp.html#a6e04921dade6ad68b29172064d54be30" title=" " alt="" coords="339,107,515,133"/>
+<area shape="rect" id="node8" href="$maths3d_8h.html#a4f551392427772319a2abb968295bad2" title="Calculates the length of vec." alt="" coords="1167,321,1293,348"/>
+<area shape="rect" id="node16" href="$maths3d_8h.html#aa1c0d13997d9eb4c57689b37f1c6d4ad" title="Subtracts vec2 from vec1." alt="" coords="728,5,865,32"/>
+<area shape="rect" id="node4" href="$example1_8cpp.html#aee370e829700aacdff9f25618d1a0b40" title=" " alt="" coords="563,107,669,133"/>
+<area shape="rect" id="node10" href="$maths3d_8h.html#afa6fbd00f48007bc9ca8b9fad6911058" title="Calculates the dot&#45;product of vec1 and vec2." alt="" coords="1569,220,1724,247"/>
+<area shape="rect" id="node14" href="$maths3d_8h.html#a6e31aefd604b0542109db392dbe9d4ed" title="Copies vec and multiplies each component by scale." alt="" coords="958,132,1085,159"/>
+<area shape="rect" id="node17" href="$maths3d_8h.html#aac2d3408690942718b493a9d7f044aa3" title="Adds vec1 and vec2." alt="" coords="1377,56,1485,83"/>
+<area shape="rect" id="node5" href="$maths3d_8h.html#ac8a62a63b780796489c14691caac5824" title="Copies vec and divides each component by the length of vec (returning the normalized or unit vector o..." alt="" coords="717,169,876,196"/>
+<area shape="rect" id="node6" href="$maths3d_8h.html#add8a21f2e58d7d54153d07a551e2295a" title="Calculates 1/length of vec." alt="" coords="924,271,1119,297"/>
+<area shape="rect" id="node7" href="$maths3d_8h.html#a7d18c307128606532d069a5fc8e9effe" title="If redefine Scalar1f to something other than float, update this function as applicable." alt="" coords="1176,271,1284,297"/>
+<area shape="rect" id="node9" href="$maths3d_8h.html#a6a12894b1a4971a2291d506140394124" title="Calculates the length squared of vec." alt="" coords="1341,296,1521,323"/>
+<area shape="rect" id="node11" href="$maths3d_8h.html#a90265d9aa55b92df80e1ff0db7be136f" title="Multiplies vec1 with vec2." alt="" coords="1801,157,1937,184"/>
+<area shape="rect" id="node13" href="$maths3d_8h.html#a670630003a2a62f351daa92d3e3a6d8f" title="Returns the sum of the components of vec." alt="" coords="1772,220,1967,247"/>
+<area shape="rect" id="node12" href="$maths3d_8h.html#ae4a4af082482c7992d487d2f709a1d4b" title="Assigns x, y, z and w to the corresponding components of the vector." alt="" coords="2015,81,2119,108"/>
+<area shape="rect" id="node15" href="$maths3d_8h.html#a6931631ee39dd7d2078a35562c6e3e98" title="Assigns v to all four of the components of the vector." alt="" coords="1575,107,1719,133"/>
+</map>
