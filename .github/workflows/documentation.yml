@@ -29,7 +29,7 @@ jobs:
 
   publish:
     name: Publish
-    needs: job1
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
