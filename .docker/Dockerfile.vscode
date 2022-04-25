@@ -1,0 +1,7 @@
+FROM jryland/dev-env:latest
+
+# Configure for use with docker 'Dev Environments'
+RUN useradd -s /bin/bash -m vscode
+RUN groupadd docker
+RUN usermod -aG docker vscode
+USER vscode
