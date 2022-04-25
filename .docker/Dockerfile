@@ -15,3 +15,9 @@ RUN apt install -y doxygen graphviz plantuml
 RUN apt install -y texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra
 RUN apt install -y pandoc librsvg2-bin
 
+# Configure for use with docker 'Dev Environments'
+RUN useradd -s /bin/bash -m vscode
+RUN groupadd docker
+RUN usermod -aG docker vscode
+USER vscode
+

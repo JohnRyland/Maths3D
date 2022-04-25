@@ -22,6 +22,12 @@ docker tag dev-env:latest jryland/dev-env:latest
 docker push jryland/dev-env:latest
 ```
 
+  or:
+
+```
+./update.sh
+```
+
 4) Verify, the image should have been uploaded to here:
 
      https://hub.docker.com/r/jryland/dev-env
