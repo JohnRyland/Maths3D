@@ -1,0 +1,14 @@
+digraph "Vector4f_Zero"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Vector4f_Zero",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Scalar1f_Zero",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$maths3d_8h.html#a23076d13621d19b8faf6760896a64270",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Vector4f_Replicate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$maths3d_8h.html#a6931631ee39dd7d2078a35562c6e3e98",tooltip=" "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Vector4f_Set",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$maths3d_8h.html#ae4a4af082482c7992d487d2f709a1d4b",tooltip=" "];
+}
