@@ -1,0 +1,4 @@
+<map id="Vector4f_Subtract" name="Vector4f_Subtract">
+<area shape="rect" id="node1" title="Subtracts vec2 from vec1." alt="" coords="5,5,143,32"/>
+<area shape="rect" id="node2" href="$maths3d_8h.html#ae4a4af082482c7992d487d2f709a1d4b" title="Assigns x, y, z and w to the corresponding components of the vector." alt="" coords="191,5,295,32"/>
+</map>
