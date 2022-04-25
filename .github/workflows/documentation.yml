@@ -7,18 +7,12 @@ on:
     branches: [ main ]
 
 jobs:
-  job1:
+  build:
     name: Build
     runs-on: ubuntu-latest
+    container: jryland/dev-env:latest
     steps:
       - uses: actions/checkout@v1
-      
-      - name: Install tools
-        run: |
-          sudo apt update
-          sudo apt install -y doxygen graphviz plantuml
-          sudo apt install -y texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra
-          sudo apt install -y pandoc librsvg2-bin
 
       - name: Generate documentation
         run: |
@@ -33,7 +27,7 @@ jobs:
           name: documentation
           path: .build/docs
 
-  job2:
+  publish:
     name: Publish
     needs: job1
     runs-on: ubuntu-latest
