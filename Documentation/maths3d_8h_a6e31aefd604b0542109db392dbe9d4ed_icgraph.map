@@ -1,0 +1,6 @@
+<map id="Vector4f_Scaled" name="Vector4f_Scaled">
+<area shape="rect" id="node1" title="Copies vec and multiplies each component by scale." alt="" coords="465,31,592,57"/>
+<area shape="rect" id="node2" href="$maths3d_8h.html#ac8a62a63b780796489c14691caac5824" title="Copies vec and divides each component by the length of vec (returning the normalized or unit vector o..." alt="" coords="259,5,417,32"/>
+<area shape="rect" id="node3" href="$tests_8cpp.html#a0e64913f2f7932ab8f3b57ab47d494a7" title=" " alt="" coords="108,31,211,57"/>
+<area shape="rect" id="node4" href="$tests_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title=" " alt="" coords="5,31,60,57"/>
+</map>
