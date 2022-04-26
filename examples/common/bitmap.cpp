@@ -6,7 +6,7 @@
 //
 
 
-///////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
 // License
 
 //
@@ -50,7 +50,8 @@ struct BitmapFileHeader
   uint32_le   importantColors;
 };
 
-static_assert(sizeof(BitmapFileHeader) == 54, "Unexpected Bitmap header size, compiler might be adding padding");
+static_assert(sizeof(BitmapFileHeader) == 54,
+              "Unexpected Bitmap header size, compiler might be adding padding");
 
 
 ////////////////////////////////////////////////////////////////////////////////////
@@ -84,7 +85,8 @@ bool Image_SaveBitmap(const Image& image, const char* fileName)
   header.horzRes = 0;
   header.vertRes = 0;
   header.importantColors = 0;
-  printf("Saving image %s, size: %i x %i, header: %lu\n", fileName, (uint32_t)header.width, (uint32_t)header.height, sizeof(header));
+  printf("Saving image %s, size: %i x %i, header: %lu\n",
+         fileName, (uint32_t)header.width, (uint32_t)header.height, sizeof(header));
 
   // Write the image header
   bool success = fwrite((void*)&header, 1, sizeof(header), file) == sizeof(header);
