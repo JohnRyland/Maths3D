@@ -1,0 +1,28 @@
+<map id="matrix_tests" name="matrix_tests">
+<area shape="rect" id="node1" title=" " alt="" coords="5,352,109,378"/>
+<area shape="rect" id="node2" href="$maths3d_8h.html#a163ffd684df4d3e85aeecc27687e24ba" title=" " alt="" coords="173,149,327,176"/>
+<area shape="rect" id="node5" href="$maths3d_8h.html#ab5449f3a4c21a79a25aad1c7bc322c06" title=" " alt="" coords="391,48,628,74"/>
+<area shape="rect" id="node8" href="$maths3d_8h.html#a09e24e35e45ae0838ac9b60177164d8e" title=" " alt="" coords="395,98,624,125"/>
+<area shape="rect" id="node10" href="$maths3d_8h.html#a8e55e35ba129e305548e271c9a825524" title=" " alt="" coords="174,250,326,277"/>
+<area shape="rect" id="node12" href="$maths3d_8h.html#afc3c0913e70c1567f4c99c2d4f997352" title=" " alt="" coords="175,301,325,328"/>
+<area shape="rect" id="node13" href="$maths3d_8h.html#ad6409707b2f0acdb02554bebde18974b" title=" " alt="" coords="174,402,326,429"/>
+<area shape="rect" id="node14" href="$maths3d_8h.html#a33093eeb58c9a5d9a08463984722756d" title=" " alt="" coords="179,352,321,378"/>
+<area shape="rect" id="node15" href="$maths3d_8h.html#ad520ae2903c45418c3c4809762623e22" title=" " alt="" coords="169,200,331,226"/>
+<area shape="rect" id="node16" href="$maths3d_8h.html#ad9ab510eb17aa1dc3dc76005eb09d667" title=" " alt="" coords="157,453,343,480"/>
+<area shape="rect" id="node19" href="$maths3d_8h.html#ae4a4af082482c7992d487d2f709a1d4b" title="Assigns x, y, z and w to the corresponding components of the vector." alt="" coords="923,504,1027,530"/>
+<area shape="rect" id="node20" href="$maths3d_8h.html#aefb08742da337dfb8cc6147e39b16fd0" title=" " alt="" coords="423,605,596,632"/>
+<area shape="rect" id="node21" href="$maths3d_8h.html#a63fb9c019da7af1893d1e5814f0a98fd" title=" " alt="" coords="176,554,324,581"/>
+<area shape="rect" id="node25" href="$maths3d_8h.html#a92d8749d3bc3bec741c75d5e722b8911" title="Assigns zero to all four of the components of the vector." alt="" coords="453,453,566,480"/>
+<area shape="rect" id="node3" href="$maths3d_8h.html#a3fbb5d30c36494eaeb37013aab805075" title=" " alt="" coords="708,200,839,226"/>
+<area shape="rect" id="node4" href="$maths3d_8h.html#a23076d13621d19b8faf6760896a64270" title=" " alt="" coords="919,200,1031,226"/>
+<area shape="rect" id="node6" href="$maths3d_8h.html#a0e389dd6c80ea3d67dca4280855af2b2" title=" " alt="" coords="713,48,834,74"/>
+<area shape="rect" id="node7" href="$maths3d_8h.html#a791539fd7b912c66a12b8049bc5c37cb" title=" " alt="" coords="720,98,827,125"/>
+<area shape="rect" id="node9" href="$maths3d_8h.html#a7d18c307128606532d069a5fc8e9effe" title=" " alt="" coords="719,301,827,328"/>
+<area shape="rect" id="node11" href="$maths3d_8h.html#a655c027ed401744ea139601bb2219223" title=" " alt="" coords="408,250,611,277"/>
+<area shape="rect" id="node17" href="$maths3d_8h.html#aee566e6a213d4cfeeede9e23eac68c8f" title=" " alt="" coords="434,301,585,328"/>
+<area shape="rect" id="node18" href="$maths3d_8h.html#a2e257e9a25dbf2a26be0ffdee03cb9d9" title="Copies vec and sets the w component of the vector to w." alt="" coords="715,352,832,378"/>
+<area shape="rect" id="node22" href="$maths3d_8h.html#afa6fbd00f48007bc9ca8b9fad6911058" title="Calculates the dot&#45;product of vec1 and vec2." alt="" coords="432,554,587,581"/>
+<area shape="rect" id="node23" href="$maths3d_8h.html#a90265d9aa55b92df80e1ff0db7be136f" title="Multiplies vec1 with vec2." alt="" coords="705,554,841,581"/>
+<area shape="rect" id="node24" href="$maths3d_8h.html#a670630003a2a62f351daa92d3e3a6d8f" title="Returns the sum of the components of vec." alt="" coords="676,605,871,632"/>
+<area shape="rect" id="node26" href="$maths3d_8h.html#a6931631ee39dd7d2078a35562c6e3e98" title="Assigns v to all four of the components of the vector." alt="" coords="701,453,845,480"/>
+</map>
