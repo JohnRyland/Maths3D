@@ -7,5 +7,5 @@ var searchData=
   ['importantcolors_47',['importantColors',['../structBitmapFileHeader.html#a5add6e28eb35bed4c369eb2bd0c5e8f9',1,'BitmapFileHeader']]],
   ['items_48',['items',['../structFactoryItem.html#adc3419e220c44bfbd332bac6db65a14e',1,'FactoryItem']]],
   ['itemt_49',['ItemT',['../structFactoryItem.html#ab95005c7c5b14e98e0b3d9e758f68f4c',1,'FactoryItem']]],
-  ['iterator_50',['Iterator',['../classFactoryItem_1_1Iterator.html',1,'FactoryItem&lt; T &gt;::Iterator'],['../classFactoryItem_1_1Iterator.html#a8cc5164a14c24e650e58274c09effb90',1,'FactoryItem::Iterator::Iterator()']]]
+  ['iterator_50',['Iterator',['../classFactoryItem_1_1Iterator.html',1,'FactoryItem&lt; T &gt;::Iterator'],['../structFactoryItem.html#a7c931939d507fa974aa6c5da1d98b0c7',1,'FactoryItem::Iterator()'],['../classFactoryItem_1_1Iterator.html#a8cc5164a14c24e650e58274c09effb90',1,'FactoryItem::Iterator::Iterator()']]]
 ];

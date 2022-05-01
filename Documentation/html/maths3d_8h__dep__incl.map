@@ -1,8 +1,10 @@
 <map id="includes/maths3d.h" name="includes/maths3d.h">
-<area shape="rect" id="node1" title=" " alt="" coords="449,5,599,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="569,5,719,32"/>
 <area shape="rect" id="node2" href="$example1_8cpp.html" title=" " alt="" coords="5,80,256,107"/>
 <area shape="rect" id="node3" href="$example2_8cpp.html" title=" " alt="" coords="280,80,531,107"/>
 <area shape="rect" id="node4" href="$maths3d__ext_8h.html" title=" " alt="" coords="555,80,733,107"/>
-<area shape="rect" id="node6" href="$maths3d_8cpp.html" title=" " alt="" coords="757,80,886,107"/>
-<area shape="rect" id="node5" href="$tests_8cpp.html" title=" " alt="" coords="585,155,703,181"/>
+<area shape="rect" id="node6" href="$maths3d__pp_8h.html" title=" " alt="" coords="757,80,929,107"/>
+<area shape="rect" id="node8" href="$maths3d_8cpp.html" title=" " alt="" coords="953,80,1082,107"/>
+<area shape="rect" id="node5" href="$tests_8cpp.html" title=" " alt="" coords="580,155,697,181"/>
+<area shape="rect" id="node7" href="$example3_8cpp.html" title=" " alt="" coords="721,155,972,181"/>
 </map>

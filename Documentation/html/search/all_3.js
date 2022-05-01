@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['vector4f_5ftransform_15',['Vector4f_Transform',['../maths3d_8cpp.html#aa4034ce6071b46002489f994f1cca0fa',1,'maths3d.cpp']]]
+  ['declare_5funit_5ftest_5fhelper_17',['DECLARE_UNIT_TEST_HELPER',['../test_8h.html#a4cc63b7b6849e870146e48ccd86513a5',1,'test.h']]],
+  ['declare_5funit_5ftest_5fhelper_5finternal_18',['DECLARE_UNIT_TEST_HELPER_INTERNAL',['../test_8h.html#abdf18ed494d6c82be89706dc928ee4a8',1,'test.h']]],
+  ['degrees_19',['Degrees',['../structDegrees.html',1,'']]]
 ];

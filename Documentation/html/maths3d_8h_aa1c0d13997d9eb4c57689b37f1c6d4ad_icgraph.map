@@ -1,8 +1,9 @@
 <map id="Vector4f_Subtract" name="Vector4f_Subtract">
-<area shape="rect" id="node1" title="Subtracts vec2 from vec1." alt="" coords="717,49,855,76"/>
-<area shape="rect" id="node2" href="$example1_8cpp.html#a6e04921dade6ad68b29172064d54be30" title=" " alt="" coords="339,24,515,50"/>
-<area shape="rect" id="node3" href="$example1_8cpp.html#a2e9724f5f6bfe7c417e05eb7c7cf93c9" title=" " alt="" coords="135,49,291,76"/>
-<area shape="rect" id="node5" href="$example1_8cpp.html#aee370e829700aacdff9f25618d1a0b40" title=" " alt="" coords="563,24,669,50"/>
-<area shape="rect" id="node6" href="$example2_8cpp.html#a73781238ba06430e5d25f8624259b99e" title=" " alt="" coords="575,125,657,152"/>
-<area shape="rect" id="node4" href="$example1_8cpp.html#a73781238ba06430e5d25f8624259b99e" title=" " alt="" coords="5,49,87,76"/>
+<area shape="rect" id="node1" title="Subtracts vec2 from vec1." alt="" coords="717,107,855,133"/>
+<area shape="rect" id="node2" href="$maths3d__pp_8h.html#a32a95820a5af0dc9a972ac15bec5c0f5" title="Subtract two vectors." alt="" coords="575,5,657,32"/>
+<area shape="rect" id="node3" href="$example1_8cpp.html#a6e04921dade6ad68b29172064d54be30" title=" " alt="" coords="339,107,515,133"/>
+<area shape="rect" id="node4" href="$example1_8cpp.html#a2e9724f5f6bfe7c417e05eb7c7cf93c9" title=" " alt="" coords="135,132,291,159"/>
+<area shape="rect" id="node6" href="$example1_8cpp.html#aee370e829700aacdff9f25618d1a0b40" title=" " alt="" coords="563,107,669,133"/>
+<area shape="rect" id="node7" href="$example2_8cpp.html#a73781238ba06430e5d25f8624259b99e" title=" " alt="" coords="575,208,657,235"/>
+<area shape="rect" id="node5" href="$example1_8cpp.html#a73781238ba06430e5d25f8624259b99e" title=" " alt="" coords="5,132,87,159"/>
 </map>

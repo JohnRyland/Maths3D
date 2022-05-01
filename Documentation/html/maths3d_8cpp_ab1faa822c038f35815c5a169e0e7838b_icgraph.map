@@ -1,4 +1,6 @@
 <map id="Matrix4x4f_Transposed" name="Matrix4x4f_Transposed">
-<area shape="rect" id="node1" title=" " alt="" coords="201,5,375,32"/>
-<area shape="rect" id="node2" href="$maths3d_8cpp.html#aa4034ce6071b46002489f994f1cca0fa" title=" " alt="" coords="5,5,153,32"/>
+<area shape="rect" id="node1" title="Creates a matrix where the matrix a is mirrored through the diagonal of the matrix." alt="" coords="333,31,507,57"/>
+<area shape="rect" id="node2" href="$maths3d__pp_8h.html#a94fd30370ea543700d1e8ad79013aeac" title="Transpose of matrix." alt="" coords="167,5,255,32"/>
+<area shape="rect" id="node3" href="$maths3d_8h.html#aa4034ce6071b46002489f994f1cca0fa" title=" " alt="" coords="137,56,285,83"/>
+<area shape="rect" id="node4" href="$maths3d__pp_8h.html#a24a4fb9429dd8efb22eb5a3dea5bd57b" title="Multiply matrix by a vector (transform)." alt="" coords="5,56,89,83"/>
 </map>

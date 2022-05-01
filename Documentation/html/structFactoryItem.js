@@ -7,6 +7,7 @@ var structFactoryItem =
     [ "end", "structFactoryItem.html#a77c34eb4b63db279a22916f16ede4299", null ],
     [ "getFactoryHead", "structFactoryItem.html#adae896229f519854ac72840eb96c7ebb", null ],
     [ "items", "structFactoryItem.html#adc3419e220c44bfbd332bac6db65a14e", null ],
+    [ "ItemT::Iterator", "structFactoryItem.html#a7c931939d507fa974aa6c5da1d98b0c7", null ],
     [ "m_next", "structFactoryItem.html#acc78ee78b4b0556b672936db9349ebf7", null ],
     [ "m_value", "structFactoryItem.html#a8d196122fe0251d520b865320d0e58e8", null ]
 ];

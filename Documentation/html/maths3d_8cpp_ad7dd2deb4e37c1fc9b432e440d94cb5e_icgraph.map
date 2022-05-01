@@ -1,4 +1,5 @@
 <map id="Matrix4x4f_Scaled" name="Matrix4x4f_Scaled">
-<area shape="rect" id="node1" title=" " alt="" coords="209,5,352,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="209,31,352,57"/>
 <area shape="rect" id="node2" href="$maths3d_8h.html#a0f859fe03f21ffcf0c4994d4415b41eb" title=" " alt="" coords="5,5,161,32"/>
+<area shape="rect" id="node3" href="$maths3d__pp_8h.html#a5f512bbdb4a00dd011ee336f60fe24f3" title="Multiply by a scalar." alt="" coords="41,56,125,83"/>
 </map>
