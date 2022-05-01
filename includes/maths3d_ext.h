@@ -67,18 +67,18 @@
 
 
 /// Transforms arrays of vectors by the transform matrix. 
-/// \param translate is a bool to enable or disable applying the translation component of the transform.
-/// \param divideByW is a bool to enable or disable applying perspective by dividing by W.
-/// \param alignedOutput is a bool to flag if outputStream is aligned to a 128-bit boundary or not.
-/// \param outputStep is the width in floats to the next vector element of the outputStream array.
-///        This allows the outputStream array to be an array of structures of which the vector is a member.
-///        These structures should be 32-bit aligned, and if the size is not a multiple of 128-bits, then
-///        alignedOutput shouldn't be set.
-/// \param alignedInput is a bool to flag if inputStream is aligned to a 128-bit boundary or not.
-/// \param inputStep is the width in floats to the next vector element of the inputStream array.
-///        This allows the inputStream array to be an array of structures of which the vector is a member.
-///        These structures should be 32-bit aligned, and if the size is not a multiple of 128-bits, then
-///        alignedInput shouldn't be set.
+/// \tparam translate is a bool to enable or disable applying the translation component of the transform.
+/// \tparam divideByW is a bool to enable or disable applying perspective by dividing by W.
+/// \tparam alignedOutput is a bool to flag if outputStream is aligned to a 128-bit boundary or not.
+/// \tparam outputStep is the width in floats to the next vector element of the outputStream array.
+///         This allows the outputStream array to be an array of structures of which the vector is a member.
+///         These structures should be 32-bit aligned, and if the size is not a multiple of 128-bits, then
+///         alignedOutput shouldn't be set.
+/// \tparam alignedInput is a bool to flag if inputStream is aligned to a 128-bit boundary or not.
+/// \tparam inputStep is the width in floats to the next vector element of the inputStream array.
+///         This allows the inputStream array to be an array of structures of which the vector is a member.
+///         These structures should be 32-bit aligned, and if the size is not a multiple of 128-bits, then
+///         alignedInput shouldn't be set.
 /// \param outputStream is the output buffer to put the transformed vectors to.
 /// \param inputStream is the input array of vectors to apply the transform to.
 /// \param count is the number of vectors to transform.
@@ -153,18 +153,18 @@ void Vector4f_SSETransformStreamGeneric(float* outputStream, const float* inputS
 }
 
 /// Transforms arrays of vectors by the transform matrix (non-SSE fallback implementation, untested). 
-/// \param translate is a bool to enable or disable applying the translation component of the transform.
-/// \param divideByW is a bool to enable or disable applying perspective by dividing by W.
-/// \param alignedOutput is ignored
-/// \param outputStep is the width in floats to the next vector element of the outputStream array.
-///        This allows the outputStream array to be an array of structures of which the vector is a member.
-///        These structures should be 32-bit aligned, and if the size is not a multiple of 128-bits, then
-///        alignedOutput shouldn't be set.
-/// \param alignedInput is ignored
-/// \param inputStep is the width in floats to the next vector element of the inputStream array.
-///        This allows the inputStream array to be an array of structures of which the vector is a member.
-///        These structures should be 32-bit aligned, and if the size is not a multiple of 128-bits, then
-///        alignedInput shouldn't be set.
+/// \tparam translate is a bool to enable or disable applying the translation component of the transform.
+/// \tparam divideByW is a bool to enable or disable applying perspective by dividing by W.
+/// \tparam alignedOutput is ignored
+/// \tparam outputStep is the width in floats to the next vector element of the outputStream array.
+///         This allows the outputStream array to be an array of structures of which the vector is a member.
+///         These structures should be 32-bit aligned, and if the size is not a multiple of 128-bits, then
+///         alignedOutput shouldn't be set.
+/// \tparam alignedInput is ignored
+/// \tparam inputStep is the width in floats to the next vector element of the inputStream array.
+///         This allows the inputStream array to be an array of structures of which the vector is a member.
+///         These structures should be 32-bit aligned, and if the size is not a multiple of 128-bits, then
+///         alignedInput shouldn't be set.
 /// \param outputStream is the output buffer to put the transformed vectors to.
 /// \param inputStream is the input array of vectors to apply the transform to.
 /// \param count is the number of vectors to transform.
