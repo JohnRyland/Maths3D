@@ -27,7 +27,7 @@
     </tr>
     <tr>
       <th scope="row">Date:</th>
-      <td>2022-05-01 01:46:18</td>
+      <td>2022-05-02 14:04:11</td>
     </tr>
   </table>
 </div>
@@ -47,15 +47,15 @@
     </tr>
     <tr>
       <th scope="row">Functions:</th>
-      <td>13</td>
-      <td>13</td>
+      <td>19</td>
+      <td>19</td>
       <td class="coverage-high">100.0%</td>
     </tr>
     <tr>
       <th scope="row">Branches:</th>
-      <td>2</td>
-      <td>2</td>
-      <td class="coverage-high">100.0%</td>
+      <td>7</td>
+      <td>12</td>
+      <td class="coverage-low">58.3%</td>
     </tr>
   </table>
 </div>
@@ -82,6 +82,39 @@
       </td>
       <td>
         <a href="#l210"> called 1 time</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l210">void Vector4f_SSETransformCoordStream&lt;4ul&gt;(Vector4f (&amp;) [4ul], Vector4f const (&amp;) [4ul], Matrix4x4f const&amp;)</a>
+      </td>
+      <td>
+        <a href="#l210">210</a>
+      </td>
+      <td>
+        <a href="#l210"> called 3 times</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l210">void Vector4f_SSETransformCoordStream&lt;8ul&gt;(Vector4f (&amp;) [8ul], Vector4f const (&amp;) [8ul], Matrix4x4f const&amp;)</a>
+      </td>
+      <td>
+        <a href="#l210">210</a>
+      </td>
+      <td>
+        <a href="#l210"> called 3 times</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l210">void Vector4f_SSETransformCoordStream&lt;9ul&gt;(Vector4f (&amp;) [9ul], Vector4f const (&amp;) [9ul], Matrix4x4f const&amp;)</a>
+      </td>
+      <td>
+        <a href="#l210">210</a>
+      </td>
+      <td>
+        <a href="#l210"> called 3 times</a>
       </td>
     </tr>
     <tr>
@@ -141,6 +174,39 @@
     </tr>
     <tr>
       <td>
+        <a href="#l202">void Vector4f_SSETransformStream&lt;4ul&gt;(Vector4f (&amp;) [4ul], Vector4f const (&amp;) [4ul], Matrix4x4f const&amp;)</a>
+      </td>
+      <td>
+        <a href="#l202">202</a>
+      </td>
+      <td>
+        <a href="#l202"> called 3 times</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l202">void Vector4f_SSETransformStream&lt;8ul&gt;(Vector4f (&amp;) [8ul], Vector4f const (&amp;) [8ul], Matrix4x4f const&amp;)</a>
+      </td>
+      <td>
+        <a href="#l202">202</a>
+      </td>
+      <td>
+        <a href="#l202"> called 3 times</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l202">void Vector4f_SSETransformStream&lt;9ul&gt;(Vector4f (&amp;) [9ul], Vector4f const (&amp;) [9ul], Matrix4x4f const&amp;)</a>
+      </td>
+      <td>
+        <a href="#l202">202</a>
+      </td>
+      <td>
+        <a href="#l202"> called 3 times</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
         <a href="#l227">void Vector4f_SSETransformStreamAligned&lt;16ul&gt;(Vector4f (&amp;) [16ul], Vector4f const (&amp;) [16ul], Matrix4x4f const&amp;)</a>
       </td>
       <td>
@@ -180,7 +246,7 @@
         <a href="#l87">87</a>
       </td>
       <td>
-        <a href="#l87"> called 2 times</a>
+        <a href="#l87"> called 11 times</a>
       </td>
     </tr>
     <tr>
@@ -202,7 +268,7 @@
         <a href="#l87">87</a>
       </td>
       <td>
-        <a href="#l87"> called 1 time</a>
+        <a href="#l87"> called 10 times</a>
       </td>
     </tr>
     <tr>
@@ -923,7 +989,7 @@
       <td class="lineno"><a id="l87" href="#l87">87</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">14</td>
+      <td class="linecount coveredLine">50</td>
       <td class="src coveredLine"><span class="kt">void</span> <span class="n">Vector4f_SSETransformStreamGeneric</span><span class="p">(</span><span class="kt">float</span><span class="o">*</span> <span class="n">outputStream</span><span class="p">,</span> <span class="k">const</span> <span class="kt">float</span><span class="o">*</span> <span class="n">inputStream</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="n">count</span><span class="p">,</span> <span class="k">const</span> <span class="n">Matrix4x4f</span><span class="o">&amp;</span> <span class="n">transform</span><span class="p">)</span></td>
     </tr>
 
@@ -1011,7 +1077,7 @@
       <td class="lineno"><a id="l98" href="#l98">98</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">14</td>
+      <td class="linecount coveredLine">50</td>
       <td class="src coveredLine">  <span class="n">xform</span><span class="p">.</span><span class="n">m</span> <span class="o">=</span> <span class="n">transform</span><span class="p">;</span></td>
     </tr>
 
@@ -1019,7 +1085,7 @@
       <td class="lineno"><a id="l99" href="#l99">99</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">14</td>
+      <td class="linecount coveredLine">50</td>
       <td class="src coveredLine">  <span class="kr">__m128</span> <span class="n">R0</span> <span class="o">=</span> <span class="n">xform</span><span class="p">.</span><span class="n">r</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span> <span class="c1">// R0 to R4 are the rows of the transform matrix</span></td>
     </tr>
 
@@ -1027,7 +1093,7 @@
       <td class="lineno"><a id="l100" href="#l100">100</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">14</td>
+      <td class="linecount coveredLine">50</td>
       <td class="src coveredLine">  <span class="kr">__m128</span> <span class="n">R1</span> <span class="o">=</span> <span class="n">xform</span><span class="p">.</span><span class="n">r</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span></td>
     </tr>
 
@@ -1035,7 +1101,7 @@
       <td class="lineno"><a id="l101" href="#l101">101</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">14</td>
+      <td class="linecount coveredLine">50</td>
       <td class="src coveredLine">  <span class="kr">__m128</span> <span class="n">R2</span> <span class="o">=</span> <span class="n">xform</span><span class="p">.</span><span class="n">r</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span></td>
     </tr>
 
@@ -1043,7 +1109,7 @@
       <td class="lineno"><a id="l102" href="#l102">102</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">14</td>
+      <td class="linecount coveredLine">50</td>
       <td class="src coveredLine">  <span class="kr">__m128</span> <span class="n">R3</span> <span class="o">=</span> <span class="n">xform</span><span class="p">.</span><span class="n">r</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span></td>
     </tr>
 
@@ -1053,12 +1119,12 @@
         <details class="linebranchDetails">
         <summary class="linebranchSummary">2/2</summary>
         <div class="linebranchContents">
-          <div class="takenBranch">&check; Branch 0 taken 352 times.</div>
-          <div class="takenBranch">&check; Branch 1 taken 7 times.</div>
+          <div class="takenBranch">&check; Branch 0 taken 478 times.</div>
+          <div class="takenBranch">&check; Branch 1 taken 25 times.</div>
         </div>
         </details>
       </td>
-      <td class="linecount coveredLine">718</td>
+      <td class="linecount coveredLine">1006</td>
       <td class="src coveredLine">  <span class="k">for</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">count</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span></td>
     </tr>
 
@@ -1089,8 +1155,15 @@
     <tr class="source-line">
       <td class="lineno"><a id="l107" href="#l107">107</a></td>
       <td class="linebranch">
+        <details class="linebranchDetails">
+        <summary class="linebranchSummary">1/2</summary>
+        <div class="linebranchContents">
+          <div class="takenBranch">&check; Branch 1 taken 126 times.</div>
+          <div class="notTakenBranch">&cross; Branch 2 not taken.</div>
+        </div>
+        </details>
       </td>
-      <td class="linecount coveredLine">704</td>
+      <td class="linecount coveredLine">956</td>
       <td class="src coveredLine">    <span class="n">_mm_prefetch</span><span class="p">((</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">inputStream</span><span class="p">[</span><span class="mi">256</span><span class="p">],</span> <span class="n">_MM_HINT_T0</span><span class="p">);</span></td>
     </tr>
 
@@ -1154,7 +1227,7 @@
       <td class="lineno"><a id="l115" href="#l115">115</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">608</td>
+      <td class="linecount coveredLine">860</td>
       <td class="src coveredLine">      <span class="n">vals</span> <span class="o">=</span> <span class="n">_mm_loadu_ps</span><span class="p">(</span><span class="n">inputStream</span><span class="p">);</span></td>
     </tr>
 
@@ -1185,24 +1258,45 @@
     <tr class="source-line">
       <td class="lineno"><a id="l119" href="#l119">119</a></td>
       <td class="linebranch">
+        <details class="linebranchDetails">
+        <summary class="linebranchSummary">1/2</summary>
+        <div class="linebranchContents">
+          <div class="takenBranch">&check; Branch 0 taken 126 times.</div>
+          <div class="notTakenBranch">&cross; Branch 1 not taken.</div>
+        </div>
+        </details>
       </td>
-      <td class="linecount coveredLine">704</td>
+      <td class="linecount coveredLine">956</td>
       <td class="src coveredLine">    <span class="kr">__m128</span> <span class="n">X</span> <span class="o">=</span> <span class="n">_mm_shuffle_ps</span><span class="p">(</span><span class="n">vals</span><span class="p">,</span><span class="n">vals</span><span class="p">,</span><span class="n">_MM_SHUFFLE</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">));</span></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l120" href="#l120">120</a></td>
       <td class="linebranch">
+        <details class="linebranchDetails">
+        <summary class="linebranchSummary">1/2</summary>
+        <div class="linebranchContents">
+          <div class="takenBranch">&check; Branch 0 taken 126 times.</div>
+          <div class="notTakenBranch">&cross; Branch 1 not taken.</div>
+        </div>
+        </details>
       </td>
-      <td class="linecount coveredLine">704</td>
+      <td class="linecount coveredLine">956</td>
       <td class="src coveredLine">    <span class="kr">__m128</span> <span class="n">Y</span> <span class="o">=</span> <span class="n">_mm_shuffle_ps</span><span class="p">(</span><span class="n">vals</span><span class="p">,</span><span class="n">vals</span><span class="p">,</span><span class="n">_MM_SHUFFLE</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">));</span></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l121" href="#l121">121</a></td>
       <td class="linebranch">
+        <details class="linebranchDetails">
+        <summary class="linebranchSummary">1/2</summary>
+        <div class="linebranchContents">
+          <div class="takenBranch">&check; Branch 0 taken 126 times.</div>
+          <div class="notTakenBranch">&cross; Branch 1 not taken.</div>
+        </div>
+        </details>
       </td>
-      <td class="linecount coveredLine">704</td>
+      <td class="linecount coveredLine">956</td>
       <td class="src coveredLine">    <span class="kr">__m128</span> <span class="n">Z</span> <span class="o">=</span> <span class="n">_mm_shuffle_ps</span><span class="p">(</span><span class="n">vals</span><span class="p">,</span><span class="n">vals</span><span class="p">,</span><span class="n">_MM_SHUFFLE</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">));</span></td>
     </tr>
 
@@ -1218,7 +1312,7 @@
       <td class="lineno"><a id="l123" href="#l123">123</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">704</td>
+      <td class="linecount coveredLine">956</td>
       <td class="src coveredLine">    <span class="n">Z</span> <span class="o">=</span> <span class="n">_mm_mul_ps</span><span class="p">(</span><span class="n">Z</span><span class="p">,</span><span class="n">R2</span><span class="p">);</span></td>
     </tr>
 
@@ -1250,7 +1344,7 @@
       <td class="lineno"><a id="l127" href="#l127">127</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">640</td>
+      <td class="linecount coveredLine">892</td>
       <td class="src coveredLine">      <span class="n">Z</span> <span class="o">=</span> <span class="n">_mm_add_ps</span><span class="p">(</span><span class="n">Z</span><span class="p">,</span><span class="n">R3</span><span class="p">);</span></td>
     </tr>
 
@@ -1274,7 +1368,7 @@
       <td class="lineno"><a id="l130" href="#l130">130</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">704</td>
+      <td class="linecount coveredLine">956</td>
       <td class="src coveredLine">    <span class="n">Y</span> <span class="o">=</span> <span class="n">_mm_mul_ps</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span><span class="n">R1</span><span class="p">);</span></td>
     </tr>
 
@@ -1290,7 +1384,7 @@
       <td class="lineno"><a id="l132" href="#l132">132</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">704</td>
+      <td class="linecount coveredLine">956</td>
       <td class="src coveredLine">    <span class="n">Z</span> <span class="o">=</span> <span class="n">_mm_add_ps</span><span class="p">(</span><span class="n">Z</span><span class="p">,</span><span class="n">Y</span><span class="p">);</span></td>
     </tr>
 
@@ -1306,7 +1400,7 @@
       <td class="lineno"><a id="l134" href="#l134">134</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">704</td>
+      <td class="linecount coveredLine">956</td>
       <td class="src coveredLine">    <span class="n">X</span> <span class="o">=</span> <span class="n">_mm_mul_ps</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">R0</span><span class="p">);</span></td>
     </tr>
 
@@ -1322,7 +1416,7 @@
       <td class="lineno"><a id="l136" href="#l136">136</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">704</td>
+      <td class="linecount coveredLine">956</td>
       <td class="src coveredLine">    <span class="n">Z</span> <span class="o">=</span> <span class="n">_mm_add_ps</span><span class="p">(</span><span class="n">Z</span><span class="p">,</span><span class="n">X</span><span class="p">);</span></td>
     </tr>
 
@@ -1353,8 +1447,15 @@
     <tr class="source-line">
       <td class="lineno"><a id="l140" href="#l140">140</a></td>
       <td class="linebranch">
+        <details class="linebranchDetails">
+        <summary class="linebranchSummary">1/2</summary>
+        <div class="linebranchContents">
+          <div class="takenBranch">&check; Branch 0 taken 63 times.</div>
+          <div class="notTakenBranch">&cross; Branch 1 not taken.</div>
+        </div>
+        </details>
       </td>
-      <td class="linecount coveredLine">128</td>
+      <td class="linecount coveredLine">380</td>
       <td class="src coveredLine">      <span class="n">Z</span> <span class="o">=</span> <span class="n">_mm_div_ps</span><span class="p">(</span><span class="n">Z</span><span class="p">,</span><span class="n">_mm_shuffle_ps</span><span class="p">(</span><span class="n">Z</span><span class="p">,</span><span class="n">Z</span><span class="p">,</span><span class="n">_MM_SHUFFLE</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">)));</span></td>
     </tr>
 
@@ -1434,7 +1535,7 @@
       <td class="lineno"><a id="l150" href="#l150">150</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">704</td>
+      <td class="linecount coveredLine">956</td>
       <td class="src coveredLine">    <span class="n">inputStream</span>  <span class="o">+=</span> <span class="n">inputStep</span><span class="p">;</span></td>
     </tr>
 
@@ -1442,7 +1543,7 @@
       <td class="lineno"><a id="l151" href="#l151">151</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">704</td>
+      <td class="linecount coveredLine">956</td>
       <td class="src coveredLine">    <span class="n">outputStream</span> <span class="o">+=</span> <span class="n">outputStep</span><span class="p">;</span></td>
     </tr>
 
@@ -1458,7 +1559,7 @@
       <td class="lineno"><a id="l153" href="#l153">153</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">14</td>
+      <td class="linecount coveredLine">50</td>
       <td class="src coveredLine"><span class="p">}</span></td>
     </tr>
 
@@ -1850,7 +1951,7 @@
       <td class="lineno"><a id="l202" href="#l202">202</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">4</td>
+      <td class="linecount coveredLine">22</td>
       <td class="src coveredLine"><span class="kt">void</span> <span class="n">Vector4f_SSETransformStream</span><span class="p">(</span><span class="n">Vector4f</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">outputStream</span><span class="p">)[</span><span class="n">N</span><span class="p">],</span> <span class="k">const</span> <span class="n">Vector4f</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">inputStream</span><span class="p">)[</span><span class="n">N</span><span class="p">],</span> <span class="k">const</span> <span class="n">Matrix4x4f</span><span class="o">&amp;</span> <span class="n">transform</span><span class="p">)</span></td>
     </tr>
 
@@ -1866,7 +1967,7 @@
       <td class="lineno"><a id="l204" href="#l204">204</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">4</td>
+      <td class="linecount coveredLine">22</td>
       <td class="src coveredLine">  <span class="n">Vector4f_SSETransformStreamGeneric</span><span class="o">&lt;</span><span class="nb">true</span><span class="p">,</span><span class="nb">false</span><span class="p">,</span><span class="nb">false</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="nb">false</span><span class="p">,</span><span class="mi">4</span><span class="o">&gt;</span><span class="p">((</span><span class="kt">float</span><span class="o">*</span><span class="p">)</span><span class="n">outputStream</span><span class="p">,</span> <span class="p">(</span><span class="kt">float</span><span class="o">*</span><span class="p">)</span><span class="n">inputStream</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">transform</span><span class="p">);</span></td>
     </tr>
 
@@ -1874,7 +1975,7 @@
       <td class="lineno"><a id="l205" href="#l205">205</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">4</td>
+      <td class="linecount coveredLine">22</td>
       <td class="src coveredLine"><span class="p">}</span></td>
     </tr>
 
@@ -1914,7 +2015,7 @@
       <td class="lineno"><a id="l210" href="#l210">210</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">1</td>
+      <td class="linecount coveredLine">19</td>
       <td class="src coveredLine"><span class="kt">void</span> <span class="n">Vector4f_SSETransformCoordStream</span><span class="p">(</span><span class="n">Vector4f</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">outputStream</span><span class="p">)[</span><span class="n">N</span><span class="p">],</span> <span class="k">const</span> <span class="n">Vector4f</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">inputStream</span><span class="p">)[</span><span class="n">N</span><span class="p">],</span> <span class="k">const</span> <span class="n">Matrix4x4f</span><span class="o">&amp;</span> <span class="n">transform</span><span class="p">)</span></td>
     </tr>
 
@@ -1930,7 +2031,7 @@
       <td class="lineno"><a id="l212" href="#l212">212</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">1</td>
+      <td class="linecount coveredLine">19</td>
       <td class="src coveredLine">  <span class="n">Vector4f_SSETransformStreamGeneric</span><span class="o">&lt;</span><span class="nb">true</span><span class="p">,</span><span class="nb">true</span><span class="p">,</span><span class="nb">false</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="nb">false</span><span class="p">,</span><span class="mi">4</span><span class="o">&gt;</span><span class="p">((</span><span class="kt">float</span><span class="o">*</span><span class="p">)</span><span class="n">outputStream</span><span class="p">,</span> <span class="p">(</span><span class="kt">float</span><span class="o">*</span><span class="p">)</span><span class="n">inputStream</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">transform</span><span class="p">);</span></td>
     </tr>
 
@@ -1938,7 +2039,7 @@
       <td class="lineno"><a id="l213" href="#l213">213</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">1</td>
+      <td class="linecount coveredLine">19</td>
       <td class="src coveredLine"><span class="p">}</span></td>
     </tr>
 
