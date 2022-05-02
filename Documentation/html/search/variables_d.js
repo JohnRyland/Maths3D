@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['w_345',['w',['../structVector4f.html#ad502e69df42a9503bedb8263279d5a9c',1,'Vector4f']]],
-  ['width_346',['width',['../structBitmapFileHeader.html#ace4552cf6719bb9c50471fff84a880bb',1,'BitmapFileHeader::width()'],['../structImage.html#a233397bc1d2d69917f7533b9384a56f8',1,'Image::width()']]]
+  ['translation_429',['translation',['../structCamera.html#abfd4b523a3727ced1e6b8d713049a4ea',1,'Camera']]],
+  ['type_430',['type',['../structShape.html#a5719d40a67a935c207890ea68d5b27b9',1,'Shape::type()'],['../structObject.html#a475d08456066620daa76a58baecd1162',1,'Object::type()']]]
 ];

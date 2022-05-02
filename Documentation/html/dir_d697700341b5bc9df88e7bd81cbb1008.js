@@ -7,5 +7,7 @@ var dir_d697700341b5bc9df88e7bd81cbb1008 =
       [ "uint32_le", "classuint32__le.html", "classuint32__le" ],
       [ "uint16_be", "classuint16__be.html", "classuint16__be" ],
       [ "uint32_be", "classuint32__be.html", "classuint32__be" ]
-    ] ]
+    ] ],
+    [ "svg.cpp", "svg_8cpp.html", "svg_8cpp" ],
+    [ "svg.h", "svg_8h.html", "svg_8h" ]
 ];

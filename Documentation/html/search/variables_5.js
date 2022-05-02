@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['lhs_318',['lhs',['../classVectorProduct4f.html#a3b2cefc2d3f3166e93075f953c3f8c50',1,'VectorProduct4f']]],
-  ['lights_319',['lights',['../structScene.html#a30fe13eb09d7fdc413efa3f5d439aca8',1,'Scene']]],
-  ['lookat_320',['lookAt',['../structRay.html#afe963f1b4f5aea2ee47e122a5e0866fd',1,'Ray']]]
+  ['imagedatafileoffset_396',['imageDataFileOffset',['../structBitmapFileHeader.html#af460115f533695ac2f228195a4d810f1',1,'BitmapFileHeader']]],
+  ['imagesize_397',['imageSize',['../structBitmapFileHeader.html#a5f0a49710cf91dfd0c18bf2ecf9b2d7f',1,'BitmapFileHeader']]],
+  ['importantcolors_398',['importantColors',['../structBitmapFileHeader.html#a5add6e28eb35bed4c369eb2bd0c5e8f9',1,'BitmapFileHeader']]]
 ];

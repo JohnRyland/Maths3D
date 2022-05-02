@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['radius_337',['radius',['../structSphere.html#a7f2fa653d9db670dc81b45ab5d1953d5',1,'Sphere::radius()'],['../structCube.html#a187099a5be0e4aaf46d3e3293187e82a',1,'Cube::radius()']]],
-  ['reserved_338',['reserved',['../structBitmapFileHeader.html#a29501b14f682addef5285a46663029ff',1,'BitmapFileHeader']]],
-  ['rhs_339',['rhs',['../classVectorProduct4f.html#ac8866713055b330530cb708261223313',1,'VectorProduct4f']]],
-  ['row_340',['row',['../structMatrix4x4f.html#a57afa98a763021c5a853ea9ce5bddbda',1,'Matrix4x4f']]]
+  ['palettesize_416',['paletteSize',['../structBitmapFileHeader.html#a887099e202f176c84a237f5788680ffe',1,'BitmapFileHeader']]],
+  ['pixels_417',['pixels',['../structImage.html#a026f50cb67e6ae7d991f8bb4ba9a18cb',1,'Image']]],
+  ['planes_418',['planes',['../structBitmapFileHeader.html#a9921af85572321b3330342c2f8658114',1,'BitmapFileHeader']]],
+  ['points_419',['points',['../structObject.html#a146ef173e5470ff5218bc5e0969a7b39',1,'Object']]],
+  ['position_420',['position',['../structLight.html#ae5910e817c3068f82756f77b0c443049',1,'Light']]]
 ];

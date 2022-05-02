@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['imagedatafileoffset_315',['imageDataFileOffset',['../structBitmapFileHeader.html#af460115f533695ac2f228195a4d810f1',1,'BitmapFileHeader']]],
-  ['imagesize_316',['imageSize',['../structBitmapFileHeader.html#a5f0a49710cf91dfd0c18bf2ecf9b2d7f',1,'BitmapFileHeader']]],
-  ['importantcolors_317',['importantColors',['../structBitmapFileHeader.html#a5add6e28eb35bed4c369eb2bd0c5e8f9',1,'BitmapFileHeader']]]
+  ['headersize_393',['headerSize',['../structBitmapFileHeader.html#a207876297e79cc361918d3ff83753ca9',1,'BitmapFileHeader']]],
+  ['height_394',['height',['../structBitmapFileHeader.html#a8c34740219400c85d78e19fc45324d7b',1,'BitmapFileHeader::height()'],['../structImage.html#aae4c89087111bc31067684279947f80e',1,'Image::height()']]],
+  ['horzres_395',['horzRes',['../structBitmapFileHeader.html#a0f6f000ae90e0fb6c21f5f8cd52200fc',1,'BitmapFileHeader']]]
 ];

@@ -22,12 +22,18 @@ Preprocessing /__w/Maths3D/Maths3D/examples/common/bitmap.h...
 Parsing file /__w/Maths3D/Maths3D/examples/common/bitmap.h...
 Preprocessing /__w/Maths3D/Maths3D/examples/common/endian.h...
 Parsing file /__w/Maths3D/Maths3D/examples/common/endian.h...
+Preprocessing /__w/Maths3D/Maths3D/examples/common/svg.cpp...
+Parsing file /__w/Maths3D/Maths3D/examples/common/svg.cpp...
+Preprocessing /__w/Maths3D/Maths3D/examples/common/svg.h...
+Parsing file /__w/Maths3D/Maths3D/examples/common/svg.h...
 Preprocessing /__w/Maths3D/Maths3D/examples/example1/example1.cpp...
 Parsing file /__w/Maths3D/Maths3D/examples/example1/example1.cpp...
 Preprocessing /__w/Maths3D/Maths3D/examples/example2/example2.cpp...
 Parsing file /__w/Maths3D/Maths3D/examples/example2/example2.cpp...
 Preprocessing /__w/Maths3D/Maths3D/examples/example3/example3.cpp...
 Parsing file /__w/Maths3D/Maths3D/examples/example3/example3.cpp...
+Preprocessing /__w/Maths3D/Maths3D/examples/example4/example4.cpp...
+Parsing file /__w/Maths3D/Maths3D/examples/example4/example4.cpp...
 Preprocessing /__w/Maths3D/Maths3D/includes/maths3d.h...
 Parsing file /__w/Maths3D/Maths3D/includes/maths3d.h...
 Preprocessing /__w/Maths3D/Maths3D/includes/maths3d_ext.h...
@@ -102,9 +108,12 @@ Parsing code for file docs/README.md...
 Parsing code for file examples/common/bitmap.cpp...
 Generating code for file examples/common/bitmap.h...
 Generating code for file examples/common/endian.h...
+Parsing code for file examples/common/svg.cpp...
+Generating code for file examples/common/svg.h...
 Parsing code for file examples/example1/example1.cpp...
 Parsing code for file examples/example2/example2.cpp...
 Parsing code for file examples/example3/example3.cpp...
+Parsing code for file examples/example4/example4.cpp...
 Generating code for file includes/maths3d.h...
 Generating code for file includes/maths3d_ext.h...
 Generating code for file includes/maths3d_pp.h...
@@ -120,6 +129,10 @@ Generating caller graph for function Image_SaveBitmap
 Generating docs for file examples/common/bitmap.h...
 Generating caller graph for function Image_SaveBitmap
 Generating docs for file examples/common/endian.h...
+Generating docs for file examples/common/svg.cpp...
+Generating caller graph for function SVG_Create
+Generating docs for file examples/common/svg.h...
+Generating caller graph for function SVG_Create
 Generating docs for file examples/example1/example1.cpp...
 Generating call graph for function PointOfClosestIntercept
 Generating caller graph for function PointOfClosestIntercept
@@ -141,6 +154,27 @@ Generating caller graph for function PointOfClosestIntercept
 Generating caller graph for function RayDirection
 Generating call graph for function RayTracer
 Generating call graph for function TraceRay
+Generating docs for file examples/example4/example4.cpp...
+Generating caller graph for function Axes_Lines
+Generating call graph for function Axes_Transform
+Generating caller graph for function Axes_Transform
+Generating caller graph for function Axes_Unit
+Generating call graph for function Camera_ViewMatrix
+Generating caller graph for function Camera_ViewMatrix
+Generating call graph for function Cube_Lines
+Generating caller graph for function Cube_Lines
+Generating call graph for function Cube_Transform
+Generating caller graph for function Cube_Transform
+Generating caller graph for function Cube_Unit
+Generating call graph for function Frustum_Lines
+Generating caller graph for function Frustum_Lines
+Generating call graph for function Frustum_Transform
+Generating caller graph for function Frustum_Transform
+Generating caller graph for function Frustum_Unit
+Generating call graph for function main
+Generating caller graph for function Object_LineHelper
+Generating call graph for function Object_Transform
+Generating caller graph for function Object_Transform
 Generating docs for file includes/maths3d.h...
 Generating call graph for function Matrix4x4f_Adjugate
 Generating caller graph for function Matrix4x4f_Adjugate
@@ -153,17 +187,27 @@ Generating call graph for function Matrix4x4f_Multiply
 Generating caller graph for function Matrix4x4f_Multiply
 Generating call graph for function Matrix4x4f_OrthographicFrustum
 Generating call graph for function Matrix4x4f_PerspectiveFrustum
+Generating caller graph for function Matrix4x4f_PerspectiveFrustum
 Generating call graph for function Matrix4x4f_RotateCommon
 Generating caller graph for function Matrix4x4f_RotateCommon
 Generating call graph for function Matrix4x4f_RotateX
+Generating caller graph for function Matrix4x4f_RotateX
+Generating call graph for function Matrix4x4f_RotateXYZ
+Generating caller graph for function Matrix4x4f_RotateXYZ
 Generating call graph for function Matrix4x4f_RotateY
+Generating caller graph for function Matrix4x4f_RotateY
 Generating call graph for function Matrix4x4f_RotateZ
+Generating caller graph for function Matrix4x4f_RotateZ
+Generating call graph for function Matrix4x4f_Scale
+Generating caller graph for function Matrix4x4f_Scale
 Generating caller graph for function Matrix4x4f_Scaled
 Generating call graph for function Matrix4x4f_ScaleXYZ
-Generating caller graph for function Matrix4x4f_Set
+Generating caller graph for function Matrix4x4f_ScaleXYZ
 Generating call graph for function Matrix4x4f_TranslateXYZ
 Generating caller graph for function Matrix4x4f_TranslateXYZ
 Generating caller graph for function Matrix4x4f_Transposed
+Generating call graph for function Matrix4x4f_YFlip
+Generating call graph for function Matrix4x4f_YZSwap
 Generating call graph for function Matrix4x4f_Zero
 Generating caller graph for function Matrix4x4f_Zero
 Generating caller graph for function Scalar1f_One
@@ -203,6 +247,8 @@ Generating caller graph for function Vector4f_Transform
 Generating call graph for function Vector4f_Zero
 Generating caller graph for function Vector4f_Zero
 Generating docs for file includes/maths3d_ext.h...
+Generating caller graph for function Vector4f_SSETransformCoordStream
+Generating caller graph for function Vector4f_SSETransformStream
 Generating call graph for function Vector4f_TransformStreamGeneric
 Generating docs for file includes/maths3d_pp.h...
 Generating call graph for function operator*
@@ -223,10 +269,12 @@ Generating call graph for function Matrix4x4f_Multiply
 Generating caller graph for function Matrix4x4f_Multiply
 Generating call graph for function Matrix4x4f_OrthographicFrustum
 Generating call graph for function Matrix4x4f_PerspectiveFrustum
+Generating caller graph for function Matrix4x4f_PerspectiveFrustum
 Generating call graph for function Matrix4x4f_RotateCommon
 Generating caller graph for function Matrix4x4f_RotateCommon
 Generating caller graph for function Matrix4x4f_Scaled
 Generating call graph for function Matrix4x4f_ScaleXYZ
+Generating caller graph for function Matrix4x4f_ScaleXYZ
 Generating caller graph for function Matrix4x4f_Transposed
 Generating caller graph for function Matrixi4x4f_3x3_Determinant
 Generating call graph for function Vector4f_Transform
@@ -235,7 +283,10 @@ Generating docs for file tests/tests.cpp...
 Generating page documentation...
 Generating group documentation...
 Generating class documentation...
+Generating docs for compound Arrow...
 Generating docs for compound BitmapFileHeader...
+Generating docs for compound Camera...
+Generating docs for compound Circle...
 Generating docs for compound Cube...
 Generating docs for compound Degrees...
 Generating docs for compound FactoryItem...
@@ -248,12 +299,16 @@ Generating docs for nested compound FactoryItem::Iterator...
 Generating docs for compound Feet...
 Generating docs for compound Image...
 Generating docs for compound Light...
+Generating docs for compound Line...
 Generating docs for compound Matrix4x4f...
 Generating call graph for function Matrix4x4f::operator=
 Generating docs for compound Metres...
+Generating docs for compound Object...
 Generating docs for compound Radians...
 Generating docs for compound Ray...
+Generating docs for compound Rotation...
 Generating docs for compound Scene...
+Generating docs for compound Shape...
 Generating docs for compound Sphere...
 Generating docs for compound uint16_be...
 Generating call graph for function uint16_be::uint16_be
@@ -283,6 +338,7 @@ Generating dependency graph for directory .modules
 Generating dependency graph for directory examples/example1
 Generating dependency graph for directory examples/example2
 Generating dependency graph for directory examples/example3
+Generating dependency graph for directory examples/example4
 Generating dependency graph for directory examples
 Generating dependency graph for directory .modules/TestFramework/src
 Generating dependency graph for directory src
@@ -306,210 +362,263 @@ writing tag file...
 Running plantuml with JAVA...
 Running dot...
 Generating dot graphs using 3 parallel threads...
-Running dot for graph 1/166
-Running dot for graph 2/166
-Running dot for graph 3/166
-Running dot for graph 4/166
-Running dot for graph 5/166
-Running dot for graph 6/166
-Running dot for graph 7/166
-Running dot for graph 8/166
-Running dot for graph 9/166
-Running dot for graph 10/166
-Running dot for graph 11/166
-Running dot for graph 12/166
-Running dot for graph 13/166
-Running dot for graph 14/166
-Running dot for graph 15/166
-Running dot for graph 16/166
-Running dot for graph 17/166
-Running dot for graph 18/166
-Running dot for graph 19/166
-Running dot for graph 20/166
-Running dot for graph 21/166
-Running dot for graph 22/166
-Running dot for graph 23/166
-Running dot for graph 24/166
-Running dot for graph 25/166
-Running dot for graph 26/166
-Running dot for graph 27/166
-Running dot for graph 28/166
-Running dot for graph 29/166
-Running dot for graph 30/166
-Running dot for graph 31/166
-Running dot for graph 32/166
-Running dot for graph 33/166
-Running dot for graph 34/166
-Running dot for graph 35/166
-Running dot for graph 36/166
-Running dot for graph 37/166
-Running dot for graph 38/166
-Running dot for graph 39/166
-Running dot for graph 40/166
-Running dot for graph 41/166
-Running dot for graph 42/166
-Running dot for graph 43/166
-Running dot for graph 44/166
-Running dot for graph 45/166
-Running dot for graph 46/166
-Running dot for graph 47/166
-Running dot for graph 48/166
-Running dot for graph 49/166
-Running dot for graph 50/166
-Running dot for graph 51/166
-Running dot for graph 52/166
-Running dot for graph 53/166
-Running dot for graph 54/166
-Running dot for graph 55/166
-Running dot for graph 56/166
-Running dot for graph 57/166
-Running dot for graph 58/166
-Running dot for graph 59/166
-Running dot for graph 60/166
-Running dot for graph 61/166
-Running dot for graph 62/166
-Running dot for graph 63/166
-Running dot for graph 64/166
-Running dot for graph 65/166
-Running dot for graph 66/166
-Running dot for graph 67/166
-Running dot for graph 68/166
-Running dot for graph 69/166
-Running dot for graph 70/166
-Running dot for graph 71/166
-Running dot for graph 72/166
-Running dot for graph 73/166
-Running dot for graph 74/166
-Running dot for graph 75/166
-Running dot for graph 76/166
-Running dot for graph 77/166
-Running dot for graph 78/166
-Running dot for graph 79/166
-Running dot for graph 80/166
-Running dot for graph 81/166
-Running dot for graph 82/166
-Running dot for graph 83/166
-Running dot for graph 84/166
-Running dot for graph 85/166
-Running dot for graph 86/166
-Running dot for graph 87/166
-Running dot for graph 88/166
-Running dot for graph 89/166
-Running dot for graph 90/166
-Running dot for graph 91/166
-Running dot for graph 92/166
-Running dot for graph 93/166
-Running dot for graph 94/166
-Running dot for graph 95/166
-Running dot for graph 96/166
-Running dot for graph 97/166
-Running dot for graph 98/166
-Running dot for graph 99/166
-Running dot for graph 100/166
-Running dot for graph 101/166
-Running dot for graph 102/166
-Running dot for graph 103/166
-Running dot for graph 104/166
-Running dot for graph 105/166
-Running dot for graph 106/166
-Running dot for graph 107/166
-Running dot for graph 108/166
-Running dot for graph 109/166
-Running dot for graph 110/166
-Running dot for graph 111/166
-Running dot for graph 112/166
-Running dot for graph 113/166
-Running dot for graph 114/166
-Running dot for graph 115/166
-Running dot for graph 116/166
-Running dot for graph 117/166
-Running dot for graph 118/166
-Running dot for graph 119/166
-Running dot for graph 120/166
-Running dot for graph 121/166
-Running dot for graph 122/166
-Running dot for graph 123/166
-Running dot for graph 124/166
-Running dot for graph 125/166
-Running dot for graph 126/166
-Running dot for graph 127/166
-Running dot for graph 128/166
-Running dot for graph 129/166
-Running dot for graph 130/166
-Running dot for graph 131/166
-Running dot for graph 132/166
-Running dot for graph 133/166
-Running dot for graph 134/166
-Running dot for graph 135/166
-Running dot for graph 136/166
-Running dot for graph 137/166
-Running dot for graph 138/166
-Running dot for graph 139/166
-Running dot for graph 140/166
-Running dot for graph 141/166
-Running dot for graph 142/166
-Running dot for graph 143/166
-Running dot for graph 144/166
-Running dot for graph 145/166
-Running dot for graph 146/166
-Running dot for graph 147/166
-Running dot for graph 148/166
-Running dot for graph 149/166
-Running dot for graph 150/166
-Running dot for graph 151/166
-Running dot for graph 152/166
-Running dot for graph 153/166
-Running dot for graph 154/166
-Running dot for graph 155/166
-Running dot for graph 156/166
-Running dot for graph 157/166
-Running dot for graph 158/166
-Running dot for graph 159/166
-Running dot for graph 160/166
-Running dot for graph 161/166
-Running dot for graph 162/166
-Running dot for graph 163/166
-Running dot for graph 164/166
-Running dot for graph 165/166
-Running dot for graph 166/166
-Patching output file 1/39
-Patching output file 2/39
-Patching output file 3/39
-Patching output file 4/39
-Patching output file 5/39
-Patching output file 6/39
-Patching output file 7/39
-Patching output file 8/39
-Patching output file 9/39
-Patching output file 10/39
-Patching output file 11/39
-Patching output file 12/39
-Patching output file 13/39
-Patching output file 14/39
-Patching output file 15/39
-Patching output file 16/39
-Patching output file 17/39
-Patching output file 18/39
-Patching output file 19/39
-Patching output file 20/39
-Patching output file 21/39
-Patching output file 22/39
-Patching output file 23/39
-Patching output file 24/39
-Patching output file 25/39
-Patching output file 26/39
-Patching output file 27/39
-Patching output file 28/39
-Patching output file 29/39
-Patching output file 30/39
-Patching output file 31/39
-Patching output file 32/39
-Patching output file 33/39
-Patching output file 34/39
-Patching output file 35/39
-Patching output file 36/39
-Patching output file 37/39
-Patching output file 38/39
-Patching output file 39/39
-lookup cache used 408/65536 hits=3239 misses=560
+Running dot for graph 1/211
+Running dot for graph 2/211
+Running dot for graph 3/211
+Running dot for graph 4/211
+Running dot for graph 5/211
+Running dot for graph 6/211
+Running dot for graph 7/211
+Running dot for graph 8/211
+Running dot for graph 9/211
+Running dot for graph 10/211
+Running dot for graph 11/211
+Running dot for graph 12/211
+Running dot for graph 13/211
+Running dot for graph 14/211
+Running dot for graph 15/211
+Running dot for graph 16/211
+Running dot for graph 17/211
+Running dot for graph 18/211
+Running dot for graph 19/211
+Running dot for graph 20/211
+Running dot for graph 21/211
+Running dot for graph 22/211
+Running dot for graph 23/211
+Running dot for graph 24/211
+Running dot for graph 25/211
+Running dot for graph 26/211
+Running dot for graph 27/211
+Running dot for graph 28/211
+Running dot for graph 29/211
+Running dot for graph 30/211
+Running dot for graph 31/211
+Running dot for graph 32/211
+Running dot for graph 33/211
+Running dot for graph 34/211
+Running dot for graph 35/211
+Running dot for graph 36/211
+Running dot for graph 37/211
+Running dot for graph 38/211
+Running dot for graph 39/211
+Running dot for graph 40/211
+Running dot for graph 41/211
+Running dot for graph 42/211
+Running dot for graph 43/211
+Running dot for graph 44/211
+Running dot for graph 45/211
+Running dot for graph 46/211
+Running dot for graph 47/211
+Running dot for graph 48/211
+Running dot for graph 49/211
+Running dot for graph 50/211
+Running dot for graph 51/211
+Running dot for graph 52/211
+Running dot for graph 53/211
+Running dot for graph 54/211
+Running dot for graph 55/211
+Running dot for graph 56/211
+Running dot for graph 57/211
+Running dot for graph 58/211
+Running dot for graph 59/211
+Running dot for graph 60/211
+Running dot for graph 61/211
+Running dot for graph 62/211
+Running dot for graph 63/211
+Running dot for graph 64/211
+Running dot for graph 65/211
+Running dot for graph 66/211
+Running dot for graph 67/211
+Running dot for graph 68/211
+Running dot for graph 69/211
+Running dot for graph 70/211
+Running dot for graph 71/211
+Running dot for graph 72/211
+Running dot for graph 73/211
+Running dot for graph 74/211
+Running dot for graph 75/211
+Running dot for graph 76/211
+Running dot for graph 77/211
+Running dot for graph 78/211
+Running dot for graph 79/211
+Running dot for graph 80/211
+Running dot for graph 81/211
+Running dot for graph 82/211
+Running dot for graph 83/211
+Running dot for graph 84/211
+Running dot for graph 85/211
+Running dot for graph 86/211
+Running dot for graph 87/211
+Running dot for graph 88/211
+Running dot for graph 89/211
+Running dot for graph 90/211
+Running dot for graph 91/211
+Running dot for graph 92/211
+Running dot for graph 93/211
+Running dot for graph 94/211
+Running dot for graph 95/211
+Running dot for graph 96/211
+Running dot for graph 97/211
+Running dot for graph 98/211
+Running dot for graph 99/211
+Running dot for graph 100/211
+Running dot for graph 101/211
+Running dot for graph 102/211
+Running dot for graph 103/211
+Running dot for graph 104/211
+Running dot for graph 105/211
+Running dot for graph 106/211
+Running dot for graph 107/211
+Running dot for graph 108/211
+Running dot for graph 109/211
+Running dot for graph 110/211
+Running dot for graph 111/211
+Running dot for graph 112/211
+Running dot for graph 113/211
+Running dot for graph 114/211
+Running dot for graph 115/211
+Running dot for graph 116/211
+Running dot for graph 117/211
+Running dot for graph 118/211
+Running dot for graph 119/211
+Running dot for graph 120/211
+Running dot for graph 121/211
+Running dot for graph 122/211
+Running dot for graph 123/211
+Running dot for graph 124/211
+Running dot for graph 125/211
+Running dot for graph 126/211
+Running dot for graph 127/211
+Running dot for graph 128/211
+Running dot for graph 129/211
+Running dot for graph 130/211
+Running dot for graph 131/211
+Running dot for graph 132/211
+Running dot for graph 133/211
+Running dot for graph 134/211
+Running dot for graph 135/211
+Running dot for graph 136/211
+Running dot for graph 137/211
+Running dot for graph 138/211
+Running dot for graph 139/211
+Running dot for graph 140/211
+Running dot for graph 141/211
+Running dot for graph 142/211
+Running dot for graph 143/211
+Running dot for graph 144/211
+Running dot for graph 145/211
+Running dot for graph 146/211
+Running dot for graph 147/211
+Running dot for graph 148/211
+Running dot for graph 149/211
+Running dot for graph 150/211
+Running dot for graph 151/211
+Running dot for graph 152/211
+Running dot for graph 153/211
+Running dot for graph 154/211
+Running dot for graph 155/211
+Running dot for graph 156/211
+Running dot for graph 157/211
+Running dot for graph 158/211
+Running dot for graph 159/211
+Running dot for graph 160/211
+Running dot for graph 161/211
+Running dot for graph 162/211
+Running dot for graph 163/211
+Running dot for graph 164/211
+Running dot for graph 165/211
+Running dot for graph 166/211
+Running dot for graph 167/211
+Running dot for graph 168/211
+Running dot for graph 169/211
+Running dot for graph 170/211
+Running dot for graph 171/211
+Running dot for graph 172/211
+Running dot for graph 173/211
+Running dot for graph 174/211
+Running dot for graph 175/211
+Running dot for graph 176/211
+Running dot for graph 177/211
+Running dot for graph 178/211
+Running dot for graph 179/211
+Running dot for graph 180/211
+Running dot for graph 181/211
+Running dot for graph 182/211
+Running dot for graph 183/211
+Running dot for graph 184/211
+Running dot for graph 185/211
+Running dot for graph 186/211
+Running dot for graph 187/211
+Running dot for graph 188/211
+Running dot for graph 189/211
+Running dot for graph 190/211
+Running dot for graph 191/211
+Running dot for graph 192/211
+Running dot for graph 193/211
+Running dot for graph 194/211
+Running dot for graph 195/211
+Running dot for graph 196/211
+Running dot for graph 197/211
+Running dot for graph 198/211
+Running dot for graph 199/211
+Running dot for graph 200/211
+Running dot for graph 201/211
+Running dot for graph 202/211
+Running dot for graph 203/211
+Running dot for graph 204/211
+Running dot for graph 205/211
+Running dot for graph 206/211
+Running dot for graph 207/211
+Running dot for graph 208/211
+Running dot for graph 209/211
+Running dot for graph 210/211
+Running dot for graph 211/211
+Patching output file 1/47
+Patching output file 2/47
+Patching output file 3/47
+Patching output file 4/47
+Patching output file 5/47
+Patching output file 6/47
+Patching output file 7/47
+Patching output file 8/47
+Patching output file 9/47
+Patching output file 10/47
+Patching output file 11/47
+Patching output file 12/47
+Patching output file 13/47
+Patching output file 14/47
+Patching output file 15/47
+Patching output file 16/47
+Patching output file 17/47
+Patching output file 18/47
+Patching output file 19/47
+Patching output file 20/47
+Patching output file 21/47
+Patching output file 22/47
+Patching output file 23/47
+Patching output file 24/47
+Patching output file 25/47
+Patching output file 26/47
+Patching output file 27/47
+Patching output file 28/47
+Patching output file 29/47
+Patching output file 30/47
+Patching output file 31/47
+Patching output file 32/47
+Patching output file 33/47
+Patching output file 34/47
+Patching output file 35/47
+Patching output file 36/47
+Patching output file 37/47
+Patching output file 38/47
+Patching output file 39/47
+Patching output file 40/47
+Patching output file 41/47
+Patching output file 42/47
+Patching output file 43/47
+Patching output file 44/47
+Patching output file 45/47
+Patching output file 46/47
+Patching output file 47/47
+lookup cache used 506/65536 hits=3934 misses=686
 finished...

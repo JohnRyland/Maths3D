@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['scalar1f_5fone_267',['Scalar1f_One',['../maths3d_8h.html#a7d18c307128606532d069a5fc8e9effe',1,'maths3d.h']]],
-  ['scalar1f_5ftwo_268',['Scalar1f_Two',['../maths3d_8h.html#a791539fd7b912c66a12b8049bc5c37cb',1,'maths3d.h']]],
-  ['scalar1f_5fzero_269',['Scalar1f_Zero',['../maths3d_8h.html#a23076d13621d19b8faf6760896a64270',1,'maths3d.h']]]
+  ['pointofclosestintercept_341',['PointOfClosestIntercept',['../example1_8cpp.html#a6e04921dade6ad68b29172064d54be30',1,'PointOfClosestIntercept(const Ray &amp;ray, const Vector4f &amp;point):&#160;example1.cpp'],['../example2_8cpp.html#a06194c3ab2fc9f73ca2ce41b35ad700e',1,'PointOfClosestIntercept(const Vector4f &amp;origin, const Vector4f &amp;rayDirection, const Vector4f &amp;point):&#160;example2.cpp'],['../example3_8cpp.html#a06194c3ab2fc9f73ca2ce41b35ad700e',1,'PointOfClosestIntercept(const Vector4f &amp;origin, const Vector4f &amp;rayDirection, const Vector4f &amp;point):&#160;example3.cpp']]]
 ];
