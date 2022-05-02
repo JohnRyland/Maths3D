@@ -53,6 +53,8 @@ Object<N> Object_Transform(const Object<N>& obj, const Vector4f& scale, const Ro
   const Matrix4x4f scaling = Matrix4x4f_ScaleXYZ(scale);
   const Matrix4x4f rotating = Matrix4x4f_RotateXYZ(rotation);
   const Matrix4x4f translating = Matrix4x4f_TranslateXYZ(translation);
+
+  // World transformation matrix (model space -> world space)
   const Matrix4x4f xform = translating * rotating * scaling;
 
   // Transform local coordinates in to world coordinates (without perspective divide)
@@ -102,7 +104,7 @@ Cube Cube_Transform(const Cube& cube, const Vector4f& scale, const Rotation& rot
 }
 
 
-void Cube_Lines(const Cube& cube, std::vector<Shape>& shapeList)
+void Cube_Lines(const Cube& cube, uint32_t color, std::vector<Shape>& shapeList)
 {
   for (int pnt1 = 0; pnt1 < 8; ++pnt1)
   {
@@ -111,7 +113,7 @@ void Cube_Lines(const Cube& cube, std::vector<Shape>& shapeList)
       int x = pnt1 ^ pnt2;
       if (x == 1 || x == 2 || x == 4)
       {
-        Object_LineHelper(cube, pnt1, pnt2, 0x000000, shapeList);
+        Object_LineHelper(cube, pnt1, pnt2, color, shapeList);
       }
     }
   }
@@ -186,17 +188,17 @@ Frustum Frustum_Transform(const Frustum& frustum, const Vector4f& scale, const R
 }
 
 
-void Frustum_Lines(const Frustum& frustum, std::vector<Shape>& shapeList)
+void Frustum_Lines(const Frustum& frustum, uint32_t color, std::vector<Shape>& shapeList)
 {
   for (int pnt = 0; pnt < 3; ++pnt)
   {
-    Object_LineHelper(frustum, 0, pnt + 5, 0x000000, shapeList);
-    Object_LineHelper(frustum, pnt + 1, pnt + 2, 0x000000, shapeList);
-    Object_LineHelper(frustum, pnt + 5, pnt + 6, 0x000000, shapeList);
+    Object_LineHelper(frustum, 0, pnt + 5, color, shapeList);
+    Object_LineHelper(frustum, pnt + 1, pnt + 2, color, shapeList);
+    Object_LineHelper(frustum, pnt + 5, pnt + 6, color, shapeList);
   }
-  Object_LineHelper(frustum, 0, 8, 0x000000, shapeList);
-  Object_LineHelper(frustum, 4, 1, 0x000000, shapeList);
-  Object_LineHelper(frustum, 8, 5, 0x000000, shapeList);
+  Object_LineHelper(frustum, 0, 8, color, shapeList);
+  Object_LineHelper(frustum, 4, 1, color, shapeList);
+  Object_LineHelper(frustum, 8, 5, color, shapeList);
 }
 
 
@@ -217,10 +219,13 @@ Camera Camera_Create(Scalar1f scale, const Rotation& rotation, const Vector4f& t
 }
 
 
+// Returns the view transformation matrix (world space -> view/camera space)
 Matrix4x4f Camera_ViewMatrix(const Camera& camera)
 {
   // The rotation matrix is orthonormal so we can use the transpose instead of a full inverse here.
   Matrix4x4f invRotation = Matrix4x4f_Transposed(Matrix4x4f_RotateXYZ(camera.rotation));
+
+  // We subtract the translation / camera position to move the world relative to the position of the camera.
   return invRotation * Matrix4x4f_TranslateXYZ(camera.translation * -1.0f) * Matrix4x4f_Scale(camera.scale);
 }
 
@@ -237,29 +242,23 @@ int main(int argc, const char* argv[])
   float aspectRatio = w / h;
   Degrees fieldOfView = { 90.0 };
 
-  // Move world coordinates in to camera space.
-  Camera camera = { .scale = 1.5, .rotation = { 5.0, 45.0, 10.0 }, .translation = { -12.0, 1.0f, 10.0f, 0.0f } };
-  Matrix4x4f modelViewMatrix = Camera_ViewMatrix(camera);
+  // Define our camera.
+  Camera camera = { .scale = 1.0, .rotation = { 10.0, 45.0, 10.0 }, .translation = { -12.0, 1.0f, 10.0f, 0.0f } };
 
-  // Transforms world to NDC (normalized device coords / clip space).
+  // Create the view matrix from the camera.
+  Matrix4x4f viewMatrix = Camera_ViewMatrix(camera);
+
+  // Transforms view to NDC (normalized device coords / clip space).
   Matrix4x4f perspective = Matrix4x4f_PerspectiveFrustum(fieldOfView, aspectRatio, 0.1, 10000.0);
-  Matrix4x4f screenScale = Matrix4x4f_ScaleXYZ({ w, -h, 1.0f, 1.0f });
+
+  // Then we go from clip space to window/screen space
+  Matrix4x4f screenScale = Matrix4x4f_ScaleXYZ({ w, -h, 1.0f, 1.0f });   // For SVG, +y goes down the image, so we flip it.
   Matrix4x4f screenCenter = Matrix4x4f_TranslateXYZ({ w * 0.5f, h * 0.5f, 0.0f, 0.0f }); // scale and trans converts NDC in to screen space (device coords)
 
   // Combine the transforms.
-  Matrix4x4f xform = screenCenter * screenScale * perspective * modelViewMatrix;
+  Matrix4x4f xform = screenCenter * screenScale * perspective * viewMatrix;
 
   std::vector<Shape> shapeList;
-  int gridSize = 1;
-  for (int j = 0; j < gridSize; ++j)
-  {
-    for (int i = 0; i < gridSize; ++i)
-    {
-      Cube cube = Cube_Transform(Cube_Unit(), { 2.0, 2.0, 2.0, 1.0 }, { 20.0, 40.0, 0.0 }, { i*5.0f, 0.0, j*5.0f, 0.0 });
-      Vector4f_SSETransformCoordStream(cube.points, cube.points, xform);
-      Cube_Lines(cube, shapeList);
-    }
-  }
 
   Axes axes = Axes_Transform(Axes_Unit(), { 5.0, 5.0, 5.0, 1.0 }, { 0.0, 0.0, 0.0 }, { 0.0, 0.0, 0.0, 0.0 });
   Vector4f_SSETransformCoordStream(axes.points, axes.points, xform);
@@ -267,7 +266,18 @@ int main(int argc, const char* argv[])
 
   Frustum frustum = Frustum_Transform(Frustum_Unit(), { 3.0, 3.0, 3.0, 1.0 }, { 0.0, 0.0, 0.0 }, { 0.0, 0.0, 0.0, 0.0 });
   Vector4f_SSETransformCoordStream(frustum.points, frustum.points, xform);
-  Frustum_Lines(frustum, shapeList);
+  Frustum_Lines(frustum, 0xA0A0A0, shapeList);
+
+  int gridSize = 1;
+  for (int j = 0; j < gridSize; ++j)
+  {
+    for (int i = 0; i < gridSize; ++i)
+    {
+      Cube cube = Cube_Transform(Cube_Unit(), { 2.0, 2.0, 2.0, 1.0 }, { 20.0, 40.0, 0.0 }, { i*5.0f, 0.0, j*5.0f, 0.0 });
+      Vector4f_SSETransformCoordStream(cube.points, cube.points, xform);
+      Cube_Lines(cube, 0x000000, shapeList);
+    }
+  }
 
   SVG_Create("cube.svg", w, h, shapeList);
 }

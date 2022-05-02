@@ -119,13 +119,35 @@ Matrix4x4f Matrix4x4f_Frustum(Scalar1f left,   Scalar1f right,
   frustum.m[2][3] = -one;
   frustum.m[3][2] = -two * far * near * invDepth;
   return frustum;
+
+  // Generic ortho or perspective frustum
+  Matrix4x4f frustum = Matrix4x4f_Zero();
+  const Scalar1f two = Scalar1f_Two();
+  const Scalar1f leftBottomNear[3] = { left, bottom, near };
+  const Scalar1f rightTopFar[3] = { right, top, far };
+  for (int i = 0; i < 3; ++i)
+  {
+    Scalar1f scale = Scalar1f_One() / (rightTopFar[i] - leftBottomNear[i]);
+    frustum.m[i][i] = two * scale;                                          // The scaling (diagonal component)
+    int x = (perspective) ? 2 : i;
+    int y = (perspective) ? i : 3;
+    float sign = (perspective) ? 1.0f : -1.0f;
+    frustum.m[x][y] = sign * (rightTopFar[i] + leftBottomNear[i]) * scale;  // The translation component
+  }
+  frustum.m[2][2] = -frustum.m[2][2];                                       // This changes the z direction (RH->LH)
+  if (perspective)
+  {
+    frustum.m[2][3] = -one;
+    frustum.m[3][2] = -two * far * near / (far - near);
+  }
+  return frustum;
 }
 
 Matrix4x4f Matrix4x4f_PerspectiveFrustum_alt(Radians fieldOfView, Scalar1f aspectRatio, Scalar1f near, Scalar1f far)
 {
-  float scale = ::tan(fieldOfView.value * 0.5) * near;
-  float right = aspectRatio * scale;
-  return Matrix4x4f_Frustum(-right, right, -scale, scale, near, far);
+  const Scalar1f top = ::tan(fieldOfView.value * 0.5) * near;
+  const Scalar1f right = aspectRatio * top;
+  return Matrix4x4f_Frustum(-right, right, -top, top, near, far);
 }
 */
 
@@ -142,7 +164,7 @@ Matrix4x4f Matrix4x4f_PerspectiveFrustum(Radians fieldOfView, Scalar1f aspectRat
   perspective.m[1][1] = invTan;
   perspective.m[2][2] = (far + near) * negInvDepth;
   perspective.m[2][3] = -one;
-  perspective.m[3][2] = (two * far * near) * negInvDepth;
+  perspective.m[3][2] = two * far * near * negInvDepth;
   return perspective;
 }
 
@@ -157,7 +179,7 @@ Matrix4x4f Matrix4x4f_OrthographicFrustum(Scalar1f left, Scalar1f right, Scalar1
     ortho.m[i][3] = -(rightTopFar[i] + leftBottomNear[i]) * scale; // The translation component
     ortho.m[i][i] = Scalar1f_Two() * scale;                        // The scaling (diagonal component)
   }
-  ortho.m[2][2] = -ortho.m[2][2];                                  // This changes the z direction
+  ortho.m[2][2] = -ortho.m[2][2];                                  // This changes the z direction (RH->LH)
   return ortho;
 }
 
