@@ -47,6 +47,12 @@
 ////////////////////////////////////////////////////////////////////////////////////
 // Types
 
+enum class ObjectType
+{
+  Sphere,
+  Cube
+};
+
 struct Ray
 {
   Vector4f origin;
@@ -71,6 +77,16 @@ struct Cube
   Scalar1f radius;
 };
 
+struct Object
+{
+  ObjectType type;
+  union
+  {
+    Sphere sphere;
+    Cube   cube;
+  };
+};
+
 struct Light
 {
   Vector4f position;
@@ -83,8 +99,7 @@ struct Light
 
 struct Scene
 {
-  std::vector<Sphere> spheres;
-  std::vector<Cube>   cubes;
+  std::vector<Object> objects;
   std::vector<Light>  lights;
 };
 
@@ -113,63 +128,79 @@ uint32_t TraceRay(int i, int j, const Scene& scene)
   int closestObjectIndex = -1;
   Vector4f closestIntersection;
 
-  for (int i = 0; i < scene.spheres.size(); ++i)
+  for (int i = 0; i < scene.objects.size(); ++i)
   {
-    const Sphere& sphere = scene.spheres[i];
-    const Vector4f pointOnRayPerpendicularToSphereCenter = PointOfClosestIntercept(ray.origin, rayDirection, sphere.center);
-    const Vector4f vectorFromSphereCenterToRay = pointOnRayPerpendicularToSphereCenter - sphere.center;
-    const Scalar1f distanceFromSphereCenterToRay = vectorFromSphereCenterToRay;
-
-    // See if our point of closest intercept between the ray and the center of the sphere is less than the radius of the sphere.
-    if (distanceFromSphereCenterToRay < sphere.radius)
+    switch (scene.objects[i].type)
     {
-      // Now use Pythagoras' theorem to work out the distance back to the intersection point
-      float distanceBack = sqrt(sphere.radius * sphere.radius - distanceFromSphereCenterToRay * distanceFromSphereCenterToRay);
-
-      // Now we trace back along the ray this distance from the closest intercept point
-      const Vector4f intersectionPoint = pointOnRayPerpendicularToSphereCenter - (rayDirection * distanceBack);
-
-      float distanceToIntersection = intersectionPoint - ray.origin;
-
-      if (distanceToIntersection < closestDistance)
+      case ObjectType::Sphere:
       {
-        closestIntersection = intersectionPoint;;
-        closestDistance = distanceToIntersection;
-        closestObjectIndex = i;
+        const Sphere& sphere = scene.objects[i].sphere;
+        const Vector4f pointOnRayPerpendicularToSphereCenter = PointOfClosestIntercept(ray.origin, rayDirection, sphere.center);
+        const Vector4f vectorFromSphereCenterToRay = pointOnRayPerpendicularToSphereCenter - sphere.center;
+        const Scalar1f distanceFromSphereCenterToRay = vectorFromSphereCenterToRay;
+
+        // See if our point of closest intercept between the ray and the center of the sphere is less than the radius of the sphere.
+        if (distanceFromSphereCenterToRay < sphere.radius)
+        {
+          // Now use Pythagoras' theorem to work out the distance back to the intersection point
+          float distanceBack = sqrt(sphere.radius * sphere.radius - distanceFromSphereCenterToRay * distanceFromSphereCenterToRay);
+
+          // Now we trace back along the ray this distance from the closest intercept point
+          const Vector4f intersectionPoint = pointOnRayPerpendicularToSphereCenter - (rayDirection * distanceBack);
+
+          float distanceToIntersection = intersectionPoint - ray.origin;
+
+          if (distanceToIntersection < closestDistance)
+          {
+            closestIntersection = intersectionPoint;;
+            closestDistance = distanceToIntersection;
+            closestObjectIndex = i;
+          }
+        }
+        break;
+      }
+      case ObjectType::Cube:
+      {
+        // TODO: add cube support
+        // if (RayIntersectsCube(ray, scene.spheres[i]))
+        break;
       }
     }
   }
 
   if (closestObjectIndex != -1)
   {
-    const Sphere& sphere = scene.spheres[closestObjectIndex];
-    Vector4f normal = ~(closestIntersection - sphere.center);
-    Vector4f color = Vector4f_Zero();
-    for (const Light& light : scene.lights)
+    switch (scene.objects[i].type)
     {
-      Vector4f toLight = ~(closestIntersection - light.position);
-      Scalar1f lightIntensity = toLight ^ normal;
+      case ObjectType::Sphere:
+      {
+        const Sphere& sphere = scene.objects[closestObjectIndex].sphere;
+        Vector4f normal = ~(closestIntersection - sphere.center);
+        Vector4f color = Vector4f_Zero();
+        for (const Light& light : scene.lights)
+        {
+          Vector4f toLight = ~(closestIntersection - light.position);
+          Scalar1f lightIntensity = toLight ^ normal;
 
-      if (lightIntensity < 0.0)
-        lightIntensity = 0.0;
-      lightIntensity += 0.2;
-      if (lightIntensity > 1.0)
-        lightIntensity = 1.0;
+          if (lightIntensity < 0.0)
+            lightIntensity = 0.0;
+          lightIntensity += 0.2;
+          if (lightIntensity > 1.0)
+            lightIntensity = 1.0;
 
-      color = color + (sphere.color * lightIntensity);
+          color = color + (sphere.color * lightIntensity);
+        }
+        return ((uint32_t(color.x*255.0)&0xFF) << 16) | ((uint32_t(color.y*255.0)&0xff) << 8) | (uint32_t(color.z*255.0)&0xff); 
+      }
+      case ObjectType::Cube:
+      {
+        // TODO: trace ray to the light to do basic lighting
+        break;
+      }
     }
-    return ((uint32_t(color.x*255.0)&0xFF) << 16) | ((uint32_t(color.y*255.0)&0xff) << 8) | (uint32_t(color.z*255.0)&0xff); 
   }
 
-  for (int i = 0; i < scene.cubes.size(); ++i)
-  {
-    // TODO: add cube support
-    // if (RayIntersectsCube(ray, scene.spheres[i]))
-  }
-
-  // TODO: trace ray to the light to do basic lighting
-
-  // If don't intersect any spheres, then draw a black pixel.
+  // If don't intersect any objects, then draw a black pixel.
   return 0x000000;
 }
 
@@ -197,14 +228,11 @@ int main(int argc, const char* argv[])
 {
   Scene scene = 
   {
-    .spheres =
+    .objects =
     {
-      { { -50, -50,  90 }, { 1.0, 0.0, 0.0 }, 50 },
-      { {  60,  20,  50 }, { 0.0, 1.0, 0.0 }, 50 },
-      { {   0,  30, 100 }, { 0.0, 0.0, 1.0 }, 70 }
-    },
-    .cubes =
-    {
+      { ObjectType::Sphere, .sphere = { { -50, -50,  90 }, { 1.0, 0.0, 0.0 }, 50 } },
+      { ObjectType::Sphere, .sphere = { {  60,  20,  50 }, { 0.0, 1.0, 0.0 }, 50 } },
+      { ObjectType::Sphere, .sphere = { {   0,  30, 100 }, { 0.0, 0.0, 1.0 }, 70 } }
     },
     .lights =
     {

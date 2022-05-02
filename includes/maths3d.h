@@ -148,6 +148,10 @@ inline Scalar1f Scalar1f_Two()
   return 2.0f;
 }
 
+
+///////////////////////////////////////////////////////////////////////////////////
+// 3D Maths - Angles
+
 struct Degrees;
 
 struct Radians;
@@ -183,6 +187,19 @@ inline Radians::operator Degrees() const
   constexpr float rad2deg = 57.2957795131f; // 180 / pi
   return Degrees{ value * rad2deg };
 }
+
+/// \brief
+/// A 3D set of rotations.
+struct Rotation
+{
+  Degrees x;
+  Degrees y;
+  Degrees z;
+};
+
+
+///////////////////////////////////////////////////////////////////////////////////
+// 3D Maths - Distances
 
 struct Metres;
 struct Feet;
@@ -404,12 +421,40 @@ inline Matrix4x4f Matrix4x4f_Zero()
   return ret;
 }
 
+/// Creates a matrix that when multiplied by it will be able to apply a uniform 3D
+/// scaling transformation (uniform meaning that it is scaled by the same amount in
+/// the x, y and z dimensions).
+inline Matrix4x4f Matrix4x4f_Scale(Scalar1f scale)
+{
+  Matrix4x4f ret = Matrix4x4f_Zero();
+  ret.m[0][0] = ret.m[1][1] = ret.m[2][2] = scale;
+  ret.m[3][3] = Scalar1f_One();
+  return ret;
+}
+
 /// Initialize the matrix to an identity matrix, a matrix that when multiplied with
 /// another matrix, returns an identical matrix back again.
 inline Matrix4x4f Matrix4x4f_Identity()
 {
+  return Matrix4x4f_Scale(Scalar1f_One());
+}
+
+/// Creates a matrix that when multiplied by it, will flip the handedness
+/// (flips the sign of y).
+inline Matrix4x4f Matrix4x4f_YFlip()
+{
+  Matrix4x4f ret = Matrix4x4f_Identity();
+  ret.m[1][1] = -Scalar1f_One();
+  return ret;
+}
+
+/// Creates a matrix that when multiplied by it, will swap the y and z values.
+/// This might be useful to be able to go from a right handed world coordinate
+/// system to a left handed view coordinate system.
+inline Matrix4x4f Matrix4x4f_YZSwap()
+{
   Matrix4x4f ret = Matrix4x4f_Zero();
-  ret.v[0] = ret.v[5] = ret.v[10] = ret.v[15] = Scalar1f_One();
+  ret.m[0][0] = ret.m[2][1] = ret.m[1][2] = ret.m[3][3] = Scalar1f_One();
   return ret;
 }
 
@@ -431,9 +476,8 @@ Matrix4x4f Matrix4x4f_Multiply(const Matrix4x4f& m1, const Matrix4x4f& m2);
 /// Creates a matrix where the matrix a is mirrored through the diagonal of the matrix.
 Matrix4x4f Matrix4x4f_Transposed(const Matrix4x4f& a);
 
-/// Creates a matrix that when multiplied by it will be able to apply a uniform 3D
-/// scaling transformation (uniform meaning that it is scaled by the same amount in
-/// the x, y and z dimensions).
+/// Multiplies each component of matrix m by scale and returns the resulting
+/// scaled matrix. For 3D scaling, \see Matrix4x4f_Scale or \see Matrix4x4f_ScaleXYZ.
 Matrix4x4f Matrix4x4f_Scaled(const Matrix4x4f& m, Scalar1f scale);
 
 /// Creates a matrix that when multiplied by it will be able to apply a 3D scaling
@@ -465,9 +509,18 @@ inline Matrix4x4f Matrix4x4f_RotateZ(Radians z)
   return Matrix4x4f_RotateCommon(z, 2);
 }
 
+/// Creates a matrix that when multiplied by it will be able to apply a 3D rotation
+/// transformation about the x, y and z axes.
+inline Matrix4x4f Matrix4x4f_RotateXYZ(const Rotation& rotation)
+{
+  const Matrix4x4f rotX = Matrix4x4f_RotateX(rotation.x);
+  const Matrix4x4f rotY = Matrix4x4f_RotateY(rotation.y);
+  return Matrix4x4f_Multiply(Matrix4x4f_Multiply(rotX, rotY), Matrix4x4f_RotateZ(rotation.z));
+}
+
 /// Creates a matrix that when multiplied by it will be able to apply a 3D perspective
 /// projection transformation.
-/// \param fieldOfView is the field of view which is the horizontal viewing angle in to the scene.
+/// \param fieldOfView is the field of view which is the vertical viewing angle in to the scene.
 /// \param aspectRatio is the ratio of width to height of the view.
 /// \param near is the distance to the near plane. Depth values are scaled according to this.
 /// \param far is the distance to the far plane. Depth values are scaled according to this.
@@ -499,7 +552,7 @@ Matrix4x4f Matrix4x4f_Adjugate(const Matrix4x4f& a);
 /// \see Matrix4x4f_Adjugate, Matrix4x4f_Determinate
 inline Matrix4x4f Matrix4x4f_Inversed(const Matrix4x4f& a)
 {
-  Scalar1f det = Matrix4x4f_Determinant(a);
+  const Scalar1f det = Matrix4x4f_Determinant(a);
   if (det != Scalar1f_Zero())
   {
     return Matrix4x4f_Scaled(Matrix4x4f_Adjugate(a), Scalar1f_One() / det);

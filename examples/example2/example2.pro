@@ -10,3 +10,7 @@ INCLUDES = ../../includes \
 SOURCES  = example2.cpp \
            ../common/bitmap.cpp \
            ../../src/maths3d.cpp
+
+OUTPUT   = example2.bmp
+
+

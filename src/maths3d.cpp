@@ -98,19 +98,52 @@ Matrix4x4f Matrix4x4f_RotateCommon(Radians angle, int axis)
   return ret;
 }
 
+/*
+// Helper for creating off-center projection matrices if required
+Matrix4x4f Matrix4x4f_Frustum(Scalar1f left,   Scalar1f right,
+                              Scalar1f bottom, Scalar1f top,
+                              Scalar1f near,   Scalar1f far)
+{
+  const Scalar1f one = Scalar1f_One();
+  const Scalar1f two = Scalar1f_Two();
+  const Scalar1f invWidth = one / (right - left);
+  const Scalar1f invHeight = one / (top - bottom);
+  const Scalar1f invDepth = one / (far - near);
+
+  Matrix4x4f frustum = Matrix4x4f_Zero();
+  frustum.m[0][0] = two * near * invWidth;
+  frustum.m[1][1] = two * near * invHeight;
+  frustum.m[2][0] = (right + left) * invWidth;
+  frustum.m[2][1] = (top + bottom) * invHeight;
+  frustum.m[2][2] = -(far + near) * invDepth;
+  frustum.m[2][3] = -one;
+  frustum.m[3][2] = -two * far * near * invDepth;
+  return frustum;
+}
+
+Matrix4x4f Matrix4x4f_PerspectiveFrustum_alt(Radians fieldOfView, Scalar1f aspectRatio, Scalar1f near, Scalar1f far)
+{
+  float scale = ::tan(fieldOfView.value * 0.5) * near;
+  float right = aspectRatio * scale;
+  return Matrix4x4f_Frustum(-right, right, -scale, scale, near, far);
+}
+*/
+
 Matrix4x4f Matrix4x4f_PerspectiveFrustum(Radians fieldOfView, Scalar1f aspectRatio, Scalar1f near, Scalar1f far)
 {
-  const Scalar1f z = Scalar1f_Zero();
   const Scalar1f one = Scalar1f_One();
   const Scalar1f two = Scalar1f_Two();
   const Scalar1f fov = fieldOfView.value;
-  const Scalar1f ctan = one / ::tanf(fov / two);
-  const Scalar1f inlf = one / (near - far);
-  const Scalar1f perspective[16] = { ctan / aspectRatio, z, z, z,
-                                     z, ctan, z, z,
-                                     z, z, (far + near) * inlf, -one,
-                                     z, z, (two * far * near) * inlf, z };
-  return Matrix4x4f_Set(perspective);
+  const Scalar1f invTan = one / ::tanf(fov / two);
+  const Scalar1f negInvDepth = one / (near - far);
+
+  Matrix4x4f perspective = Matrix4x4f_Zero();
+  perspective.m[0][0] = invTan / aspectRatio;
+  perspective.m[1][1] = invTan;
+  perspective.m[2][2] = (far + near) * negInvDepth;
+  perspective.m[2][3] = -one;
+  perspective.m[3][2] = (two * far * near) * negInvDepth;
+  return perspective;
 }
 
 Matrix4x4f Matrix4x4f_OrthographicFrustum(Scalar1f left, Scalar1f right, Scalar1f bottom, Scalar1f top, Scalar1f near, Scalar1f far)
@@ -120,12 +153,11 @@ Matrix4x4f Matrix4x4f_OrthographicFrustum(Scalar1f left, Scalar1f right, Scalar1
   const Scalar1f rightTopFar[3] = { right, top, far };
   for (int i = 0; i < 3; ++i)
   {
-    Scalar1f scale = rightTopFar[i] - leftBottomNear[i];
-    ortho.m[i][3] = -(rightTopFar[i] + leftBottomNear[i]) / scale;
-    ortho.m[i][i] = Scalar1f_Two() / scale;
+    Scalar1f scale = Scalar1f_One() / (rightTopFar[i] - leftBottomNear[i]);
+    ortho.m[i][3] = -(rightTopFar[i] + leftBottomNear[i]) * scale; // The translation component
+    ortho.m[i][i] = Scalar1f_Two() * scale;                        // The scaling (diagonal component)
   }
-  // This changes the z direction
-  ortho.m[2][2] = -ortho.m[2][2];
+  ortho.m[2][2] = -ortho.m[2][2];                                  // This changes the z direction
   return ortho;
 }
 

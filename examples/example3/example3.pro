@@ -10,3 +10,5 @@ INCLUDES+=../common
 
 CXXFLAGS=-std=c++11
 
+OUTPUT=example3.bmp
+
