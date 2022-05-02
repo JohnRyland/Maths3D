@@ -1,0 +1,9 @@
+<map id="Vector4f::operator Scalar1f" name="Vector4f::operator Scalar1f">
+<area shape="rect" id="node1" title="Length of a vector." alt="" coords="5,23,144,65"/>
+<area shape="rect" id="node2" href="$maths3d_8h.html#a4f551392427772319a2abb968295bad2" title="Calculates the length of vec." alt="" coords="192,31,319,57"/>
+<area shape="rect" id="node3" href="$maths3d_8h.html#a6a12894b1a4971a2291d506140394124" title="Calculates the length squared of vec." alt="" coords="367,31,547,57"/>
+<area shape="rect" id="node4" href="$maths3d_8h.html#afa6fbd00f48007bc9ca8b9fad6911058" title="Calculates the dot&#45;product of vec1 and vec2." alt="" coords="595,31,749,57"/>
+<area shape="rect" id="node5" href="$maths3d_8h.html#a90265d9aa55b92df80e1ff0db7be136f" title="Multiplies vec1 with vec2." alt="" coords="827,5,963,32"/>
+<area shape="rect" id="node7" href="$maths3d_8h.html#a670630003a2a62f351daa92d3e3a6d8f" title="Returns the sum of the components of vec." alt="" coords="797,56,992,83"/>
+<area shape="rect" id="node6" href="$maths3d_8h.html#ae4a4af082482c7992d487d2f709a1d4b" title="Assigns x, y, z and w to the corresponding components of the vector." alt="" coords="1040,5,1144,32"/>
+</map>

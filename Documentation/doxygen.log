@@ -1,0 +1,624 @@
+Doxygen version used: 1.9.1
+Parsing layout file /__w/Maths3D/Maths3D/.modules/GenericMake/doxygen/layout.xml...
+Searching for include files...
+Searching for example files...
+Searching for images...
+Searching for dot files...
+Searching for msc files...
+Searching for dia files...
+Searching for files to exclude
+Searching INPUT for files to process...
+Reading and parsing tag files
+Parsing files
+Preprocessing /__w/Maths3D/Maths3D/.modules/TestFramework/include/Factory.hpp...
+Parsing file /__w/Maths3D/Maths3D/.modules/TestFramework/include/Factory.hpp...
+Preprocessing /__w/Maths3D/Maths3D/.modules/TestFramework/include/test.h...
+Parsing file /__w/Maths3D/Maths3D/.modules/TestFramework/include/test.h...
+Preprocessing /__w/Maths3D/Maths3D/.modules/TestFramework/src/TestMain.cpp...
+Parsing file /__w/Maths3D/Maths3D/.modules/TestFramework/src/TestMain.cpp...
+Preprocessing /__w/Maths3D/Maths3D/examples/common/bitmap.cpp...
+Parsing file /__w/Maths3D/Maths3D/examples/common/bitmap.cpp...
+Preprocessing /__w/Maths3D/Maths3D/examples/common/bitmap.h...
+Parsing file /__w/Maths3D/Maths3D/examples/common/bitmap.h...
+Preprocessing /__w/Maths3D/Maths3D/examples/common/endian.h...
+Parsing file /__w/Maths3D/Maths3D/examples/common/endian.h...
+Preprocessing /__w/Maths3D/Maths3D/examples/common/svg.cpp...
+Parsing file /__w/Maths3D/Maths3D/examples/common/svg.cpp...
+Preprocessing /__w/Maths3D/Maths3D/examples/common/svg.h...
+Parsing file /__w/Maths3D/Maths3D/examples/common/svg.h...
+Preprocessing /__w/Maths3D/Maths3D/examples/example1/example1.cpp...
+Parsing file /__w/Maths3D/Maths3D/examples/example1/example1.cpp...
+Preprocessing /__w/Maths3D/Maths3D/examples/example2/example2.cpp...
+Parsing file /__w/Maths3D/Maths3D/examples/example2/example2.cpp...
+Preprocessing /__w/Maths3D/Maths3D/examples/example3/example3.cpp...
+Parsing file /__w/Maths3D/Maths3D/examples/example3/example3.cpp...
+Preprocessing /__w/Maths3D/Maths3D/examples/example4/example4.cpp...
+Parsing file /__w/Maths3D/Maths3D/examples/example4/example4.cpp...
+Preprocessing /__w/Maths3D/Maths3D/includes/maths3d.h...
+Parsing file /__w/Maths3D/Maths3D/includes/maths3d.h...
+Preprocessing /__w/Maths3D/Maths3D/includes/maths3d_ext.h...
+Parsing file /__w/Maths3D/Maths3D/includes/maths3d_ext.h...
+Preprocessing /__w/Maths3D/Maths3D/includes/maths3d_pp.h...
+Parsing file /__w/Maths3D/Maths3D/includes/maths3d_pp.h...
+Preprocessing /__w/Maths3D/Maths3D/src/maths3d.cpp...
+Parsing file /__w/Maths3D/Maths3D/src/maths3d.cpp...
+Preprocessing /__w/Maths3D/Maths3D/tests/tests.cpp...
+Parsing file /__w/Maths3D/Maths3D/tests/tests.cpp...
+Reading /__w/Maths3D/Maths3D/docs/README.md...
+Building macro definition list...
+Building group list...
+Building directory list...
+Building namespace list...
+Building file list...
+Building class list...
+Computing nesting relations for classes...
+Associating documentation with classes...
+Building example list...
+Searching for enumerations...
+Searching for documented typedefs...
+Searching for members imported via using declarations...
+Searching for included using directives...
+Searching for documented variables...
+Building interface member list...
+Building member list...
+Searching for friends...
+Searching for documented defines...
+Computing class inheritance relations...
+Computing class usage relations...
+Flushing cached template relations that have become invalid...
+Computing class relations...
+Add enum values to enums...
+Searching for member function documentation...
+Creating members for template instances...
+Building page list...
+Search for main page...
+Computing page relations...
+Determining the scope of groups...
+Sorting lists...
+Determining which enums are documented
+Computing member relations...
+Building full member lists recursively...
+Adding members to member groups.
+Computing member references...
+Inheriting documentation...
+Generating disk names...
+Adding source references...
+Adding xrefitems...
+Sorting member lists...
+Setting anonymous enum type...
+Computing dependencies between directories...
+Generating citations page...
+Counting members...
+Counting data structures...
+Resolving user defined references...
+Finding anchors and sections in the documentation...
+Transferring function references...
+Combining using relations...
+Adding members to index pages...
+Correcting members for VHDL...
+Computing tooltip texts...
+Generating style sheet...
+Generating search indices...
+Generating example documentation...
+Generating file sources...
+Generating code for file .modules/TestFramework/include/Factory.hpp...
+Generating code for file .modules/TestFramework/include/test.h...
+Parsing code for file .modules/TestFramework/src/TestMain.cpp...
+Parsing code for file docs/README.md...
+Parsing code for file examples/common/bitmap.cpp...
+Generating code for file examples/common/bitmap.h...
+Generating code for file examples/common/endian.h...
+Parsing code for file examples/common/svg.cpp...
+Generating code for file examples/common/svg.h...
+Parsing code for file examples/example1/example1.cpp...
+Parsing code for file examples/example2/example2.cpp...
+Parsing code for file examples/example3/example3.cpp...
+Parsing code for file examples/example4/example4.cpp...
+Generating code for file includes/maths3d.h...
+Generating code for file includes/maths3d_ext.h...
+Generating code for file includes/maths3d_pp.h...
+Parsing code for file src/maths3d.cpp...
+Parsing code for file tests/tests.cpp...
+Generating file documentation...
+Generating docs for file .modules/TestFramework/include/Factory.hpp...
+Generating docs for file .modules/TestFramework/include/test.h...
+Generating docs for file .modules/TestFramework/src/TestMain.cpp...
+Generating docs for file docs/README.md...
+Generating docs for file examples/common/bitmap.cpp...
+Generating caller graph for function Image_SaveBitmap
+Generating docs for file examples/common/bitmap.h...
+Generating caller graph for function Image_SaveBitmap
+Generating docs for file examples/common/endian.h...
+Generating docs for file examples/common/svg.cpp...
+Generating caller graph for function SVG_Create
+Generating docs for file examples/common/svg.h...
+Generating caller graph for function SVG_Create
+Generating docs for file examples/example1/example1.cpp...
+Generating call graph for function PointOfClosestIntercept
+Generating caller graph for function PointOfClosestIntercept
+Generating call graph for function RayDirection
+Generating caller graph for function RayDirection
+Generating call graph for function RayIntersectsSphere
+Generating caller graph for function RayIntersectsSphere
+Generating call graph for function RayTracer
+Generating call graph for function TraceRay
+Generating docs for file examples/example2/example2.cpp...
+Generating call graph for function PointOfClosestIntercept
+Generating caller graph for function PointOfClosestIntercept
+Generating call graph for function RayDirection
+Generating caller graph for function RayDirection
+Generating call graph for function RayTracer
+Generating call graph for function TraceRay
+Generating docs for file examples/example3/example3.cpp...
+Generating caller graph for function PointOfClosestIntercept
+Generating caller graph for function RayDirection
+Generating call graph for function RayTracer
+Generating call graph for function TraceRay
+Generating docs for file examples/example4/example4.cpp...
+Generating caller graph for function Axes_Lines
+Generating call graph for function Axes_Transform
+Generating caller graph for function Axes_Transform
+Generating caller graph for function Axes_Unit
+Generating call graph for function Camera_ViewMatrix
+Generating caller graph for function Camera_ViewMatrix
+Generating call graph for function Cube_Lines
+Generating caller graph for function Cube_Lines
+Generating call graph for function Cube_Transform
+Generating caller graph for function Cube_Transform
+Generating caller graph for function Cube_Unit
+Generating call graph for function Frustum_Lines
+Generating caller graph for function Frustum_Lines
+Generating call graph for function Frustum_Transform
+Generating caller graph for function Frustum_Transform
+Generating caller graph for function Frustum_Unit
+Generating call graph for function main
+Generating caller graph for function Object_LineHelper
+Generating call graph for function Object_Transform
+Generating caller graph for function Object_Transform
+Generating docs for file includes/maths3d.h...
+Generating call graph for function Matrix4x4f_Adjugate
+Generating caller graph for function Matrix4x4f_Adjugate
+Generating call graph for function Matrix4x4f_Determinant
+Generating caller graph for function Matrix4x4f_Determinant
+Generating call graph for function Matrix4x4f_Identity
+Generating caller graph for function Matrix4x4f_Identity
+Generating call graph for function Matrix4x4f_Inversed
+Generating call graph for function Matrix4x4f_Multiply
+Generating caller graph for function Matrix4x4f_Multiply
+Generating call graph for function Matrix4x4f_OrthographicFrustum
+Generating call graph for function Matrix4x4f_PerspectiveFrustum
+Generating caller graph for function Matrix4x4f_PerspectiveFrustum
+Generating call graph for function Matrix4x4f_RotateCommon
+Generating caller graph for function Matrix4x4f_RotateCommon
+Generating call graph for function Matrix4x4f_RotateX
+Generating caller graph for function Matrix4x4f_RotateX
+Generating call graph for function Matrix4x4f_RotateXYZ
+Generating caller graph for function Matrix4x4f_RotateXYZ
+Generating call graph for function Matrix4x4f_RotateY
+Generating caller graph for function Matrix4x4f_RotateY
+Generating call graph for function Matrix4x4f_RotateZ
+Generating caller graph for function Matrix4x4f_RotateZ
+Generating call graph for function Matrix4x4f_Scale
+Generating caller graph for function Matrix4x4f_Scale
+Generating caller graph for function Matrix4x4f_Scaled
+Generating call graph for function Matrix4x4f_ScaleXYZ
+Generating caller graph for function Matrix4x4f_ScaleXYZ
+Generating call graph for function Matrix4x4f_TranslateXYZ
+Generating caller graph for function Matrix4x4f_TranslateXYZ
+Generating caller graph for function Matrix4x4f_Transposed
+Generating call graph for function Matrix4x4f_YFlip
+Generating call graph for function Matrix4x4f_YZSwap
+Generating call graph for function Matrix4x4f_Zero
+Generating caller graph for function Matrix4x4f_Zero
+Generating caller graph for function Scalar1f_One
+Generating caller graph for function Scalar1f_Two
+Generating caller graph for function Scalar1f_Zero
+Generating call graph for function Vector4f_Add
+Generating caller graph for function Vector4f_Add
+Generating call graph for function Vector4f_CrossProduct
+Generating caller graph for function Vector4f_CrossProduct
+Generating call graph for function Vector4f_DotProduct
+Generating caller graph for function Vector4f_DotProduct
+Generating call graph for function Vector4f_Length
+Generating caller graph for function Vector4f_Length
+Generating call graph for function Vector4f_LengthSquared
+Generating caller graph for function Vector4f_LengthSquared
+Generating call graph for function Vector4f_Multiply
+Generating caller graph for function Vector4f_Multiply
+Generating call graph for function Vector4f_Normalized
+Generating caller graph for function Vector4f_Normalized
+Generating call graph for function Vector4f_ReciprocalLength
+Generating caller graph for function Vector4f_ReciprocalLength
+Generating call graph for function Vector4f_Replicate
+Generating caller graph for function Vector4f_Replicate
+Generating call graph for function Vector4f_Scaled
+Generating caller graph for function Vector4f_Scaled
+Generating caller graph for function Vector4f_Set
+Generating call graph for function Vector4f_SetW
+Generating caller graph for function Vector4f_SetW
+Generating call graph for function Vector4f_SetX
+Generating call graph for function Vector4f_SetY
+Generating call graph for function Vector4f_SetZ
+Generating call graph for function Vector4f_Subtract
+Generating caller graph for function Vector4f_Subtract
+Generating caller graph for function Vector4f_SumComponents
+Generating call graph for function Vector4f_Transform
+Generating caller graph for function Vector4f_Transform
+Generating call graph for function Vector4f_Zero
+Generating caller graph for function Vector4f_Zero
+Generating docs for file includes/maths3d_ext.h...
+Generating caller graph for function Vector4f_SSETransformCoordStream
+Generating caller graph for function Vector4f_SSETransformStream
+Generating call graph for function Vector4f_TransformStreamGeneric
+Generating docs for file includes/maths3d_pp.h...
+Generating call graph for function operator*
+Generating call graph for function operator*
+Generating call graph for function operator*
+Generating call graph for function operator*
+Generating call graph for function operator*
+Generating call graph for function operator+
+Generating call graph for function operator-
+Generating call graph for function operator~
+Generating call graph for function operator~
+Generating docs for file src/maths3d.cpp...
+Generating call graph for function Matrix4x4f_Adjugate
+Generating caller graph for function Matrix4x4f_Adjugate
+Generating call graph for function Matrix4x4f_Determinant
+Generating caller graph for function Matrix4x4f_Determinant
+Generating call graph for function Matrix4x4f_Multiply
+Generating caller graph for function Matrix4x4f_Multiply
+Generating call graph for function Matrix4x4f_OrthographicFrustum
+Generating call graph for function Matrix4x4f_PerspectiveFrustum
+Generating caller graph for function Matrix4x4f_PerspectiveFrustum
+Generating call graph for function Matrix4x4f_RotateCommon
+Generating caller graph for function Matrix4x4f_RotateCommon
+Generating caller graph for function Matrix4x4f_Scaled
+Generating call graph for function Matrix4x4f_ScaleXYZ
+Generating caller graph for function Matrix4x4f_ScaleXYZ
+Generating caller graph for function Matrix4x4f_Transposed
+Generating caller graph for function Matrixi4x4f_3x3_Determinant
+Generating call graph for function Vector4f_Transform
+Generating caller graph for function Vector4f_Transform
+Generating docs for file tests/tests.cpp...
+Generating page documentation...
+Generating group documentation...
+Generating class documentation...
+Generating docs for compound Arrow...
+Generating docs for compound BitmapFileHeader...
+Generating docs for compound Camera...
+Generating docs for compound Circle...
+Generating docs for compound Cube...
+Generating docs for compound Degrees...
+Generating docs for compound FactoryItem...
+Generating call graph for function FactoryItem::FactoryItem
+Generating call graph for function FactoryItem::begin
+Generating caller graph for function FactoryItem::getFactoryHead
+Generating call graph for function FactoryItem::items
+Generating caller graph for function FactoryItem::items
+Generating docs for nested compound FactoryItem::Iterator...
+Generating docs for compound Feet...
+Generating docs for compound Image...
+Generating docs for compound Light...
+Generating docs for compound Line...
+Generating docs for compound Matrix4x4f...
+Generating call graph for function Matrix4x4f::operator=
+Generating docs for compound Metres...
+Generating docs for compound Object...
+Generating docs for compound Radians...
+Generating docs for compound Ray...
+Generating docs for compound Rotation...
+Generating docs for compound Scene...
+Generating docs for compound Shape...
+Generating docs for compound Sphere...
+Generating docs for compound uint16_be...
+Generating call graph for function uint16_be::uint16_be
+Generating caller graph for function uint16_be::operator=
+Generating docs for compound uint16_le...
+Generating call graph for function uint16_le::uint16_le
+Generating caller graph for function uint16_le::operator=
+Generating docs for compound uint32_be...
+Generating call graph for function uint32_be::uint32_be
+Generating caller graph for function uint32_be::operator=
+Generating docs for compound uint32_le...
+Generating call graph for function uint32_le::uint32_le
+Generating caller graph for function uint32_le::operator=
+Generating docs for compound Vector4f...
+Generating call graph for function Vector4f::operator Scalar1f
+Generating call graph for function Vector4f::operator=
+Generating docs for compound VectorProduct4f...
+Generating call graph for function VectorProduct4f::operator Scalar1f
+Generating call graph for function VectorProduct4f::operator Vector4f
+Generating namespace index...
+Generating docs for namespace UnitTest
+Generating call graph for function UnitTest::testList
+Generating docs for compound UnitTest::UnitTestItem...
+Generating graph info page...
+Generating directory documentation...
+Generating dependency graph for directory .modules
+Generating dependency graph for directory examples/example1
+Generating dependency graph for directory examples/example2
+Generating dependency graph for directory examples/example3
+Generating dependency graph for directory examples/example4
+Generating dependency graph for directory examples
+Generating dependency graph for directory .modules/TestFramework/src
+Generating dependency graph for directory src
+Generating dependency graph for directory .modules/TestFramework
+Generating dependency graph for directory tests
+Generating index page...
+Generating page index...
+Generating module index...
+Generating namespace index...
+Generating namespace member index...
+Generating annotated compound index...
+Generating alphabetical compound index...
+Generating hierarchical class index...
+Generating graphical class hierarchy...
+Generating member index...
+Generating file index...
+Generating file member index...
+Generating example index...
+finalizing index lists...
+writing tag file...
+Running plantuml with JAVA...
+Running dot...
+Generating dot graphs using 3 parallel threads...
+Running dot for graph 1/211
+Running dot for graph 2/211
+Running dot for graph 3/211
+Running dot for graph 4/211
+Running dot for graph 5/211
+Running dot for graph 6/211
+Running dot for graph 7/211
+Running dot for graph 8/211
+Running dot for graph 9/211
+Running dot for graph 10/211
+Running dot for graph 11/211
+Running dot for graph 12/211
+Running dot for graph 13/211
+Running dot for graph 14/211
+Running dot for graph 15/211
+Running dot for graph 16/211
+Running dot for graph 17/211
+Running dot for graph 18/211
+Running dot for graph 19/211
+Running dot for graph 20/211
+Running dot for graph 21/211
+Running dot for graph 22/211
+Running dot for graph 23/211
+Running dot for graph 24/211
+Running dot for graph 25/211
+Running dot for graph 26/211
+Running dot for graph 27/211
+Running dot for graph 28/211
+Running dot for graph 29/211
+Running dot for graph 30/211
+Running dot for graph 31/211
+Running dot for graph 32/211
+Running dot for graph 33/211
+Running dot for graph 34/211
+Running dot for graph 35/211
+Running dot for graph 36/211
+Running dot for graph 37/211
+Running dot for graph 38/211
+Running dot for graph 39/211
+Running dot for graph 40/211
+Running dot for graph 41/211
+Running dot for graph 42/211
+Running dot for graph 43/211
+Running dot for graph 44/211
+Running dot for graph 45/211
+Running dot for graph 46/211
+Running dot for graph 47/211
+Running dot for graph 48/211
+Running dot for graph 49/211
+Running dot for graph 50/211
+Running dot for graph 51/211
+Running dot for graph 52/211
+Running dot for graph 53/211
+Running dot for graph 54/211
+Running dot for graph 55/211
+Running dot for graph 56/211
+Running dot for graph 57/211
+Running dot for graph 58/211
+Running dot for graph 59/211
+Running dot for graph 60/211
+Running dot for graph 61/211
+Running dot for graph 62/211
+Running dot for graph 63/211
+Running dot for graph 64/211
+Running dot for graph 65/211
+Running dot for graph 66/211
+Running dot for graph 67/211
+Running dot for graph 68/211
+Running dot for graph 69/211
+Running dot for graph 70/211
+Running dot for graph 71/211
+Running dot for graph 72/211
+Running dot for graph 73/211
+Running dot for graph 74/211
+Running dot for graph 75/211
+Running dot for graph 76/211
+Running dot for graph 77/211
+Running dot for graph 78/211
+Running dot for graph 79/211
+Running dot for graph 80/211
+Running dot for graph 81/211
+Running dot for graph 82/211
+Running dot for graph 83/211
+Running dot for graph 84/211
+Running dot for graph 85/211
+Running dot for graph 86/211
+Running dot for graph 87/211
+Running dot for graph 88/211
+Running dot for graph 89/211
+Running dot for graph 90/211
+Running dot for graph 91/211
+Running dot for graph 92/211
+Running dot for graph 93/211
+Running dot for graph 94/211
+Running dot for graph 95/211
+Running dot for graph 96/211
+Running dot for graph 97/211
+Running dot for graph 98/211
+Running dot for graph 99/211
+Running dot for graph 100/211
+Running dot for graph 101/211
+Running dot for graph 102/211
+Running dot for graph 103/211
+Running dot for graph 104/211
+Running dot for graph 105/211
+Running dot for graph 106/211
+Running dot for graph 107/211
+Running dot for graph 108/211
+Running dot for graph 109/211
+Running dot for graph 110/211
+Running dot for graph 111/211
+Running dot for graph 112/211
+Running dot for graph 113/211
+Running dot for graph 114/211
+Running dot for graph 115/211
+Running dot for graph 116/211
+Running dot for graph 117/211
+Running dot for graph 118/211
+Running dot for graph 119/211
+Running dot for graph 120/211
+Running dot for graph 121/211
+Running dot for graph 122/211
+Running dot for graph 123/211
+Running dot for graph 124/211
+Running dot for graph 125/211
+Running dot for graph 126/211
+Running dot for graph 127/211
+Running dot for graph 128/211
+Running dot for graph 129/211
+Running dot for graph 130/211
+Running dot for graph 131/211
+Running dot for graph 132/211
+Running dot for graph 133/211
+Running dot for graph 134/211
+Running dot for graph 135/211
+Running dot for graph 136/211
+Running dot for graph 137/211
+Running dot for graph 138/211
+Running dot for graph 139/211
+Running dot for graph 140/211
+Running dot for graph 141/211
+Running dot for graph 142/211
+Running dot for graph 143/211
+Running dot for graph 144/211
+Running dot for graph 145/211
+Running dot for graph 146/211
+Running dot for graph 147/211
+Running dot for graph 148/211
+Running dot for graph 149/211
+Running dot for graph 150/211
+Running dot for graph 151/211
+Running dot for graph 152/211
+Running dot for graph 153/211
+Running dot for graph 154/211
+Running dot for graph 155/211
+Running dot for graph 156/211
+Running dot for graph 157/211
+Running dot for graph 158/211
+Running dot for graph 159/211
+Running dot for graph 160/211
+Running dot for graph 161/211
+Running dot for graph 162/211
+Running dot for graph 163/211
+Running dot for graph 164/211
+Running dot for graph 165/211
+Running dot for graph 166/211
+Running dot for graph 167/211
+Running dot for graph 168/211
+Running dot for graph 169/211
+Running dot for graph 170/211
+Running dot for graph 171/211
+Running dot for graph 172/211
+Running dot for graph 173/211
+Running dot for graph 174/211
+Running dot for graph 175/211
+Running dot for graph 176/211
+Running dot for graph 177/211
+Running dot for graph 178/211
+Running dot for graph 179/211
+Running dot for graph 180/211
+Running dot for graph 181/211
+Running dot for graph 182/211
+Running dot for graph 183/211
+Running dot for graph 184/211
+Running dot for graph 185/211
+Running dot for graph 186/211
+Running dot for graph 187/211
+Running dot for graph 188/211
+Running dot for graph 189/211
+Running dot for graph 190/211
+Running dot for graph 191/211
+Running dot for graph 192/211
+Running dot for graph 193/211
+Running dot for graph 194/211
+Running dot for graph 195/211
+Running dot for graph 196/211
+Running dot for graph 197/211
+Running dot for graph 198/211
+Running dot for graph 199/211
+Running dot for graph 200/211
+Running dot for graph 201/211
+Running dot for graph 202/211
+Running dot for graph 203/211
+Running dot for graph 204/211
+Running dot for graph 205/211
+Running dot for graph 206/211
+Running dot for graph 207/211
+Running dot for graph 208/211
+Running dot for graph 209/211
+Running dot for graph 210/211
+Running dot for graph 211/211
+Patching output file 1/47
+Patching output file 2/47
+Patching output file 3/47
+Patching output file 4/47
+Patching output file 5/47
+Patching output file 6/47
+Patching output file 7/47
+Patching output file 8/47
+Patching output file 9/47
+Patching output file 10/47
+Patching output file 11/47
+Patching output file 12/47
+Patching output file 13/47
+Patching output file 14/47
+Patching output file 15/47
+Patching output file 16/47
+Patching output file 17/47
+Patching output file 18/47
+Patching output file 19/47
+Patching output file 20/47
+Patching output file 21/47
+Patching output file 22/47
+Patching output file 23/47
+Patching output file 24/47
+Patching output file 25/47
+Patching output file 26/47
+Patching output file 27/47
+Patching output file 28/47
+Patching output file 29/47
+Patching output file 30/47
+Patching output file 31/47
+Patching output file 32/47
+Patching output file 33/47
+Patching output file 34/47
+Patching output file 35/47
+Patching output file 36/47
+Patching output file 37/47
+Patching output file 38/47
+Patching output file 39/47
+Patching output file 40/47
+Patching output file 41/47
+Patching output file 42/47
+Patching output file 43/47
+Patching output file 44/47
+Patching output file 45/47
+Patching output file 46/47
+Patching output file 47/47
+lookup cache used 506/65536 hits=3933 misses=686
+finished...
