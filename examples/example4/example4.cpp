@@ -219,10 +219,9 @@ Camera Camera_Create(Scalar1f scale, const Rotation& rotation, const Vector4f& t
 
 Matrix4x4f Camera_ViewMatrix(const Camera& camera)
 {
-  // A rotation matrix is a rigid body transform, there is no scaling, so we can
-  // use the transpose instead of a full inverse here.
+  // The rotation matrix is orthonormal so we can use the transpose instead of a full inverse here.
   Matrix4x4f invRotation = Matrix4x4f_Transposed(Matrix4x4f_RotateXYZ(camera.rotation));
-  return invRotation * Matrix4x4f_TranslateXYZ(camera.translation) * Matrix4x4f_Scale(camera.scale);
+  return invRotation * Matrix4x4f_TranslateXYZ(camera.translation * -1.0f) * Matrix4x4f_Scale(camera.scale);
 }
 
 
@@ -239,13 +238,13 @@ int main(int argc, const char* argv[])
   Degrees fieldOfView = { 90.0 };
 
   // Move world coordinates in to camera space.
-  Camera camera = { .scale = 1.5, .rotation = { 5.0, 45.0, 10.0 }, .translation = { 12.0, -1.0f, -10.0f, 0.0f } };
+  Camera camera = { .scale = 1.5, .rotation = { 5.0, 45.0, 10.0 }, .translation = { -12.0, 1.0f, 10.0f, 0.0f } };
   Matrix4x4f modelViewMatrix = Camera_ViewMatrix(camera);
 
   // Transforms world to NDC (normalized device coords / clip space).
   Matrix4x4f perspective = Matrix4x4f_PerspectiveFrustum(fieldOfView, aspectRatio, 0.1, 10000.0);
   Matrix4x4f screenScale = Matrix4x4f_ScaleXYZ({ w, -h, 1.0f, 1.0f });
-  Matrix4x4f screenCenter = Matrix4x4f_TranslateXYZ({ w/2.f, h/2.f, 0.0f, 0.0f }); // scale and trans converts NDC in to screen space (device coords)
+  Matrix4x4f screenCenter = Matrix4x4f_TranslateXYZ({ w * 0.5f, h * 0.5f, 0.0f, 0.0f }); // scale and trans converts NDC in to screen space (device coords)
 
   // Combine the transforms.
   Matrix4x4f xform = screenCenter * screenScale * perspective * modelViewMatrix;
@@ -256,7 +255,7 @@ int main(int argc, const char* argv[])
   {
     for (int i = 0; i < gridSize; ++i)
     {
-      Cube cube = Cube_Transform(Cube_Unit(), { 2.0, 2.0, 2.0, 1.0 }, Rotation{ .x = 20.0, .y = 40.0, .z = 0.0 }, { i*5.0f, 0.0, j*5.0f, 0.0 });
+      Cube cube = Cube_Transform(Cube_Unit(), { 2.0, 2.0, 2.0, 1.0 }, { 20.0, 40.0, 0.0 }, { i*5.0f, 0.0, j*5.0f, 0.0 });
       Vector4f_SSETransformCoordStream(cube.points, cube.points, xform);
       Cube_Lines(cube, shapeList);
     }
