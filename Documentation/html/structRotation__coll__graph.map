@@ -1,0 +1,4 @@
+<map id="Rotation" name="Rotation">
+<area shape="rect" id="node1" title="A 3D set of rotations." alt="" coords="5,124,83,151"/>
+<area shape="rect" id="node2" href="$structDegrees.html" title="A measure of angle in degrees. There are 360 degrees in a circle." alt="" coords="6,5,82,32"/>
+</map>
