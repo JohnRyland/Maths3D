@@ -14,6 +14,12 @@ jobs:
     steps:
       - uses: actions/checkout@v1
 
+      - name: Information
+        run: |
+          echo "OS details:    $(uname -a)"
+          echo "GCC version:   $(gcc -v 2>&1 | grep version)"
+          echo "Workspace:     $GITHUB_WORKSPACE"
+
       - name: Generate documentation
         run: |
           git config --global user.name "John Ryland"
@@ -33,6 +39,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
+
+      - name: Information
+        run: |
+          echo "OS details:    $(uname -a)"
+          echo "GCC version:   $(gcc -v 2>&1 | grep version)"
+          echo "Workspace:     $GITHUB_WORKSPACE"
 
       - name: Switch Branch
         env:
