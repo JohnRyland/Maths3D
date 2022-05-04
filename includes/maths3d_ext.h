@@ -198,6 +198,9 @@ void Vector4f_TransformStreamGeneric(float* outputStream, const float* inputStre
 
 /// Specialization of Vector4f_SSETransformStreamGeneric for transforming an array of vectors without applying perspective.
 /// \see Vector4f_SSETransformStreamGeneric
+/// \note the w component of the vectors are ignored but treated as if they were set to 1 so that the translation component
+/// of the matrix is applied. This specialization therefore is able to optimize out the multiplication by 1 as that is
+/// redundant, but is still adding the translation component of the matrix to the resulting vectors.
 template <size_t N>
 void Vector4f_SSETransformStream(Vector4f (&outputStream)[N], const Vector4f (&inputStream)[N], const Matrix4x4f& transform)
 {
@@ -214,6 +217,8 @@ void Vector4f_SSETransformCoordStream(Vector4f (&outputStream)[N], const Vector4
 
 /// Specialization of Vector4f_SSETransformStreamGeneric for transforming an array of normal vectors.
 /// \see Vector4f_SSETransformStreamGeneric
+/// \note the w component of the vectors are ignored but treated as if they were set to 0, therefore this specialization optimizes
+/// out the extra redundant calculations of multiplying by 0 and adding 0 for each vector which is processed.
 template <size_t N>
 void Vector4f_SSETransformNormalStream(Vector4f (&outputStream)[N], const Vector4f (&inputStream)[N], const Matrix4x4f& transform)
 {

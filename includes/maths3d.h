@@ -470,7 +470,8 @@ inline Matrix4x4f Matrix4x4f_TranslateXYZ(const Vector4f& vec)
 /// Multiplies m1 with m2 and returns the resulting matrix that combines these.
 /// This can be used to compound together different transformations. Note the order
 /// matters, as a translation followed by a rotation, for example, is not the same
-/// transformation as a rotation followed by a translation.
+/// transformation as a rotation followed by a translation. The order used is
+/// pre-multiplication, transformation sequences going from right to left.
 Matrix4x4f Matrix4x4f_Multiply(const Matrix4x4f& m1, const Matrix4x4f& m2);
 
 /// Creates a matrix where the matrix a is mirrored through the diagonal of the matrix.
