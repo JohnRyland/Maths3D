@@ -276,6 +276,7 @@ template&lt;size_t N&gt; </div>
       </table>
 </div><div class="memdoc">
 <p>Specialization of Vector4f_SSETransformStreamGeneric for transforming an array of normal vectors. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="maths3d__ext_8h.html#a7cd34ee25da58bfecc1ea06856cb17c9">Vector4f_SSETransformStreamGeneric</a> </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>the w component of the vectors are ignored but treated as if they were set to 0, therefore this specialization optimizes out the extra redundant calculations of multiplying by 0 and adding 0 for each vector which is processed. </dd></dl>
 
 </div>
 </div>
@@ -350,6 +351,7 @@ template&lt;size_t N&gt; </div>
       </table>
 </div><div class="memdoc">
 <p>Specialization of Vector4f_SSETransformStreamGeneric for transforming an array of vectors without applying perspective. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="maths3d__ext_8h.html#a7cd34ee25da58bfecc1ea06856cb17c9">Vector4f_SSETransformStreamGeneric</a> </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>the w component of the vectors are ignored but treated as if they were set to 1 so that the translation component of the matrix is applied. This specialization therefore is able to optimize out the multiplication by 1 as that is redundant, but is still adding the translation component of the matrix to the resulting vectors. </dd></dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -545,7 +547,7 @@ Here is the call graph for this function:</div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer"> Last update on Tue May 3 2022 for Maths3D  </li>
+    <li class="footer"> Last update on Wed May 4 2022 for Maths3D  </li>
   </ul>
 </div>
 </body>
