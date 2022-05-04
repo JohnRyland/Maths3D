@@ -27,7 +27,7 @@
     </tr>
     <tr>
       <th scope="row">Date:</th>
-      <td>2022-05-03 10:31:53</td>
+      <td>2022-05-04 22:42:03</td>
     </tr>
   </table>
 </div>
@@ -108,57 +108,57 @@
     </tr>
     <tr>
       <td>
-        <a href="#l553">Matrix4x4f_Inversed(Matrix4x4f const&amp;)</a>
+        <a href="#l554">Matrix4x4f_Inversed(Matrix4x4f const&amp;)</a>
       </td>
       <td>
-        <a href="#l553">553</a>
+        <a href="#l554">554</a>
       </td>
       <td>
-        <a href="#l553"> called 4 times</a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="#l493">Matrix4x4f_RotateX(Radians)</a>
-      </td>
-      <td>
-        <a href="#l493">493</a>
-      </td>
-      <td>
-        <a href="#l493"> called 13 times</a>
+        <a href="#l554"> called 4 times</a>
       </td>
     </tr>
     <tr>
       <td>
-        <a href="#l514">Matrix4x4f_RotateXYZ(Rotation const&amp;)</a>
+        <a href="#l494">Matrix4x4f_RotateX(Radians)</a>
       </td>
       <td>
-        <a href="#l514">514</a>
+        <a href="#l494">494</a>
       </td>
       <td>
-        <a href="#l514"> called 12 times</a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="#l500">Matrix4x4f_RotateY(Radians)</a>
-      </td>
-      <td>
-        <a href="#l500">500</a>
-      </td>
-      <td>
-        <a href="#l500"> called 13 times</a>
+        <a href="#l494"> called 13 times</a>
       </td>
     </tr>
     <tr>
       <td>
-        <a href="#l507">Matrix4x4f_RotateZ(Radians)</a>
+        <a href="#l515">Matrix4x4f_RotateXYZ(Rotation const&amp;)</a>
       </td>
       <td>
-        <a href="#l507">507</a>
+        <a href="#l515">515</a>
       </td>
       <td>
-        <a href="#l507"> called 13 times</a>
+        <a href="#l515"> called 12 times</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l501">Matrix4x4f_RotateY(Radians)</a>
+      </td>
+      <td>
+        <a href="#l501">501</a>
+      </td>
+      <td>
+        <a href="#l501"> called 13 times</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l508">Matrix4x4f_RotateZ(Radians)</a>
+      </td>
+      <td>
+        <a href="#l508">508</a>
+      </td>
+      <td>
+        <a href="#l508"> called 13 times</a>
       </td>
     </tr>
     <tr>
@@ -4250,7 +4250,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">/// transformation as a rotation followed by a translation.</span></td>
+      <td class="src "><span class="c1">/// transformation as a rotation followed by a translation. The order used is</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4258,7 +4258,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="n">Matrix4x4f</span> <span class="nf">Matrix4x4f_Multiply</span><span class="p">(</span><span class="k">const</span> <span class="n">Matrix4x4f</span><span class="o">&amp;</span> <span class="n">m1</span><span class="p">,</span> <span class="k">const</span> <span class="n">Matrix4x4f</span><span class="o">&amp;</span> <span class="n">m2</span><span class="p">);</span></td>
+      <td class="src "><span class="c1">/// pre-multiplication, transformation sequences going from right to left.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4266,7 +4266,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="n">Matrix4x4f</span> <span class="nf">Matrix4x4f_Multiply</span><span class="p">(</span><span class="k">const</span> <span class="n">Matrix4x4f</span><span class="o">&amp;</span> <span class="n">m1</span><span class="p">,</span> <span class="k">const</span> <span class="n">Matrix4x4f</span><span class="o">&amp;</span> <span class="n">m2</span><span class="p">);</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4274,7 +4274,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">/// Creates a matrix where the matrix a is mirrored through the diagonal of the matrix.</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -4282,7 +4282,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="n">Matrix4x4f</span> <span class="nf">Matrix4x4f_Transposed</span><span class="p">(</span><span class="k">const</span> <span class="n">Matrix4x4f</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">);</span></td>
+      <td class="src "><span class="c1">/// Creates a matrix where the matrix a is mirrored through the diagonal of the matrix.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4290,7 +4290,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="n">Matrix4x4f</span> <span class="nf">Matrix4x4f_Transposed</span><span class="p">(</span><span class="k">const</span> <span class="n">Matrix4x4f</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">);</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4298,7 +4298,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">/// Multiplies each component of matrix m by scale and returns the resulting</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -4306,7 +4306,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">/// scaled matrix. For 3D scaling, \see Matrix4x4f_Scale or \see Matrix4x4f_ScaleXYZ.</span></td>
+      <td class="src "><span class="c1">/// Multiplies each component of matrix m by scale and returns the resulting</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4314,7 +4314,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="n">Matrix4x4f</span> <span class="nf">Matrix4x4f_Scaled</span><span class="p">(</span><span class="k">const</span> <span class="n">Matrix4x4f</span><span class="o">&amp;</span> <span class="n">m</span><span class="p">,</span> <span class="n">Scalar1f</span> <span class="n">scale</span><span class="p">);</span></td>
+      <td class="src "><span class="c1">/// scaled matrix. For 3D scaling, \see Matrix4x4f_Scale or \see Matrix4x4f_ScaleXYZ.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4322,7 +4322,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="n">Matrix4x4f</span> <span class="nf">Matrix4x4f_Scaled</span><span class="p">(</span><span class="k">const</span> <span class="n">Matrix4x4f</span><span class="o">&amp;</span> <span class="n">m</span><span class="p">,</span> <span class="n">Scalar1f</span> <span class="n">scale</span><span class="p">);</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4330,7 +4330,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">/// Creates a matrix that when multiplied by it will be able to apply a 3D scaling</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -4338,7 +4338,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">/// transformation. This is a non-uniform scaling where the amount scaled in each</span></td>
+      <td class="src "><span class="c1">/// Creates a matrix that when multiplied by it will be able to apply a 3D scaling</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4346,7 +4346,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">/// dimension is determined by the scale vector parameter.</span></td>
+      <td class="src "><span class="c1">/// transformation. This is a non-uniform scaling where the amount scaled in each</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4354,7 +4354,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="n">Matrix4x4f</span> <span class="nf">Matrix4x4f_ScaleXYZ</span><span class="p">(</span><span class="k">const</span> <span class="n">Vector4f</span><span class="o">&amp;</span> <span class="n">scale</span><span class="p">);</span></td>
+      <td class="src "><span class="c1">/// dimension is determined by the scale vector parameter.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4362,7 +4362,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="n">Matrix4x4f</span> <span class="nf">Matrix4x4f_ScaleXYZ</span><span class="p">(</span><span class="k">const</span> <span class="n">Vector4f</span><span class="o">&amp;</span> <span class="n">scale</span><span class="p">);</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4370,7 +4370,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">/// Internal helper function for implementing the other matrix rotation functions.</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -4378,7 +4378,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="n">Matrix4x4f</span> <span class="nf">Matrix4x4f_RotateCommon</span><span class="p">(</span><span class="n">Radians</span> <span class="n">angle</span><span class="p">,</span> <span class="kt">int</span> <span class="n">axis</span><span class="p">);</span></td>
+      <td class="src "><span class="c1">/// Internal helper function for implementing the other matrix rotation functions.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4386,7 +4386,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="n">Matrix4x4f</span> <span class="nf">Matrix4x4f_RotateCommon</span><span class="p">(</span><span class="n">Radians</span> <span class="n">angle</span><span class="p">,</span> <span class="kt">int</span> <span class="n">axis</span><span class="p">);</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4394,7 +4394,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">/// Creates a matrix that when multiplied by it will be able to apply a 3D rotation</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -4402,11 +4402,19 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">/// transformation about the x axis. The x parameter is in radians.</span></td>
+      <td class="src "><span class="c1">/// Creates a matrix that when multiplied by it will be able to apply a 3D rotation</span></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l493" href="#l493">493</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="c1">/// transformation about the x axis. The x parameter is in radians.</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l494" href="#l494">494</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount coveredLine">13</td>
@@ -4414,7 +4422,7 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l494" href="#l494">494</a></td>
+      <td class="lineno"><a id="l495" href="#l495">495</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
@@ -4422,7 +4430,7 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l495" href="#l495">495</a></td>
+      <td class="lineno"><a id="l496" href="#l496">496</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount coveredLine">13</td>
@@ -4430,19 +4438,11 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l496" href="#l496">496</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount "></td>
-      <td class="src "><span class="p">}</span></td>
-    </tr>
-
-    <tr class="source-line">
       <td class="lineno"><a id="l497" href="#l497">497</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="p">}</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4450,7 +4450,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">/// Creates a matrix that when multiplied by it will be able to apply a 3D rotation</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -4458,11 +4458,19 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">/// transformation about the y axis. The y parameter is in radians.</span></td>
+      <td class="src "><span class="c1">/// Creates a matrix that when multiplied by it will be able to apply a 3D rotation</span></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l500" href="#l500">500</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="c1">/// transformation about the y axis. The y parameter is in radians.</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l501" href="#l501">501</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount coveredLine">13</td>
@@ -4470,7 +4478,7 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l501" href="#l501">501</a></td>
+      <td class="lineno"><a id="l502" href="#l502">502</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
@@ -4478,7 +4486,7 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l502" href="#l502">502</a></td>
+      <td class="lineno"><a id="l503" href="#l503">503</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount coveredLine">13</td>
@@ -4486,19 +4494,11 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l503" href="#l503">503</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount "></td>
-      <td class="src "><span class="p">}</span></td>
-    </tr>
-
-    <tr class="source-line">
       <td class="lineno"><a id="l504" href="#l504">504</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="p">}</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4506,7 +4506,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">/// Creates a matrix that when multiplied by it will be able to apply a 3D rotation</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -4514,11 +4514,19 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">/// transformation about the z axis. The z parameter is in radians.</span></td>
+      <td class="src "><span class="c1">/// Creates a matrix that when multiplied by it will be able to apply a 3D rotation</span></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l507" href="#l507">507</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="c1">/// transformation about the z axis. The z parameter is in radians.</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l508" href="#l508">508</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount coveredLine">13</td>
@@ -4526,7 +4534,7 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l508" href="#l508">508</a></td>
+      <td class="lineno"><a id="l509" href="#l509">509</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
@@ -4534,7 +4542,7 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l509" href="#l509">509</a></td>
+      <td class="lineno"><a id="l510" href="#l510">510</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount coveredLine">13</td>
@@ -4542,7 +4550,7 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l510" href="#l510">510</a></td>
+      <td class="lineno"><a id="l511" href="#l511">511</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
@@ -4550,7 +4558,7 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l511" href="#l511">511</a></td>
+      <td class="lineno"><a id="l512" href="#l512">512</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
@@ -4558,7 +4566,7 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l512" href="#l512">512</a></td>
+      <td class="lineno"><a id="l513" href="#l513">513</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
@@ -4566,7 +4574,7 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l513" href="#l513">513</a></td>
+      <td class="lineno"><a id="l514" href="#l514">514</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
@@ -4574,7 +4582,7 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l514" href="#l514">514</a></td>
+      <td class="lineno"><a id="l515" href="#l515">515</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount coveredLine">12</td>
@@ -4582,26 +4590,11 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l515" href="#l515">515</a></td>
+      <td class="lineno"><a id="l516" href="#l516">516</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
       <td class="src "><span class="p">{</span></td>
-    </tr>
-
-    <tr class="source-line">
-      <td class="lineno"><a id="l516" href="#l516">516</a></td>
-      <td class="linebranch">
-        <details class="linebranchDetails">
-        <summary class="linebranchSummary">1/2</summary>
-        <div class="linebranchContents">
-          <div class="takenBranch">&check; Branch 2 taken 12 times.</div>
-          <div class="notTakenBranch">&cross; Branch 3 not taken.</div>
-        </div>
-        </details>
-      </td>
-      <td class="linecount coveredLine">12</td>
-      <td class="src coveredLine">  <span class="k">const</span> <span class="n">Matrix4x4f</span> <span class="n">rotX</span> <span class="o">=</span> <span class="n">Matrix4x4f_RotateX</span><span class="p">(</span><span class="n">rotation</span><span class="p">.</span><span class="n">x</span><span class="p">);</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4616,11 +4609,26 @@
         </details>
       </td>
       <td class="linecount coveredLine">12</td>
-      <td class="src coveredLine">  <span class="k">const</span> <span class="n">Matrix4x4f</span> <span class="n">rotY</span> <span class="o">=</span> <span class="n">Matrix4x4f_RotateY</span><span class="p">(</span><span class="n">rotation</span><span class="p">.</span><span class="n">y</span><span class="p">);</span></td>
+      <td class="src coveredLine">  <span class="k">const</span> <span class="n">Matrix4x4f</span> <span class="n">rotX</span> <span class="o">=</span> <span class="n">Matrix4x4f_RotateX</span><span class="p">(</span><span class="n">rotation</span><span class="p">.</span><span class="n">x</span><span class="p">);</span></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l518" href="#l518">518</a></td>
+      <td class="linebranch">
+        <details class="linebranchDetails">
+        <summary class="linebranchSummary">1/2</summary>
+        <div class="linebranchContents">
+          <div class="takenBranch">&check; Branch 2 taken 12 times.</div>
+          <div class="notTakenBranch">&cross; Branch 3 not taken.</div>
+        </div>
+        </details>
+      </td>
+      <td class="linecount coveredLine">12</td>
+      <td class="src coveredLine">  <span class="k">const</span> <span class="n">Matrix4x4f</span> <span class="n">rotY</span> <span class="o">=</span> <span class="n">Matrix4x4f_RotateY</span><span class="p">(</span><span class="n">rotation</span><span class="p">.</span><span class="n">y</span><span class="p">);</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l519" href="#l519">519</a></td>
       <td class="linebranch">
         <details class="linebranchDetails">
         <summary class="linebranchSummary">3/6</summary>
@@ -4639,7 +4647,7 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l519" href="#l519">519</a></td>
+      <td class="lineno"><a id="l520" href="#l520">520</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
@@ -4647,19 +4655,11 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l520" href="#l520">520</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount "></td>
-      <td class="src "></td>
-    </tr>
-
-    <tr class="source-line">
       <td class="lineno"><a id="l521" href="#l521">521</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">/// Creates a matrix that when multiplied by it will be able to apply a 3D perspective</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -4667,7 +4667,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">/// projection transformation.</span></td>
+      <td class="src "><span class="c1">/// Creates a matrix that when multiplied by it will be able to apply a 3D perspective</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4675,7 +4675,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">/// \param fieldOfView is the field of view which is the vertical viewing angle in to the scene.</span></td>
+      <td class="src "><span class="c1">/// projection transformation.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4683,7 +4683,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">/// \param aspectRatio is the ratio of width to height of the view.</span></td>
+      <td class="src "><span class="c1">/// \param fieldOfView is the field of view which is the vertical viewing angle in to the scene.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4691,7 +4691,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">/// \param near is the distance to the near plane. Depth values are scaled according to this.</span></td>
+      <td class="src "><span class="c1">/// \param aspectRatio is the ratio of width to height of the view.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4699,7 +4699,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">/// \param far is the distance to the far plane. Depth values are scaled according to this.</span></td>
+      <td class="src "><span class="c1">/// \param near is the distance to the near plane. Depth values are scaled according to this.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4707,7 +4707,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="n">Matrix4x4f</span> <span class="nf">Matrix4x4f_PerspectiveFrustum</span><span class="p">(</span><span class="n">Radians</span> <span class="n">fieldOfView</span><span class="p">,</span> <span class="n">Scalar1f</span> <span class="n">aspectRatio</span><span class="p">,</span> <span class="n">Scalar1f</span> <span class="n">near</span><span class="p">,</span> <span class="n">Scalar1f</span> <span class="n">far</span><span class="p">);</span></td>
+      <td class="src "><span class="c1">/// \param far is the distance to the far plane. Depth values are scaled according to this.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4715,7 +4715,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="n">Matrix4x4f</span> <span class="nf">Matrix4x4f_PerspectiveFrustum</span><span class="p">(</span><span class="n">Radians</span> <span class="n">fieldOfView</span><span class="p">,</span> <span class="n">Scalar1f</span> <span class="n">aspectRatio</span><span class="p">,</span> <span class="n">Scalar1f</span> <span class="n">near</span><span class="p">,</span> <span class="n">Scalar1f</span> <span class="n">far</span><span class="p">);</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4723,7 +4723,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">/// Creates a matrix that when multiplied by it will be able to apply a 3D orthographic</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -4731,7 +4731,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">/// projection transformation.</span></td>
+      <td class="src "><span class="c1">/// Creates a matrix that when multiplied by it will be able to apply a 3D orthographic</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4739,7 +4739,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">/// \param left is the distance from the centre of the projection to the left edge of the view.</span></td>
+      <td class="src "><span class="c1">/// projection transformation.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4747,7 +4747,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">/// \param right is the distance from the centre of the projection to the right edge of the view.</span></td>
+      <td class="src "><span class="c1">/// \param left is the distance from the centre of the projection to the left edge of the view.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4755,7 +4755,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">/// \param bottom is the distance from the centre of the projection to the bottom edge of the view.</span></td>
+      <td class="src "><span class="c1">/// \param right is the distance from the centre of the projection to the right edge of the view.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4763,7 +4763,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">/// \param top the distance from the centre of the projection to the top edge of the view.</span></td>
+      <td class="src "><span class="c1">/// \param bottom is the distance from the centre of the projection to the bottom edge of the view.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4771,7 +4771,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">/// \param near is the distance to the near plane. Depth values are scaled according to this.</span></td>
+      <td class="src "><span class="c1">/// \param top the distance from the centre of the projection to the top edge of the view.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4779,7 +4779,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">/// \param far is the distance to the far plane. Depth values are scaled according to this.</span></td>
+      <td class="src "><span class="c1">/// \param near is the distance to the near plane. Depth values are scaled according to this.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4787,7 +4787,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="n">Matrix4x4f</span> <span class="nf">Matrix4x4f_OrthographicFrustum</span><span class="p">(</span><span class="n">Scalar1f</span> <span class="n">left</span><span class="p">,</span> <span class="n">Scalar1f</span> <span class="n">right</span><span class="p">,</span> <span class="n">Scalar1f</span> <span class="n">bottom</span><span class="p">,</span> <span class="n">Scalar1f</span> <span class="n">top</span><span class="p">,</span> <span class="n">Scalar1f</span> <span class="n">near</span><span class="p">,</span> <span class="n">Scalar1f</span> <span class="n">far</span><span class="p">);</span></td>
+      <td class="src "><span class="c1">/// \param far is the distance to the far plane. Depth values are scaled according to this.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4795,7 +4795,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="n">Matrix4x4f</span> <span class="nf">Matrix4x4f_OrthographicFrustum</span><span class="p">(</span><span class="n">Scalar1f</span> <span class="n">left</span><span class="p">,</span> <span class="n">Scalar1f</span> <span class="n">right</span><span class="p">,</span> <span class="n">Scalar1f</span> <span class="n">bottom</span><span class="p">,</span> <span class="n">Scalar1f</span> <span class="n">top</span><span class="p">,</span> <span class="n">Scalar1f</span> <span class="n">near</span><span class="p">,</span> <span class="n">Scalar1f</span> <span class="n">far</span><span class="p">);</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4803,7 +4803,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">/// Calculates the determinate of the matrix a. The determinate can be used to decide if a matrix is</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -4811,7 +4811,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">/// invertible or not. If you need to use Matrix4x4f_Inversed and need to know if it will succeed or not,</span></td>
+      <td class="src "><span class="c1">/// Calculates the determinate of the matrix a. The determinate can be used to decide if a matrix is</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4819,7 +4819,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">/// then use this function and the Matrix4x4f_Adjugate functions directly instead of the Matrix4x4f_Inversed</span></td>
+      <td class="src "><span class="c1">/// invertible or not. If you need to use Matrix4x4f_Inversed and need to know if it will succeed or not,</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4827,7 +4827,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">/// convenience function.</span></td>
+      <td class="src "><span class="c1">/// then use this function and the Matrix4x4f_Adjugate functions directly instead of the Matrix4x4f_Inversed</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4835,7 +4835,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">/// \see Matrix4x4f_Inversed, Matrix4x4f_Adjugate</span></td>
+      <td class="src "><span class="c1">/// convenience function.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4843,7 +4843,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="n">Scalar1f</span> <span class="nf">Matrix4x4f_Determinant</span><span class="p">(</span><span class="k">const</span> <span class="n">Matrix4x4f</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">);</span></td>
+      <td class="src "><span class="c1">/// \see Matrix4x4f_Inversed, Matrix4x4f_Adjugate</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4851,7 +4851,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="n">Scalar1f</span> <span class="nf">Matrix4x4f_Determinant</span><span class="p">(</span><span class="k">const</span> <span class="n">Matrix4x4f</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">);</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4859,7 +4859,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">/// Calculates the adjugate of the matrix a. This is used to find the inverse of the matrix.</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -4867,7 +4867,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">/// \see Matrix4x4f_Inversed, Matrix4x4f_Determinate</span></td>
+      <td class="src "><span class="c1">/// Calculates the adjugate of the matrix a. This is used to find the inverse of the matrix.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4875,7 +4875,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="n">Matrix4x4f</span> <span class="nf">Matrix4x4f_Adjugate</span><span class="p">(</span><span class="k">const</span> <span class="n">Matrix4x4f</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">);</span></td>
+      <td class="src "><span class="c1">/// \see Matrix4x4f_Inversed, Matrix4x4f_Determinate</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4883,7 +4883,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="n">Matrix4x4f</span> <span class="nf">Matrix4x4f_Adjugate</span><span class="p">(</span><span class="k">const</span> <span class="n">Matrix4x4f</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">);</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4891,7 +4891,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">/// Creates a matrix that is the inverse of matrix a. This resulting matrix when multiplied</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -4899,7 +4899,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">/// with the original matrix a will return an identity matrix (provided the matrix is invertible).</span></td>
+      <td class="src "><span class="c1">/// Creates a matrix that is the inverse of matrix a. This resulting matrix when multiplied</span></td>
     </tr>
 
     <tr class="source-line">
@@ -4907,11 +4907,19 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">/// \see Matrix4x4f_Adjugate, Matrix4x4f_Determinate</span></td>
+      <td class="src "><span class="c1">/// with the original matrix a will return an identity matrix (provided the matrix is invertible).</span></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l553" href="#l553">553</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="c1">/// \see Matrix4x4f_Adjugate, Matrix4x4f_Determinate</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l554" href="#l554">554</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount coveredLine">4</td>
@@ -4919,7 +4927,7 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l554" href="#l554">554</a></td>
+      <td class="lineno"><a id="l555" href="#l555">555</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
@@ -4927,7 +4935,7 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l555" href="#l555">555</a></td>
+      <td class="lineno"><a id="l556" href="#l556">556</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount coveredLine">4</td>
@@ -4935,7 +4943,7 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l556" href="#l556">556</a></td>
+      <td class="lineno"><a id="l557" href="#l557">557</a></td>
       <td class="linebranch">
         <details class="linebranchDetails">
         <summary class="linebranchSummary">1/2</summary>
@@ -4950,7 +4958,7 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l557" href="#l557">557</a></td>
+      <td class="lineno"><a id="l558" href="#l558">558</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
@@ -4958,7 +4966,7 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l558" href="#l558">558</a></td>
+      <td class="lineno"><a id="l559" href="#l559">559</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount coveredLine">4</td>
@@ -4966,7 +4974,7 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l559" href="#l559">559</a></td>
+      <td class="lineno"><a id="l560" href="#l560">560</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
@@ -4974,7 +4982,7 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l560" href="#l560">560</a></td>
+      <td class="lineno"><a id="l561" href="#l561">561</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount uncoveredLine">&cross;</td>
@@ -4982,7 +4990,7 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l561" href="#l561">561</a></td>
+      <td class="lineno"><a id="l562" href="#l562">562</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
@@ -4990,19 +4998,11 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l562" href="#l562">562</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount "></td>
-      <td class="src "></td>
-    </tr>
-
-    <tr class="source-line">
       <td class="lineno"><a id="l563" href="#l563">563</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">/// Applies the transformation of matrix m to vector vec, and returns the transformed</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -5010,7 +5010,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">/// vector.</span></td>
+      <td class="src "><span class="c1">/// Applies the transformation of matrix m to vector vec, and returns the transformed</span></td>
     </tr>
 
     <tr class="source-line">
@@ -5018,7 +5018,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="n">Vector4f</span> <span class="nf">Vector4f_Transform</span><span class="p">(</span><span class="k">const</span> <span class="n">Matrix4x4f</span><span class="o">&amp;</span> <span class="n">m</span><span class="p">,</span> <span class="k">const</span> <span class="n">Vector4f</span><span class="o">&amp;</span> <span class="n">vec</span><span class="p">);</span></td>
+      <td class="src "><span class="c1">/// vector.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -5026,11 +5026,19 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="n">Vector4f</span> <span class="nf">Vector4f_Transform</span><span class="p">(</span><span class="k">const</span> <span class="n">Matrix4x4f</span><span class="o">&amp;</span> <span class="n">m</span><span class="p">,</span> <span class="k">const</span> <span class="n">Vector4f</span><span class="o">&amp;</span> <span class="n">vec</span><span class="p">);</span></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l567" href="#l567">567</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l568" href="#l568">568</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
