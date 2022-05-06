@@ -71,7 +71,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "Factory_8hpp.html",
-"structFactoryItem.html"
+"structBitmapFileHeader.html#ab6e7e731416e7b814ff5d9cb9e653099"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
