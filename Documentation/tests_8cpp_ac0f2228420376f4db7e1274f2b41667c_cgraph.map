@@ -1,0 +1,49 @@
+<map id="main" name="main">
+<area shape="rect" id="node1" title=" " alt="" coords="5,766,60,793"/>
+<area shape="rect" id="node2" href="$tests_8cpp.html#a3943b56f2c9eb093893ed16cdf5777e7" title=" " alt="" coords="500,281,625,307"/>
+<area shape="rect" id="node16" href="$tests_8cpp.html#a81702378d4fe24787c381f549e8e1847" title=" " alt="" coords="286,741,390,767"/>
+<area shape="rect" id="node36" href="$tests_8cpp.html#a4a4c3af75b14d8e5dd8f9524082bce4e" title=" " alt="" coords="109,791,209,818"/>
+<area shape="rect" id="node37" href="$tests_8cpp.html#a0e64913f2f7932ab8f3b57ab47d494a7" title=" " alt="" coords="108,1349,211,1375"/>
+<area shape="rect" id="node3" href="$maths3d__ext_8h.html#a0f859fe03f21ffcf0c4994d4415b41eb" title=" " alt="" coords="749,189,905,215"/>
+<area shape="rect" id="node4" href="$maths3d_8h.html#a09e24e35e45ae0838ac9b60177164d8e" title=" " alt="" coords="712,513,941,539"/>
+<area shape="rect" id="node9" href="$maths3d_8h.html#ae4a4af082482c7992d487d2f709a1d4b" title="Assigns x, y, z and w to the corresponding components of the vector." alt="" coords="1667,1298,1771,1325"/>
+<area shape="rect" id="node10" href="$maths3d__ext_8h.html#a497e68ef74d169c80b8b059389b44d0d" title=" " alt="" coords="721,240,932,281"/>
+<area shape="rect" id="node11" href="$maths3d__ext_8h.html#a5919f0c49d84c8282b84174d1ec30e68" title=" " alt="" coords="721,305,932,347"/>
+<area shape="rect" id="node12" href="$maths3d__ext_8h.html#ab2ffc468787d3dff7bc736dac452b460" title=" " alt="" coords="717,371,937,412"/>
+<area shape="rect" id="node13" href="$maths3d__ext_8h.html#a414b25cb2664145c399ed71dbfa13718" title=" " alt="" coords="717,5,937,47"/>
+<area shape="rect" id="node14" href="$maths3d__ext_8h.html#a0264cb82092555148becb139fac6feae" title=" " alt="" coords="717,71,936,98"/>
+<area shape="rect" id="node15" href="$maths3d__ext_8h.html#a067b1ead0fad3513f28cfa3fadf473ae" title=" " alt="" coords="717,123,936,164"/>
+<area shape="rect" id="node5" href="$maths3d_8h.html#a0e389dd6c80ea3d67dca4280855af2b2" title=" " alt="" coords="1023,589,1144,615"/>
+<area shape="rect" id="node6" href="$maths3d_8h.html#a7d18c307128606532d069a5fc8e9effe" title=" " alt="" coords="1029,741,1137,767"/>
+<area shape="rect" id="node7" href="$maths3d_8h.html#a791539fd7b912c66a12b8049bc5c37cb" title=" " alt="" coords="1030,538,1137,565"/>
+<area shape="rect" id="node8" href="$maths3d_8h.html#a23076d13621d19b8faf6760896a64270" title=" " alt="" coords="1243,690,1355,717"/>
+<area shape="rect" id="node17" href="$maths3d_8h.html#a163ffd684df4d3e85aeecc27687e24ba" title=" " alt="" coords="486,842,639,869"/>
+<area shape="rect" id="node19" href="$maths3d_8h.html#ab5449f3a4c21a79a25aad1c7bc322c06" title=" " alt="" coords="708,575,945,602"/>
+<area shape="rect" id="node20" href="$maths3d_8h.html#a8e55e35ba129e305548e271c9a825524" title=" " alt="" coords="487,690,639,717"/>
+<area shape="rect" id="node22" href="$maths3d_8h.html#afc3c0913e70c1567f4c99c2d4f997352" title=" " alt="" coords="487,639,638,666"/>
+<area shape="rect" id="node23" href="$maths3d_8h.html#ad6409707b2f0acdb02554bebde18974b" title=" " alt="" coords="487,589,639,615"/>
+<area shape="rect" id="node24" href="$maths3d_8h.html#a33093eeb58c9a5d9a08463984722756d" title=" " alt="" coords="491,437,634,463"/>
+<area shape="rect" id="node25" href="$maths3d_8h.html#ad520ae2903c45418c3c4809762623e22" title=" " alt="" coords="482,791,643,818"/>
+<area shape="rect" id="node26" href="$maths3d_8h.html#ad9ab510eb17aa1dc3dc76005eb09d667" title=" " alt="" coords="470,741,655,767"/>
+<area shape="rect" id="node29" href="$maths3d_8h.html#aefb08742da337dfb8cc6147e39b16fd0" title=" " alt="" coords="740,994,913,1021"/>
+<area shape="rect" id="node30" href="$maths3d_8h.html#a63fb9c019da7af1893d1e5814f0a98fd" title=" " alt="" coords="489,1045,637,1071"/>
+<area shape="rect" id="node34" href="$maths3d_8h.html#a92d8749d3bc3bec741c75d5e722b8911" title="Assigns zero to all four of the components of the vector." alt="" coords="506,1121,619,1147"/>
+<area shape="rect" id="node18" href="$maths3d_8h.html#a3fbb5d30c36494eaeb37013aab805075" title=" " alt="" coords="1018,791,1149,818"/>
+<area shape="rect" id="node21" href="$maths3d_8h.html#a655c027ed401744ea139601bb2219223" title=" " alt="" coords="725,639,928,666"/>
+<area shape="rect" id="node27" href="$maths3d_8h.html#aee566e6a213d4cfeeede9e23eac68c8f" title=" " alt="" coords="751,741,902,767"/>
+<area shape="rect" id="node28" href="$maths3d_8h.html#a2e257e9a25dbf2a26be0ffdee03cb9d9" title="Copies vec and sets the w component of the vector to w." alt="" coords="768,943,885,970"/>
+<area shape="rect" id="node31" href="$maths3d_8h.html#afa6fbd00f48007bc9ca8b9fad6911058" title="Calculates the dot&#45;product of vec1 and vec2." alt="" coords="1221,1310,1376,1337"/>
+<area shape="rect" id="node32" href="$maths3d_8h.html#a90265d9aa55b92df80e1ff0db7be136f" title="Multiplies vec1 with vec2." alt="" coords="1453,1349,1589,1375"/>
+<area shape="rect" id="node33" href="$maths3d_8h.html#a670630003a2a62f351daa92d3e3a6d8f" title="Returns the sum of the components of vec." alt="" coords="1424,1298,1619,1325"/>
+<area shape="rect" id="node35" href="$maths3d_8h.html#a6931631ee39dd7d2078a35562c6e3e98" title="Assigns v to all four of the components of the vector." alt="" coords="755,1399,899,1426"/>
+<area shape="rect" id="node38" href="$maths3d_8h.html#aac2d3408690942718b493a9d7f044aa3" title="Adds vec1 and vec2." alt="" coords="1245,1551,1353,1578"/>
+<area shape="rect" id="node39" href="$maths3d_8h.html#aea681748308bba9afb0ffdd613264f99" title="Calculates the cross&#45;product of v1 and v2." alt="" coords="743,1298,911,1325"/>
+<area shape="rect" id="node40" href="$maths3d_8h.html#ac8a62a63b780796489c14691caac5824" title="Copies vec and divides each component by the length of vec (returning the normalized or unit vector o..." alt="" coords="259,1349,417,1375"/>
+<area shape="rect" id="node44" href="$maths3d_8h.html#a6e31aefd604b0542109db392dbe9d4ed" title="Copies vec and multiplies each component by scale." alt="" coords="499,1399,626,1426"/>
+<area shape="rect" id="node45" href="$maths3d_8h.html#a5919d68dc856d05b663229a06d9cb307" title="Copies vec and sets the x component of the vector to x." alt="" coords="1465,1602,1578,1629"/>
+<area shape="rect" id="node46" href="$maths3d_8h.html#affb9d0d47db26105ea3f139c56910ac9" title="Copies vec and sets the y component of the vector to y." alt="" coords="1243,1653,1355,1679"/>
+<area shape="rect" id="node47" href="$maths3d_8h.html#aafe26d688ec8f15c1cfbb8514508789f" title="Copies vec and sets the z component of the vector to z." alt="" coords="281,1222,395,1249"/>
+<area shape="rect" id="node41" href="$maths3d_8h.html#add8a21f2e58d7d54153d07a551e2295a" title="Calculates 1/length of vec." alt="" coords="465,1349,660,1375"/>
+<area shape="rect" id="node42" href="$maths3d_8h.html#a4f551392427772319a2abb968295bad2" title="Calculates the length of vec." alt="" coords="763,1349,890,1375"/>
+<area shape="rect" id="node43" href="$maths3d_8h.html#a6a12894b1a4971a2291d506140394124" title="Calculates the length squared of vec." alt="" coords="993,1323,1173,1350"/>
+</map>

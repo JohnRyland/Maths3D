@@ -1,0 +1,4 @@
+<map id="operator~" name="operator~">
+<area shape="rect" id="node1" title="Transpose of matrix." alt="" coords="5,5,93,32"/>
+<area shape="rect" id="node2" href="$maths3d_8h.html#ab1faa822c038f35815c5a169e0e7838b" title="Creates a matrix where the matrix a is mirrored through the diagonal of the matrix." alt="" coords="141,5,315,32"/>
+</map>
