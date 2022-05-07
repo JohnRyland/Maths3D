@@ -130,6 +130,10 @@ void Vector4f_SSETransformStreamGeneric(float* outputStream, const float* inputS
     Y = _mm_mul_ps(Y,R1);
     // We add Y to Z, so Z = R3[0]+z*R2[0]+y*R1[0] ...
     Z = _mm_add_ps(Z,Y);
+    
+    // TODO: add optional AVX2 optimizations
+    //_mm_fmadd_ps()   // fused multiply+add instruction if have AVX2
+
     // We multiply X with R0, so X = x*R0[0], ...
     X = _mm_mul_ps(X,R0);
     // We add X to Z, so Z = R3[0] + z*R2[0] + y*R1[0] + x*R0[0], ...
@@ -183,7 +187,7 @@ void Vector4f_TransformStreamGeneric(float* outputStream, const float* inputStre
     // and the compiler flags can be configured so that the compiler will be able to emit these.
     // See the Vector4f_Transform function for the alternative form which transposes the transform matrix
     // first and then uses dot products instead. On some platforms where there are optimizations for dot-products
-    // then this might be faster instead.
+    // then this might instead be faster.
     Z = Vector4f_Add(Z, Vector4f_Multiply(transform.row[1], Vector4f_Replicate(inputStream[1]))); // y
     Z = Vector4f_Add(Z, Vector4f_Multiply(transform.row[0], Vector4f_Replicate(inputStream[0]))); // x
     if (divideByW)
