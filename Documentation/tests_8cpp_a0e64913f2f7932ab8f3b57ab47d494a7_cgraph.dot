@@ -1,0 +1,58 @@
+digraph "vector_tests"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="vector_tests",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Vector4f_Add",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$maths3d_8h.html#aac2d3408690942718b493a9d7f044aa3",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Vector4f_Set",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$maths3d_8h.html#ae4a4af082482c7992d487d2f709a1d4b",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Vector4f_CrossProduct",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$maths3d_8h.html#aea681748308bba9afb0ffdd613264f99",tooltip=" "];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Scalar1f_One",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$maths3d_8h.html#a7d18c307128606532d069a5fc8e9effe",tooltip=" "];
+  Node4 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Vector4f_Normalized",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$maths3d_8h.html#ac8a62a63b780796489c14691caac5824",tooltip=" "];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="Vector4f_ReciprocalLength",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$maths3d_8h.html#add8a21f2e58d7d54153d07a551e2295a",tooltip=" "];
+  Node7 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="Vector4f_Length",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$maths3d_8h.html#a4f551392427772319a2abb968295bad2",tooltip=" "];
+  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="Vector4f_LengthSquared",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$maths3d_8h.html#a6a12894b1a4971a2291d506140394124",tooltip=" "];
+  Node9 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="Vector4f_DotProduct",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$maths3d_8h.html#afa6fbd00f48007bc9ca8b9fad6911058",tooltip=" "];
+  Node10 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="Vector4f_Multiply",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$maths3d_8h.html#a90265d9aa55b92df80e1ff0db7be136f",tooltip=" "];
+  Node11 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="Vector4f_SumComponents",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$maths3d_8h.html#a670630003a2a62f351daa92d3e3a6d8f",tooltip=" "];
+  Node6 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="Vector4f_Scaled",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$maths3d_8h.html#a6e31aefd604b0542109db392dbe9d4ed",tooltip=" "];
+  Node13 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="Vector4f_Replicate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$maths3d_8h.html#a6931631ee39dd7d2078a35562c6e3e98",tooltip=" "];
+  Node14 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="Vector4f_SetW",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$maths3d_8h.html#a2e257e9a25dbf2a26be0ffdee03cb9d9",tooltip=" "];
+  Node15 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node16 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="Vector4f_SetX",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$maths3d_8h.html#a5919d68dc856d05b663229a06d9cb307",tooltip=" "];
+  Node16 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node17 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="Vector4f_SetY",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$maths3d_8h.html#affb9d0d47db26105ea3f139c56910ac9",tooltip=" "];
+  Node17 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node18 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="Vector4f_SetZ",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$maths3d_8h.html#aafe26d688ec8f15c1cfbb8514508789f",tooltip=" "];
+  Node18 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node19 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node19 [label="Vector4f_Zero",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$maths3d_8h.html#a92d8749d3bc3bec741c75d5e722b8911",tooltip=" "];
+  Node19 -> Node20 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node20 [label="Scalar1f_Zero",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$maths3d_8h.html#a23076d13621d19b8faf6760896a64270",tooltip=" "];
+  Node19 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}
