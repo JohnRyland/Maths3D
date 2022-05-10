@@ -170,7 +170,7 @@ uint32_t TraceRay(int i, int j, const Scene& scene)
 
   if (closestObjectIndex != -1)
   {
-    switch (scene.objects[i].type)
+    switch (scene.objects[closestObjectIndex].type)
     {
       case ObjectType::Sphere:
       {
