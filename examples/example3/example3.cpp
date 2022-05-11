@@ -230,9 +230,9 @@ int main(int argc, const char* argv[])
   {
     .objects =
     {
-      { ObjectType::Sphere, .sphere = { { -50, -50,  90 }, { 1.0, 0.0, 0.0 }, 50 } },
-      { ObjectType::Sphere, .sphere = { {  60,  20,  50 }, { 0.0, 1.0, 0.0 }, 50 } },
-      { ObjectType::Sphere, .sphere = { {   0,  30, 100 }, { 0.0, 0.0, 1.0 }, 70 } }
+      Object{ ObjectType::Sphere, .sphere = { { -50, -50,  90 }, { 1.0, 0.0, 0.0 }, 50 } },
+      Object{ ObjectType::Sphere, .sphere = { {  60,  20,  50 }, { 0.0, 1.0, 0.0 }, 50 } },
+      Object{ ObjectType::Sphere, .sphere = { {   0,  30, 100 }, { 0.0, 0.0, 1.0 }, 70 } }
     },
     .lights =
     {

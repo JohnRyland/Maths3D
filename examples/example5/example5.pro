@@ -7,5 +7,5 @@ CXXFLAGS = -std=c++11
 OUTPUT   = example5.pdf
 
 %.pdf: %.svg
-	rsvg-convert --format pdf $< -o $@
+	$(if $(shell which -a rsvg-convert),rsvg-convert --format pdf $< -o $@)
 
