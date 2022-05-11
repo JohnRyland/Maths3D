@@ -7,7 +7,7 @@ CXXFLAGS=-std=c++11
 OUTPUT=cube.pdf
 
 cube.pdf: cube.svg
-	rsvg-convert --format pdf $< -o $@
+	$(if $(shell which -a rsvg-convert),rsvg-convert --format pdf $< -o $@)
 
 
 
