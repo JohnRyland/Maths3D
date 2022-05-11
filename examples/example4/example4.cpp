@@ -279,6 +279,6 @@ int main(int argc, const char* argv[])
     }
   }
 
-  SVG_Create("cube.svg", w, h, shapeList);
+  SVG_Create("example4.svg", w, h, shapeList);
 }
 
