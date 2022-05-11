@@ -4,7 +4,7 @@ TARGET   = example1
 
 CXXFLAGS = -std=c++11
 
-INCLUDES = ../../includes \
+INCLUDES = ../../include \
 					 ../common
 
 SOURCES  = example1.cpp \
