@@ -1,5 +1,6 @@
 PROJECT   = Maths3D
 TARGET    = Maths3D
+VERSION   = 0.9.8
 BRIEF     = "Maths for Computer Graphics"
 LOGO      = docs/logo.svg
 DOCS      = docs/README.md
