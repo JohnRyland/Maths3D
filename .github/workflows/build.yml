@@ -15,7 +15,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: make
       run: |
-        apt install -y libxrandr
+        sudo apt install -y libxrandr
         make
     - name: make test
       run: make test
