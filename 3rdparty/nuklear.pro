@@ -2,9 +2,8 @@
 LIB=.modules/Nuklear/examples/blah.a
 
 $(LIB): .build/install/usr/local/lib/libglfw3.a
-	export PKG_CONFIG_SYSROOT_DIR=$(abspath $(TEMP_DIR)/install)
-	export PKG_CONFIG_LIBDIR=${PKG_CONFIG_SYSROOT_DIR}/usr/local/lib/pkgconfig
-	cd .modules/Nuklear/example && make
+	cd .modules/Nuklear/example && PKG_CONFIG_SYSROOT_DIR=$(abspath $(TEMP_DIR)/install) \
+		      PKG_CONFIG_LIBDIR=$(abspath $(TEMP_DIR)/install)/usr/local/lib/pkgconfig make
 
 build: $(LIB)
 
