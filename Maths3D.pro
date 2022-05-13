@@ -4,7 +4,7 @@ BRIEF     = "Maths for Computer Graphics"
 LOGO      = docs/logo.svg
 DOCS      = docs/README.md
 
-SOURCES   = src/maths3d.cpp tests/tests.cpp examples/examples.pro
+SOURCES   = src/maths3d.cpp tests/tests.cpp examples/examples.pro 3rdparty/3rdparty.pro
 INCLUDES  = include
 
 LIBRARIES = m
