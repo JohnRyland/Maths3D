@@ -1,0 +1,18 @@
+<map id="Camera_ViewMatrix" name="Camera_ViewMatrix">
+<area shape="rect" id="node1" title=" " alt="" coords="5,207,160,234"/>
+<area shape="rect" id="node2" href="$maths3d_8h.html#a730872e7bde7c3758509076e5166f31b" title=" " alt="" coords="216,80,385,107"/>
+<area shape="rect" id="node11" href="$maths3d_8h.html#a99edf56f913fde15556d44f5edcfd5e5" title=" " alt="" coords="675,182,810,208"/>
+<area shape="rect" id="node12" href="$maths3d_8h.html#ad9ab510eb17aa1dc3dc76005eb09d667" title=" " alt="" coords="208,232,393,259"/>
+<area shape="rect" id="node16" href="$maths3d_8h.html#ab1faa822c038f35815c5a169e0e7838b" title="Creates a matrix where the matrix a is mirrored through the diagonal of the matrix." alt="" coords="214,283,387,310"/>
+<area shape="rect" id="node3" href="$maths3d_8h.html#a65cdc5d4d5315542b78fe93220e41905" title=" " alt="" coords="666,16,819,43"/>
+<area shape="rect" id="node6" href="$maths3d_8h.html#a90aa396fb2898f3117d152f6ee471e0d" title=" " alt="" coords="441,30,593,56"/>
+<area shape="rect" id="node9" href="$maths3d_8h.html#a91d4c88dd9e9c61b2a28d011c8449de2" title=" " alt="" coords="442,80,593,107"/>
+<area shape="rect" id="node10" href="$maths3d_8h.html#ac9b7694cbf0678572160d2f54b184563" title=" " alt="" coords="441,131,593,158"/>
+<area shape="rect" id="node4" href="$maths3d_8h.html#a3fbb5d30c36494eaeb37013aab805075" title="Initialize the matrix to zero." alt="" coords="892,156,1023,183"/>
+<area shape="rect" id="node5" href="$maths3d_8h.html#a23076d13621d19b8faf6760896a64270" title="If redefine Scalar1f to something other than float, update this function as applicable." alt="" coords="1071,131,1183,158"/>
+<area shape="rect" id="node7" href="$maths3d_8h.html#ae631fc742b5251ab497804c2581aecdb" title="Internal helper function for implementing the other matrix rotation functions." alt="" coords="641,118,844,144"/>
+<area shape="rect" id="node8" href="$maths3d_8h.html#a7d18c307128606532d069a5fc8e9effe" title="If redefine Scalar1f to something other than float, update this function as applicable." alt="" coords="903,207,1011,234"/>
+<area shape="rect" id="node13" href="$maths3d_8h.html#aee566e6a213d4cfeeede9e23eac68c8f" title=" " alt="" coords="442,232,593,259"/>
+<area shape="rect" id="node14" href="$maths3d_8h.html#a2e257e9a25dbf2a26be0ffdee03cb9d9" title="Copies vec and sets the w component of the vector to w." alt="" coords="459,334,576,360"/>
+<area shape="rect" id="node15" href="$maths3d_8h.html#ae4a4af082482c7992d487d2f709a1d4b" title="Assigns x, y, z and w to the corresponding components of the vector." alt="" coords="691,334,795,360"/>
+</map>
