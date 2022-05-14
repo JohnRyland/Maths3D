@@ -2,7 +2,7 @@ include 3rdparty/glew.pro
 include 3rdparty/glfw.pro
 
 CC=gcc
-CFLAGS += -I$(TEMP_DIR)/install/usr/local/include -DGLEW_STATIC
+CFLAGS += -I$(OUTPUT_DIR)/install/usr/local/include -DGLEW_STATIC
 
 # Platform specific OpenGL libraries
 ifeq ($(PLATFORM),Windows)
