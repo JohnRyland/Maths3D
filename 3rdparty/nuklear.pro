@@ -1,9 +1,32 @@
+include 3rdparty/glew.pro
+include 3rdparty/glfw.pro
 
-LIB=.modules/Nuklear/examples/blah.a
+CC=gcc
+CFLAGS += -I$(TEMP_DIR)/install/usr/local/include -DGLEW_STATIC
 
-$(LIB): .build/install/usr/local/lib/libglfw3.a
-	cd .modules/Nuklear/example && PKG_CONFIG_SYSROOT_DIR=$(abspath $(TEMP_DIR)/install) \
-		      PKG_CONFIG_LIBDIR=$(abspath $(TEMP_DIR)/install)/usr/local/lib/pkgconfig make
+# Platform specific OpenGL libraries
+ifeq ($(PLATFORM),Windows)
+  GL_LFLAGS := -lopengl32 -lglu32 -lkernel32 -lgdi32 -luser32
+endif
+ifeq ($(PLATFORM),Darwin)
+  GL_LFLAGS := -framework OpenGL -framework Cocoa -framework IOKit -framework CoreVideo
+endif
+ifeq ($(PLATFORM),Linux)
+  GL_LFLAGS := -lGL -lGLU -ldl -lm -pthread
+endif
 
-build: $(LIB)
+bin/file_browser: .modules/Nuklear/example/file_browser.c $(GLEW_LIB) $(GLFW_LIB)
+	echo $(PLATFORM)
+	$(CC) $(CFLAGS) -o $@ $^ $(GL_LFLAGS)
+
+bin/extended: .modules/Nuklear/example/extended.c $(GLEW_LIB) $(GLFW_LIB)
+	$(CC) $(CFLAGS) -o $@ $^ $(GL_LFLAGS)
+
+bin/canvas: .modules/Nuklear/example/canvas.c $(GLEW_LIB) $(GLFW_LIB)
+	$(CC) $(CFLAGS) -o $@ $^ $(GL_LFLAGS)
+
+bin/skinning: .modules/Nuklear/example/skinning.c $(GLEW_LIB) $(GLFW_LIB)
+	$(CC) $(CFLAGS) -o $@ $^ $(GL_LFLAGS)
+
+build: bin/file_browser bin/extended bin/canvas bin/skinning
 
