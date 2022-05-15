@@ -48,7 +48,7 @@
 /// the image which is in the lower left. Offset width is at (width,0) and
 /// so on up to offset width*height which is the top right at (width,height).
 ///
-/// There is no bounds checking, so it is up to the user to ensure that
+/// There are no bounds checking, so it is up to the user to ensure that
 /// pixels is a valid pointer to an array of width*height*sizeof(uint32_t) bytes.
 struct Image
 {
