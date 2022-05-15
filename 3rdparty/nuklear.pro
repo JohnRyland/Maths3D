@@ -1,7 +1,6 @@
 include 3rdparty/glew.pro
 include 3rdparty/glfw.pro
 
-CC=gcc
 CFLAGS += -I$(OUTPUT_DIR)/install/usr/local/include -DGLEW_STATIC
 
 # Platform specific OpenGL libraries
@@ -16,7 +15,6 @@ ifeq ($(PLATFORM),Linux)
 endif
 
 bin/file_browser: .modules/Nuklear/example/file_browser.c $(GLEW_LIB) $(GLFW_LIB)
-	echo $(PLATFORM)
 	$(CC) $(CFLAGS) -o $@ $^ $(GL_LFLAGS)
 
 bin/extended: .modules/Nuklear/example/extended.c $(GLEW_LIB) $(GLFW_LIB)
