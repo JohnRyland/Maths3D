@@ -1,0 +1,11 @@
+<map id="Matrix4x4f_RotateXYZ" name="Matrix4x4f_RotateXYZ">
+<area shape="rect" id="node1" title=" " alt="" coords="5,75,175,101"/>
+<area shape="rect" id="node2" href="$maths3d_8h.html#a65cdc5d4d5315542b78fe93220e41905" title=" " alt="" coords="447,5,601,32"/>
+<area shape="rect" id="node5" href="$maths3d_8h.html#a90aa396fb2898f3117d152f6ee471e0d" title=" " alt="" coords="223,49,375,76"/>
+<area shape="rect" id="node8" href="$maths3d_8h.html#a91d4c88dd9e9c61b2a28d011c8449de2" title=" " alt="" coords="223,100,374,127"/>
+<area shape="rect" id="node9" href="$maths3d_8h.html#ac9b7694cbf0678572160d2f54b184563" title=" " alt="" coords="223,151,375,177"/>
+<area shape="rect" id="node3" href="$maths3d_8h.html#a3fbb5d30c36494eaeb37013aab805075" title="Initialize the matrix to zero." alt="" coords="673,12,804,39"/>
+<area shape="rect" id="node4" href="$maths3d_8h.html#a23076d13621d19b8faf6760896a64270" title="If redefine Scalar1f to something other than float, update this function as applicable." alt="" coords="852,37,964,64"/>
+<area shape="rect" id="node6" href="$maths3d_8h.html#ae631fc742b5251ab497804c2581aecdb" title="Internal helper function for implementing the other matrix rotation functions." alt="" coords="423,88,625,115"/>
+<area shape="rect" id="node7" href="$maths3d_8h.html#a7d18c307128606532d069a5fc8e9effe" title="If redefine Scalar1f to something other than float, update this function as applicable." alt="" coords="685,113,793,140"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="operator&#45;" name="operator&#45;">
+<area shape="rect" id="node1" title="Subtract two vectors." alt="" coords="5,5,88,32"/>
+<area shape="rect" id="node2" href="$maths3d_8h.html#aa1c0d13997d9eb4c57689b37f1c6d4ad" title="Subtracts vec2 from vec1." alt="" coords="136,5,273,32"/>
+<area shape="rect" id="node3" href="$maths3d_8h.html#ae4a4af082482c7992d487d2f709a1d4b" title="Assigns x, y, z and w to the corresponding components of the vector." alt="" coords="321,5,425,32"/>
+</map>
