@@ -117,7 +117,7 @@ Public Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Simple image which is a buffer of 32-bpp ARGB values in an array. </p>
 <p>Assumes little endian. Offset 0 of pixels is at coordinate (0,0) of the image which is in the lower left. Offset width is at (width,0) and so on up to offset width*height which is the top right at (width,height).</p>
-<p>There is no bounds checking, so it is up to the user to ensure that pixels is a valid pointer to an array of width*height*sizeof(uint32_t) bytes. </p>
+<p>There are no bounds checking, so it is up to the user to ensure that pixels is a valid pointer to an array of width*height*sizeof(uint32_t) bytes. </p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
 <a id="aae4c89087111bc31067684279947f80e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aae4c89087111bc31067684279947f80e">&#9670;&nbsp;</a></span>height</h2>
