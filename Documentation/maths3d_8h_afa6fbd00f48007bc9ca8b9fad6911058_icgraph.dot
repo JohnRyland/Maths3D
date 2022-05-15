@@ -1,0 +1,25 @@
+digraph "Vector4f_DotProduct"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="Vector4f_DotProduct",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Vector4f_LengthSquared",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$maths3d_8h.html#a6a12894b1a4971a2291d506140394124",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Vector4f_Length",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$maths3d_8h.html#a4f551392427772319a2abb968295bad2",tooltip=" "];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Vector4f_ReciprocalLength",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$maths3d_8h.html#add8a21f2e58d7d54153d07a551e2295a",tooltip=" "];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Vector4f_Normalized",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$maths3d_8h.html#ac8a62a63b780796489c14691caac5824",tooltip=" "];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="vector_tests",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$tests_8cpp.html#a0e64913f2f7932ab8f3b57ab47d494a7",tooltip=" "];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$tests_8cpp.html#ac0f2228420376f4db7e1274f2b41667c",tooltip=" "];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="Vector4f_Transform",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$maths3d_8h.html#a63fb9c019da7af1893d1e5814f0a98fd",tooltip=" "];
+  Node8 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="matrix_tests",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$tests_8cpp.html#a81702378d4fe24787c381f549e8e1847",tooltip=" "];
+  Node9 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}
