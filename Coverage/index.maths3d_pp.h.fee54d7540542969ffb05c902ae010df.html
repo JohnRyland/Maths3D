@@ -23,7 +23,7 @@
     </tr>
     <tr>
       <th scope="row">File:</th>
-      <td>examples/example1/example1.cpp</td>
+      <td>include/maths3d_pp.h</td>
     </tr>
     <tr>
       <th scope="row">Date:</th>
@@ -41,21 +41,21 @@
     </tr>
     <tr>
       <th scope="row">Lines:</th>
-      <td>35</td>
-      <td>35</td>
+      <td>16</td>
+      <td>16</td>
       <td class="coverage-high">100.0%</td>
     </tr>
     <tr>
       <th scope="row">Functions:</th>
-      <td>6</td>
-      <td>6</td>
+      <td>8</td>
+      <td>8</td>
       <td class="coverage-high">100.0%</td>
     </tr>
     <tr>
       <th scope="row">Branches:</th>
-      <td>11</td>
-      <td>14</td>
-      <td class="coverage-medium">78.6%</td>
+      <td>0</td>
+      <td>0</td>
+      <td class="coverage-unknown">-%</td>
     </tr>
   </table>
 </div>
@@ -75,68 +75,90 @@
     </tr>
     <tr>
       <td>
-        <a href="#l90">PointOfClosestIntercept(Ray const&amp;, Vector4f const&amp;)</a>
+        <a href="#l130">Vector4f::operator float() const</a>
       </td>
       <td>
-        <a href="#l90">90</a>
+        <a href="#l130">130</a>
       </td>
       <td>
-        <a href="#l90"> called 2666556 times</a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="#l85">RayDirection(Ray const&amp;)</a>
-      </td>
-      <td>
-        <a href="#l85">85</a>
-      </td>
-      <td>
-        <a href="#l85"> called 2666556 times</a>
+        <a href="#l130"> called 2658073 times</a>
       </td>
     </tr>
     <tr>
       <td>
-        <a href="#l99">RayIntersectsSphere(Ray const&amp;, Sphere const&amp;)</a>
+        <a href="#l76">VectorProduct4f::operator float()</a>
       </td>
       <td>
-        <a href="#l99">99</a>
+        <a href="#l76">76</a>
       </td>
       <td>
-        <a href="#l99"> called 2666556 times</a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="#l147">main</a>
-      </td>
-      <td>
-        <a href="#l147">147</a>
-      </td>
-      <td>
-        <a href="#l147"> called 12 times</a>
+        <a href="#l76"> called 2640363 times</a>
       </td>
     </tr>
     <tr>
       <td>
-        <a href="#l110">unsigned int TraceRay&lt;320ul, 240ul, 100&gt;(int, int, Scene const&amp;)</a>
+        <a href="#l153">operator*(Matrix4x4f const&amp;, Matrix4x4f const&amp;)</a>
       </td>
       <td>
-        <a href="#l110">110</a>
+        <a href="#l153">153</a>
       </td>
       <td>
-        <a href="#l110"> called 921600 times</a>
+        <a href="#l153"> called 66 times</a>
       </td>
     </tr>
     <tr>
       <td>
-        <a href="#l129">void RayTracer&lt;320ul, 240ul, 100&gt;(Scene const&amp;, char const*)</a>
+        <a href="#l112">operator*(Vector4f const&amp;, float const&amp;)</a>
       </td>
       <td>
-        <a href="#l129">129</a>
+        <a href="#l112">112</a>
       </td>
       <td>
-        <a href="#l129"> called 12 times</a>
+        <a href="#l112"> called 2764042 times</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l118">operator+(Vector4f const&amp;, Vector4f const&amp;)</a>
+      </td>
+      <td>
+        <a href="#l118">118</a>
+      </td>
+      <td>
+        <a href="#l118"> called 2640363 times</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l124">operator-(Vector4f const&amp;, Vector4f const&amp;)</a>
+      </td>
+      <td>
+        <a href="#l124">124</a>
+      </td>
+      <td>
+        <a href="#l124"> called 6372872 times</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l100">operator^(Vector4f const&amp;, Vector4f const&amp;)</a>
+      </td>
+      <td>
+        <a href="#l100">100</a>
+      </td>
+      <td>
+        <a href="#l100"> called 2640363 times</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l136">operator~(Vector4f const&amp;)</a>
+      </td>
+      <td>
+        <a href="#l136">136</a>
+      </td>
+      <td>
+        <a href="#l136"> called 1056726 times</a>
       </td>
     </tr>
   </table>
@@ -159,7 +181,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">////////////////////////////////////////////////////////////////////////////////////</span></td>
+      <td class="src "><span class="cp">#pragma once</span></td>
     </tr>
 
     <tr class="source-line">
@@ -167,7 +189,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">// About</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -175,7 +197,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="c1">///////////////////////////////////////////////////////////////////////////////////</span></td>
     </tr>
 
     <tr class="source-line">
@@ -183,7 +205,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">//</span></td>
+      <td class="src "><span class="c1">// About</span></td>
     </tr>
 
     <tr class="source-line">
@@ -191,7 +213,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">// Simple Example of a basic ray tracer</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -199,7 +221,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">//</span></td>
+      <td class="src "><span class="c1">// </span></td>
     </tr>
 
     <tr class="source-line">
@@ -207,7 +229,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="c1">// Maths3D</span></td>
     </tr>
 
     <tr class="source-line">
@@ -215,7 +237,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="c1">// Maths for Computer Graphics</span></td>
     </tr>
 
     <tr class="source-line">
@@ -223,7 +245,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">///////////////////////////////////////////////////////////////////////////////////</span></td>
+      <td class="src "><span class="c1">// </span></td>
     </tr>
 
     <tr class="source-line">
@@ -231,7 +253,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">// License</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -247,7 +269,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">//</span></td>
+      <td class="src "><span class="c1">///////////////////////////////////////////////////////////////////////////////////</span></td>
     </tr>
 
     <tr class="source-line">
@@ -255,7 +277,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">// Copyright (c) 2022, John Ryland</span></td>
+      <td class="src "><span class="c1">// License</span></td>
     </tr>
 
     <tr class="source-line">
@@ -263,7 +285,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">// All rights reserved.</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -271,7 +293,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">//</span></td>
+      <td class="src "><span class="c1">// </span></td>
     </tr>
 
     <tr class="source-line">
@@ -279,7 +301,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">// BSD-2-Clause License. See included LICENSE file for details.</span></td>
+      <td class="src "><span class="c1">// Copyright (c) 2021-2022, John Ryland</span></td>
     </tr>
 
     <tr class="source-line">
@@ -287,7 +309,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">// If LICENSE file is missing, see: https://opensource.org/licenses/BSD-2-Clause</span></td>
+      <td class="src "><span class="c1">// All rights reserved.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -295,7 +317,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">//</span></td>
+      <td class="src "><span class="c1">// </span></td>
     </tr>
 
     <tr class="source-line">
@@ -303,7 +325,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="c1">// Redistribution and use in source and binary forms, with or without</span></td>
     </tr>
 
     <tr class="source-line">
@@ -311,7 +333,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="c1">// modification, are permitted provided that the following conditions are met:</span></td>
     </tr>
 
     <tr class="source-line">
@@ -319,7 +341,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">////////////////////////////////////////////////////////////////////////////////////</span></td>
+      <td class="src "><span class="c1">// </span></td>
     </tr>
 
     <tr class="source-line">
@@ -327,7 +349,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">// Documentation</span></td>
+      <td class="src "><span class="c1">// 1. Redistributions of source code must retain the above copyright notice, this</span></td>
     </tr>
 
     <tr class="source-line">
@@ -335,7 +357,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="c1">//    list of conditions and the following disclaimer. </span></td>
     </tr>
 
     <tr class="source-line">
@@ -343,7 +365,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">/// \file example1.cpp</span></td>
+      <td class="src "><span class="c1">// 2. Redistributions in binary form must reproduce the above copyright notice,</span></td>
     </tr>
 
     <tr class="source-line">
@@ -351,7 +373,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">///</span></td>
+      <td class="src "><span class="c1">//    this list of conditions and the following disclaimer in the documentation</span></td>
     </tr>
 
     <tr class="source-line">
@@ -359,7 +381,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">/// This is the first example program for the Maths3D library to show some</span></td>
+      <td class="src "><span class="c1">//    and/or other materials provided with the distribution.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -367,7 +389,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">/// practical example usage of the vector functions.</span></td>
+      <td class="src "><span class="c1">// </span></td>
     </tr>
 
     <tr class="source-line">
@@ -375,7 +397,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">///</span></td>
+      <td class="src "><span class="c1">// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND</span></td>
     </tr>
 
     <tr class="source-line">
@@ -383,7 +405,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">/// It creates a very simple scene containing 3 spheres, and then ray traces this</span></td>
+      <td class="src "><span class="c1">// ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED</span></td>
     </tr>
 
     <tr class="source-line">
@@ -391,7 +413,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">/// only to the first ray hit with no recursion or lighting.</span></td>
+      <td class="src "><span class="c1">// WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE</span></td>
     </tr>
 
     <tr class="source-line">
@@ -399,7 +421,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">///</span></td>
+      <td class="src "><span class="c1">// DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR</span></td>
     </tr>
 
     <tr class="source-line">
@@ -407,7 +429,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">/// It sends out rays for each pixel of the output image. It defines the ray as</span></td>
+      <td class="src "><span class="c1">// ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES</span></td>
     </tr>
 
     <tr class="source-line">
@@ -415,7 +437,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">/// a pair of 3d points, the first is the eye position which is behind the center of</span></td>
+      <td class="src "><span class="c1">// (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -423,7 +445,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">/// the view plane at a position of 0, 0, -viewDistance. It then has a second point</span></td>
+      <td class="src "><span class="c1">// LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND</span></td>
     </tr>
 
     <tr class="source-line">
@@ -431,7 +453,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">/// which is where the ray is pointing to which is through the pixel which is at</span></td>
+      <td class="src "><span class="c1">// ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT</span></td>
     </tr>
 
     <tr class="source-line">
@@ -439,7 +461,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">/// x, y, 0 for x values from -width/2 to width/2 and similarly for y and the height.</span></td>
+      <td class="src "><span class="c1">// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS</span></td>
     </tr>
 
     <tr class="source-line">
@@ -447,7 +469,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">///</span></td>
+      <td class="src "><span class="c1">// SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -455,7 +477,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">/// Then for each ray, it tests it against each sphere to find the closest point</span></td>
+      <td class="src "><span class="c1">// </span></td>
     </tr>
 
     <tr class="source-line">
@@ -463,7 +485,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">/// the ray gets to the center of the sphere, and then compares that to the radius</span></td>
+      <td class="src "><span class="c1">// The views and conclusions contained in the software and documentation are those</span></td>
     </tr>
 
     <tr class="source-line">
@@ -471,7 +493,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">/// of the sphere. If it is less than the radius, then the ray is passing through</span></td>
+      <td class="src "><span class="c1">// of the authors and should not be interpreted as representing official policies, </span></td>
     </tr>
 
     <tr class="source-line">
@@ -479,7 +501,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">/// the sphere and the color of that sphere is used to draw the pixel.</span></td>
+      <td class="src "><span class="c1">// either expressed or implied, of the Maths3D Project.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -487,7 +509,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">///</span></td>
+      <td class="src "><span class="c1">// </span></td>
     </tr>
 
     <tr class="source-line">
@@ -495,7 +517,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">/// This ignores finding the closest sphere which would require additional calculations.</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -511,7 +533,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="c1">///////////////////////////////////////////////////////////////////////////////////</span></td>
     </tr>
 
     <tr class="source-line">
@@ -519,7 +541,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">////////////////////////////////////////////////////////////////////////////////////</span></td>
+      <td class="src "><span class="c1">// Documentation</span></td>
     </tr>
 
     <tr class="source-line">
@@ -527,7 +549,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">// Includes</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -535,7 +557,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="c1">/// \file maths3d_pp.h</span></td>
     </tr>
 
     <tr class="source-line">
@@ -543,7 +565,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cp">#include</span> <span class="cpf">&lt;cstdint&gt;</span><span class="cp"></span></td>
+      <td class="src "><span class="c1">///</span></td>
     </tr>
 
     <tr class="source-line">
@@ -551,7 +573,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cp">#include</span> <span class="cpf">&lt;cstdio&gt;</span><span class="cp"></span></td>
+      <td class="src "><span class="c1">/// C++ operator overload support for operations on the Scalar, Vector and Matrix</span></td>
     </tr>
 
     <tr class="source-line">
@@ -559,7 +581,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cp">#include</span> <span class="cpf">&quot;bitmap.h&quot;</span><span class="cp"></span></td>
+      <td class="src "><span class="c1">/// types defined in maths3d.h. \see maths3d.h</span></td>
     </tr>
 
     <tr class="source-line">
@@ -567,7 +589,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cp">#include</span> <span class="cpf">&quot;maths3d.h&quot;</span><span class="cp"></span></td>
+      <td class="src "><span class="c1">///</span></td>
     </tr>
 
     <tr class="source-line">
@@ -575,7 +597,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="c1">/// This code requires a modern C++ compiler.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -583,7 +605,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="c1">///</span></td>
     </tr>
 
     <tr class="source-line">
@@ -591,7 +613,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">////////////////////////////////////////////////////////////////////////////////////</span></td>
+      <td class="src "><span class="c1">/// \see Scalar1f, Vector4f, Matrix4x4f</span></td>
     </tr>
 
     <tr class="source-line">
@@ -599,7 +621,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">// Types</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -615,7 +637,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="k">struct</span> <span class="n">Sphere</span></td>
+      <td class="src "><span class="c1">///////////////////////////////////////////////////////////////////////////////////</span></td>
     </tr>
 
     <tr class="source-line">
@@ -623,7 +645,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="p">{</span></td>
+      <td class="src "><span class="c1">// Includes</span></td>
     </tr>
 
     <tr class="source-line">
@@ -631,7 +653,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">Vector4f</span> <span class="n">center</span><span class="p">;</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -639,7 +661,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">Scalar1f</span> <span class="n">radius</span><span class="p">;</span></td>
+      <td class="src "><span class="cp">#include</span> <span class="cpf">&quot;maths3d.h&quot;</span><span class="cp"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -647,7 +669,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="kt">uint32_t</span> <span class="n">color</span><span class="p">;</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -655,7 +677,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="p">};</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -663,7 +685,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="c1">///////////////////////////////////////////////////////////////////////////////////</span></td>
     </tr>
 
     <tr class="source-line">
@@ -671,7 +693,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="k">struct</span> <span class="n">Ray</span></td>
+      <td class="src "><span class="c1">// Types</span></td>
     </tr>
 
     <tr class="source-line">
@@ -679,7 +701,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="p">{</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -687,7 +709,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">Vector4f</span> <span class="n">origin</span><span class="p">;</span></td>
+      <td class="src "><span class="n">class</span> <span class="n">VectorProduct4f</span></td>
     </tr>
 
     <tr class="source-line">
@@ -695,7 +717,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">Vector4f</span> <span class="n">lookAt</span><span class="p">;</span></td>
+      <td class="src "><span class="p">{</span></td>
     </tr>
 
     <tr class="source-line">
@@ -703,7 +725,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="p">};</span></td>
+      <td class="src "><span class="nl">public</span><span class="p">:</span></td>
     </tr>
 
     <tr class="source-line">
@@ -711,7 +733,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="n">Vector4f</span> <span class="n">lhs</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -719,7 +741,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="n">Vector4f</span> <span class="n">rhs</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
@@ -727,7 +749,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">////////////////////////////////////////////////////////////////////////////////////</span></td>
+      <td class="src ">  <span class="n">operator</span> <span class="nf">Scalar1f</span><span class="p">();</span></td>
     </tr>
 
     <tr class="source-line">
@@ -735,7 +757,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">// Scene</span></td>
+      <td class="src ">  <span class="n">operator</span> <span class="nf">Vector4f</span><span class="p">();</span></td>
     </tr>
 
     <tr class="source-line">
@@ -743,7 +765,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="p">};</span></td>
     </tr>
 
     <tr class="source-line">
@@ -751,15 +773,15 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="k">struct</span> <span class="n">Scene</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l76" href="#l76">76</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount "></td>
-      <td class="src "><span class="p">{</span></td>
+      <td class="linecount coveredLine">2640363</td>
+      <td class="src coveredLine"><span class="kr">inline</span> <span class="n">VectorProduct4f</span><span class="o">::</span><span class="n">operator</span> <span class="n">Scalar1f</span><span class="p">()</span></td>
     </tr>
 
     <tr class="source-line">
@@ -767,15 +789,15 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="k">static</span> <span class="k">constexpr</span> <span class="kt">int</span> <span class="n">numberOfSpheres</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span></td>
+      <td class="src "><span class="p">{</span></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l78" href="#l78">78</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount "></td>
-      <td class="src ">  <span class="n">Sphere</span> <span class="n">spheres</span><span class="p">[</span><span class="n">numberOfSpheres</span><span class="p">];</span></td>
+      <td class="linecount coveredLine">2640363</td>
+      <td class="src coveredLine">  <span class="k">return</span> <span class="n">Vector4f_DotProduct</span><span class="p">(</span><span class="n">lhs</span><span class="p">,</span> <span class="n">rhs</span><span class="p">);</span></td>
     </tr>
 
     <tr class="source-line">
@@ -783,7 +805,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="p">};</span></td>
+      <td class="src "><span class="p">}</span></td>
     </tr>
 
     <tr class="source-line">
@@ -799,7 +821,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="kr">inline</span> <span class="n">VectorProduct4f</span><span class="o">::</span><span class="n">operator</span> <span class="n">Vector4f</span><span class="p">()</span></td>
     </tr>
 
     <tr class="source-line">
@@ -807,7 +829,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">////////////////////////////////////////////////////////////////////////////////////</span></td>
+      <td class="src "><span class="p">{</span></td>
     </tr>
 
     <tr class="source-line">
@@ -815,7 +837,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="c1">// Ray tracer</span></td>
+      <td class="src ">  <span class="k">return</span> <span class="n">Vector4f_CrossProduct</span><span class="p">(</span><span class="n">lhs</span><span class="p">,</span> <span class="n">rhs</span><span class="p">);</span></td>
     </tr>
 
     <tr class="source-line">
@@ -823,15 +845,15 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="p">}</span></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l85" href="#l85">85</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">2666556</td>
-      <td class="src coveredLine"><span class="n">Vector4f</span> <span class="nf">RayDirection</span><span class="p">(</span><span class="k">const</span> <span class="n">Ray</span><span class="o">&amp;</span> <span class="n">ray</span><span class="p">)</span></td>
+      <td class="linecount "></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -839,15 +861,15 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="p">{</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l87" href="#l87">87</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">2666556</td>
-      <td class="src coveredLine">  <span class="k">return</span> <span class="n">Vector4f_Normalized</span><span class="p">(</span><span class="n">Vector4f_Subtract</span><span class="p">(</span><span class="n">ray</span><span class="p">.</span><span class="n">lookAt</span><span class="p">,</span> <span class="n">ray</span><span class="p">.</span><span class="n">origin</span><span class="p">));</span></td>
+      <td class="linecount "></td>
+      <td class="src "><span class="c1">///////////////////////////////////////////////////////////////////////////////////</span></td>
     </tr>
 
     <tr class="source-line">
@@ -855,7 +877,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="p">}</span></td>
+      <td class="src "><span class="c1">// 3D Maths - Vector</span></td>
     </tr>
 
     <tr class="source-line">
@@ -870,8 +892,8 @@
       <td class="lineno"><a id="l90" href="#l90">90</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">2666556</td>
-      <td class="src coveredLine"><span class="n">Vector4f</span> <span class="nf">PointOfClosestIntercept</span><span class="p">(</span><span class="k">const</span> <span class="n">Ray</span><span class="o">&amp;</span> <span class="n">ray</span><span class="p">,</span> <span class="k">const</span> <span class="n">Vector4f</span><span class="o">&amp;</span> <span class="n">point</span><span class="p">)</span></td>
+      <td class="linecount "></td>
+      <td class="src "><span class="c1">/// assign a scalar</span></td>
     </tr>
 
     <tr class="source-line">
@@ -879,51 +901,35 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="p">{</span></td>
+      <td class="src "><span class="kr">inline</span> <span class="n">Vector4f</span><span class="o">&amp;</span> <span class="n">Vector4f</span><span class="o">::</span><span class="n">operator</span><span class="o">=</span><span class="p">(</span><span class="n">Scalar1f</span> <span class="n">value</span><span class="p">)</span></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l92" href="#l92">92</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">2666556</td>
-      <td class="src coveredLine">  <span class="k">const</span> <span class="n">Vector4f</span> <span class="n">rayDirection</span> <span class="o">=</span> <span class="n">RayDirection</span><span class="p">(</span><span class="n">ray</span><span class="p">);</span></td>
+      <td class="linecount "></td>
+      <td class="src "><span class="p">{</span></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l93" href="#l93">93</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">2666556</td>
-      <td class="src coveredLine">  <span class="k">const</span> <span class="n">Vector4f</span> <span class="n">fromRayToPoint</span> <span class="o">=</span> <span class="n">Vector4f_Subtract</span><span class="p">(</span><span class="n">point</span><span class="p">,</span> <span class="n">ray</span><span class="p">.</span><span class="n">origin</span><span class="p">);</span></td>
+      <td class="linecount "></td>
+      <td class="src ">  <span class="o">*</span><span class="n">this</span> <span class="o">=</span> <span class="n">Vector4f_Replicate</span><span class="p">(</span><span class="n">value</span><span class="p">);</span></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l94" href="#l94">94</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">2666556</td>
-      <td class="src coveredLine">  <span class="k">const</span> <span class="n">Scalar1f</span> <span class="n">lengthAlongRayToPerpendicularToPoint</span> <span class="o">=</span> <span class="n">Vector4f_DotProduct</span><span class="p">(</span><span class="n">rayDirection</span><span class="p">,</span> <span class="n">fromRayToPoint</span><span class="p">);</span></td>
+      <td class="linecount "></td>
+      <td class="src ">  <span class="k">return</span> <span class="o">*</span><span class="n">this</span><span class="p">;</span></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l95" href="#l95">95</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount coveredLine">2666556</td>
-      <td class="src coveredLine">  <span class="k">const</span> <span class="n">Scalar1f</span><span class="o">&amp;</span> <span class="n">length</span> <span class="o">=</span> <span class="n">lengthAlongRayToPerpendicularToPoint</span><span class="p">;</span></td>
-    </tr>
-
-    <tr class="source-line">
-      <td class="lineno"><a id="l96" href="#l96">96</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount coveredLine">2666556</td>
-      <td class="src coveredLine">  <span class="k">return</span> <span class="n">Vector4f_Add</span><span class="p">(</span><span class="n">ray</span><span class="p">.</span><span class="n">origin</span><span class="p">,</span> <span class="n">Vector4f_Scaled</span><span class="p">(</span><span class="n">rayDirection</span><span class="p">,</span> <span class="n">length</span><span class="p">));</span></td>
-    </tr>
-
-    <tr class="source-line">
-      <td class="lineno"><a id="l97" href="#l97">97</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
@@ -931,7 +937,7 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l98" href="#l98">98</a></td>
+      <td class="lineno"><a id="l96" href="#l96">96</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
@@ -939,15 +945,39 @@
     </tr>
 
     <tr class="source-line">
+      <td class="lineno"><a id="l97" href="#l97">97</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="c1">/// Product of two vectors.</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l98" href="#l98">98</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="c1">/// When the result is used as a Scalar1f, the dot-product (inner product) is returned.</span></td>
+    </tr>
+
+    <tr class="source-line">
       <td class="lineno"><a id="l99" href="#l99">99</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">2666556</td>
-      <td class="src coveredLine"><span class="kt">bool</span> <span class="nf">RayIntersectsSphere</span><span class="p">(</span><span class="k">const</span> <span class="n">Ray</span><span class="o">&amp;</span> <span class="n">ray</span><span class="p">,</span> <span class="k">const</span> <span class="n">Sphere</span><span class="o">&amp;</span> <span class="n">sphere</span><span class="p">)</span></td>
+      <td class="linecount "></td>
+      <td class="src "><span class="c1">/// When the result is used as a Vector4f, the cross-product (wedge/exterior product) is returned.</span></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l100" href="#l100">100</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount coveredLine">2640363</td>
+      <td class="src coveredLine"><span class="kr">inline</span> <span class="n">VectorProduct4f</span> <span class="n">operator</span><span class="o">^</span><span class="p">(</span><span class="k">const</span> <span class="n">Vector4f</span><span class="o">&amp;</span> <span class="n">vec1</span><span class="p">,</span> <span class="k">const</span> <span class="n">Vector4f</span><span class="o">&amp;</span> <span class="n">vec2</span><span class="p">)</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l101" href="#l101">101</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
@@ -955,27 +985,19 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l101" href="#l101">101</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount coveredLine">2666556</td>
-      <td class="src coveredLine">  <span class="k">const</span> <span class="n">Vector4f</span> <span class="n">pointOnRayPerpendicularToSphereCenter</span> <span class="o">=</span> <span class="n">PointOfClosestIntercept</span><span class="p">(</span><span class="n">ray</span><span class="p">,</span> <span class="n">sphere</span><span class="p">.</span><span class="n">center</span><span class="p">);</span></td>
-    </tr>
-
-    <tr class="source-line">
       <td class="lineno"><a id="l102" href="#l102">102</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">2666556</td>
-      <td class="src coveredLine">  <span class="k">const</span> <span class="n">Vector4f</span> <span class="n">vectorFromSphereCenterToRay</span> <span class="o">=</span> <span class="n">Vector4f_Subtract</span><span class="p">(</span><span class="n">pointOnRayPerpendicularToSphereCenter</span><span class="p">,</span> <span class="n">sphere</span><span class="p">.</span><span class="n">center</span><span class="p">);</span></td>
+      <td class="linecount coveredLine">2640363</td>
+      <td class="src coveredLine">  <span class="k">return</span> <span class="p">{</span> <span class="n">vec1</span><span class="p">,</span> <span class="n">vec2</span> <span class="p">};</span></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l103" href="#l103">103</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">2666556</td>
-      <td class="src coveredLine">  <span class="k">const</span> <span class="n">Scalar1f</span> <span class="n">distanceFromSphereCenterToRay</span> <span class="o">=</span> <span class="n">Vector4f_Length</span><span class="p">(</span><span class="n">vectorFromSphereCenterToRay</span><span class="p">);</span></td>
+      <td class="linecount "></td>
+      <td class="src "><span class="p">}</span></td>
     </tr>
 
     <tr class="source-line">
@@ -991,15 +1013,15 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="c1">// See if our point of closest intercept between the ray and the center of the sphere is less than the radius of the sphere.</span></td>
+      <td class="src "><span class="c1">/// Multiply two vectors.</span></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l106" href="#l106">106</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">2666556</td>
-      <td class="src coveredLine">  <span class="k">return</span> <span class="n">distanceFromSphereCenterToRay</span> <span class="o">&lt;</span> <span class="n">sphere</span><span class="p">.</span><span class="n">radius</span><span class="p">;</span></td>
+      <td class="linecount "></td>
+      <td class="src "><span class="kr">inline</span> <span class="n">Vector4f</span> <span class="n">operator</span><span class="o">*</span><span class="p">(</span><span class="k">const</span> <span class="n">Vector4f</span><span class="o">&amp;</span> <span class="n">vec1</span><span class="p">,</span> <span class="k">const</span> <span class="n">Vector4f</span><span class="o">&amp;</span> <span class="n">vec2</span><span class="p">)</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1007,7 +1029,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="p">}</span></td>
+      <td class="src "><span class="p">{</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1015,7 +1037,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src ">  <span class="k">return</span> <span class="n">Vector4f_Multiply</span><span class="p">(</span><span class="n">vec1</span><span class="p">,</span> <span class="n">vec2</span><span class="p">);</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1023,15 +1045,15 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="k">template</span> <span class="o">&lt;</span><span class="kt">size_t</span> <span class="n">width</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">height</span><span class="p">,</span> <span class="kt">int</span> <span class="n">viewDistance</span><span class="o">&gt;</span></td>
+      <td class="src "><span class="p">}</span></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l110" href="#l110">110</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">921600</td>
-      <td class="src coveredLine"><span class="kt">uint32_t</span> <span class="n">TraceRay</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="kt">int</span> <span class="n">j</span><span class="p">,</span> <span class="k">const</span> <span class="n">Scene</span><span class="o">&amp;</span> <span class="n">scene</span><span class="p">)</span></td>
+      <td class="linecount "></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -1039,31 +1061,31 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="p">{</span></td>
+      <td class="src "><span class="c1">/// Multiply by a scalar.</span></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l112" href="#l112">112</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">921600</td>
-      <td class="src coveredLine">  <span class="n">Vector4f</span> <span class="n">eye</span><span class="p">{</span> <span class="mf">0.0f</span><span class="p">,</span> <span class="mf">0.0f</span><span class="p">,</span> <span class="o">-</span><span class="n">viewDistance</span><span class="p">,</span> <span class="mf">0.0f</span> <span class="p">};</span></td>
+      <td class="linecount coveredLine">2764042</td>
+      <td class="src coveredLine"><span class="kr">inline</span> <span class="n">Vector4f</span> <span class="n">operator</span><span class="o">*</span><span class="p">(</span><span class="k">const</span> <span class="n">Vector4f</span><span class="o">&amp;</span> <span class="n">vec1</span><span class="p">,</span> <span class="k">const</span> <span class="n">Scalar1f</span><span class="o">&amp;</span> <span class="n">scale</span><span class="p">)</span></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l113" href="#l113">113</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">921600</td>
-      <td class="src coveredLine">  <span class="n">Vector4f</span> <span class="n">lookAt</span><span class="p">{</span> <span class="n">i</span> <span class="o">-</span> <span class="mf">0.5f</span> <span class="o">*</span> <span class="n">width</span><span class="p">,</span> <span class="n">j</span> <span class="o">-</span> <span class="mf">0.5f</span> <span class="o">*</span> <span class="n">height</span><span class="p">,</span> <span class="mf">0.0f</span><span class="p">,</span> <span class="mf">0.0f</span> <span class="p">};</span></td>
+      <td class="linecount "></td>
+      <td class="src "><span class="p">{</span></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l114" href="#l114">114</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">921600</td>
-      <td class="src coveredLine">  <span class="n">Ray</span> <span class="n">ray</span><span class="p">{</span> <span class="n">eye</span><span class="p">,</span> <span class="n">lookAt</span> <span class="p">};</span></td>
+      <td class="linecount coveredLine">2764042</td>
+      <td class="src coveredLine">  <span class="k">return</span> <span class="n">Vector4f_Scaled</span><span class="p">(</span><span class="n">vec1</span><span class="p">,</span> <span class="n">scale</span><span class="p">);</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1071,22 +1093,15 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="p">}</span></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l116" href="#l116">116</a></td>
       <td class="linebranch">
-        <details class="linebranchDetails">
-        <summary class="linebranchSummary">2/2</summary>
-        <div class="linebranchContents">
-          <div class="takenBranch">&check; Branch 0 taken 2666556 times.</div>
-          <div class="takenBranch">&check; Branch 1 taken 809076 times.</div>
-        </div>
-        </details>
       </td>
-      <td class="linecount coveredLine">3475632</td>
-      <td class="src coveredLine">  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">scene</span><span class="p">.</span><span class="n">numberOfSpheres</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span></td>
+      <td class="linecount "></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -1094,22 +1109,15 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="p">{</span></td>
+      <td class="src "><span class="c1">/// Add two vectors.</span></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l118" href="#l118">118</a></td>
       <td class="linebranch">
-        <details class="linebranchDetails">
-        <summary class="linebranchSummary">2/2</summary>
-        <div class="linebranchContents">
-          <div class="takenBranch">&check; Branch 1 taken 112524 times.</div>
-          <div class="takenBranch">&check; Branch 2 taken 2554032 times.</div>
-        </div>
-        </details>
       </td>
-      <td class="linecount coveredLine">2666556</td>
-      <td class="src coveredLine">    <span class="k">if</span> <span class="p">(</span><span class="n">RayIntersectsSphere</span><span class="p">(</span><span class="n">ray</span><span class="p">,</span> <span class="n">scene</span><span class="p">.</span><span class="n">spheres</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span></td>
+      <td class="linecount coveredLine">2640363</td>
+      <td class="src coveredLine"><span class="kr">inline</span> <span class="n">Vector4f</span> <span class="n">operator</span><span class="o">+</span><span class="p">(</span><span class="k">const</span> <span class="n">Vector4f</span><span class="o">&amp;</span> <span class="n">vec1</span><span class="p">,</span> <span class="k">const</span> <span class="n">Vector4f</span><span class="o">&amp;</span> <span class="n">vec2</span><span class="p">)</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1117,15 +1125,15 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">    <span class="p">{</span></td>
+      <td class="src "><span class="p">{</span></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l120" href="#l120">120</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">112524</td>
-      <td class="src coveredLine">      <span class="k">return</span> <span class="n">scene</span><span class="p">.</span><span class="n">spheres</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">color</span><span class="p">;</span></td>
+      <td class="linecount coveredLine">2640363</td>
+      <td class="src coveredLine">  <span class="k">return</span> <span class="n">Vector4f_Add</span><span class="p">(</span><span class="n">vec1</span><span class="p">,</span> <span class="n">vec2</span><span class="p">);</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1133,7 +1141,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">    <span class="p">}</span></td>
+      <td class="src "><span class="p">}</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1141,7 +1149,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="p">}</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -1149,31 +1157,31 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="c1">/// Subtract two vectors.</span></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l124" href="#l124">124</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount "></td>
-      <td class="src ">  <span class="c1">// If don&#39;t intersect any spheres, then draw a black pixel.</span></td>
+      <td class="linecount coveredLine">6372872</td>
+      <td class="src coveredLine"><span class="kr">inline</span> <span class="n">Vector4f</span> <span class="n">operator</span><span class="o">-</span><span class="p">(</span><span class="k">const</span> <span class="n">Vector4f</span><span class="o">&amp;</span> <span class="n">vec1</span><span class="p">,</span> <span class="k">const</span> <span class="n">Vector4f</span><span class="o">&amp;</span> <span class="n">vec2</span><span class="p">)</span></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l125" href="#l125">125</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">809076</td>
-      <td class="src coveredLine">  <span class="k">return</span> <span class="mh">0x000000</span><span class="p">;</span></td>
+      <td class="linecount "></td>
+      <td class="src "><span class="p">{</span></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l126" href="#l126">126</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount "></td>
-      <td class="src "><span class="p">}</span></td>
+      <td class="linecount coveredLine">6372872</td>
+      <td class="src coveredLine">  <span class="k">return</span> <span class="n">Vector4f_Subtract</span><span class="p">(</span><span class="n">vec1</span><span class="p">,</span> <span class="n">vec2</span><span class="p">);</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1181,7 +1189,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="p">}</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1189,23 +1197,23 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="k">template</span> <span class="o">&lt;</span><span class="kt">size_t</span> <span class="n">width</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">height</span><span class="p">,</span> <span class="kt">int</span> <span class="n">viewDistance</span><span class="o">&gt;</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l129" href="#l129">129</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">12</td>
-      <td class="src coveredLine"><span class="kt">void</span> <span class="n">RayTracer</span><span class="p">(</span><span class="k">const</span> <span class="n">Scene</span><span class="o">&amp;</span> <span class="n">scene</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">fileName</span><span class="p">)</span></td>
+      <td class="linecount "></td>
+      <td class="src "><span class="c1">/// Length of a vector.</span></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l130" href="#l130">130</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount "></td>
-      <td class="src "><span class="p">{</span></td>
+      <td class="linecount coveredLine">2658073</td>
+      <td class="src coveredLine"><span class="kr">inline</span> <span class="n">Vector4f</span><span class="o">::</span><span class="n">operator</span> <span class="n">Scalar1f</span><span class="p">()</span> <span class="k">const</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1213,30 +1221,23 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="kt">uint32_t</span> <span class="n">pixels</span><span class="p">[</span><span class="n">width</span> <span class="o">*</span> <span class="n">height</span><span class="p">];</span></td>
+      <td class="src "><span class="p">{</span></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l132" href="#l132">132</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">12</td>
-      <td class="src coveredLine">  <span class="n">Image</span> <span class="n">image</span><span class="p">{</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">pixels</span> <span class="p">};</span></td>
+      <td class="linecount coveredLine">2658073</td>
+      <td class="src coveredLine">  <span class="k">return</span> <span class="n">Vector4f_Length</span><span class="p">(</span><span class="o">*</span><span class="n">this</span><span class="p">);</span></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l133" href="#l133">133</a></td>
       <td class="linebranch">
-        <details class="linebranchDetails">
-        <summary class="linebranchSummary">2/2</summary>
-        <div class="linebranchContents">
-          <div class="takenBranch">&check; Branch 0 taken 2880 times.</div>
-          <div class="takenBranch">&check; Branch 1 taken 12 times.</div>
-        </div>
-        </details>
       </td>
-      <td class="linecount coveredLine">2892</td>
-      <td class="src coveredLine">  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">height</span><span class="p">;</span> <span class="o">++</span><span class="n">j</span><span class="p">)</span></td>
+      <td class="linecount "></td>
+      <td class="src "><span class="p">}</span></td>
     </tr>
 
     <tr class="source-line">
@@ -1244,129 +1245,27 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="p">{</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l135" href="#l135">135</a></td>
       <td class="linebranch">
-        <details class="linebranchDetails">
-        <summary class="linebranchSummary">2/2</summary>
-        <div class="linebranchContents">
-          <div class="takenBranch">&check; Branch 0 taken 921600 times.</div>
-          <div class="takenBranch">&check; Branch 1 taken 2880 times.</div>
-        </div>
-        </details>
       </td>
-      <td class="linecount coveredLine">924480</td>
-      <td class="src coveredLine">    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">width</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span></td>
+      <td class="linecount "></td>
+      <td class="src "><span class="c1">/// Normalized vector of a vector.</span></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l136" href="#l136">136</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount "></td>
-      <td class="src ">    <span class="p">{</span></td>
+      <td class="linecount coveredLine">1056726</td>
+      <td class="src coveredLine"><span class="kr">inline</span> <span class="n">Vector4f</span> <span class="n">operator</span><span class="o">~</span><span class="p">(</span><span class="k">const</span> <span class="n">Vector4f</span><span class="o">&amp;</span> <span class="n">vec</span><span class="p">)</span></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l137" href="#l137">137</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount coveredLine">921600</td>
-      <td class="src coveredLine">      <span class="n">pixels</span><span class="p">[</span><span class="n">j</span><span class="o">*</span><span class="n">width</span> <span class="o">+</span> <span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">TraceRay</span><span class="o">&lt;</span><span class="n">width</span><span class="p">,</span><span class="n">height</span><span class="p">,</span><span class="n">viewDistance</span><span class="o">&gt;</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">scene</span><span class="p">);</span></td>
-    </tr>
-
-    <tr class="source-line">
-      <td class="lineno"><a id="l138" href="#l138">138</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount "></td>
-      <td class="src ">    <span class="p">}</span></td>
-    </tr>
-
-    <tr class="source-line">
-      <td class="lineno"><a id="l139" href="#l139">139</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount "></td>
-      <td class="src ">  <span class="p">}</span></td>
-    </tr>
-
-    <tr class="source-line">
-      <td class="lineno"><a id="l140" href="#l140">140</a></td>
-      <td class="linebranch">
-        <details class="linebranchDetails">
-        <summary class="linebranchSummary">1/2</summary>
-        <div class="linebranchContents">
-          <div class="takenBranch">&check; Branch 1 taken 12 times.</div>
-          <div class="notTakenBranch">&cross; Branch 2 not taken.</div>
-        </div>
-        </details>
-      </td>
-      <td class="linecount coveredLine">12</td>
-      <td class="src coveredLine">  <span class="n">Image_SaveBitmap</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">fileName</span><span class="p">);</span></td>
-    </tr>
-
-    <tr class="source-line">
-      <td class="lineno"><a id="l141" href="#l141">141</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount coveredLine">12</td>
-      <td class="src coveredLine"><span class="p">}</span></td>
-    </tr>
-
-    <tr class="source-line">
-      <td class="lineno"><a id="l142" href="#l142">142</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount "></td>
-      <td class="src "></td>
-    </tr>
-
-    <tr class="source-line">
-      <td class="lineno"><a id="l143" href="#l143">143</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount "></td>
-      <td class="src "></td>
-    </tr>
-
-    <tr class="source-line">
-      <td class="lineno"><a id="l144" href="#l144">144</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount "></td>
-      <td class="src "><span class="c1">////////////////////////////////////////////////////////////////////////////////////</span></td>
-    </tr>
-
-    <tr class="source-line">
-      <td class="lineno"><a id="l145" href="#l145">145</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount "></td>
-      <td class="src "><span class="c1">// Main</span></td>
-    </tr>
-
-    <tr class="source-line">
-      <td class="lineno"><a id="l146" href="#l146">146</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount "></td>
-      <td class="src "></td>
-    </tr>
-
-    <tr class="source-line">
-      <td class="lineno"><a id="l147" href="#l147">147</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount coveredLine">12</td>
-      <td class="src coveredLine"><span class="kt">int</span> <span class="n">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">argv</span><span class="p">[])</span></td>
-    </tr>
-
-    <tr class="source-line">
-      <td class="lineno"><a id="l148" href="#l148">148</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
@@ -1374,77 +1273,23 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l149" href="#l149">149</a></td>
+      <td class="lineno"><a id="l138" href="#l138">138</a></td>
       <td class="linebranch">
-        <details class="linebranchDetails">
-        <summary class="linebranchSummary">1/2</summary>
-        <div class="linebranchContents">
-          <div class="takenBranch">&check; Branch 1 taken 12 times.</div>
-          <div class="notTakenBranch">&cross; Branch 2 not taken.</div>
-        </div>
-        </details>
       </td>
-      <td class="linecount coveredLine">12</td>
-      <td class="src coveredLine">  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;example1</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span></td>
+      <td class="linecount coveredLine">1056726</td>
+      <td class="src coveredLine">  <span class="k">return</span> <span class="n">Vector4f_Normalized</span><span class="p">(</span><span class="n">vec</span><span class="p">);</span></td>
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l150" href="#l150">150</a></td>
+      <td class="lineno"><a id="l139" href="#l139">139</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src ">  <span class="n">Scene</span> <span class="n">scene</span><span class="p">;</span></td>
+      <td class="src "><span class="p">}</span></td>
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l151" href="#l151">151</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount coveredLine">12</td>
-      <td class="src coveredLine">  <span class="n">scene</span><span class="p">.</span><span class="n">spheres</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">Sphere</span><span class="p">{</span> <span class="p">{</span> <span class="o">-</span><span class="mi">50</span><span class="p">,</span> <span class="o">-</span><span class="mi">50</span><span class="p">,</span> <span class="mi">90</span> <span class="p">},</span> <span class="mi">50</span><span class="p">,</span> <span class="mh">0xFF0000</span> <span class="p">};</span></td>
-    </tr>
-
-    <tr class="source-line">
-      <td class="lineno"><a id="l152" href="#l152">152</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount coveredLine">12</td>
-      <td class="src coveredLine">  <span class="n">scene</span><span class="p">.</span><span class="n">spheres</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">Sphere</span><span class="p">{</span> <span class="p">{</span>  <span class="mi">60</span><span class="p">,</span>  <span class="mi">20</span><span class="p">,</span> <span class="mi">70</span> <span class="p">},</span> <span class="mi">50</span><span class="p">,</span> <span class="mh">0x00FF00</span> <span class="p">};</span></td>
-    </tr>
-
-    <tr class="source-line">
-      <td class="lineno"><a id="l153" href="#l153">153</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount coveredLine">12</td>
-      <td class="src coveredLine">  <span class="n">scene</span><span class="p">.</span><span class="n">spheres</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">Sphere</span><span class="p">{</span> <span class="p">{</span>   <span class="mi">0</span><span class="p">,</span>  <span class="mi">30</span><span class="p">,</span> <span class="mi">80</span> <span class="p">},</span> <span class="mi">70</span><span class="p">,</span> <span class="mh">0x0000FF</span> <span class="p">};</span></td>
-    </tr>
-
-    <tr class="source-line">
-      <td class="lineno"><a id="l154" href="#l154">154</a></td>
-      <td class="linebranch">
-        <details class="linebranchDetails">
-        <summary class="linebranchSummary">1/2</summary>
-        <div class="linebranchContents">
-          <div class="takenBranch">&check; Branch 1 taken 12 times.</div>
-          <div class="notTakenBranch">&cross; Branch 2 not taken.</div>
-        </div>
-        </details>
-      </td>
-      <td class="linecount coveredLine">12</td>
-      <td class="src coveredLine">  <span class="n">RayTracer</span><span class="o">&lt;</span><span class="mi">320</span><span class="p">,</span><span class="mi">240</span><span class="p">,</span><span class="mi">100</span><span class="o">&gt;</span><span class="p">(</span><span class="n">scene</span><span class="p">,</span> <span class="s">&quot;example1.bmp&quot;</span><span class="p">);</span></td>
-    </tr>
-
-    <tr class="source-line">
-      <td class="lineno"><a id="l155" href="#l155">155</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount coveredLine">12</td>
-      <td class="src coveredLine"><span class="p">}</span></td>
-    </tr>
-
-    <tr class="source-line">
-      <td class="lineno"><a id="l156" href="#l156">156</a></td>
+      <td class="lineno"><a id="l140" href="#l140">140</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
@@ -1452,7 +1297,287 @@
     </tr>
 
     <tr class="source-line">
+      <td class="lineno"><a id="l141" href="#l141">141</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l142" href="#l142">142</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="c1">///////////////////////////////////////////////////////////////////////////////////</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l143" href="#l143">143</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="c1">// Matrix operators</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l144" href="#l144">144</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l145" href="#l145">145</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="c1">/// Convert vector to a translation matrix</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l146" href="#l146">146</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="kr">inline</span> <span class="n">Matrix4x4f</span><span class="o">&amp;</span> <span class="n">Matrix4x4f</span><span class="o">::</span><span class="n">operator</span><span class="o">=</span><span class="p">(</span><span class="k">const</span> <span class="n">Vector4f</span><span class="o">&amp;</span> <span class="n">vec</span><span class="p">)</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l147" href="#l147">147</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="p">{</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l148" href="#l148">148</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src ">  <span class="o">*</span><span class="n">this</span> <span class="o">=</span> <span class="n">Matrix4x4f_TranslateXYZ</span><span class="p">(</span><span class="n">vec</span><span class="p">);</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l149" href="#l149">149</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src ">  <span class="k">return</span> <span class="o">*</span><span class="n">this</span><span class="p">;</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l150" href="#l150">150</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="p">}</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l151" href="#l151">151</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l152" href="#l152">152</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="c1">/// Multiply two matrices.</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l153" href="#l153">153</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount coveredLine">66</td>
+      <td class="src coveredLine"><span class="kr">inline</span> <span class="n">Matrix4x4f</span> <span class="n">operator</span><span class="o">*</span><span class="p">(</span><span class="k">const</span> <span class="n">Matrix4x4f</span><span class="o">&amp;</span> <span class="n">m1</span><span class="p">,</span> <span class="k">const</span> <span class="n">Matrix4x4f</span><span class="o">&amp;</span> <span class="n">m2</span><span class="p">)</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l154" href="#l154">154</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="p">{</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l155" href="#l155">155</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount coveredLine">66</td>
+      <td class="src coveredLine">  <span class="k">return</span> <span class="n">Matrix4x4f_Multiply</span><span class="p">(</span><span class="n">m1</span><span class="p">,</span> <span class="n">m2</span><span class="p">);</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l156" href="#l156">156</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="p">}</span></td>
+    </tr>
+
+    <tr class="source-line">
       <td class="lineno"><a id="l157" href="#l157">157</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l158" href="#l158">158</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="c1">/// Transpose of matrix.</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l159" href="#l159">159</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="kr">inline</span> <span class="n">Matrix4x4f</span> <span class="n">operator</span><span class="o">~</span><span class="p">(</span><span class="k">const</span> <span class="n">Matrix4x4f</span><span class="o">&amp;</span> <span class="n">m</span><span class="p">)</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l160" href="#l160">160</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="p">{</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l161" href="#l161">161</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src ">  <span class="k">return</span> <span class="n">Matrix4x4f_Transposed</span><span class="p">(</span><span class="n">m</span><span class="p">);</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l162" href="#l162">162</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="p">}</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l163" href="#l163">163</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l164" href="#l164">164</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="c1">/// Multiply by a scalar.</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l165" href="#l165">165</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="kr">inline</span> <span class="n">Matrix4x4f</span> <span class="n">operator</span><span class="o">*</span><span class="p">(</span><span class="k">const</span> <span class="n">Matrix4x4f</span><span class="o">&amp;</span> <span class="n">m</span><span class="p">,</span> <span class="k">const</span> <span class="n">Scalar1f</span><span class="o">&amp;</span> <span class="n">scale</span><span class="p">)</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l166" href="#l166">166</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="p">{</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l167" href="#l167">167</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src ">  <span class="k">return</span> <span class="n">Matrix4x4f_Scaled</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">scale</span><span class="p">);</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l168" href="#l168">168</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="p">}</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l169" href="#l169">169</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l170" href="#l170">170</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="c1">/// Multiply matrix by a vector (transform).</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l171" href="#l171">171</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="kr">inline</span> <span class="n">Vector4f</span> <span class="n">operator</span><span class="o">*</span><span class="p">(</span><span class="k">const</span> <span class="n">Matrix4x4f</span><span class="o">&amp;</span> <span class="n">m</span><span class="p">,</span> <span class="k">const</span> <span class="n">Vector4f</span><span class="o">&amp;</span> <span class="n">vec</span><span class="p">)</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l172" href="#l172">172</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="p">{</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l173" href="#l173">173</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src ">  <span class="k">return</span> <span class="n">Vector4f_Transform</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">vec</span><span class="p">);</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l174" href="#l174">174</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="p">}</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l175" href="#l175">175</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l176" href="#l176">176</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
