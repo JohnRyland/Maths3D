@@ -1,0 +1,9 @@
+<map id="operator*" name="operator*">
+<area shape="rect" id="node1" title="Multiply matrix by a vector (transform)." alt="" coords="5,56,89,83"/>
+<area shape="rect" id="node2" href="$maths3d_8h.html#aa4034ce6071b46002489f994f1cca0fa" title=" " alt="" coords="137,56,285,83"/>
+<area shape="rect" id="node3" href="$maths3d_8cpp.html#ab1faa822c038f35815c5a169e0e7838b" title="Creates a matrix where the matrix a is mirrored through the diagonal of the matrix." alt="" coords="333,5,507,32"/>
+<area shape="rect" id="node4" href="$maths3d_8h.html#afa6fbd00f48007bc9ca8b9fad6911058" title="Calculates the dot&#45;product of vec1 and vec2." alt="" coords="343,56,497,83"/>
+<area shape="rect" id="node6" href="$maths3d_8h.html#ae4a4af082482c7992d487d2f709a1d4b" title="Assigns x, y, z and w to the corresponding components of the vector." alt="" coords="797,56,901,83"/>
+<area shape="rect" id="node5" href="$maths3d_8h.html#a90265d9aa55b92df80e1ff0db7be136f" title="Multiplies vec1 with vec2." alt="" coords="584,5,720,32"/>
+<area shape="rect" id="node7" href="$maths3d_8h.html#a670630003a2a62f351daa92d3e3a6d8f" title="Returns the sum of the components of vec." alt="" coords="555,56,749,83"/>
+</map>
