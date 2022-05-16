@@ -1,0 +1,9 @@
+FROM ubuntu
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN apt update
+
+# Install minimum C/C++ development tools
+RUN apt install -y g++ make git
+

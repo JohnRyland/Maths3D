@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Setup a minimal docker image with C++ compiler
+docker build -t dev-env-min -f Dockerfile.min .
+docker tag dev-env-min:latest jryland/dev-env-min:latest
+docker push jryland/dev-env-min:latest
+
 # Setup base docker image
 docker build -t dev-env -f Dockerfile.devenv .
 docker tag dev-env:latest jryland/dev-env:latest

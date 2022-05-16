@@ -5,10 +5,12 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt update
 
 # Install misc utilities
-RUN apt install -y cmake python-is-python3 ditaa mactex dos2unix sqlite universal-ctags
+RUN apt install -y cmake python-is-python3 ditaa dos2unix sqlite universal-ctags
+# RUN apt install -y mactex
 
 # Configure for use with docker 'Dev Environments'
 RUN useradd -s /bin/bash -m vscode
 RUN groupadd docker
 RUN usermod -aG docker vscode
 USER vscode
+
