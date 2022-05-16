@@ -1,4 +1,11 @@
-FROM jryland/dev-env:latest
+FROM jryland/dev-env-github:latest
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN apt update
+
+# Install misc utilities
+RUN apt install -y cmake python-is-python3 ditaa mactex dos2unix sqlite universal-ctags
 
 # Configure for use with docker 'Dev Environments'
 RUN useradd -s /bin/bash -m vscode

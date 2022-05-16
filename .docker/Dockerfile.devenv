@@ -14,3 +14,4 @@ RUN apt install -y clang clang-format
 RUN apt install -y doxygen graphviz plantuml
 RUN apt install -y texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra
 RUN apt install -y pandoc librsvg2-bin
+
