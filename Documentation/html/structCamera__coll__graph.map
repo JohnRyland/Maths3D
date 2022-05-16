@@ -1,0 +1,6 @@
+<map id="Camera" name="Camera">
+<area shape="rect" id="node1" title=" " alt="" coords="59,213,132,240"/>
+<area shape="rect" id="node2" href="$structVector4f.html" title="A four component vector suitable as a 3D vector in a 3D graphics pipeline." alt="" coords="5,124,81,151"/>
+<area shape="rect" id="node3" href="$structRotation.html" title="A 3D set of rotations." alt="" coords="110,124,187,151"/>
+<area shape="rect" id="node4" href="$structDegrees.html" title="A measure of angle in degrees. There are 360 degrees in a circle." alt="" coords="111,5,187,32"/>
+</map>
