@@ -67,7 +67,7 @@ bool Image_SaveBitmap(const Image& image, const char* fileName)
   }
 
   int bytesPerPixel = 4;
-  size_t pixelDataSize = image.width * image.height * bytesPerPixel;
+  size_t pixelDataSize = (size_t)image.width * image.height * bytesPerPixel;
 
   // Save the header
   BitmapFileHeader header = { 0 };

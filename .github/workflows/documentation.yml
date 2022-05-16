@@ -25,13 +25,13 @@ jobs:
           git config --global user.name "John Ryland"
           make pdfs
           make doxygen
-          sed -i 's/object type="image\/svg+xml" data/img src/g' .build/docs/html/index.html
+          sed -i 's/object type="image\/svg+xml" data/img src/g' .build/Linux-release/docs/html/index.html
 
       - name: Save documentation
         uses: actions/upload-artifact@v1
         with:
           name: documentation
-          path: .build/docs
+          path: .build/Linux-release/docs
 
   publish:
     name: Publish
