@@ -1,0 +1,5 @@
+<map id="operator+" name="operator+">
+<area shape="rect" id="node1" title="Add two vectors." alt="" coords="5,5,93,32"/>
+<area shape="rect" id="node2" href="$maths3d_8h.html#aac2d3408690942718b493a9d7f044aa3" title="Adds vec1 and vec2." alt="" coords="141,5,249,32"/>
+<area shape="rect" id="node3" href="$maths3d_8h.html#ae4a4af082482c7992d487d2f709a1d4b" title="Assigns x, y, z and w to the corresponding components of the vector." alt="" coords="297,5,401,32"/>
+</map>

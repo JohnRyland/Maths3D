@@ -1,0 +1,5 @@
+<map id="operator=" name="operator=">
+<area shape="rect" id="node1" title="assign a scalar" alt="" coords="5,5,93,32"/>
+<area shape="rect" id="node2" href="$maths3d_8h.html#a6931631ee39dd7d2078a35562c6e3e98" title="Assigns v to all four of the components of the vector." alt="" coords="141,5,285,32"/>
+<area shape="rect" id="node3" href="$maths3d_8h.html#ae4a4af082482c7992d487d2f709a1d4b" title="Assigns x, y, z and w to the corresponding components of the vector." alt="" coords="333,5,437,32"/>
+</map>
