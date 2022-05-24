@@ -184,6 +184,24 @@ The API</h1>
 <div class="line">Matrix4x4f Matrix4x4f_OrthographicFrustum(Scalar1f left, Scalar1f right,</div>
 <div class="line">                                          Scalar1f bottom, Scalar1f top,</div>
 <div class="line">                                          Scalar1f near, Scalar1f far);</div>
+</div><!-- fragment --><p>There are C++ operator overloads for quite a lot of these functions.</p>
+<div class="fragment"><div class="line">Vector4f&amp; Vector4f::operator=(Scalar1f value);                    // Replicate</div>
+<div class="line">Vector4f operator*(const Vector4f&amp; vec1, const Vector4f&amp; vec2);</div>
+<div class="line">Vector4f operator*(const Vector4f&amp; vec1, const Scalar1f&amp; scale);</div>
+<div class="line">Vector4f operator+(const Vector4f&amp; vec1, const Vector4f&amp; vec2);</div>
+<div class="line">Vector4f operator-(const Vector4f&amp; vec1, const Vector4f&amp; vec2);</div>
+<div class="line">Vector4f::operator Scalar1f() const;                              // Length</div>
+<div class="line">Vector4f operator~(const Vector4f&amp; vec);                          // Normalized</div>
+<div class="line">Matrix4x4f&amp; Matrix4x4f::operator=(const Vector4f&amp; vec);           // Translation matrix</div>
+<div class="line">Matrix4x4f operator*(const Matrix4x4f&amp; m1, const Matrix4x4f&amp; m2);</div>
+<div class="line">Matrix4x4f operator~(const Matrix4x4f&amp; m);                        // Transposed</div>
+<div class="line">Matrix4x4f operator*(const Matrix4x4f&amp; m, const Scalar1f&amp; scale);</div>
+<div class="line">Vector4f operator*(const Matrix4x4f&amp; m, const Vector4f&amp; vec);     // Transform</div>
+<div class="line"> </div>
+<div class="line">/// Product of two vectors.</div>
+<div class="line">/// When the result is used as a Scalar1f, the dot-product (inner product) is returned.</div>
+<div class="line">/// When the result is used as a Vector4f, the cross-product (wedge/exterior product) is returned.</div>
+<div class="line">VectorProduct4f operator^(const Vector4f&amp; vec1, const Vector4f&amp; vec2);</div>
 </div><!-- fragment --> </div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->
