@@ -101,7 +101,7 @@ array of them. For all the provided functions below, we don't bother
 providing SIMD optimizations as most compilers can auto-vectorize this code
 just fine and so it only will make the code more error prone, and not able
 to be re-compiled with different compiler flags to target different machine
-types or without or without different levels of SIMD support.
+types or with or without different levels of SIMD support.
 
 
 # The API
