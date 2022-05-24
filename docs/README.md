@@ -152,3 +152,24 @@ Matrix4x4f Matrix4x4f_OrthographicFrustum(Scalar1f left, Scalar1f right,
                                           Scalar1f near, Scalar1f far);
 ```
 
+There are C++ operator overloads for quite a lot of these functions.
+
+```
+Vector4f& Vector4f::operator=(Scalar1f value);                    // Replicate
+Vector4f operator*(const Vector4f& vec1, const Vector4f& vec2);
+Vector4f operator*(const Vector4f& vec1, const Scalar1f& scale);
+Vector4f operator+(const Vector4f& vec1, const Vector4f& vec2);
+Vector4f operator-(const Vector4f& vec1, const Vector4f& vec2);
+Vector4f::operator Scalar1f() const;                              // Length
+Vector4f operator~(const Vector4f& vec);                          // Normalized
+Matrix4x4f& Matrix4x4f::operator=(const Vector4f& vec);           // Translation matrix
+Matrix4x4f operator*(const Matrix4x4f& m1, const Matrix4x4f& m2);
+Matrix4x4f operator~(const Matrix4x4f& m);                        // Transposed
+Matrix4x4f operator*(const Matrix4x4f& m, const Scalar1f& scale);
+Vector4f operator*(const Matrix4x4f& m, const Vector4f& vec);     // Transform
+
+/// Product of two vectors.
+/// When the result is used as a Scalar1f, the dot-product (inner product) is returned.
+/// When the result is used as a Vector4f, the cross-product (wedge/exterior product) is returned.
+VectorProduct4f operator^(const Vector4f& vec1, const Vector4f& vec2);
+```
