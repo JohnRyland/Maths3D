@@ -43,7 +43,7 @@ these APIs. It also means that they can be safely used in multithreaded
 code. From a performance point of view it assumes that the compiler will be
 able to perform RVO.
 
-Inputs are passed by const reference when the size of the input would be
+Inputs are passed by const reference when the size of the input as a value would be
 larger than the size of a pointer.
 
 
