@@ -117,7 +117,7 @@ Introduction</h2>
 <p>No header or library dependencies.</p>
 <p>The API attempts to be functional in style, with inputs and a returned output.</p>
 <p>The inputs are never mutated (modified) and the returned value is a newly constructed object. This is to maintain referential transparency. Some benefits to this approach are that it is easy to chain together calls to these APIs. It also means that they can be safely used in multithreaded code. From a performance point of view it assumes that the compiler will be able to perform RVO.</p>
-<p>Inputs are passed by const reference when the size of the input would be larger than the size of a pointer.</p>
+<p>Inputs are passed by const reference when the size of the input as a value would be larger than the size of a pointer.</p>
 <h1><a class="anchor" id="autotoc_md4"></a>
 Scalars</h1>
 <p>Changing the scalar type will change the underlying value type used by vector and matrix.</p>
@@ -208,7 +208,7 @@ The API</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer"> Last update on Tue May 24 2022 for Maths3D  </li>
+    <li class="footer"> Last update on Wed May 25 2022 for Maths3D  </li>
   </ul>
 </div>
 </body>
