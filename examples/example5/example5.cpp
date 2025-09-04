@@ -235,7 +235,7 @@ Matrix4x4f Camera_ViewMatrix(const Camera& camera)
 
 int main(int argc, const char* argv[])
 {
-  printf("example4\n");
+  printf("example5\n");
 
   float w = 300.0;
   float h = 200.0;

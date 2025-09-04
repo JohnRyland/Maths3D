@@ -8,7 +8,7 @@ ifeq ($(PLATFORM),Windows)
   GL_LFLAGS := -lopengl32 -lglu32 -lkernel32 -lgdi32 -luser32
 endif
 ifeq ($(PLATFORM),Darwin)
-  GL_LFLAGS := -framework OpenGL -framework Cocoa -framework IOKit -framework CoreVideo
+  GL_LFLAGS := -framework OpenGL -framework Cocoa -framework IOKit -framework CoreVideo -framework QuartzCore
 endif
 ifeq ($(PLATFORM),Linux)
   GL_LFLAGS := -lGL -lGLU -ldl -lm -pthread
